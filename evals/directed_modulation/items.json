@@ -1,6 +1,7 @@
 {
  "family": "directed-modulation",
  "gate": "Qwen3.6-27B behavioral compliance >=8/10 at temp 0.7: copies the carrier verbatim and never mentions the concept (pairs, atomic) / never reveals the secret word or preference. Readout: teacher-forced assistant text at writing positions; positive/negated pairs share pair_id.",
+ "eval_render_note": "EVAL RENDER: feed `prompt` verbatim as plain text, NO chat template (directed-modulation is the only chat-templated family). `gate_variant` records how the item was behaviorally verified and does NOT affect the eval read.",
  "items": [
   {
    "name": "dm-pair-00-pos",
@@ -3962,6 +3963,5 @@
     "kind": "writing_positions"
    }
   }
- ],
- "eval_render_note": "EVAL RENDER: feed `prompt` verbatim as plain text, NO chat template (directed-modulation is the only chat-templated family). `gate_variant` records how the item was behaviorally verified and does NOT affect the eval read."
+ ]
 }

@@ -1,6 +1,8 @@
 {
  "family": "multihop",
  "gate": "Qwen3.6-27B behavioral: >=8/10 correct at temp 0.7 (greedy-verified first); association scored against association_aliases.json (phrase-aware, echo-guarded); poetry scored by committed rhyme",
+ "eval_render_note": "EVAL RENDER: feed `prompt` verbatim as plain text, NO chat template (directed-modulation is the only chat-templated family). `gate_variant` records how the item was behaviorally verified and does NOT affect the eval read.",
+ "read": "the last word of the prompt (its last non-whitespace token; one position per item, every judged layer); changed 2026-09-23 from the final prompt token, which for 33 items is the bare space after the last word (Camila: \"multihop should be read on the second to last token, ie the last word, not the space token\"). Per item, `readout.offsets` is the read position counted from the end of the Qwen3.6-27B tokenization of `prompt`: -2 for the 33 prompts that end in a bare space token, -1 for the 67 whose final token is the word itself (59) or the opening quote of `is \"` (8: the quote is the last non-whitespace token and is the read).",
  "items": [
   {
    "name": "atomic-26-symbol",
@@ -111,43 +113,6 @@
    }
   },
   {
-   "name": "dbl-altitude-antonym",
-   "prompt": "Fact: The antonym of how you would describe an airplane's cruising altitude is \"",
-   "target": "low",
-   "intermediates": [
-    "high"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "double-dice-faces",
-   "prompt": "Fact: Double the number of faces on a standard die is ",
-   "target": "12",
-   "intermediates": [
-    "6",
-    "six"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -2
-    ]
-   }
-  },
-  {
    "name": "etym-caesar-monthnum",
    "prompt": "Fact: The month named after Julius Caesar is month number ",
    "target": "7",
@@ -162,24 +127,6 @@
     "kind": "last_word_token",
     "offsets": [
      -2
-    ]
-   }
-  },
-  {
-   "name": "firstletter-valentines-month",
-   "prompt": "Fact: The first letter of the month containing Valentine's Day is \"",
-   "target": "F",
-   "intermediates": [
-    "February"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -1
     ]
    }
   },
@@ -207,60 +154,6 @@
    "target": "4",
    "intermediates": [
     "heart"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -2
-    ]
-   }
-  },
-  {
-   "name": "half-clock-hours",
-   "prompt": "Fact: Half the number of hours shown on a standard clock face is ",
-   "target": "6",
-   "intermediates": [
-    "12"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -2
-    ]
-   }
-  },
-  {
-   "name": "holiday-christmas-monthnum",
-   "prompt": "Fact: Christmas Day is celebrated in month number ",
-   "target": "12",
-   "intermediates": [
-    "December"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -2
-    ]
-   }
-  },
-  {
-   "name": "holiday-halloween-monthnum",
-   "prompt": "Fact: Halloween is celebrated in month number ",
-   "target": "10",
-   "intermediates": [
-    "October"
    ],
    "source": "jlens_source",
    "consistency": 1.0,
@@ -382,61 +275,6 @@
    }
   },
   {
-   "name": "nhop-cube-element",
-   "prompt": "Count the items in a dozen. The element at that position on the periodic table is magnesium. Count the faces on a cube. The element at that position on the periodic table is ",
-   "target": "carbon",
-   "intermediates": [
-    "6",
-    "six"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "plain_stripped",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -2
-    ]
-   }
-  },
-  {
-   "name": "nhop-rainbow-element",
-   "prompt": "Count the items in a dozen. The element at that position on the periodic table is magnesium. Count the colors in a rainbow. The element at that position on the periodic table is ",
-   "target": "nitrogen",
-   "intermediates": [
-    "7"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "plain_stripped",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -2
-    ]
-   }
-  },
-  {
-   "name": "nhop-spider-element",
-   "prompt": "Count the items in a dozen. The element at that position on the periodic table is magnesium. Count the legs on a spider. The element at that position on the periodic table is ",
-   "target": "oxygen",
-   "intermediates": [
-    "8"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "plain_stripped",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -2
-    ]
-   }
-  },
-  {
    "name": "pred-valentines-prevmonth",
    "prompt": "Fact: The month immediately before the one containing Valentine's Day is \"",
    "target": "January",
@@ -451,42 +289,6 @@
     "kind": "last_word_token",
     "offsets": [
      -1
-    ]
-   }
-  },
-  {
-   "name": "rhyme-tree-squared",
-   "prompt": "Fact: The square of the number whose name rhymes with tree is ",
-   "target": "9",
-   "intermediates": [
-    "three"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -2
-    ]
-   }
-  },
-  {
-   "name": "spaceneedle-border",
-   "prompt": "Fact: The US state where the Space Needle is located shares its northern border with ",
-   "target": "Canada",
-   "intermediates": [
-    "Seattle"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "plain_stripped",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -2
     ]
    }
   },
@@ -761,24 +563,6 @@
    }
   },
   {
-   "name": "bf-sushi-capital",
-   "prompt": "Fact: The capital city of the country where sushi originated is",
-   "target": "Tokyo",
-   "intermediates": [
-    "Japan"
-   ],
-   "source": "staging",
-   "consistency": 1.0,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "bf-whitebear-ocean",
    "prompt": "Fact: The ocean where the white bear of the far north hunts is the",
    "target": "Arctic",
@@ -887,24 +671,6 @@
    }
   },
   {
-   "name": "b3-mh-cuckoo-mountains",
-   "prompt": "Fact: The mountain range of the country famous for cuckoo clocks and neutrality is the",
-   "target": "Alps",
-   "intermediates": [
-    "Switzerland"
-   ],
-   "source": "staging_b3",
-   "consistency": 1.0,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "b3-mh-eiffel-capital",
    "prompt": "Fact: The capital of the country famous for the Eiffel Tower is",
    "target": "Paris",
@@ -982,24 +748,6 @@
    "target": "apple",
    "intermediates": [
     "Newton"
-   ],
-   "source": "staging_b3",
-   "consistency": 1.0,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "b3-mh-greatwall-river",
-   "prompt": "Fact: The longest river of the country that built the Great Wall is the",
-   "target": "Yangtze",
-   "intermediates": [
-    "China"
    ],
    "source": "staging_b3",
    "consistency": 1.0,
@@ -1121,47 +869,11 @@
    }
   },
   {
-   "name": "b3-mh-liberty-river",
-   "prompt": "Fact: The river beside the island of the Statue of Liberty is the",
-   "target": "Hudson",
-   "intermediates": [
-    "New York"
-   ],
-   "source": "staging_b3",
-   "consistency": 1.0,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "b3-mh-lisbon-language",
    "prompt": "Fact: The language spoken in the country whose capital is Lisbon is",
    "target": "Portuguese",
    "intermediates": [
     "Portugal"
-   ],
-   "source": "staging_b3",
-   "consistency": 1.0,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "b3-mh-longestriver-sea",
-   "prompt": "Fact: The sea into which the world's longest river empties is the",
-   "target": "Mediterranean",
-   "intermediates": [
-    "Nile"
    ],
    "source": "staging_b3",
    "consistency": 1.0,
@@ -1229,24 +941,6 @@
    }
   },
   {
-   "name": "b3-mh-tajmahal-river",
-   "prompt": "Fact: The sacred river of the country of the Taj Mahal is the",
-   "target": "Ganges",
-   "intermediates": [
-    "India"
-   ],
-   "source": "staging_b3",
-   "consistency": 1.0,
-   "gate_variant": "chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "b3-mh-tulips-capital",
    "prompt": "Fact: The capital of the country famous for tulips and windmills is",
    "target": "Amsterdam",
@@ -1280,24 +974,6 @@
     "kind": "last_word_token",
     "offsets": [
      -1
-    ]
-   }
-  },
-  {
-   "name": "basketball-players",
-   "prompt": "Fact: The number of players per side in the sport invented in Springfield, Massachusetts is ",
-   "target": "5",
-   "intermediates": [
-    "basketball"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.9,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -2
     ]
    }
   },
@@ -1370,42 +1046,6 @@
     "kind": "last_word_token",
     "offsets": [
      -1
-    ]
-   }
-  },
-  {
-   "name": "nhop-soccer-element",
-   "prompt": "Count the items in a dozen. The element at that position on the periodic table is magnesium. Count the players on a soccer team on the field. The element at that position on the periodic table is ",
-   "target": "sodium",
-   "intermediates": [
-    "11"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.9,
-   "gate_variant": "plain_stripped",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -2
-    ]
-   }
-  },
-  {
-   "name": "super-smallest-continent",
-   "prompt": "Fact: The smallest country in the world is located on the continent of ",
-   "target": "Europe",
-   "intermediates": [
-    "Vatican"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.9,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -2
     ]
    }
   },
@@ -1505,24 +1145,6 @@
    "target": "Copenhagen",
    "intermediates": [
     "Denmark"
-   ],
-   "source": "staging_b3",
-   "consistency": 0.9,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "b3-mh-operahouse-country",
-   "prompt": "Fact: The country of the famous sail-shaped opera house is",
-   "target": "Australia",
-   "intermediates": [
-    "Sydney"
    ],
    "source": "staging_b3",
    "consistency": 0.9,
@@ -1662,25 +1284,6 @@
    }
   },
   {
-   "name": "roman-rings-olympic",
-   "prompt": "Fact: Written as a Roman numeral, the number of Olympic rings is ",
-   "target": "V",
-   "intermediates": [
-    "5",
-    "five"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.8,
-   "gate_variant": "plain_stripped",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -2
-    ]
-   }
-  },
-  {
    "name": "bf-colosseum-language",
    "prompt": "Fact: The language spoken in the country where the Colosseum stands is",
    "target": "Italian",
@@ -1807,7 +1410,5 @@
     ]
    }
   }
- ],
- "eval_render_note": "EVAL RENDER: feed `prompt` verbatim as plain text, NO chat template (directed-modulation is the only chat-templated family). `gate_variant` records how the item was behaviorally verified and does NOT affect the eval read.",
- "read": "the last word of the prompt (its last non-whitespace token; one position per item, every judged layer); changed 2026-09-23 from the final prompt token, which for 33 items is the bare space after the last word (Camila: \"multihop should be read on the second to last token, ie the last word, not the space token\"). Per item, `readout.offsets` is the read position counted from the end of the Qwen3.6-27B tokenization of `prompt`: -2 for the 33 prompts that end in a bare space token, -1 for the 67 whose final token is the word itself (59) or the opening quote of `is \"` (8: the quote is the last non-whitespace token and is the read)."
+ ]
 }

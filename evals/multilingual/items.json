@@ -1,6 +1,7 @@
 {
  "family": "multilingual",
  "gate": "Qwen3.6-27B behavioral: >=8/10 correct at temp 0.7 (greedy-verified first); association scored against association_aliases.json (phrase-aware, echo-guarded); poetry scored by committed rhyme",
+ "eval_render_note": "EVAL RENDER: feed `prompt` verbatim as plain text, NO chat template (directed-modulation is the only chat-templated family). `gate_variant` records how the item was behaviorally verified and does NOT affect the eval read.",
  "items": [
   {
    "name": "de-half-six",
@@ -394,29 +395,6 @@
    }
   },
   {
-   "name": "pt-time-after-night",
-   "prompt": "Depois da noite vem o \"",
-   "target": "dia",
-   "intermediates": [
-    "day"
-   ],
-   "reference_concepts": [
-    "português",
-    "time",
-    "night"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "arabic-color-blood",
    "prompt": "الدم لونه ",
    "target": "أحمر",
@@ -431,29 +409,6 @@
    "source": "jlens_source",
    "consistency": 1.0,
    "gate_variant": "plain_stripped",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "czech-opposite-tall",
-   "prompt": "Opak slova \"vysoký\" je \"",
-   "target": "nízký",
-   "intermediates": [
-    "short"
-   ],
-   "reference_concepts": [
-    "Czech",
-    "opposite",
-    "tall"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "plain",
    "eval_render": "plain",
    "readout": {
     "kind": "final_prompt_token",
@@ -496,29 +451,6 @@
     "Filipino",
     "opposite",
     "up"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "french-family-nephew",
-   "prompt": "Le fils de ta sœur est ton \"",
-   "target": "neveu",
-   "intermediates": [
-    "nephew"
-   ],
-   "reference_concepts": [
-    "French",
-    "family",
-    "son"
    ],
    "source": "jlens_source",
    "consistency": 1.0,
@@ -730,29 +662,6 @@
    "source": "jlens_source",
    "consistency": 1.0,
    "gate_variant": "plain_stripped",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "serbian-opposite-day",
-   "prompt": "Супротно од \"дан\" је \"",
-   "target": "ноћ",
-   "intermediates": [
-    "night"
-   ],
-   "reference_concepts": [
-    "Serbian",
-    "opposite",
-    "day"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "plain",
    "eval_render": "plain",
    "readout": {
     "kind": "final_prompt_token",
@@ -978,28 +887,6 @@
    "reference_concepts": [
     "Spanish",
     "France"
-   ],
-   "source": "staging_b3",
-   "consistency": 1.0,
-   "gate_variant": "chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "b3-ml-es-color-blood",
-   "prompt": "El color de la sangre es el",
-   "target": "rojo",
-   "intermediates": [
-    "red"
-   ],
-   "reference_concepts": [
-    "Spanish",
-    "blood"
    ],
    "source": "staging_b3",
    "consistency": 1.0,
@@ -1494,29 +1381,6 @@
    }
   },
   {
-   "name": "de-order-first-last",
-   "prompt": "Das Gegenteil von \"erste\" ist \"",
-   "target": "letzte",
-   "intermediates": [
-    "last"
-   ],
-   "reference_concepts": [
-    "German",
-    "order",
-    "first"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.9,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "es-order-first-last",
    "prompt": "Lo contrario de \"primero\" es \"",
    "target": "último",
@@ -1747,29 +1611,6 @@
    }
   },
   {
-   "name": "pt-time-old-new",
-   "prompt": "O contrário de \"velho\" é \"",
-   "target": "novo",
-   "intermediates": [
-    "new"
-   ],
-   "reference_concepts": [
-    "português",
-    "time",
-    "old"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.9,
-   "gate_variant": "chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "danish-color-ocean",
    "prompt": "Farven på havet er ",
    "target": "blå",
@@ -1807,29 +1648,6 @@
    "source": "jlens_source",
    "consistency": 0.9,
    "gate_variant": "plain_stripped",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "estonian-opposite-open",
-   "prompt": "Sõna \"avatud\" vastand on \"",
-   "target": "suletud",
-   "intermediates": [
-    "closed"
-   ],
-   "reference_concepts": [
-    "Estonian",
-    "opposite",
-    "open"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.9,
-   "gate_variant": "plain",
    "eval_render": "plain",
    "readout": {
     "kind": "final_prompt_token",
@@ -1945,29 +1763,6 @@
    "source": "jlens_source",
    "consistency": 0.9,
    "gate_variant": "chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "slovak-opposite-young",
-   "prompt": "Opak slova \"mladý\" je \"",
-   "target": "starý",
-   "intermediates": [
-    "old"
-   ],
-   "reference_concepts": [
-    "Slovak",
-    "opposite",
-    "young"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.9,
-   "gate_variant": "plain",
    "eval_render": "plain",
    "readout": {
     "kind": "final_prompt_token",
@@ -2297,6 +2092,5 @@
     ]
    }
   }
- ],
- "eval_render_note": "EVAL RENDER: feed `prompt` verbatim as plain text, NO chat template (directed-modulation is the only chat-templated family). `gate_variant` records how the item was behaviorally verified and does NOT affect the eval read."
+ ]
 }

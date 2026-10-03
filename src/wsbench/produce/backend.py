@@ -6,7 +6,7 @@ from contextlib import nullcontext
 from dataclasses import dataclass
 from typing import Any, Self
 
-DEFAULT_MODEL = "Qwen/Qwen3.6-27B"
+DEFAULT_MODEL = "Qwen/Qwen3.5-9B"
 
 
 @dataclass

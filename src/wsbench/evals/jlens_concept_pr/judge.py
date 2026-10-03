@@ -63,7 +63,7 @@ from .prompts import (
 )
 
 FAMILY = "jlens_concept_pr"
-HEADLINE_LAYER = 44
+HEADLINE_LAYER = 22  # Qwen3.5-9B port (27B: 44)
 FOIL_SEED = 0
 MAX_TOKENS = 16000  # every stage: a 60-concept response echoes every concept back
 STAGE_P_TEMPERATURE = 0.0

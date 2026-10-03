@@ -93,8 +93,8 @@ class JLens:
 
     name: str = "jlens"
     layers: list[int] | None = None
-    repo: str = "neuronpedia/jacobian-lens"
-    filename: str = "qwen3.6-27b/jlens/Salesforce-wikitext/Qwen3.6-27B_jacobian_lens_n1000.pt"
+    repo: str = "camilablank/workspace-lenses"  # Qwen3.5-9B port: the paper-recipe n=25 J-lens (no n=1000 wikitext lens exists for 9B)
+    filename: str = "qwen3.5-9b/j-lens/lens.pt"
     k: int = TOP_K
     _b: Backend | None = field(default=None, repr=False)
     _jac: Any = field(default=None, repr=False)
@@ -132,7 +132,7 @@ class RLens:
     name: str = "rlens"
     layers: list[int] | None = None
     repo: str = "camilablank/workspace-lenses"
-    filename: str = "qwen3.6-27b/r-lens/lens.pt"
+    filename: str = "qwen3.5-9b/r-lens/lens.pt"
     k: int = TOP_K
     _b: Backend | None = field(default=None, repr=False)
     _jac: Any = field(default=None, repr=False)

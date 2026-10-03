@@ -31,7 +31,7 @@ from wsbench.results import FamilyResult, completeness
 from .concept_pr import ItemScore, bootstrap_ci, is_content_token, score_item
 
 M = 10
-HEADLINE_LAYER = 44
+HEADLINE_LAYER = 22  # Qwen3.5-9B port (27B: 44)
 MAX_REJECT_RATE = 0.05  # JLENS_PR_MAX_REJECT_RATE of the source stage script
 CHANCE_LABEL = "shuffled-partner foil precision (measured, see extras.foil)"
 FAILURE_STATUSES = ("missing_a", "incomplete_b", "missing_p")

@@ -1,6 +1,7 @@
 {
  "family": "association",
  "gate": "Qwen3.6-27B behavioral: >=8/10 correct at temp 0.7 (greedy-verified first); association scored against association_aliases.json (phrase-aware, echo-guarded); poetry scored by committed rhyme",
+ "eval_render_note": "EVAL RENDER: feed `prompt` verbatim as plain text, NO chat template (directed-modulation is the only chat-templated family). `gate_variant` records how the item was behaviorally verified and does NOT affect the eval read.",
  "items": [
   {
    "name": "pt-carnaval",
@@ -105,57 +106,6 @@
    }
   },
   {
-   "name": "nasa",
-   "prompt": "The countdown hit zero and the rumble under her seat became a roar that pressed her flat, the blue curve of the world falling away through the tiny window.",
-   "intermediates": [
-    "NASA"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "neighbors",
-   "prompt": "She knew what time his car left and what night the bins went out, and had waved at him for six years without learning either of his names.",
-   "intermediates": [
-    "neighbors"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "noir",
-   "prompt": "The neon bled through the blinds in stripes across the desk, and the dame in the doorway had a problem and a cigarette and no intention of telling him which was which.",
-   "intermediates": [
-    "noir"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "pennsylvania",
    "prompt": "The scrapple was already on the table when he came down, and through the window the hex sign on the neighbor's barn caught the early light.",
    "intermediates": [
@@ -224,40 +174,6 @@
    }
   },
   {
-   "name": "unesco",
-   "prompt": "The emblem had been Julian Huxley's idea, or near enough, and now it hung beside a thousand temple gates and a thousand ruins the world had agreed to keep.",
-   "intermediates": [
-    "UNESCO"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "winter",
-   "prompt": "The light was already failing by four and the radiators clanked awake one by one through the building.",
-   "intermediates": [
-    "winter"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "bf-baseball",
    "prompt": "He tipped his cap on the mound, checked the runner at first, and threw the full-count pitch.",
    "intermediates": [
@@ -292,44 +208,10 @@
    }
   },
   {
-   "name": "bf-christmas",
-   "prompt": "The children left cookies by the fireplace and were asleep long before the sound of sleigh bells.",
-   "intermediates": [
-    "Christmas"
-   ],
-   "source": "staging",
-   "consistency": 1.0,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "bf-coffee",
    "prompt": "The line stretched out the door all morning, and the grinder behind the counter never stopped whirring.",
    "intermediates": [
     "coffee"
-   ],
-   "source": "staging",
-   "consistency": 1.0,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "bf-fire",
-   "prompt": "Smoke curled under the door, the alarm shrieked, and the extinguisher's pin was already pulled.",
-   "intermediates": [
-    "fire"
    ],
    "source": "staging",
    "consistency": 1.0,
@@ -360,44 +242,10 @@
    }
   },
   {
-   "name": "bf-library",
-   "prompt": "She whispered at the front desk, stamped the due date, and wheeled the cart between the silent shelves.",
-   "intermediates": [
-    "library"
-   ],
-   "source": "staging",
-   "consistency": 1.0,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "bf-olympics",
    "prompt": "Five interlocking rings hung above the stadium as the torch ended its journey across continents.",
    "intermediates": [
     "Olympics"
-   ],
-   "source": "staging",
-   "consistency": 1.0,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "bf-paris",
-   "prompt": "From the iron tower's summit they watched the Seine curve past the Louvre in the evening light.",
-   "intermediates": [
-    "Paris"
    ],
    "source": "staging",
    "consistency": 1.0,
@@ -479,23 +327,6 @@
    }
   },
   {
-   "name": "bf-vampire",
-   "prompt": "He never appeared in mirrors, declined the garlic bread, and asked, politely, to be invited in.",
-   "intermediates": [
-    "vampire"
-   ],
-   "source": "staging",
-   "consistency": 1.0,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "bf-wedding",
    "prompt": "She walked slowly down the aisle as the organ played and everyone rose from the pews.",
    "intermediates": [
@@ -513,61 +344,10 @@
    }
   },
   {
-   "name": "bf2-ballet",
-   "prompt": "She rose to the very tips of her shoes as the orchestra swelled, and thirty tutus turned in perfect unison behind her.",
-   "intermediates": [
-    "ballet"
-   ],
-   "source": "staging",
-   "consistency": 1.0,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "bf2-boxing",
-   "prompt": "He touched gloves at the center of the ring, kept his chin tucked, and listened for the bell through the crowd.",
-   "intermediates": [
-    "boxing"
-   ],
-   "source": "staging",
-   "consistency": 1.0,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "bf2-earthquake",
    "prompt": "The chandelier swayed first, then every glass in the cabinet chattered, and the dog was under the table before the first shelf let go.",
    "intermediates": [
     "earthquake"
-   ],
-   "source": "staging",
-   "consistency": 1.0,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "bf2-graduation",
-   "prompt": "The tassels turned in one motion, the caps went up, and two hundred families lost sight of their own child in the air.",
-   "intermediates": [
-    "graduation"
    ],
    "source": "staging",
    "consistency": 1.0,
@@ -700,40 +480,6 @@
    }
   },
   {
-   "name": "b3-as-lifeguard",
-   "prompt": "The whistle blew twice, and every child in the shallow end froze while she climbed down from her red chair.",
-   "intermediates": [
-    "lifeguard"
-   ],
-   "source": "staging_b3",
-   "consistency": 1.0,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "b3-as-magician",
-   "prompt": "He rolled up both sleeves, showed the hat empty on the inside, and the front row still gasped at the rabbit.",
-   "intermediates": [
-    "magician"
-   ],
-   "source": "staging_b3",
-   "consistency": 1.0,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "b3-as-marathon",
    "prompt": "At mile twenty the cheering blurred into one long sound, and volunteers held out paper cups of water.",
    "intermediates": [
@@ -802,44 +548,10 @@
    }
   },
   {
-   "name": "b3-as-subway",
-   "prompt": "The doors chimed shut as the platform slid away, and everyone swayed together into the tunnel's dark.",
-   "intermediates": [
-    "subway"
-   ],
-   "source": "staging_b3",
-   "consistency": 1.0,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "b3-as-tennis",
    "prompt": "She tossed the ball high, and the serve cracked off her strings before the applause had faded.",
    "intermediates": [
     "tennis"
-   ],
-   "source": "staging_b3",
-   "consistency": 1.0,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "b3-as-troy",
-   "prompt": "The city woke to find the siege camp empty, and at the gates a towering wooden gift.",
-   "intermediates": [
-    "Troy"
    ],
    "source": "staging_b3",
    "consistency": 1.0,
@@ -870,61 +582,10 @@
    }
   },
   {
-   "name": "b3-as-vineyard",
-   "prompt": "They moved down the rows with shears, filling crates with heavy purple clusters before the autumn rain.",
-   "intermediates": [
-    "vineyard"
-   ],
-   "source": "staging_b3",
-   "consistency": 1.0,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "b4-as-auction",
    "prompt": "The paddles rose faster as the gavel hovered, and the man on the phone nodded one more time.",
    "intermediates": [
     "auction"
-   ],
-   "source": "staging_b3",
-   "consistency": 1.0,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "b4-as-avalanche",
-   "prompt": "The mountainside let go with a crack, and the white wall swallowed the tree line in seconds.",
-   "intermediates": [
-    "avalanche"
-   ],
-   "source": "staging_b3",
-   "consistency": 1.0,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "b4-as-dominoes",
-   "prompt": "One tile clicked into the next, and the whole spiral rippled down in a long clatter.",
-   "intermediates": [
-    "dominoes"
    ],
    "source": "staging_b3",
    "consistency": 1.0,
@@ -989,216 +650,12 @@
    }
   },
   {
-   "name": "b5-as-knitting",
-   "prompt": "The needles clicked through the evening news, and a sleeve slowly grew across her lap.",
-   "intermediates": [
-    "knitting"
-   ],
-   "source": "staging_b3",
-   "consistency": 1.0,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "b5-as-pinocchio",
-   "prompt": "With every answer the puppet gave, the carpenter watched the small wooden nose grow longer.",
-   "intermediates": [
-    "Pinocchio"
-   ],
-   "source": "staging_b3",
-   "consistency": 1.0,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "de-konig",
-   "prompt": "Er saß, wo sein Vater gesessen hatte, und spürte das Gewicht jedes Blickes im Saal, der auf das Wort wartete, das zum Befehl würde.",
-   "intermediates": [
-    "König"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.9,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "de-oktoberfest",
-   "prompt": "Die Maßkrüge stießen unter dem Zeltdach zusammen, und die Blaskapelle spielte zum dritten Mal dasselbe Lied.",
-   "intermediates": [
-    "Oktoberfest"
-   ],
-   "source": "staging_b3",
-   "consistency": 0.9,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "cia",
-   "prompt": "He'd used three names in as many cities and the folder on the table had more black bars than words, and none of them were his either.",
-   "intermediates": [
-    "CIA"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.9,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "dawn",
-   "prompt": "The first bird started before the sky did, and the cold had that thin quality that wouldn't last another hour.",
-   "intermediates": [
-    "dawn"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.9,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "fired",
-   "prompt": "The box on his desk wasn't the one he came in with, and through the glass wall he could see HR waiting by the elevator.",
-   "intermediates": [
-    "fired"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.9,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "free-h",
-   "prompt": "The gate buzzed and the first thing he noticed was how big the sky looked without a fence cutting it in half.",
-   "intermediates": [
-    "free"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.9,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "grief",
    "prompt": "She kept his coffee mug on the counter, washed it every morning and put it back, though no one had used it in eleven months.",
    "intermediates": [
     "grief"
    ],
    "source": "jlens_source",
-   "consistency": 0.9,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "history-h",
-   "prompt": "He ran his fingers over the names carved into the stone, each one a boy his grandfather had mentioned once and never again.",
-   "intermediates": [
-    "history"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.9,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "love-h",
-   "prompt": "They'd reached the point where silences didn't need filling, and her hand found his across the table without either of them looking.",
-   "intermediates": [
-    "love"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.9,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "space-h",
-   "prompt": "He let go of the handrail and for the first time in his life, there was no direction that counted as down.",
-   "intermediates": [
-    "space"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.9,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "bf-dentist",
-   "prompt": "She flossed twice that morning, then spent an hour answering questions asked around a mirror in her mouth.",
-   "intermediates": [
-    "dentist"
-   ],
-   "source": "staging",
    "consistency": 0.9,
    "gate_variant": "referent",
    "eval_render": "plain",
@@ -1229,46 +686,12 @@
    }
   },
   {
-   "name": "bf2-beekeeping",
-   "prompt": "He puffed smoke gently at the hive's entrance before lifting the frame, heavy and golden, into the light.",
-   "intermediates": [
-    "beekeeping"
-   ],
-   "source": "staging",
-   "consistency": 0.9,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "bf2-volcano",
    "prompt": "The mountain had smoked for a week, and now the villagers watched the orange glow crest the ridge at midnight.",
    "intermediates": [
     "volcano"
    ],
    "source": "staging",
-   "consistency": 0.9,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "b3-as-birthday",
-   "prompt": "The lights went out, a small glow came around the corner, and everyone started singing at once.",
-   "intermediates": [
-    "birthday"
-   ],
-   "source": "staging_b3",
    "consistency": 0.9,
    "gate_variant": "referent",
    "eval_render": "plain",
@@ -1331,112 +754,10 @@
    }
   },
   {
-   "name": "b3-as-quixote",
-   "prompt": "He lowered his lance at the great arm-waving giants, while his squire shouted that they were only mills.",
-   "intermediates": [
-    "Quixote"
-   ],
-   "source": "staging_b3",
-   "consistency": 0.9,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "b3-as-sauna",
-   "prompt": "They sat wrapped in towels on the cedar benches while the stones hissed with each ladle of water.",
-   "intermediates": [
-    "sauna"
-   ],
-   "source": "staging_b3",
-   "consistency": 0.9,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "b3-as-skiing",
-   "prompt": "The lift rocked over the pines, and at the summit she clicked her boots in and pushed off into the powder.",
-   "intermediates": [
-    "skiing"
-   ],
-   "source": "staging_b3",
-   "consistency": 0.9,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "b3-as-weightlifting",
-   "prompt": "Chalk dust hung in the air as he set his grip, and the plates clanged together on the way up.",
-   "intermediates": [
-    "weightlifting"
-   ],
-   "source": "staging_b3",
-   "consistency": 0.9,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "b4-as-juggling",
-   "prompt": "Five pins traced their arcs above his hands, and the crowd counted each catch out loud.",
-   "intermediates": [
-    "juggling"
-   ],
-   "source": "staging_b3",
-   "consistency": 0.9,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "b5-as-icefishing",
    "prompt": "He drilled through two feet of ice, dropped the line into the dark circle, and pulled his stool closer to the heater.",
    "intermediates": [
     "ice fishing"
-   ],
-   "source": "staging_b3",
-   "consistency": 0.9,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "b5-as-piano",
-   "prompt": "The metronome ticked while small fingers stumbled through the scales, and the teacher counted softly along.",
-   "intermediates": [
-    "piano"
    ],
    "source": "staging_b3",
    "consistency": 0.9,
@@ -1467,63 +788,12 @@
    }
   },
   {
-   "name": "es-siesta",
-   "prompt": "Las persianas bajaron después del almuerzo, las calles quedaron vacías bajo el sol, y nadie contestó el teléfono hasta las cinco.",
-   "intermediates": [
-    "siesta"
-   ],
-   "source": "staging_b3",
-   "consistency": 0.8,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "it-mercato",
    "prompt": "Le bancarelle si riempirono all'alba di casse di pesce e cesti di pomodori, e le voci dei venditori coprivano ogni contrattazione.",
    "intermediates": [
     "mercato"
    ],
    "source": "staging_b3",
-   "consistency": 0.8,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "desert",
-   "prompt": "The horizon shook in the heat and his shadow had shrunk to a puddle at his feet; the last of the water was three swallows, maybe four.",
-   "intermediates": [
-    "desert"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.8,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "divorce",
-   "prompt": "She signed on the line her lawyer pointed to, slid the pen across the table, and didn't wait for him to pick it up.",
-   "intermediates": [
-    "divorce"
-   ],
-   "source": "jlens_source",
    "consistency": 0.8,
    "gate_variant": "referent",
    "eval_render": "plain",
@@ -1558,23 +828,6 @@
     "time"
    ],
    "source": "jlens_source",
-   "consistency": 0.8,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "bf2-barber",
-   "prompt": "The chair pumped up two notches, the cape snapped shut at his neck, and the scissors began their small talk.",
-   "intermediates": [
-    "barber"
-   ],
-   "source": "staging",
    "consistency": 0.8,
    "gate_variant": "referent",
    "eval_render": "plain",
@@ -1669,41 +922,6 @@
      -1
     ]
    }
-  },
-  {
-   "name": "b3-as-moses",
-   "prompt": "The staff came down, the waters stood up in walls, and a nation walked across on the dry seabed.",
-   "intermediates": [
-    "Moses"
-   ],
-   "source": "staging_b3",
-   "consistency": 0.8,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "b3-as-surgery",
-   "prompt": "She snapped the second glove, the tray of instruments gleamed, and the monitor beeped its steady time.",
-   "intermediates": [
-    "surgery"
-   ],
-   "source": "staging_b3",
-   "consistency": 0.8,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
   }
- ],
- "eval_render_note": "EVAL RENDER: feed `prompt` verbatim as plain text, NO chat template (directed-modulation is the only chat-templated family). `gate_variant` records how the item was behaviorally verified and does NOT affect the eval read."
+ ]
 }

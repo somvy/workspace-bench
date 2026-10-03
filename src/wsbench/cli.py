@@ -535,7 +535,7 @@ class Produce(Command):
     def __init__(self) -> None:
         super().__init__()
         self.method = "logit_lens"
-        self.model = "Qwen/Qwen3.6-27B"
+        self.model = "Qwen/Qwen3.5-9B"
         self.family = ""
         self.text = ""
         self.chat = False
