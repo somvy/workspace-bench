@@ -156,10 +156,13 @@
   "jailbreak_recognition": {
    "rule": "unchanged: no model gate, renders byte-identical to Qwen3.6-27B",
    "kept": 86
+  },
+  "hallucination": {
+   "rule": "rebuilt by scripts/port/hallucination.py: same prompts, subject's own on-policy responses, sites re-derived",
+   "kept": 149
   }
  },
  "deferred": {
-  "hallucination": "bank is Qwen3.6-27B's own responses; needs 9B responses + labels (emptied on this branch)",
   "agentic_misalignment": "needs 9B rollouts that misbehave (emptied on this branch)",
   "jlens_concept_pr": "needs 9B rollouts, activations and source prompts (private repo) (emptied on this branch)"
  }

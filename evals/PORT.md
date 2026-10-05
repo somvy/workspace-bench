@@ -1,8 +1,9 @@
 # Qwen3.5-9B port (branch `port-qwen3.5-9b`)
 
-> **Not ported, emptied on this branch:** hallucination, agentic_misalignment, jlens_concept_pr. Their banks are
-> Qwen3.6-27B token ids and rollouts. **Below 20 items:** brew 0, relational_multihop 18, conjunctive_association 10.
-> **Judging** of every non-regex family, and the token-lens summarizer, still go through OpenRouter (Gemini 3.8 Flash).
+> **Not ported, emptied on this branch:** agentic_misalignment, jlens_concept_pr. Their banks are
+> Qwen3.6-27B token ids and rollouts. **hallucination** is rebuilt on the 9B's own responses (below). **Below 20 items:** brew 0, relational_multihop 18, conjunctive_association 10.
+> **Judging** of every non-regex family, and the token-lens summarizer, go through OpenRouter (Gemini 3.8 Flash) by
+> default, or through a local server with `WSBENCH_BASE_URL` (README, "Local judge").
 
 Every bank on this branch is the Qwen3.6-27B bank from `main`, filtered to the items `Qwen/Qwen3.5-9B` (post-trained) passes,
 with the model-specific golds rebuilt. `PORT.json` has per-family counts and rules. Build scripts: `scripts/port/` (README there).
@@ -34,6 +35,18 @@ conservative subset.
   - Blind lucky-guessing floor (Qwen3.6-27B guesser, 5 draws T=1): original 0.193 (bench's frozen Gemini number 0.195),
     mixed 0.171, rebuilt 0.177; chance 0.20.
 
+- **hallucination**: same 149 prompts; the 9B answers each one on-policy (vLLM, T=1.0, top-p 1.0, top-k 0, 512 new
+  tokens, seed 7, empty think block, EOS dropped; the original used HF generate with the same settings). Read sites
+  are re-derived on the 9B's tokens. The source repo's site code (`hallucination_bench.sites`) is not public;
+  `scripts/port/hallucination.py` reimplements it from the bank's meta, and its `check` mode reproduces all 1,123
+  original sites (position, token, kind, char offset) from the Qwen3.6-27B capture rows, 149/149 items.
+  - Result: 149 items (none dropped), 1,127 sites (original 1,123); kinds clause 438, sentence 305, markup 217,
+    newline 120, quote 47. The 9B's responses are shorter (median 173 tokens vs 228); 38 hit the 512-token cap
+    (original 35). Prompt renders are token-identical to the original bank, 149/149.
+  - Checked end to end: logit-lens readouts on the 9B (5,635 rows = 1,127 sites x 5 layers), then a 4-item slice
+    judged by local Gemma-4-31B-it through summarizer, span judge and verify, 0 unjudged cells.
+  - The original items were "screened" (source meta); no screening was redone on the 9B's responses.
+
 ## Unchanged
 multi_concept_directed_modulation and jailbreak_recognition have no model gate. `tplcheck.py`: Qwen3.5-9B has the same
 tokenizer and renders every read render of every family to identical token ids, so their positions carry over.
@@ -53,7 +66,8 @@ Smoke test (typo_mt): with the cosine readout the J-lens peaks at layer 10 and f
 
 ## Dropped / not ported
 - Fewer than 20 items, left in place but flagged in PORT.json: brew 0, relational_multihop 18, conjunctive_association 10.
-- Not ported, item lists emptied: hallucination (needs the 9B's own responses + labels), agentic_misalignment (needs 9B
-  rollouts), jlens_concept_pr (needs 9B rollouts and activations; source prompts are private).
+- Not ported, item lists emptied: agentic_misalignment (needs 9B rollouts), jlens_concept_pr (needs 9B rollouts and
+  activations; source prompts are private).
 - The NLA method still points at the 27B NLA; no 9B NLA exists.
-- `tests/golden` pins the original banks and will fail on this branch.
+- `tests/golden` and the per-family bank tests (`test_bank*`, golden prompts, item counts) pin the original banks and
+  fail on this branch (119 tests); the code tests pass.

@@ -21,6 +21,7 @@ from dataclasses import dataclass
 from typing import Any, Literal
 
 OPENROUTER = "https://openrouter.ai/api/v1"
+BASE_URL_ENV = "WSBENCH_BASE_URL"  # OpenAI-compatible server (e.g. local vLLM) that replaces OpenRouter
 _TRANSIENT = (408, 409, 429, 500, 502, 503, 504, 529)
 _FATAL = ("AuthenticationError", "PermissionDeniedError", "NotFoundError")
 _ATTEMPTS = 12
@@ -66,6 +67,8 @@ def api_key(model: str) -> str:
         if not key:
             raise JudgeConfigError(f"ANTHROPIC_API_KEY is missing (needed for {model})")
         return key
+    if os.environ.get(BASE_URL_ENV):
+        return os.environ.get("OPENROUTER_API_KEY") or "local"
     key = os.environ.get("OPENROUTER_API_KEY", "")
     if not key.startswith("sk-or-"):
         raise JudgeConfigError("OPENROUTER_API_KEY is missing or not an OpenRouter key (sk-or-…)")
@@ -137,7 +140,7 @@ def _make_client(route: str, key: str) -> Any:
         return AsyncAnthropic(api_key=key, max_retries=0)
     from openai import AsyncOpenAI
 
-    return AsyncOpenAI(api_key=key, base_url=OPENROUTER, max_retries=0)
+    return AsyncOpenAI(api_key=key, base_url=os.environ.get(BASE_URL_ENV) or OPENROUTER, max_retries=0)
 
 
 # ---------------------------------------------------------------- one call

@@ -1,5 +1,8 @@
 # Hallucination (chat)
 
+> **Branch `port-qwen3.5-9b`:** the bank below is rebuilt on Qwen3.5-9B's own responses (149 items, 1,127 sites);
+> see `evals/PORT.md`. The text describes the original Qwen3.6-27B bank.
+
 **Does an activation-reading lens make things up about the conversation it is reading?**
 Qwen3.6-27B answers 149 real chat prompts; the lens reads the model's activation at summary
 positions (punctuation and newlines) of the model's own response, and the judge checks every

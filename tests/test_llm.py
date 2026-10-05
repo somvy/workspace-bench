@@ -134,6 +134,15 @@ def test_api_key_missing_and_malformed(monkeypatch):
     assert llm.api_key(CLAUDE) == "sk-ant-ok"
 
 
+def test_base_url_server_needs_no_openrouter_key(monkeypatch):
+    monkeypatch.setenv(llm.BASE_URL_ENV, "http://localhost:8000/v1")
+    monkeypatch.delenv("OPENROUTER_API_KEY", raising=False)
+    assert llm.api_key("google/gemma-4-31B-it") == "local"
+    assert str(llm._make_client("openrouter", "local").base_url).startswith("http://localhost:8000/v1")
+    monkeypatch.delenv(llm.BASE_URL_ENV)
+    assert str(llm._make_client("openrouter", "sk-or-x").base_url).startswith(llm.OPENROUTER)
+
+
 def test_schema_block_shape():
     assert SCHEMA == {
         "name": "t",

@@ -11,3 +11,5 @@ Run in order. Paths are hard-coded to the machines they ran on (`/workspace` = a
 3. `tplcheck.py`: token-id equality of every read render under the Qwen3.6-27B and Qwen3.5-9B tokenizers.
 4. `assemble.py`: reads the original banks from `main`, writes the filtered/rebuilt banks + `evals/PORT.json`. Idempotent.
 5. `fullcheck.sh`: no-API smoke test: logit-lens readouts for every family on the 9B, then `wsbench run all=True dry_run=True`.
+6. `hallucination.py check` then `hallucination.py build` (vLLM venv, 1 GPU): reproduces the original bank's read
+   sites, then rebuilds `evals/hallucination/` on the subject's own responses and updates `PORT.json`.

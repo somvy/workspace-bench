@@ -33,6 +33,26 @@ uv run wsbench list              # per family: group, items, metric, judge, prom
 Keys are read from the environment (export them, never commit them): `OPENROUTER_API_KEY=sk-or-...`
 for every Gemini family, `ANTHROPIC_API_KEY` for the two Claude-pinned ones.
 
+### Local judge (any OpenAI-compatible server)
+
+`WSBENCH_BASE_URL` sends every non-Claude call (judge, summarizer, stage-2 verify) to that server
+instead of OpenRouter; no OpenRouter key is needed. Name the served model with `judge_model=`
+(the summarizer follows it). A run with `WSBENCH_BASE_URL` set is never `pinned_instrument`, so it
+is never a number of record. Claude-pinned families still go to Anthropic unless `judge_model=`
+names a non-Claude model. The cache is keyed by model name, so do not serve a local model under the
+name of an OpenRouter model.
+
+```bash
+vllm serve google/gemma-4-31B-it --port 8000 --max-model-len 16384   # one 80 GB GPU, or --tensor-parallel-size 2
+export WSBENCH_BASE_URL=http://localhost:8000/v1
+uv run wsbench run all=True readouts_root=outputs/readouts/jlens judge_model=google/gemma-4-31B-it out=outputs/judged/jlens_gemma
+```
+
+Calibration (hallucination family only, 858 oracle-lens readouts of Qwen3.6-27B, Gemini 3.8 Flash
+as reference): Gemma-4-31B-it reaches F1 0.70 on the "hallucinated" label (Gemini against its own
+rerun: 0.905), with recall 0.83 and precision 0.60, so it over-flags (rate 0.40 vs 0.29). Other
+families are not calibrated. Use it for iteration; re-judge with the pinned model for reported numbers.
+
 ### Score one arm end to end
 
 ```bash

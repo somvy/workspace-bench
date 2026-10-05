@@ -21,8 +21,8 @@ REFUSAL = {"none", "n", "i", "no", "nothing", "unknown", "not", "as"}  # never a
 MORAL_COMMIT, MORAL_MINORITY = 8, 2  # committed: majority >= 8/10 and greedy agrees; deliberative: minority >= 2/10 + reasons on both sides
 MORAL_VARIANT = "mixed"  # user's choice: keep bank reasons where the subject agrees with the bank, rebuild the rest
 UNCHANGED = ["multi_concept_directed_modulation", "jailbreak_recognition"]  # no model gate; renders byte-identical (tplcheck.py)
-DEFERRED = {"hallucination": "bank is Qwen3.6-27B's own responses; needs 9B responses + labels",
-            "agentic_misalignment": "needs 9B rollouts that misbehave",
+HAL_RULE = "rebuilt by scripts/port/hallucination.py: same prompts, subject's own on-policy responses, sites re-derived"
+DEFERRED = {"agentic_misalignment": "needs 9B rollouts that misbehave",
             "jlens_concept_pr": "needs 9B rollouts, activations and source prompts (private repo)"}
 
 SIDE = {"yes": "yes", "true": "yes", "no": "no", "false": "no"}
@@ -247,8 +247,8 @@ def main():
     # 8. not-ported families are emptied: their banks carry Qwen3.6-27B ids/rollouts and would score silently on the 9B
     raw = lambda rel: json.loads(subprocess.run(["git", "-C", str(BENCH), "show", f"main:evals/{rel}"], capture_output=True, check=True).stdout)
     put = lambda rel, d: (BENCH / "evals" / rel).write_text(json.dumps(d, ensure_ascii=False, indent=1) + "\n")
-    put("hallucination/items.json", {**raw("hallucination/items.json"), "items": []})
-    put("hallucination/capture_rows.json", [])
+    hal = json.loads((BENCH / "evals/hallucination/items.json").read_text())  # owned by hallucination.py, left as is
+    manifest["families"]["hallucination"] = {"rule": HAL_RULE, "kept": len(hal["items"]) if hal["meta"]["model"] == SUBJECT_ID else 0}
     put("agentic_misalignment/items.json", {**raw("agentic_misalignment/items.json"), "items": [], "n_items": 0})
     put("jlens_concept_pr/manifest.json", {**raw("jlens_concept_pr/manifest.json"), "prompts": []})
     manifest["deferred"] = {f: why + " (emptied on this branch)" for f, why in DEFERRED.items()}

@@ -53,3 +53,10 @@ def test_reasoning_defaults_per_route():
 def test_aux_models_default_empty():
     assert dict(JudgeConfig().aux_models) == {}
     assert JudgeConfig().prompt_version == "v1"
+
+
+def test_base_url_server_is_never_pinned():
+    from wsbench.llm import BASE_URL_ENV
+
+    r = resolve(JudgeConfig(), env={BASE_URL_ENV: "http://localhost:8000/v1"})
+    assert r.model == DEFAULT_JUDGE and r.source == "family" and r.pinned is False

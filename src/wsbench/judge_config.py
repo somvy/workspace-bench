@@ -4,7 +4,7 @@ from collections.abc import Mapping
 from dataclasses import dataclass, field
 from typing import Literal
 
-from wsbench.llm import route
+from wsbench.llm import BASE_URL_ENV, route
 
 DEFAULT_JUDGE = "google/gemini-3.8-flash"
 DEFAULT_REASONING = {"effort": "minimal"}  # Gemini cannot turn reasoning off
@@ -23,7 +23,7 @@ class JudgeConfig:
 class ResolvedJudge:
     model: str
     reasoning: dict | None
-    pinned: bool  # True iff model == config.model (no override took effect)
+    pinned: bool  # True iff model == config.model and no WSBENCH_BASE_URL server replaces OpenRouter
     source: Literal["flag", "env", "family"]
 
 
@@ -45,5 +45,8 @@ def resolve(
     else:
         reasoning = None
     return ResolvedJudge(
-        model=model, reasoning=reasoning, pinned=model == config.model, source=source
+        model=model,
+        reasoning=reasoning,
+        pinned=model == config.model and not env.get(BASE_URL_ENV),
+        source=source,
     )
