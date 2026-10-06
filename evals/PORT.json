@@ -41,39 +41,45 @@
    "rule": "chat gate",
    "bank": 100,
    "asked": 100,
-   "kept": 37
+   "kept": 37,
+   "probe_token_lens": "restamped with Qwen/Qwen2.5-7B-Instruct (scripts/port/restamp.py); {'gained': 0, 'lost': 0} creditable forms vs the bank"
   },
   "multihop_mt": {
    "rule": "chat gate",
    "bank": 100,
    "asked": 100,
-   "kept": 21
+   "kept": 21,
+   "probe_token_lens": "restamped with Qwen/Qwen2.5-7B-Instruct (scripts/port/restamp.py); {'gained': 0, 'lost': 0} creditable forms vs the bank"
   },
   "multilingual_mt": {
    "rule": "chat gate",
    "bank": 100,
    "asked": 100,
    "kept": 7,
-   "dropped": "fewer than 20 passing items"
+   "dropped": "fewer than 20 passing items",
+   "probe_token_lens": "restamped with Qwen/Qwen2.5-7B-Instruct (scripts/port/restamp.py); {'gained': 3, 'lost': 0} creditable forms vs the bank"
   },
   "multilingual_multihop": {
    "rule": "chat gate",
    "bank": 98,
    "asked": 98,
    "kept": 13,
-   "dropped": "fewer than 20 passing items"
+   "dropped": "fewer than 20 passing items",
+   "probe_token_lens": "restamped with Qwen/Qwen2.5-7B-Instruct (scripts/port/restamp.py); {'gained': 0, 'lost': 0} creditable forms vs the bank"
   },
   "multilingual_typo": {
    "rule": "chat gate",
    "bank": 100,
    "asked": 100,
-   "kept": 33
+   "kept": 33,
+   "probe_token_lens": "restamped with Qwen/Qwen2.5-7B-Instruct (scripts/port/restamp.py); {'gained': 10, 'lost': 0} creditable forms vs the bank"
   },
   "typo_mt": {
    "rule": "chat gate",
    "bank": 100,
    "asked": 100,
-   "kept": 60
+   "kept": 60,
+   "probe_token_lens": "restamped with Qwen/Qwen2.5-7B-Instruct (scripts/port/restamp.py); {'gained': 0, 'lost': 0} creditable forms vs the bank"
   },
   "arithmetic_intermediates": {
    "rule": "chat gate",

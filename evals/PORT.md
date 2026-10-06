@@ -54,6 +54,13 @@ compares the selected text.
   -7 = `<|im_start|>`); mapped by token identity to -4 / -3. They were the best cells on the 27B, so on the 7B they are
   a guess: use `opts=cells=all` until they are re-selected.
 - **hallucination** is captured token ids, rebuilt above.
+- **The six multi-token families** (typo_mt, multihop_mt, multilingual_mt, basic_readout_mt, multilingual_multihop,
+  multilingual_typo) credit an answer form only when it is strictly multi-token under the probed model's tokenizer
+  (`probe_token_lens` > 1), so a top-k token lens cannot hit it with one token. The counts are per-tokenizer;
+  `scripts/port/restamp.py` restamps them with Qwen2.5's tokenizer. The rule (minimum token count over as-is / lower /
+  title case, bare and with a leading space) reproduces all 4,600 original Qwen3.6-27B stamps exactly (`restamp.py check`).
+  On Qwen2.5 counts mostly go up (smaller vocabulary): 13 forms become creditable (multilingual_mt 3, multilingual_typo 10),
+  none lose credit, no item is dropped.
 
 ## Layers
 Every layer l becomes min(int(l * 28 / 64 + 0.5), 27) (64 to 28 layers): GRID [9, 11, 12, 14, 16, 18, 19, 21, 23, 25, 26],
@@ -65,8 +72,9 @@ agentic [*GRID, 27]; producer default 19.
   then `wsbench run all=True dry_run=True` (exit 0): every family reaches its judge with the expected item count, the six
   regex families score with 0 missing cells, hallucination expects 5,480 cells (1,096 sites x 5 layers), 0 missing.
   No judge call was made; no lens has been scored on this branch.
-- Tests: the code tests pass; 133 tests that pin the original banks (item counts, golden prompts, bank positions/layers)
-  fail, as on the 9B branch (119 there; the extra ones pin jailbreak positions, typo/typo_mt items and 27B layer numbers).
+- Tests: the code tests pass; 135 tests that pin the original banks (item counts, golden prompts, bank positions/layers)
+  fail, as on the 9B branch (119 there; the extra ones pin jailbreak positions, typo/typo_mt items, 27B layer numbers
+  and the multi-token stamps). With main's banks swapped in, this branch's code fails 5 tests, all pinning 27B layer numbers.
 
 ## Not ported
 - agentic_misalignment (needs 7B rollouts), jlens_concept_pr (needs 7B rollouts and activations; source prompts are private).

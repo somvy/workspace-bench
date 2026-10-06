@@ -17,5 +17,7 @@ Run in order. Paths are hard-coded to the machines they ran on (`/workspace` = a
    tokenizers), then after `assemble.py`: `remap.py check` (rebuilds the original jailbreak reads exactly) and
    `remap.py write` (jailbreak reads on the subject's render, arithmetic cell offsets by tail-token identity).
    `remap.py write` is not idempotent: run it once on a fresh `assemble.py` output.
+   Then `restamp.py check` (rebuilds the original `probe_token_lens` stamps of the six multi-token banks exactly) and
+   `restamp.py write` (restamps them with the subject tokenizer, drops items left without a creditable required form).
 Note: `port.py gen` reads the banks of the current checkout; run it on the original (main) banks, not on a branch whose
 banks are already filtered for another subject.
