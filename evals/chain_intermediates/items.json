@@ -30,7 +30,7 @@
     "Halve it, rounding down.",
     "Halve it, rounding down."
    ],
-   "start": 27,
+   "start": 26,
    "intermediates": [
     13,
     6
@@ -40,26 +40,26 @@
     null
    ],
    "answer": 3,
-   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nHalve it, rounding down.\nHalve it, rounding down.\nHalve it, rounding down.\nThe starting number is 27. What is the final number? Reply with only the final number, nothing else.",
-   "prompt_first": "Start with the number 27 and apply the steps below, in order.\nHalve it, rounding down.\nHalve it, rounding down.\nHalve it, rounding down.\nWhat is the final number? Reply with only the final number, nothing else.",
+   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nHalve it, rounding down.\nHalve it, rounding down.\nHalve it, rounding down.\nThe starting number is 26. What is the final number? Reply with only the final number, nothing else.",
+   "prompt_first": "Start with the number 26 and apply the steps below, in order.\nHalve it, rounding down.\nHalve it, rounding down.\nHalve it, rounding down.\nWhat is the final number? Reply with only the final number, nothing else.",
    "literals": [
-    27
+    26
    ],
    "distractors": [
     [
-     27,
+     26,
      3,
-     14,
+     12,
      11
     ],
     [
-     27,
+     26,
      3,
-     5,
+     7,
      4
     ]
    ],
-   "name": "chain-d3p-0711",
+   "name": "chain-d3p-0768",
    "gate": {
     "last": {
      "ok": true,
@@ -142,132 +142,6 @@
    "depth": 3,
    "cond": false,
    "kinds": [
-    "sub",
-    "sub",
-    "add"
-   ],
-   "steps": [
-    "Subtract 8.",
-    "Subtract 2.",
-    "Add 6."
-   ],
-   "start": 25,
-   "intermediates": [
-    17,
-    15
-   ],
-   "untaken": [
-    null,
-    null
-   ],
-   "answer": 21,
-   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nSubtract 8.\nSubtract 2.\nAdd 6.\nThe starting number is 25. What is the final number? Reply with only the final number, nothing else.",
-   "prompt_first": "Start with the number 25 and apply the steps below, in order.\nSubtract 8.\nSubtract 2.\nAdd 6.\nWhat is the final number? Reply with only the final number, nothing else.",
-   "literals": [
-    2,
-    6,
-    8,
-    25
-   ],
-   "distractors": [
-    [
-     25,
-     21,
-     16,
-     8
-    ],
-    [
-     25,
-     21,
-     14,
-     6
-    ]
-   ],
-   "name": "chain-w2-d3p-0547",
-   "gate": {
-    "last": {
-     "ok": true,
-     "greedy_ok": true,
-     "correct": 10,
-     "n": 10,
-     "perfect": true
-    },
-    "first": {
-     "ok": true,
-     "greedy_ok": true,
-     "correct": 9,
-     "n": 10,
-     "perfect": false
-    }
-   }
-  },
-  {
-   "depth": 3,
-   "cond": false,
-   "kinds": [
-    "sub",
-    "add",
-    "add"
-   ],
-   "steps": [
-    "Subtract 2.",
-    "Add 6.",
-    "Add 5."
-   ],
-   "start": 15,
-   "intermediates": [
-    13,
-    19
-   ],
-   "untaken": [
-    null,
-    null
-   ],
-   "answer": 24,
-   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nSubtract 2.\nAdd 6.\nAdd 5.\nThe starting number is 15. What is the final number? Reply with only the final number, nothing else.",
-   "prompt_first": "Start with the number 15 and apply the steps below, in order.\nSubtract 2.\nAdd 6.\nAdd 5.\nWhat is the final number? Reply with only the final number, nothing else.",
-   "literals": [
-    2,
-    5,
-    6,
-    15
-   ],
-   "distractors": [
-    [
-     15,
-     24,
-     12,
-     5
-    ],
-    [
-     15,
-     24,
-     18,
-     2
-    ]
-   ],
-   "name": "chain-w2-d3p-0552",
-   "gate": {
-    "last": {
-     "ok": true,
-     "greedy_ok": true,
-     "correct": 10,
-     "n": 10,
-     "perfect": true
-    },
-    "first": {
-     "ok": true,
-     "greedy_ok": true,
-     "correct": 9,
-     "n": 10,
-     "perfect": false
-    }
-   }
-  },
-  {
-   "depth": 3,
-   "cond": false,
-   "kinds": [
     "add",
     "add",
     "sub"
@@ -331,45 +205,47 @@
    "depth": 3,
    "cond": false,
    "kinds": [
-    "halve_down",
-    "halve_down",
-    "halve_down"
+    "double",
+    "add",
+    "add"
    ],
    "steps": [
-    "Halve it, rounding down.",
-    "Halve it, rounding down.",
-    "Halve it, rounding down."
+    "Double it.",
+    "Add 5.",
+    "Add 2."
    ],
    "start": 10,
    "intermediates": [
-    5,
-    2
+    20,
+    25
    ],
    "untaken": [
     null,
     null
    ],
-   "answer": 1,
-   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nHalve it, rounding down.\nHalve it, rounding down.\nHalve it, rounding down.\nThe starting number is 10. What is the final number? Reply with only the final number, nothing else.",
-   "prompt_first": "Start with the number 10 and apply the steps below, in order.\nHalve it, rounding down.\nHalve it, rounding down.\nHalve it, rounding down.\nWhat is the final number? Reply with only the final number, nothing else.",
+   "answer": 27,
+   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nDouble it.\nAdd 5.\nAdd 2.\nThe starting number is 10. What is the final number? Reply with only the final number, nothing else.",
+   "prompt_first": "Start with the number 10 and apply the steps below, in order.\nDouble it.\nAdd 5.\nAdd 2.\nWhat is the final number? Reply with only the final number, nothing else.",
    "literals": [
+    2,
+    5,
     10
    ],
    "distractors": [
     [
      10,
-     1,
-     4,
-     3
+     27,
+     19,
+     5
     ],
     [
      10,
-     1,
-     3,
-     4
+     27,
+     24,
+     5
     ]
    ],
-   "name": "chain-w2-d3p-0704",
+   "name": "chain-w2-d3p-0684",
    "gate": {
     "last": {
      "ok": true,
@@ -388,39 +264,168 @@
    }
   },
   {
-   "depth": 2,
+   "depth": 3,
    "cond": false,
    "kinds": [
-    "triple",
-    "triple"
+    "double",
+    "double",
+    "double"
    ],
    "steps": [
-    "Multiply it by 3.",
-    "Multiply it by 3."
+    "Double it.",
+    "Double it.",
+    "Double it."
    ],
-   "start": 2,
+   "start": 7,
    "intermediates": [
-    6
+    14,
+    28
    ],
    "untaken": [
+    null,
     null
    ],
-   "answer": 18,
-   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nMultiply it by 3.\nMultiply it by 3.\nThe starting number is 2. What is the final number? Reply with only the final number, nothing else.",
-   "prompt_first": "Start with the number 2 and apply the steps below, in order.\nMultiply it by 3.\nMultiply it by 3.\nWhat is the final number? Reply with only the final number, nothing else.",
+   "answer": 56,
+   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nDouble it.\nDouble it.\nDouble it.\nThe starting number is 7. What is the final number? Reply with only the final number, nothing else.",
+   "prompt_first": "Start with the number 7 and apply the steps below, in order.\nDouble it.\nDouble it.\nDouble it.\nWhat is the final number? Reply with only the final number, nothing else.",
    "literals": [
-    2,
-    3
+    7
    ],
    "distractors": [
     [
-     2,
-     18,
-     5,
-     3
+     7,
+     56,
+     13,
+     12
+    ],
+    [
+     7,
+     56,
+     27,
+     26
     ]
    ],
-   "name": "chain-d2p-0200",
+   "name": "chain-w2-d3p-0848",
+   "gate": {
+    "last": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    },
+    "first": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    }
+   }
+  },
+  {
+   "depth": 3,
+   "cond": false,
+   "kinds": [
+    "halve_down",
+    "halve_down",
+    "halve_down"
+   ],
+   "steps": [
+    "Halve it, rounding down.",
+    "Halve it, rounding down.",
+    "Halve it, rounding down."
+   ],
+   "start": 26,
+   "intermediates": [
+    13,
+    6
+   ],
+   "untaken": [
+    null,
+    null
+   ],
+   "answer": 3,
+   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nHalve it, rounding down.\nHalve it, rounding down.\nHalve it, rounding down.\nThe starting number is 26. What is the final number? Reply with only the final number, nothing else.",
+   "prompt_first": "Start with the number 26 and apply the steps below, in order.\nHalve it, rounding down.\nHalve it, rounding down.\nHalve it, rounding down.\nWhat is the final number? Reply with only the final number, nothing else.",
+   "literals": [
+    26
+   ],
+   "distractors": [
+    [
+     26,
+     3,
+     14,
+     11
+    ],
+    [
+     26,
+     3,
+     5,
+     4
+    ]
+   ],
+   "name": "chain-w2-d3p-0881",
+   "gate": {
+    "last": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    },
+    "first": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    }
+   }
+  },
+  {
+   "depth": 3,
+   "cond": false,
+   "kinds": [
+    "double",
+    "double",
+    "double"
+   ],
+   "steps": [
+    "Double it.",
+    "Double it.",
+    "Double it."
+   ],
+   "start": 5,
+   "intermediates": [
+    10,
+    20
+   ],
+   "untaken": [
+    null,
+    null
+   ],
+   "answer": 40,
+   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nDouble it.\nDouble it.\nDouble it.\nThe starting number is 5. What is the final number? Reply with only the final number, nothing else.",
+   "prompt_first": "Start with the number 5 and apply the steps below, in order.\nDouble it.\nDouble it.\nDouble it.\nWhat is the final number? Reply with only the final number, nothing else.",
+   "literals": [
+    5
+   ],
+   "distractors": [
+    [
+     5,
+     40,
+     9,
+     8
+    ],
+    [
+     5,
+     40,
+     19,
+     18
+    ]
+   ],
+   "name": "chain-w2-d3p-0892",
    "gate": {
     "last": {
      "ok": true,
@@ -493,6 +498,159 @@
    "depth": 2,
    "cond": false,
    "kinds": [
+    "sub",
+    "triple"
+   ],
+   "steps": [
+    "Subtract 2.",
+    "Multiply it by 3."
+   ],
+   "start": 11,
+   "intermediates": [
+    9
+   ],
+   "untaken": [
+    null
+   ],
+   "answer": 27,
+   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nSubtract 2.\nMultiply it by 3.\nThe starting number is 11. What is the final number? Reply with only the final number, nothing else.",
+   "prompt_first": "Start with the number 11 and apply the steps below, in order.\nSubtract 2.\nMultiply it by 3.\nWhat is the final number? Reply with only the final number, nothing else.",
+   "literals": [
+    2,
+    3,
+    11
+   ],
+   "distractors": [
+    [
+     11,
+     27,
+     8,
+     3
+    ]
+   ],
+   "name": "chain-d2p-0230",
+   "gate": {
+    "last": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    },
+    "first": {
+     "ok": false,
+     "greedy_ok": true,
+     "correct": 7,
+     "n": 10,
+     "perfect": false
+    }
+   }
+  },
+  {
+   "depth": 2,
+   "cond": false,
+   "kinds": [
+    "halve_down",
+    "halve_down"
+   ],
+   "steps": [
+    "Halve it, rounding down.",
+    "Halve it, rounding down."
+   ],
+   "start": 4,
+   "intermediates": [
+    2
+   ],
+   "untaken": [
+    null
+   ],
+   "answer": 1,
+   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nHalve it, rounding down.\nHalve it, rounding down.\nThe starting number is 4. What is the final number? Reply with only the final number, nothing else.",
+   "prompt_first": "Start with the number 4 and apply the steps below, in order.\nHalve it, rounding down.\nHalve it, rounding down.\nWhat is the final number? Reply with only the final number, nothing else.",
+   "literals": [
+    4
+   ],
+   "distractors": [
+    [
+     4,
+     1,
+     3,
+     5
+    ]
+   ],
+   "name": "chain-d2p-0231",
+   "gate": {
+    "last": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    },
+    "first": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    }
+   }
+  },
+  {
+   "depth": 2,
+   "cond": false,
+   "kinds": [
+    "halve_up",
+    "triple"
+   ],
+   "steps": [
+    "Halve it, rounding up.",
+    "Multiply it by 3."
+   ],
+   "start": 10,
+   "intermediates": [
+    5
+   ],
+   "untaken": [
+    null
+   ],
+   "answer": 15,
+   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nHalve it, rounding up.\nMultiply it by 3.\nThe starting number is 10. What is the final number? Reply with only the final number, nothing else.",
+   "prompt_first": "Start with the number 10 and apply the steps below, in order.\nHalve it, rounding up.\nMultiply it by 3.\nWhat is the final number? Reply with only the final number, nothing else.",
+   "literals": [
+    3,
+    10
+   ],
+   "distractors": [
+    [
+     10,
+     15,
+     4,
+     3
+    ]
+   ],
+   "name": "chain-d2p-0234",
+   "gate": {
+    "last": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    },
+    "first": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 9,
+     "n": 10,
+     "perfect": false
+    }
+   }
+  },
+  {
+   "depth": 2,
+   "cond": false,
+   "kinds": [
     "triple",
     "add"
    ],
@@ -523,6 +681,57 @@
     ]
    ],
    "name": "chain-d2p-0239",
+   "gate": {
+    "last": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    },
+    "first": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    }
+   }
+  },
+  {
+   "depth": 2,
+   "cond": false,
+   "kinds": [
+    "add",
+    "double"
+   ],
+   "steps": [
+    "Add 3.",
+    "Double it."
+   ],
+   "start": 4,
+   "intermediates": [
+    7
+   ],
+   "untaken": [
+    null
+   ],
+   "answer": 14,
+   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nAdd 3.\nDouble it.\nThe starting number is 4. What is the final number? Reply with only the final number, nothing else.",
+   "prompt_first": "Start with the number 4 and apply the steps below, in order.\nAdd 3.\nDouble it.\nWhat is the final number? Reply with only the final number, nothing else.",
+   "literals": [
+    3,
+    4
+   ],
+   "distractors": [
+    [
+     4,
+     14,
+     8,
+     3
+    ]
+   ],
+   "name": "chain-d2p-0256",
    "gate": {
     "last": {
      "ok": true,
@@ -596,37 +805,36 @@
    "depth": 2,
    "cond": false,
    "kinds": [
-    "sub",
-    "add"
+    "halve_down",
+    "triple"
    ],
    "steps": [
-    "Subtract 8.",
-    "Add 5."
+    "Halve it, rounding down.",
+    "Multiply it by 3."
    ],
-   "start": 24,
+   "start": 12,
    "intermediates": [
-    16
+    6
    ],
    "untaken": [
     null
    ],
-   "answer": 21,
-   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nSubtract 8.\nAdd 5.\nThe starting number is 24. What is the final number? Reply with only the final number, nothing else.",
-   "prompt_first": "Start with the number 24 and apply the steps below, in order.\nSubtract 8.\nAdd 5.\nWhat is the final number? Reply with only the final number, nothing else.",
+   "answer": 18,
+   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nHalve it, rounding down.\nMultiply it by 3.\nThe starting number is 12. What is the final number? Reply with only the final number, nothing else.",
+   "prompt_first": "Start with the number 12 and apply the steps below, in order.\nHalve it, rounding down.\nMultiply it by 3.\nWhat is the final number? Reply with only the final number, nothing else.",
    "literals": [
-    5,
-    8,
-    24
+    3,
+    12
    ],
    "distractors": [
     [
-     24,
-     21,
-     15,
-     8
+     12,
+     18,
+     7,
+     3
     ]
    ],
-   "name": "chain-d2p-0330",
+   "name": "chain-d2p-0295",
    "gate": {
     "last": {
      "ok": true,
@@ -638,7 +846,109 @@
     "first": {
      "ok": true,
      "greedy_ok": true,
-     "correct": 9,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    }
+   }
+  },
+  {
+   "depth": 2,
+   "cond": false,
+   "kinds": [
+    "triple",
+    "halve_up"
+   ],
+   "steps": [
+    "Multiply it by 3.",
+    "Halve it, rounding up."
+   ],
+   "start": 17,
+   "intermediates": [
+    51
+   ],
+   "untaken": [
+    null
+   ],
+   "answer": 26,
+   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nMultiply it by 3.\nHalve it, rounding up.\nThe starting number is 17. What is the final number? Reply with only the final number, nothing else.",
+   "prompt_first": "Start with the number 17 and apply the steps below, in order.\nMultiply it by 3.\nHalve it, rounding up.\nWhat is the final number? Reply with only the final number, nothing else.",
+   "literals": [
+    3,
+    17
+   ],
+   "distractors": [
+    [
+     17,
+     26,
+     52,
+     3
+    ]
+   ],
+   "name": "chain-d2p-0333",
+   "gate": {
+    "last": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    },
+    "first": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    }
+   }
+  },
+  {
+   "depth": 2,
+   "cond": false,
+   "kinds": [
+    "triple",
+    "halve_up"
+   ],
+   "steps": [
+    "Multiply it by 3.",
+    "Halve it, rounding up."
+   ],
+   "start": 25,
+   "intermediates": [
+    75
+   ],
+   "untaken": [
+    null
+   ],
+   "answer": 38,
+   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nMultiply it by 3.\nHalve it, rounding up.\nThe starting number is 25. What is the final number? Reply with only the final number, nothing else.",
+   "prompt_first": "Start with the number 25 and apply the steps below, in order.\nMultiply it by 3.\nHalve it, rounding up.\nWhat is the final number? Reply with only the final number, nothing else.",
+   "literals": [
+    3,
+    25
+   ],
+   "distractors": [
+    [
+     25,
+     38,
+     74,
+     3
+    ]
+   ],
+   "name": "chain-d2p-0341",
+   "gate": {
+    "last": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    },
+    "first": {
+     "ok": false,
+     "greedy_ok": true,
+     "correct": 7,
      "n": 10,
      "perfect": false
     }
@@ -853,6 +1163,108 @@
    "depth": 2,
    "cond": false,
    "kinds": [
+    "halve_up",
+    "add"
+   ],
+   "steps": [
+    "Halve it, rounding up.",
+    "Add 5."
+   ],
+   "start": 20,
+   "intermediates": [
+    10
+   ],
+   "untaken": [
+    null
+   ],
+   "answer": 15,
+   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nHalve it, rounding up.\nAdd 5.\nThe starting number is 20. What is the final number? Reply with only the final number, nothing else.",
+   "prompt_first": "Start with the number 20 and apply the steps below, in order.\nHalve it, rounding up.\nAdd 5.\nWhat is the final number? Reply with only the final number, nothing else.",
+   "literals": [
+    5,
+    20
+   ],
+   "distractors": [
+    [
+     20,
+     15,
+     9,
+     5
+    ]
+   ],
+   "name": "chain-d2p-0385",
+   "gate": {
+    "last": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    },
+    "first": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 9,
+     "n": 10,
+     "perfect": false
+    }
+   }
+  },
+  {
+   "depth": 2,
+   "cond": false,
+   "kinds": [
+    "halve_up",
+    "sub"
+   ],
+   "steps": [
+    "Halve it, rounding up.",
+    "Subtract 7."
+   ],
+   "start": 30,
+   "intermediates": [
+    15
+   ],
+   "untaken": [
+    null
+   ],
+   "answer": 8,
+   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nHalve it, rounding up.\nSubtract 7.\nThe starting number is 30. What is the final number? Reply with only the final number, nothing else.",
+   "prompt_first": "Start with the number 30 and apply the steps below, in order.\nHalve it, rounding up.\nSubtract 7.\nWhat is the final number? Reply with only the final number, nothing else.",
+   "literals": [
+    7,
+    30
+   ],
+   "distractors": [
+    [
+     30,
+     8,
+     16,
+     7
+    ]
+   ],
+   "name": "chain-d2p-0392",
+   "gate": {
+    "last": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    },
+    "first": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    }
+   }
+  },
+  {
+   "depth": 2,
+   "cond": false,
+   "kinds": [
     "double",
     "double"
    ],
@@ -1000,6 +1412,57 @@
      "correct": 7,
      "n": 10,
      "perfect": false
+    }
+   }
+  },
+  {
+   "depth": 2,
+   "cond": false,
+   "kinds": [
+    "double",
+    "add"
+   ],
+   "steps": [
+    "Double it.",
+    "Add 4."
+   ],
+   "start": 7,
+   "intermediates": [
+    14
+   ],
+   "untaken": [
+    null
+   ],
+   "answer": 18,
+   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nDouble it.\nAdd 4.\nThe starting number is 7. What is the final number? Reply with only the final number, nothing else.",
+   "prompt_first": "Start with the number 7 and apply the steps below, in order.\nDouble it.\nAdd 4.\nWhat is the final number? Reply with only the final number, nothing else.",
+   "literals": [
+    4,
+    7
+   ],
+   "distractors": [
+    [
+     7,
+     18,
+     15,
+     4
+    ]
+   ],
+   "name": "chain-w2-d2p-0014",
+   "gate": {
+    "last": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    },
+    "first": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
     }
    }
   },
@@ -1161,58 +1624,6 @@
    "depth": 2,
    "cond": false,
    "kinds": [
-    "add",
-    "sub"
-   ],
-   "steps": [
-    "Add 3.",
-    "Subtract 7."
-   ],
-   "start": 25,
-   "intermediates": [
-    28
-   ],
-   "untaken": [
-    null
-   ],
-   "answer": 21,
-   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nAdd 3.\nSubtract 7.\nThe starting number is 25. What is the final number? Reply with only the final number, nothing else.",
-   "prompt_first": "Start with the number 25 and apply the steps below, in order.\nAdd 3.\nSubtract 7.\nWhat is the final number? Reply with only the final number, nothing else.",
-   "literals": [
-    3,
-    7,
-    25
-   ],
-   "distractors": [
-    [
-     25,
-     21,
-     29,
-     7
-    ]
-   ],
-   "name": "chain-w2-d2p-0078",
-   "gate": {
-    "last": {
-     "ok": true,
-     "greedy_ok": true,
-     "correct": 10,
-     "n": 10,
-     "perfect": true
-    },
-    "first": {
-     "ok": true,
-     "greedy_ok": true,
-     "correct": 10,
-     "n": 10,
-     "perfect": true
-    }
-   }
-  },
-  {
-   "depth": 2,
-   "cond": false,
-   "kinds": [
     "double",
     "sub"
    ],
@@ -1257,6 +1668,56 @@
      "correct": 10,
      "n": 10,
      "perfect": true
+    }
+   }
+  },
+  {
+   "depth": 2,
+   "cond": false,
+   "kinds": [
+    "halve_down",
+    "halve_down"
+   ],
+   "steps": [
+    "Halve it, rounding down.",
+    "Halve it, rounding down."
+   ],
+   "start": 19,
+   "intermediates": [
+    9
+   ],
+   "untaken": [
+    null
+   ],
+   "answer": 4,
+   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nHalve it, rounding down.\nHalve it, rounding down.\nThe starting number is 19. What is the final number? Reply with only the final number, nothing else.",
+   "prompt_first": "Start with the number 19 and apply the steps below, in order.\nHalve it, rounding down.\nHalve it, rounding down.\nWhat is the final number? Reply with only the final number, nothing else.",
+   "literals": [
+    19
+   ],
+   "distractors": [
+    [
+     19,
+     4,
+     10,
+     7
+    ]
+   ],
+   "name": "chain-w2-d2p-0087",
+   "gate": {
+    "last": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    },
+    "first": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 8,
+     "n": 10,
+     "perfect": false
     }
    }
   },
@@ -1411,6 +1872,57 @@
      "correct": 8,
      "n": 10,
      "perfect": false
+    }
+   }
+  },
+  {
+   "depth": 2,
+   "cond": false,
+   "kinds": [
+    "sub",
+    "double"
+   ],
+   "steps": [
+    "Subtract 6.",
+    "Double it."
+   ],
+   "start": 24,
+   "intermediates": [
+    18
+   ],
+   "untaken": [
+    null
+   ],
+   "answer": 36,
+   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nSubtract 6.\nDouble it.\nThe starting number is 24. What is the final number? Reply with only the final number, nothing else.",
+   "prompt_first": "Start with the number 24 and apply the steps below, in order.\nSubtract 6.\nDouble it.\nWhat is the final number? Reply with only the final number, nothing else.",
+   "literals": [
+    6,
+    24
+   ],
+   "distractors": [
+    [
+     24,
+     36,
+     17,
+     6
+    ]
+   ],
+   "name": "chain-w2-d2p-0100",
+   "gate": {
+    "last": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    },
+    "first": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
     }
    }
   },
@@ -1677,6 +2189,57 @@
    "depth": 2,
    "cond": false,
    "kinds": [
+    "halve_down",
+    "triple"
+   ],
+   "steps": [
+    "Halve it, rounding down.",
+    "Multiply it by 3."
+   ],
+   "start": 12,
+   "intermediates": [
+    6
+   ],
+   "untaken": [
+    null
+   ],
+   "answer": 18,
+   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nHalve it, rounding down.\nMultiply it by 3.\nThe starting number is 12. What is the final number? Reply with only the final number, nothing else.",
+   "prompt_first": "Start with the number 12 and apply the steps below, in order.\nHalve it, rounding down.\nMultiply it by 3.\nWhat is the final number? Reply with only the final number, nothing else.",
+   "literals": [
+    3,
+    12
+   ],
+   "distractors": [
+    [
+     12,
+     18,
+     5,
+     3
+    ]
+   ],
+   "name": "chain-w2-d2p-0148",
+   "gate": {
+    "last": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    },
+    "first": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 8,
+     "n": 10,
+     "perfect": false
+    }
+   }
+  },
+  {
+   "depth": 2,
+   "cond": false,
+   "kinds": [
     "add",
     "add"
    ],
@@ -1708,57 +2271,6 @@
     ]
    ],
    "name": "chain-w2-d2p-0171",
-   "gate": {
-    "last": {
-     "ok": true,
-     "greedy_ok": true,
-     "correct": 10,
-     "n": 10,
-     "perfect": true
-    },
-    "first": {
-     "ok": true,
-     "greedy_ok": true,
-     "correct": 10,
-     "n": 10,
-     "perfect": true
-    }
-   }
-  },
-  {
-   "depth": 2,
-   "cond": false,
-   "kinds": [
-    "double",
-    "add"
-   ],
-   "steps": [
-    "Double it.",
-    "Add 2."
-   ],
-   "start": 19,
-   "intermediates": [
-    38
-   ],
-   "untaken": [
-    null
-   ],
-   "answer": 40,
-   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nDouble it.\nAdd 2.\nThe starting number is 19. What is the final number? Reply with only the final number, nothing else.",
-   "prompt_first": "Start with the number 19 and apply the steps below, in order.\nDouble it.\nAdd 2.\nWhat is the final number? Reply with only the final number, nothing else.",
-   "literals": [
-    2,
-    19
-   ],
-   "distractors": [
-    [
-     19,
-     40,
-     37,
-     2
-    ]
-   ],
-   "name": "chain-w2-d2p-0172",
    "gate": {
     "last": {
      "ok": true,
@@ -2035,6 +2547,210 @@
    "depth": 2,
    "cond": false,
    "kinds": [
+    "triple",
+    "add"
+   ],
+   "steps": [
+    "Multiply it by 3.",
+    "Add 9."
+   ],
+   "start": 6,
+   "intermediates": [
+    18
+   ],
+   "untaken": [
+    null
+   ],
+   "answer": 27,
+   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nMultiply it by 3.\nAdd 9.\nThe starting number is 6. What is the final number? Reply with only the final number, nothing else.",
+   "prompt_first": "Start with the number 6 and apply the steps below, in order.\nMultiply it by 3.\nAdd 9.\nWhat is the final number? Reply with only the final number, nothing else.",
+   "literals": [
+    3,
+    6,
+    9
+   ],
+   "distractors": [
+    [
+     6,
+     27,
+     19,
+     3
+    ]
+   ],
+   "name": "chain-w2-d2p-0203",
+   "gate": {
+    "last": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    },
+    "first": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    }
+   }
+  },
+  {
+   "depth": 2,
+   "cond": false,
+   "kinds": [
+    "triple",
+    "halve_down"
+   ],
+   "steps": [
+    "Multiply it by 3.",
+    "Halve it, rounding down."
+   ],
+   "start": 8,
+   "intermediates": [
+    24
+   ],
+   "untaken": [
+    null
+   ],
+   "answer": 12,
+   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nMultiply it by 3.\nHalve it, rounding down.\nThe starting number is 8. What is the final number? Reply with only the final number, nothing else.",
+   "prompt_first": "Start with the number 8 and apply the steps below, in order.\nMultiply it by 3.\nHalve it, rounding down.\nWhat is the final number? Reply with only the final number, nothing else.",
+   "literals": [
+    3,
+    8
+   ],
+   "distractors": [
+    [
+     8,
+     12,
+     23,
+     3
+    ]
+   ],
+   "name": "chain-w2-d2p-0205",
+   "gate": {
+    "last": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    },
+    "first": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 9,
+     "n": 10,
+     "perfect": false
+    }
+   }
+  },
+  {
+   "depth": 2,
+   "cond": false,
+   "kinds": [
+    "halve_down",
+    "halve_down"
+   ],
+   "steps": [
+    "Halve it, rounding down.",
+    "Halve it, rounding down."
+   ],
+   "start": 7,
+   "intermediates": [
+    3
+   ],
+   "untaken": [
+    null
+   ],
+   "answer": 1,
+   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nHalve it, rounding down.\nHalve it, rounding down.\nThe starting number is 7. What is the final number? Reply with only the final number, nothing else.",
+   "prompt_first": "Start with the number 7 and apply the steps below, in order.\nHalve it, rounding down.\nHalve it, rounding down.\nWhat is the final number? Reply with only the final number, nothing else.",
+   "literals": [
+    7
+   ],
+   "distractors": [
+    [
+     7,
+     1,
+     4,
+     5
+    ]
+   ],
+   "name": "chain-w2-d2p-0222",
+   "gate": {
+    "last": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    },
+    "first": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 9,
+     "n": 10,
+     "perfect": false
+    }
+   }
+  },
+  {
+   "depth": 2,
+   "cond": false,
+   "kinds": [
+    "add",
+    "halve_down"
+   ],
+   "steps": [
+    "Add 7.",
+    "Halve it, rounding down."
+   ],
+   "start": 21,
+   "intermediates": [
+    28
+   ],
+   "untaken": [
+    null
+   ],
+   "answer": 14,
+   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nAdd 7.\nHalve it, rounding down.\nThe starting number is 21. What is the final number? Reply with only the final number, nothing else.",
+   "prompt_first": "Start with the number 21 and apply the steps below, in order.\nAdd 7.\nHalve it, rounding down.\nWhat is the final number? Reply with only the final number, nothing else.",
+   "literals": [
+    7,
+    21
+   ],
+   "distractors": [
+    [
+     21,
+     14,
+     29,
+     7
+    ]
+   ],
+   "name": "chain-w2-d2p-0226",
+   "gate": {
+    "last": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    },
+    "first": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    }
+   }
+  },
+  {
+   "depth": 2,
+   "cond": false,
+   "kinds": [
     "add",
     "sub"
    ],
@@ -2087,6 +2803,57 @@
    "depth": 2,
    "cond": false,
    "kinds": [
+    "halve_down",
+    "sub"
+   ],
+   "steps": [
+    "Halve it, rounding down.",
+    "Subtract 8."
+   ],
+   "start": 30,
+   "intermediates": [
+    15
+   ],
+   "untaken": [
+    null
+   ],
+   "answer": 7,
+   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nHalve it, rounding down.\nSubtract 8.\nThe starting number is 30. What is the final number? Reply with only the final number, nothing else.",
+   "prompt_first": "Start with the number 30 and apply the steps below, in order.\nHalve it, rounding down.\nSubtract 8.\nWhat is the final number? Reply with only the final number, nothing else.",
+   "literals": [
+    8,
+    30
+   ],
+   "distractors": [
+    [
+     30,
+     7,
+     14,
+     8
+    ]
+   ],
+   "name": "chain-w2-d2p-0254",
+   "gate": {
+    "last": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    },
+    "first": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    }
+   }
+  },
+  {
+   "depth": 2,
+   "cond": false,
+   "kinds": [
     "triple",
     "sub"
    ],
@@ -2132,6 +2899,108 @@
      "correct": 10,
      "n": 10,
      "perfect": true
+    }
+   }
+  },
+  {
+   "depth": 2,
+   "cond": false,
+   "kinds": [
+    "triple",
+    "double"
+   ],
+   "steps": [
+    "Multiply it by 3.",
+    "Double it."
+   ],
+   "start": 4,
+   "intermediates": [
+    12
+   ],
+   "untaken": [
+    null
+   ],
+   "answer": 24,
+   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nMultiply it by 3.\nDouble it.\nThe starting number is 4. What is the final number? Reply with only the final number, nothing else.",
+   "prompt_first": "Start with the number 4 and apply the steps below, in order.\nMultiply it by 3.\nDouble it.\nWhat is the final number? Reply with only the final number, nothing else.",
+   "literals": [
+    3,
+    4
+   ],
+   "distractors": [
+    [
+     4,
+     24,
+     11,
+     3
+    ]
+   ],
+   "name": "chain-w2-d2p-0270",
+   "gate": {
+    "last": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    },
+    "first": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 9,
+     "n": 10,
+     "perfect": false
+    }
+   }
+  },
+  {
+   "depth": 2,
+   "cond": false,
+   "kinds": [
+    "triple",
+    "halve_down"
+   ],
+   "steps": [
+    "Multiply it by 3.",
+    "Halve it, rounding down."
+   ],
+   "start": 10,
+   "intermediates": [
+    30
+   ],
+   "untaken": [
+    null
+   ],
+   "answer": 15,
+   "prompt": "Apply the steps below, in order, to the starting number given at the end.\nMultiply it by 3.\nHalve it, rounding down.\nThe starting number is 10. What is the final number? Reply with only the final number, nothing else.",
+   "prompt_first": "Start with the number 10 and apply the steps below, in order.\nMultiply it by 3.\nHalve it, rounding down.\nWhat is the final number? Reply with only the final number, nothing else.",
+   "literals": [
+    3,
+    10
+   ],
+   "distractors": [
+    [
+     10,
+     15,
+     29,
+     3
+    ]
+   ],
+   "name": "chain-w2-d2p-0271",
+   "gate": {
+    "last": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 10,
+     "n": 10,
+     "perfect": true
+    },
+    "first": {
+     "ok": true,
+     "greedy_ok": true,
+     "correct": 9,
+     "n": 10,
+     "perfect": false
     }
    }
   }

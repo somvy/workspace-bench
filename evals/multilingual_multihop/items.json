@@ -10,14 +10,14 @@
  "frozen": "2026-09-10",
  "items": [
   {
-   "name": "mlmh-ar-southpole-norwegian",
+   "name": "mlmh-ar-suryavarman-temple-country",
    "subfamily": "2hop",
-   "prompt": "كان قائد أول بعثة استكشافية بلغت القطب الجنوبي عام 1911 يحمل الجنسية",
-   "target": "النرويجية",
+   "prompt": "البناء الديني الضخم الذي شيّده الملك سوريافارمان الثاني في القرن الثاني عشر يقع اليوم في دولة",
+   "target": "كمبوديا",
    "target_alts": [
-    "النرويجية",
-    "نرويجية",
-    "النرويجيّة"
+    "كمبوديا",
+    "كامبوديا",
+    "مملكة كمبوديا"
    ],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -29,7 +29,7 @@
    },
    "lang": "ar",
    "intermediates": [
-    "Roald Amundsen"
+    "Angkor Wat"
    ],
    "units": [
     {
@@ -38,15 +38,13 @@
      "multi_token": true,
      "forms": {
       "ar": [
-       "روالد أموندسن",
-       "أموندسن",
-       "روال أموندسن"
+       "أنغكور وات",
+       "معبد أنغكور وات"
       ]
      },
      "match": [
-      "روالد أموندسن",
-      "أموندسن",
-      "روال أموندسن"
+      "أنغكور وات",
+      "معبد أنغكور وات"
      ]
     },
     {
@@ -55,19 +53,19 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "Roald Amundsen",
-       "Amundsen"
+       "Angkor Wat",
+       "the temple of Angkor Wat"
       ],
       "zh": [
-       "罗尔德·阿蒙森",
-       "阿蒙森"
+       "吴哥窟",
+       "吴哥寺"
       ]
      },
      "match": [
-      "Roald Amundsen",
-      "Amundsen",
-      "罗尔德·阿蒙森",
-      "阿蒙森"
+      "Angkor Wat",
+      "the temple of Angkor Wat",
+      "吴哥窟",
+      "吴哥寺"
      ]
     },
     {
@@ -98,19 +96,20 @@
    ],
    "bridges": [
     {
-     "question": "Who led the first expedition to reach the South Pole in December 1911? Answer with just the name.",
+     "question": "Which temple complex was built by King Suryavarman II in the 12th century? Answer with just the name.",
      "units": [
       "bridge_l2",
       "bridge_native"
      ],
      "answers": [
-      "Roald Amundsen",
-      "Amundsen",
-      "روالد أموندسن",
-      "روال أموندسن",
-      "أموندسن",
-      "罗尔德·阿蒙森",
-      "阿蒙森"
+      "Angkor Wat",
+      "Angkor",
+      "أنغكور وات",
+      "أنكور وات",
+      "معبد أنغكور وات",
+      "吴哥窟",
+      "吴哥寺",
+      "the temple of Angkor Wat"
      ]
     }
    ],
@@ -125,18 +124,17 @@
     "units": {
      "bridge_l2": {
       "ar": [
-       5,
-       3,
-       5
+       4,
+       6
       ]
      },
      "bridge_native": {
       "en": [
-       5,
-       3
+       3,
+       6
       ],
       "zh": [
-       6,
+       3,
        3
       ]
      },
@@ -158,333 +156,12 @@
    },
    "mc": {
     "bridge_native": {
-     "gold": "Roald Amundsen",
+     "gold": "Angkor Wat",
      "distractors": [
-      "Robert Falcon Scott",
-      "Ernest Shackleton",
-      "Fridtjof Nansen",
-      "Douglas Mawson"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mlmh-ar-wagner-festival-bavaria",
-   "subfamily": "2hop",
-   "prompt": "شُيِّد دار الأوبرا الخاص بالمهرجان السنوي الذي أسّسه ريتشارد فاغنر في ولاية ألمانية تُسمّى",
-   "target": "بافاريا",
-   "target_alts": [
-    "بايرن",
-    "بافاريا",
-    "ولاية بافاريا",
-    "الولاية البافارية"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "ar",
-   "intermediates": [
-    "Bayreuth"
-   ],
-   "units": [
-    {
-     "role": "bridge_l2",
-     "required": false,
-     "multi_token": true,
-     "forms": {
-      "ar": [
-       "بايرويت",
-       "بلدة بايرويت",
-       "بايرُويت"
-      ]
-     },
-     "match": [
-      "بايرويت",
-      "بلدة بايرويت",
-      "بايرُويت"
-     ]
-    },
-    {
-     "role": "bridge_native",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Bayreuth",
-       "the town of Bayreuth"
-      ],
-      "zh": [
-       "拜罗伊特",
-       "拜罗伊特市"
-      ]
-     },
-     "match": [
-      "Bayreuth",
-      "the town of Bayreuth",
-      "拜罗伊特",
-      "拜罗伊特市"
-     ]
-    },
-    {
-     "role": "language",
-     "required": false,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Arabic"
-      ],
-      "zh": [
-       "阿拉伯语"
-      ],
-      "ar": [
-       "العربية",
-       "اللغة العربية",
-       "بالعربية"
-      ]
-     },
-     "match": [
-      "Arabic",
-      "阿拉伯语",
-      "العربية",
-      "اللغة العربية",
-      "بالعربية"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "In which town is the annual opera festival founded by Richard Wagner held? Answer with just the name.",
-     "units": [
-      "bridge_l2",
-      "bridge_native"
-     ],
-     "answers": [
-      "Bayreuth",
-      "the town of Bayreuth",
-      "بايرويت",
-      "بلدة بايرويت",
-      "拜罗伊特",
-      "拜罗伊特市",
-      "بايرُويت"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge_l2|bridge_native": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge_l2": {
-      "ar": [
-       3,
-       4,
-       4
-      ]
-     },
-     "bridge_native": {
-      "en": [
-       3,
-       6
-      ],
-      "zh": [
-       4,
-       5
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       4
-      ],
-      "ar": [
-       1,
-       2,
-       2
-      ]
-     }
-    },
-    "target": 3
-   },
-   "mc": {
-    "bridge_native": {
-     "gold": "Bayreuth",
-     "distractors": [
-      "Bamberg",
-      "Regensburg",
-      "Würzburg",
-      "Weimar"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mlmh-el-andronikos-university",
-   "subfamily": "2hop",
-   "prompt": "Ο αρχαιολόγος που ανακάλυψε το 1977 τους μακεδονικούς βασιλικούς τάφους στη Βεργίνα ήταν καθηγητής στο πανεπιστήμιο της",
-   "target": "Θεσσαλονίκης",
-   "target_alts": [
-    "Θεσσαλονίκης",
-    "Θεσσαλονίκη",
-    "Θεσσαλονίκην"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "el",
-   "intermediates": [
-    "Manolis Andronikos"
-   ],
-   "units": [
-    {
-     "role": "bridge_l2",
-     "required": false,
-     "multi_token": true,
-     "forms": {
-      "el": [
-       "Μανόλης Ανδρόνικος",
-       "Ανδρόνικος",
-       "Ανδρόνικου"
-      ]
-     },
-     "match": [
-      "Μανόλης Ανδρόνικος",
-      "Ανδρόνικος",
-      "Ανδρόνικου"
-     ]
-    },
-    {
-     "role": "bridge_native",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Manolis Andronikos",
-       "Manolis Andronicos"
-      ],
-      "zh": [
-       "马诺利斯·安德罗尼科斯",
-       "安德罗尼科斯"
-      ]
-     },
-     "match": [
-      "Manolis Andronikos",
-      "Manolis Andronicos",
-      "马诺利斯·安德罗尼科斯",
-      "安德罗尼科斯"
-     ]
-    },
-    {
-     "role": "language",
-     "required": false,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Greek"
-      ],
-      "zh": [
-       "希腊语"
-      ],
-      "el": [
-       "ελληνικά",
-       "στα ελληνικά",
-       "νέα ελληνικά"
-      ]
-     },
-     "match": [
-      "Greek",
-      "希腊语",
-      "ελληνικά",
-      "στα ελληνικά",
-      "νέα ελληνικά"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which archaeologist discovered the Macedonian royal tombs at Vergina in 1977? Answer with just the name.",
-     "units": [
-      "bridge_l2",
-      "bridge_native"
-     ],
-     "answers": [
-      "Manolis Andronikos",
-      "Andronikos",
-      "Andronicos",
-      "Μανόλης Ανδρόνικος",
-      "Ανδρόνικος",
-      "Ανδρόνικου",
-      "马诺利斯·安德罗尼科斯",
-      "安德罗尼科斯",
-      "Manolis Andronicos"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge_l2|bridge_native": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge_l2": {
-      "el": [
-       9,
-       6,
-       6
-      ]
-     },
-     "bridge_native": {
-      "en": [
-       5,
-       5
-      ],
-      "zh": [
-       8,
-       4
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2
-      ],
-      "el": [
-       2,
-       3,
-       3
-      ]
-     }
-    },
-    "target": 5
-   },
-   "mc": {
-    "bridge_native": {
-     "gold": "Manolis Andronikos",
-     "distractors": [
-      "Spyridon Marinatos",
-      "Christos Tsountas",
-      "Georgios Mylonas",
-      "Nikolaos Platon"
+      "Borobudur",
+      "Prambanan",
+      "Wat Phou",
+      "Ananda Temple"
      ]
     }
    }
@@ -820,345 +497,16 @@
    }
   },
   {
-   "name": "mlmh-el-kazantzakis-crete",
+   "name": "mlmh-fi-asml-alankomaat",
    "subfamily": "2hop",
-   "prompt": "Ο συγγραφέας του μυθιστορήματος «Βίος και Πολιτεία του Αλέξη Ζορμπά» γεννήθηκε στο μεγαλύτερο νησί της χώρας του, την",
-   "target": "Κρήτη",
+   "prompt": "Maailman ainoa mikrosirujen valmistuksessa käytettäviä EUV-litografialaitteita tuottava yritys on kotoisin maasta nimeltä",
+   "target": "Alankomaat",
    "target_alts": [
-    "Κρήτη",
-    "Κρήτης",
-    "της Κρήτης",
-    "στην Κρήτη"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "el",
-   "intermediates": [
-    "Nikos Kazantzakis"
-   ],
-   "units": [
-    {
-     "role": "bridge_l2",
-     "required": false,
-     "multi_token": true,
-     "forms": {
-      "el": [
-       "Νίκος Καζαντζάκης",
-       "Καζαντζάκης",
-       "Καζαντζάκη"
-      ]
-     },
-     "match": [
-      "Νίκος Καζαντζάκης",
-      "Καζαντζάκης",
-      "Καζαντζάκη"
-     ]
-    },
-    {
-     "role": "bridge_native",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Nikos Kazantzakis",
-       "Kazantzakis"
-      ],
-      "zh": [
-       "尼科斯·卡赞扎基斯",
-       "卡赞扎基斯"
-      ]
-     },
-     "match": [
-      "Nikos Kazantzakis",
-      "Kazantzakis",
-      "尼科斯·卡赞扎基斯",
-      "卡赞扎基斯"
-     ]
-    },
-    {
-     "role": "language",
-     "required": false,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Greek"
-      ],
-      "zh": [
-       "希腊语"
-      ],
-      "el": [
-       "ελληνικά",
-       "στα ελληνικά",
-       "νέα ελληνικά"
-      ]
-     },
-     "match": [
-      "Greek",
-      "希腊语",
-      "ελληνικά",
-      "στα ελληνικά",
-      "νέα ελληνικά"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Who wrote the novel 'Zorba the Greek' (originally 'Life and Times of Alexis Zorbas')? Answer with just the name.",
-     "units": [
-      "bridge_l2",
-      "bridge_native"
-     ],
-     "answers": [
-      "Kazantzakis",
-      "Nikos Kazantzakis",
-      "Καζαντζάκης",
-      "Νίκος Καζαντζάκης",
-      "Καζαντζάκη",
-      "卡赞扎基斯",
-      "尼科斯·卡赞扎基斯"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge_l2|bridge_native": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge_l2": {
-      "el": [
-       9,
-       6,
-       6
-      ]
-     },
-     "bridge_native": {
-      "en": [
-       5,
-       3
-      ],
-      "zh": [
-       8,
-       5
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2
-      ],
-      "el": [
-       2,
-       3,
-       3
-      ]
-     }
-    },
-    "target": 3
-   },
-   "mc": {
-    "bridge_native": {
-     "gold": "Nikos Kazantzakis",
-     "distractors": [
-      "Giorgos Seferis",
-      "Odysseas Elytis",
-      "Constantine Cavafy",
-      "Kostis Palamas"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mlmh-el-ptfe-fluorine",
-   "subfamily": "2hop",
-   "prompt": "Εκτός από τον άνθρακα, το μοναδικό άλλο χημικό στοιχείο που περιέχει το πολυμερές της αντικολλητικής επίστρωσης στα τηγάνια είναι το",
-   "target": "φθόριο",
-   "target_alts": [
-    "φθόριο",
-    "το φθόριο",
-    "φθορίου",
-    "του φθορίου"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "el",
-   "intermediates": [
-    "polytetrafluoroethylene"
-   ],
-   "units": [
-    {
-     "role": "bridge_l2",
-     "required": false,
-     "multi_token": true,
-     "forms": {
-      "el": [
-       "πολυτετραφθοροαιθυλένιο",
-       "τεφλόν",
-       "το τεφλόν"
-      ]
-     },
-     "match": [
-      "πολυτετραφθοροαιθυλένιο",
-      "τεφλόν",
-      "το τεφλόν"
-     ]
-    },
-    {
-     "role": "bridge_native",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "polytetrafluoroethylene",
-       "Teflon",
-       "PTFE"
-      ],
-      "zh": [
-       "聚四氟乙烯",
-       "特氟龙",
-       "铁氟龙"
-      ]
-     },
-     "match": [
-      "polytetrafluoroethylene",
-      "Teflon",
-      "PTFE",
-      "聚四氟乙烯",
-      "特氟龙",
-      "铁氟龙"
-     ]
-    },
-    {
-     "role": "language",
-     "required": false,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Greek"
-      ],
-      "zh": [
-       "希腊语"
-      ],
-      "el": [
-       "ελληνικά",
-       "στα ελληνικά",
-       "η ελληνική γλώσσα"
-      ]
-     },
-     "match": [
-      "Greek",
-      "希腊语",
-      "ελληνικά",
-      "στα ελληνικά",
-      "η ελληνική γλώσσα"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "What is the name of the nonstick polymer, discovered at DuPont in 1938, that coats frying pans? Answer with just the name.",
-     "units": [
-      "bridge_l2",
-      "bridge_native"
-     ],
-     "answers": [
-      "Teflon",
-      "PTFE",
-      "polytetrafluoroethylene",
-      "τεφλόν",
-      "πολυτετραφθοροαιθυλένιο",
-      "聚四氟乙烯",
-      "特氟龙",
-      "το τεφλόν",
-      "铁氟龙"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge_l2|bridge_native": 0.9
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge_l2": {
-      "el": [
-       12,
-       4,
-       5
-      ]
-     },
-     "bridge_native": {
-      "en": [
-       6,
-       3,
-       2
-      ],
-      "zh": [
-       3,
-       3,
-       3
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2
-      ],
-      "el": [
-       2,
-       3,
-       6
-      ]
-     }
-    },
-    "target": 4
-   },
-   "mc": {
-    "bridge_native": {
-     "gold": "polytetrafluoroethylene",
-     "distractors": [
-      "polyvinyl chloride",
-      "polyvinylidene fluoride",
-      "polymethyl methacrylate",
-      "polystyrene"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mlmh-fi-bayeux-normandia",
-   "subfamily": "2hop",
-   "prompt": "Hastingsin taistelun tapahtumia kuvaavaa keskiaikaista kirjottua tekstiiliteosta säilytetään Ranskan historiallisessa maakunnassa nimeltä",
-   "target": "Normandia",
-   "target_alts": [
-    "Normandia",
-    "Normandiassa",
-    "Normandian",
-    "Normandiaan",
-    "Normandiasta",
-    "Ala-Normandia"
+    "Alankomaissa",
+    "Alankomaista",
+    "Hollanti",
+    "Hollannissa",
+    "Hollannista"
    ],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -1170,7 +518,7 @@
    },
    "lang": "fi",
    "intermediates": [
-    "Bayeux Tapestry"
+    "ASML Holding N.V."
    ],
    "units": [
     {
@@ -1179,13 +527,15 @@
      "multi_token": true,
      "forms": {
       "fi": [
-       "Bayeux'n seinävaate",
-       "Bayeux'n kuvakudos"
+       "ASML-yhtiö",
+       "hollantilainen ASML",
+       "ASML-konserni"
       ]
      },
      "match": [
-      "Bayeux'n seinävaate",
-      "Bayeux'n kuvakudos"
+      "ASML-yhtiö",
+      "hollantilainen ASML",
+      "ASML-konserni"
      ]
     },
     {
@@ -1194,19 +544,19 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "Bayeux Tapestry",
-       "the Bayeux Tapestry"
+       "ASML Holding N.V.",
+       "ASML Holding"
       ],
       "zh": [
-       "贝叶挂毯",
-       "巴约挂毯"
+       "阿斯麦控股",
+       "阿斯麦公司"
       ]
      },
      "match": [
-      "Bayeux Tapestry",
-      "the Bayeux Tapestry",
-      "贝叶挂毯",
-      "巴约挂毯"
+      "ASML Holding N.V.",
+      "ASML Holding",
+      "阿斯麦控股",
+      "阿斯麦公司"
      ]
     },
     {
@@ -1222,38 +572,41 @@
       ],
       "fi": [
        "suomen kieli",
-       "suomeksi"
+       "suomeksi",
+       "suomea"
       ]
      },
      "match": [
       "Finnish",
       "芬兰语",
       "suomen kieli",
-      "suomeksi"
+      "suomeksi",
+      "suomea"
      ]
     }
    ],
    "bridges": [
     {
-     "question": "Which medieval embroidered cloth depicts the Norman conquest of England and the Battle of Hastings? Answer with just the name.",
+     "question": "Which company is the world's only manufacturer of extreme ultraviolet (EUV) lithography machines for chipmaking? Answer with just the name.",
      "units": [
       "bridge_l2",
       "bridge_native"
      ],
      "answers": [
-      "Bayeux Tapestry",
-      "the Bayeux Tapestry",
-      "Bayeux tapestry",
-      "Bayeux'n seinävaate",
-      "Bayeux'n kuvakudos",
-      "Bayeux'n matto",
-      "贝叶挂毯",
-      "巴约挂毯"
+      "ASML",
+      "ASML Holding",
+      "ASML Holding N.V.",
+      "ASML-yhtiö",
+      "阿斯麦",
+      "阿斯麦控股",
+      "hollantilainen ASML",
+      "ASML-konserni",
+      "阿斯麦公司"
      ]
     }
    ],
-   "consistency": 0.9,
-   "consistency_strict": 0.8,
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
    "consistency_greedy": 1,
    "bridge_consistency": {
     "bridge_l2|bridge_native": 1.0
@@ -1263,18 +616,19 @@
     "units": {
      "bridge_l2": {
       "fi": [
-       7,
-       6
+       5,
+       5,
+       5
       ]
      },
      "bridge_native": {
       "en": [
-       4,
-       5
+       6,
+       3
       ],
       "zh": [
-       4,
-       4
+       3,
+       3
       ]
      },
      "language": {
@@ -1286,341 +640,8 @@
       ],
       "fi": [
        3,
-       3
-      ]
-     }
-    },
-    "target": 2
-   },
-   "mc": {
-    "bridge_native": {
-     "gold": "Bayeux Tapestry",
-     "distractors": [
-      "The Lady and the Unicorn",
-      "Apocalypse Tapestry",
-      "The Hunt of the Unicorn",
-      "Överhogdal Tapestries"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mlmh-he-oresund-malmo",
-   "subfamily": "2hop",
-   "prompt": "הקצה המזרחי של החיבור הקבוע שנפתח בשנת 2000 בין דנמרק לשוודיה נמצא בעיר",
-   "target": "מאלמה",
-   "target_alts": [
-    "מלמה",
-    "מאלמו",
-    "מלמו",
-    "מאלמה."
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "he",
-   "intermediates": [
-    "Oresund Bridge"
-   ],
-   "units": [
-    {
-     "role": "bridge_l2",
-     "required": false,
-     "multi_token": true,
-     "forms": {
-      "he": [
-       "גשר אורסונד",
-       "גשר האורסונד",
-       "האורסונד"
-      ]
-     },
-     "match": [
-      "גשר אורסונד",
-      "גשר האורסונד",
-      "האורסונד"
-     ]
-    },
-    {
-     "role": "bridge_native",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Oresund Bridge",
-       "Øresund Bridge",
-       "Oresund Link"
-      ],
-      "zh": [
-       "厄勒海峡大桥",
-       "厄勒海峡大桥隧道"
-      ]
-     },
-     "match": [
-      "Oresund Bridge",
-      "Øresund Bridge",
-      "Oresund Link",
-      "厄勒海峡大桥",
-      "厄勒海峡大桥隧道"
-     ]
-    },
-    {
-     "role": "language",
-     "required": false,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Hebrew"
-      ],
-      "zh": [
-       "希伯来语"
-      ],
-      "he": [
-       "עברית",
-       "בעברית",
-       "השפה העברית"
-      ]
-     },
-     "match": [
-      "Hebrew",
-      "希伯来语",
-      "עברית",
-      "בעברית",
-      "השפה העברית"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which bridge, opened in 2000, provides a fixed link across the strait between Denmark and Sweden? Answer with just the name.",
-     "units": [
-      "bridge_l2",
-      "bridge_native"
-     ],
-     "answers": [
-      "Oresund Bridge",
-      "Øresund Bridge",
-      "Oresund",
-      "Øresund",
-      "Øresundsbron",
-      "Oresundsbron",
-      "גשר אורסונד",
-      "גשר האורסונד",
-      "厄勒海峡大桥",
-      "האורסונד",
-      "Oresund Link",
-      "厄勒海峡大桥隧道"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge_l2|bridge_native": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge_l2": {
-      "he": [
-       7,
-       7,
-       5
-      ]
-     },
-     "bridge_native": {
-      "en": [
-       3,
        3,
        3
-      ],
-      "zh": [
-       4,
-       5
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       4
-      ],
-      "he": [
-       3,
-       3,
-       5
-      ]
-     }
-    },
-    "target": 3
-   },
-   "mc": {
-    "bridge_native": {
-     "gold": "Oresund Bridge",
-     "distractors": [
-      "Great Belt Bridge",
-      "Little Belt Bridge",
-      "Vasco da Gama Bridge",
-      "Rion-Antirion Bridge"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mlmh-he-beriberi-thiamine",
-   "subfamily": "2hop",
-   "prompt": "הליקוי הנוירולוגי שפגע בהמוני אוכלי אורז מלוטש במזרח אסיה נובע ממחסור בתרכובת הנקראת",
-   "target": "תיאמין",
-   "target_alts": [
-    "תיאמין",
-    "התיאמין",
-    "ויטמין B1",
-    "תיאמין (B1)",
-    "תיאמין הידרוכלוריד"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "he",
-   "intermediates": [
-    "beriberi"
-   ],
-   "units": [
-    {
-     "role": "bridge_l2",
-     "required": false,
-     "multi_token": true,
-     "forms": {
-      "he": [
-       "מחלת בריברי",
-       "בריברי",
-       "הבריברי"
-      ]
-     },
-     "match": [
-      "מחלת בריברי",
-      "בריברי",
-      "הבריברי"
-     ]
-    },
-    {
-     "role": "bridge_native",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "beriberi",
-       "beri-beri",
-       "wet beriberi"
-      ],
-      "zh": [
-       "脚气病",
-       "维生素B1缺乏症"
-      ]
-     },
-     "match": [
-      "beriberi",
-      "beri-beri",
-      "wet beriberi",
-      "脚气病",
-      "维生素B1缺乏症"
-     ]
-    },
-    {
-     "role": "language",
-     "required": false,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Hebrew"
-      ],
-      "zh": [
-       "希伯来语"
-      ],
-      "he": [
-       "עברית",
-       "בעברית",
-       "השפה העברית"
-      ]
-     },
-     "match": [
-      "Hebrew",
-      "希伯来语",
-      "עברית",
-      "בעברית",
-      "השפה העברית"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which nutritional deficiency illness, affecting the nerves and the heart, was historically widespread among populations whose diet consisted mainly of polished white rice in East Asia? Answer with just the name.",
-     "units": [
-      "bridge_l2",
-      "bridge_native"
-     ],
-     "answers": [
-      "beriberi",
-      "beri-beri",
-      "wet beriberi",
-      "dry beriberi",
-      "בריברי",
-      "מחלת בריברי",
-      "הבריברי",
-      "脚气病",
-      "维生素B1缺乏症"
-     ]
-    }
-   ],
-   "consistency": 0.9,
-   "consistency_strict": 0.9,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge_l2|bridge_native": 0.9
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge_l2": {
-      "he": [
-       5,
-       2,
-       3
-      ]
-     },
-     "bridge_native": {
-      "en": [
-       3,
-       3,
-       4
-      ],
-      "zh": [
-       3,
-       5
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       4
-      ],
-      "he": [
-       3,
-       3,
-       5
       ]
      }
     },
@@ -1628,815 +649,27 @@
    },
    "mc": {
     "bridge_native": {
-     "gold": "beriberi",
+     "gold": "ASML Holding N.V.",
      "distractors": [
-      "scurvy",
-      "pellagra",
-      "rickets",
-      "kwashiorkor"
+      "Applied Materials, Inc.",
+      "Tokyo Electron Limited",
+      "Lam Research Corporation",
+      "KLA Corporation"
      ]
     }
    }
   },
   {
-   "name": "mlmh-he-hindenburg-hydrogen",
+   "name": "mlmh-ko-bayreuth-bavaria",
    "subfamily": "2hop",
-   "prompt": "הגז שמילא את ספינת האוויר הגרמנית שהתפוצצה בשנת 1937 מעל לייקהרסט היה",
-   "target": "מימן",
+   "prompt": "바그너가 오직 자신의 악극만을 상연하려고 직접 세운 전용 공연장이 자리한 도시가 속해 있는 연방주는",
+   "target": "바이에른",
    "target_alts": [
-    "מימן",
-    "המימן",
-    "גז מימן",
-    "מֵימָן",
-    "מימן דו־אטומי"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "he",
-   "intermediates": [
-    "Hindenburg"
-   ],
-   "units": [
-    {
-     "role": "bridge_l2",
-     "required": false,
-     "multi_token": true,
-     "forms": {
-      "he": [
-       "הינדנבורג",
-       "הינדנבורגר"
-      ]
-     },
-     "match": [
-      "הינדנבורג",
-      "הינדנבורגר"
-     ]
-    },
-    {
-     "role": "bridge_native",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Hindenburg",
-       "LZ 129 Hindenburg"
-      ],
-      "zh": [
-       "兴登堡号飞艇",
-       "兴登堡号"
-      ]
-     },
-     "match": [
-      "Hindenburg",
-      "LZ 129 Hindenburg",
-      "兴登堡号飞艇",
-      "兴登堡号"
-     ]
-    },
-    {
-     "role": "language",
-     "required": false,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Hebrew"
-      ],
-      "zh": [
-       "希伯来语"
-      ],
-      "he": [
-       "עברית",
-       "בעברית",
-       "השפה העברית"
-      ]
-     },
-     "match": [
-      "Hebrew",
-      "希伯来语",
-      "עברית",
-      "בעברית",
-      "השפה העברית"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which German airship exploded over Lakehurst, New Jersey, in 1937? Answer with just the name.",
-     "units": [
-      "bridge_l2",
-      "bridge_native"
-     ],
-     "answers": [
-      "Hindenburg",
-      "LZ 129 Hindenburg",
-      "the Hindenburg",
-      "הינדנבורג",
-      "ספינת האוויר הינדנבורג",
-      "兴登堡号",
-      "兴登堡号飞艇",
-      "הינדנבורגר"
-     ]
-    }
-   ],
-   "consistency": 0.9,
-   "consistency_strict": 0.9,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge_l2|bridge_native": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge_l2": {
-      "he": [
-       5,
-       5
-      ]
-     },
-     "bridge_native": {
-      "en": [
-       2,
-       7
-      ],
-      "zh": [
-       6,
-       4
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       4
-      ],
-      "he": [
-       3,
-       3,
-       5
-      ]
-     }
-    },
-    "target": 2
-   },
-   "mc": {
-    "bridge_native": {
-     "gold": "Hindenburg",
-     "distractors": [
-      "Graf Zeppelin",
-      "USS Akron",
-      "USS Shenandoah",
-      "USS Macon"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mlmh-hu-vosztok-foldresz",
-   "subfamily": "2hop",
-   "prompt": "1983-ban a Föld valaha mért legalacsonyabb léghőmérsékletét feljegyző orosz sarkkutató bázis földrésze az",
-   "target": "Antarktisz",
-   "target_alts": [
-    "Antarktisz",
-    "az Antarktisz",
-    "Antarktiszon",
-    "Antarktiszra",
-    "Antarktika",
-    "Antarktisz kontinense"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "hu",
-   "intermediates": [
-    "Vostok Station"
-   ],
-   "units": [
-    {
-     "role": "bridge_l2",
-     "required": false,
-     "multi_token": true,
-     "forms": {
-      "hu": [
-       "Vosztok-állomás",
-       "Vosztok",
-       "a Vosztokon"
-      ]
-     },
-     "match": [
-      "Vosztok-állomás",
-      "Vosztok",
-      "a Vosztokon"
-     ]
-    },
-    {
-     "role": "bridge_native",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Vostok Station",
-       "Vostok research base"
-      ],
-      "zh": [
-       "东方站",
-       "沃斯托克站"
-      ]
-     },
-     "match": [
-      "Vostok Station",
-      "Vostok research base",
-      "东方站",
-      "沃斯托克站"
-     ]
-    },
-    {
-     "role": "language",
-     "required": false,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Hungarian"
-      ],
-      "zh": [
-       "匈牙利语"
-      ],
-      "hu": [
-       "magyarul",
-       "magyar nyelven"
-      ]
-     },
-     "match": [
-      "Hungarian",
-      "匈牙利语",
-      "magyarul",
-      "magyar nyelven"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which Russian Antarctic research station recorded the lowest natural air temperature ever measured on Earth in 1983? Answer with just the name.",
-     "units": [
-      "bridge_l2",
-      "bridge_native"
-     ],
-     "answers": [
-      "Vostok",
-      "Vostok Station",
-      "Vosztok",
-      "Vosztok-állomás",
-      "东方站",
-      "沃斯托克站",
-      "a Vosztokon",
-      "Vostok research base"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge_l2|bridge_native": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge_l2": {
-      "hu": [
-       6,
-       3,
-       4
-      ]
-     },
-     "bridge_native": {
-      "en": [
-       3,
-       4
-      ],
-      "zh": [
-       2,
-       4
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2
-      ],
-      "hu": [
-       1,
-       4
-      ]
-     }
-    },
-    "target": 3
-   },
-   "mc": {
-    "bridge_native": {
-     "gold": "Vostok Station",
-     "distractors": [
-      "Amundsen-Scott South Pole Station",
-      "McMurdo Station",
-      "Concordia Station",
-      "Mirny Station"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mlmh-hu-nyaki-negy-szerv-kalcium-hormon",
-   "subfamily": "2hop",
-   "prompt": "A nyakban található négy apró, lencse nagyságú belső elválasztású szerv által termelt, a vér kalciumszintjét emelő hormon a",
-   "target": "parathormon",
-   "target_alts": [
-    "parathormon",
-    "parathormont",
-    "parathormonnak",
-    "parathormonnal",
-    "a parathormon"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "hu",
-   "intermediates": [
-    "parathyroid gland"
-   ],
-   "units": [
-    {
-     "role": "bridge_l2",
-     "required": false,
-     "multi_token": true,
-     "forms": {
-      "hu": [
-       "mellékpajzsmirigy",
-       "mellékpajzsmirigyek",
-       "a mellékpajzsmirigy"
-      ]
-     },
-     "match": [
-      "mellékpajzsmirigy",
-      "mellékpajzsmirigyek",
-      "a mellékpajzsmirigy"
-     ]
-    },
-    {
-     "role": "bridge_native",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "parathyroid gland",
-       "parathyroid glands",
-       "the parathyroids"
-      ],
-      "zh": [
-       "甲状旁腺",
-       "甲状旁腺体"
-      ]
-     },
-     "match": [
-      "parathyroid gland",
-      "parathyroid glands",
-      "the parathyroids",
-      "甲状旁腺",
-      "甲状旁腺体"
-     ]
-    },
-    {
-     "role": "language",
-     "required": false,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Hungarian"
-      ],
-      "zh": [
-       "匈牙利语"
-      ],
-      "hu": [
-       "magyarul",
-       "magyar nyelv",
-       "magyar nyelven"
-      ]
-     },
-     "match": [
-      "Hungarian",
-      "匈牙利语",
-      "magyarul",
-      "magyar nyelv",
-      "magyar nyelven"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which four small glands, embedded on the rear surface of the thyroid in the neck, regulate the body's calcium balance? Answer with just the name.",
-     "units": [
-      "bridge_l2",
-      "bridge_native"
-     ],
-     "answers": [
-      "parathyroid glands",
-      "parathyroid gland",
-      "the parathyroids",
-      "parathyroids",
-      "mellékpajzsmirigy",
-      "mellékpajzsmirigyek",
-      "甲状旁腺",
-      "a mellékpajzsmirigy",
-      "甲状旁腺体"
-     ]
-    }
-   ],
-   "consistency": 0.8,
-   "consistency_strict": 0.8,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge_l2|bridge_native": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge_l2": {
-      "hu": [
-       8,
-       9,
-       9
-      ]
-     },
-     "bridge_native": {
-      "en": [
-       4,
-       4,
-       4
-      ],
-      "zh": [
-       3,
-       4
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2
-      ],
-      "hu": [
-       1,
-       2,
-       4
-      ]
-     }
-    },
-    "target": 4
-   },
-   "mc": {
-    "bridge_native": {
-     "gold": "parathyroid gland",
-     "distractors": [
-      "thyroid gland",
-      "adrenal gland",
-      "pituitary gland",
-      "pineal gland"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mlmh-id-giyanti-yogyakarta",
-   "subfamily": "2hop",
-   "prompt": "Kesepakatan tahun 1755 yang membelah wilayah Mataram melahirkan Kasunanan Surakarta dan Kesultanan",
-   "target": "Yogyakarta",
-   "target_alts": [
-    "Yogyakarta",
-    "Ngayogyakarta",
-    "Jogjakarta",
-    "Ngayogyakarta Hadiningrat"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "id",
-   "intermediates": [
-    "Treaty of Giyanti"
-   ],
-   "units": [
-    {
-     "role": "bridge_l2",
-     "required": false,
-     "multi_token": true,
-     "forms": {
-      "id": [
-       "Perjanjian Giyanti",
-       "Palihan Nagari"
-      ]
-     },
-     "match": [
-      "Perjanjian Giyanti",
-      "Palihan Nagari"
-     ]
-    },
-    {
-     "role": "bridge_native",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Treaty of Giyanti",
-       "Giyanti Agreement"
-      ],
-      "zh": [
-       "吉扬蒂条约",
-       "吉扬蒂协定"
-      ]
-     },
-     "match": [
-      "Treaty of Giyanti",
-      "Giyanti Agreement",
-      "吉扬蒂条约",
-      "吉扬蒂协定"
-     ]
-    },
-    {
-     "role": "language",
-     "required": false,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Indonesian"
-      ],
-      "zh": [
-       "印尼语",
-       "印度尼西亚语"
-      ],
-      "id": [
-       "bahasa Indonesia",
-       "Bahasa Indonesia"
-      ]
-     },
-     "match": [
-      "Indonesian",
-      "印尼语",
-      "印度尼西亚语",
-      "bahasa Indonesia",
-      "Bahasa Indonesia"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which 1755 treaty split the Javanese realm of Mataram into two courts? Answer with just the name.",
-     "units": [
-      "bridge_l2",
-      "bridge_native"
-     ],
-     "answers": [
-      "Giyanti",
-      "Treaty of Giyanti",
-      "Perjanjian Giyanti",
-      "Giyanti Agreement",
-      "Palihan Nagari",
-      "吉扬蒂条约",
-      "吉扬蒂协定"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge_l2|bridge_native": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge_l2": {
-      "id": [
-       4,
-       4
-      ]
-     },
-     "bridge_native": {
-      "en": [
-       5,
-       4
-      ],
-      "zh": [
-       4,
-       4
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2,
-       2
-      ],
-      "id": [
-       2,
-       2
-      ]
-     }
-    },
-    "target": 1
-   },
-   "mc": {
-    "bridge_native": {
-     "gold": "Treaty of Giyanti",
-     "distractors": [
-      "Treaty of Salatiga",
-      "Treaty of Bongaya",
-      "Treaty of Tuntang",
-      "Linggadjati Agreement"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mlmh-id-transsiberia-vladivostok",
-   "subfamily": "2hop",
-   "prompt": "Rel tunggal terpanjang di dunia yang membentang dari Moskwa jauh ke arah timur berakhir di kota pelabuhan",
-   "target": "Vladivostok",
-   "target_alts": [
-    "Vladivostok",
-    "Kota Vladivostok",
-    "Vladivostock"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "id",
-   "intermediates": [
-    "Trans-Siberian Railway"
-   ],
-   "units": [
-    {
-     "role": "bridge_l2",
-     "required": false,
-     "multi_token": true,
-     "forms": {
-      "id": [
-       "Kereta Api Trans-Siberia",
-       "Jalur Trans-Siberia"
-      ]
-     },
-     "match": [
-      "Kereta Api Trans-Siberia",
-      "Jalur Trans-Siberia"
-     ]
-    },
-    {
-     "role": "bridge_native",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Trans-Siberian Railway"
-      ],
-      "zh": [
-       "西伯利亚大铁路"
-      ]
-     },
-     "match": [
-      "Trans-Siberian Railway",
-      "西伯利亚大铁路"
-     ]
-    },
-    {
-     "role": "language",
-     "required": false,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Indonesian"
-      ],
-      "zh": [
-       "印尼语",
-       "印度尼西亚语"
-      ],
-      "id": [
-       "bahasa Indonesia"
-      ]
-     },
-     "match": [
-      "Indonesian",
-      "印尼语",
-      "印度尼西亚语",
-      "bahasa Indonesia"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which railway line, the longest single railway in the world, runs from Moscow across Russia to the Pacific coast? Answer with just the name.",
-     "units": [
-      "bridge_l2",
-      "bridge_native"
-     ],
-     "answers": [
-      "Trans-Siberian Railway",
-      "Trans-Siberian",
-      "Transsiberian Railway",
-      "Kereta Api Trans-Siberia",
-      "Jalur Trans-Siberia",
-      "Trans-Siberia",
-      "西伯利亚大铁路"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge_l2|bridge_native": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge_l2": {
-      "id": [
-       6,
-       5
-      ]
-     },
-     "bridge_native": {
-      "en": [
-       5
-      ],
-      "zh": [
-       5
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2,
-       2
-      ],
-      "id": [
-       2
-      ]
-     }
-    },
-    "target": 4
-   },
-   "mc": {
-    "bridge_native": {
-     "gold": "Trans-Siberian Railway",
-     "distractors": [
-      "Baikal–Amur Mainline",
-      "Canadian Pacific Railway",
-      "Orient Express",
-      "Trans-Australian Railway"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mlmh-ko-krakatoa-currency",
-   "subfamily": "2hop",
-   "prompt": "1883년의 거대한 폭발로 굉음이 지구 반대편까지 전해진 순다 해협의 섬이 속한 나라의 화폐 단위는",
-   "target": "루피아",
-   "target_alts": [
-    "루피아",
-    "루피아화",
-    "인도네시아 루피아",
-    "루피아이다"
+    "바이에른주",
+    "바이에른 주",
+    "바이에른이다",
+    "바이에른주다",
+    "바이에른 자유주"
    ],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -2448,7 +681,7 @@
    },
    "lang": "ko",
    "intermediates": [
-    "Krakatoa"
+    "Bayreuth Festspielhaus"
    ],
    "units": [
     {
@@ -2457,15 +690,15 @@
      "multi_token": true,
      "forms": {
       "ko": [
-       "크라카타우",
-       "크라카타우 화산",
-       "크라카토아"
+       "바이로이트 축제극장",
+       "바이로이트 축제 극장",
+       "바이로이트"
       ]
      },
      "match": [
-      "크라카타우",
-      "크라카타우 화산",
-      "크라카토아"
+      "바이로이트 축제극장",
+      "바이로이트 축제 극장",
+      "바이로이트"
      ]
     },
     {
@@ -2474,19 +707,19 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "Krakatoa",
-       "Krakatau"
+       "Bayreuth Festspielhaus",
+       "Bayreuth Festival Theatre"
       ],
       "zh": [
-       "喀拉喀托火山",
-       "喀拉喀托"
+       "拜罗伊特节日剧院",
+       "拜罗伊特"
       ]
      },
      "match": [
-      "Krakatoa",
-      "Krakatau",
-      "喀拉喀托火山",
-      "喀拉喀托"
+      "Bayreuth Festspielhaus",
+      "Bayreuth Festival Theatre",
+      "拜罗伊特节日剧院",
+      "拜罗伊特"
      ]
     },
     {
@@ -2503,7 +736,7 @@
       ],
       "ko": [
        "한국어",
-       "한국어로",
+       "한국말",
        "우리말"
       ]
      },
@@ -2512,31 +745,33 @@
       "韩语",
       "韩国语",
       "한국어",
-      "한국어로",
+      "한국말",
       "우리말"
      ]
     }
    ],
    "bridges": [
     {
-     "question": "Which volcano in the Sunda Strait erupted catastrophically in 1883, producing one of the loudest sounds in recorded history? Answer with just the name.",
+     "question": "What is the name of the festival opera house that Richard Wagner had built for performances of his own music dramas? Answer with just the name.",
      "units": [
       "bridge_l2",
       "bridge_native"
      ],
      "answers": [
-      "Krakatoa",
-      "Krakatau",
-      "크라카타우",
-      "크라카토아",
-      "크라카타우 화산",
-      "喀拉喀托",
-      "喀拉喀托火山"
+      "Bayreuth Festspielhaus",
+      "Festspielhaus",
+      "Bayreuth Festival Theatre",
+      "Bayreuth",
+      "바이로이트 축제극장",
+      "바이로이트",
+      "拜罗伊特节日剧院",
+      "拜罗伊特",
+      "바이로이트 축제 극장"
      ]
     }
    ],
-   "consistency": 0.9,
-   "consistency_strict": 0.9,
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
    "consistency_greedy": 1,
    "bridge_consistency": {
     "bridge_l2|bridge_native": 1.0
@@ -2546,18 +781,18 @@
     "units": {
      "bridge_l2": {
       "ko": [
-       4,
        6,
-       4
+       6,
+       3
       ]
      },
      "bridge_native": {
       "en": [
-       3,
-       2
+       6,
+       5
       ],
       "zh": [
-       5,
+       6,
        4
       ]
      },
@@ -2576,31 +811,31 @@
       ]
      }
     },
-    "target": 2
+    "target": 3
    },
    "mc": {
     "bridge_native": {
-     "gold": "Krakatoa",
+     "gold": "Bayreuth Festspielhaus",
      "distractors": [
-      "Mount Tambora",
-      "Mount Merapi",
-      "Mount Pinatubo",
-      "Mount Vesuvius"
+      "Semperoper Dresden",
+      "Teatro alla Scala",
+      "Vienna State Opera",
+      "Nationaltheater München"
      ]
     }
    }
   },
   {
-   "name": "mlmh-pl-erupcja-1815-panstwo",
+   "name": "mlmh-ko-svalbard-norway",
    "subfamily": "2hop",
-   "prompt": "Wulkan, którego erupcja w 1815 roku wywołała na półkuli północnej rok bez lata, leży na terytorium państwa",
-   "target": "Indonezji",
+   "prompt": "전 세계 작물의 씨앗을 영구 보관하는 국제 종자 저장고가 들어선 북극권 군도를 다스리는 나라는",
+   "target": "노르웨이",
    "target_alts": [
-    "Indonezji",
-    "Indonezja",
-    "Indonezję",
-    "Indonezyjskiego",
-    "Republiki Indonezji"
+    "노르웨이",
+    "노르웨이다",
+    "노르웨이입니다",
+    "노르웨이 왕국",
+    "노르웨이이며"
    ],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -2610,9 +845,9 @@
      -1
     ]
    },
-   "lang": "pl",
+   "lang": "ko",
    "intermediates": [
-    "Mount Tambora"
+    "Svalbard"
    ],
    "units": [
     {
@@ -2620,14 +855,16 @@
      "required": false,
      "multi_token": true,
      "forms": {
-      "pl": [
-       "góra Tambora",
-       "Tambory"
+      "ko": [
+       "스발바르 제도",
+       "스발바르",
+       "스피츠베르겐"
       ]
      },
      "match": [
-      "góra Tambora",
-      "Tambory"
+      "스발바르 제도",
+      "스발바르",
+      "스피츠베르겐"
      ]
     },
     {
@@ -2636,19 +873,23 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "Mount Tambora",
-       "Tambora volcano"
+       "Svalbard",
+       "Svalbard archipelago",
+       "Spitsbergen"
       ],
       "zh": [
-       "坦博拉火山",
-       "坦博拉"
+       "斯瓦尔巴群岛",
+       "斯瓦尔巴",
+       "斯匹次卑尔根"
       ]
      },
      "match": [
-      "Mount Tambora",
-      "Tambora volcano",
-      "坦博拉火山",
-      "坦博拉"
+      "Svalbard",
+      "Svalbard archipelago",
+      "Spitsbergen",
+      "斯瓦尔巴群岛",
+      "斯瓦尔巴",
+      "斯匹次卑尔根"
      ]
     },
     {
@@ -2657,47 +898,50 @@
      "multi_token": false,
      "forms": {
       "en": [
-       "Polish"
+       "Korean"
       ],
       "zh": [
-       "波兰语"
+       "韩语",
+       "韩国语"
       ],
-      "pl": [
-       "język polski",
-       "po polsku",
-       "polszczyzna"
+      "ko": [
+       "한국어",
+       "한국말",
+       "우리말"
       ]
      },
      "match": [
-      "Polish",
-      "波兰语",
-      "język polski",
-      "po polsku",
-      "polszczyzna"
+      "Korean",
+      "韩语",
+      "韩国语",
+      "한국어",
+      "한국말",
+      "우리말"
      ]
     }
    ],
    "bridges": [
     {
-     "question": "Which volcano's catastrophic 1815 eruption led to the 'Year Without a Summer'? Answer with just the name.",
+     "question": "On which Arctic archipelago is the global seed vault for permanently storing crop seeds located? Answer with just the name.",
      "units": [
       "bridge_l2",
       "bridge_native"
      ],
      "answers": [
-      "Tambora",
-      "Mount Tambora",
-      "Gunung Tambora",
-      "góra Tambora",
-      "Tambory",
-      "坦博拉火山",
-      "坦博拉",
-      "Tambora volcano"
+      "Svalbard",
+      "Svalbard archipelago",
+      "Spitsbergen",
+      "스발바르",
+      "스발바르 제도",
+      "스피츠베르겐",
+      "斯瓦尔巴群岛",
+      "斯瓦尔巴",
+      "斯匹次卑尔根"
      ]
     }
    ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
+   "consistency": 0.9,
+   "consistency_strict": 0.9,
    "consistency_greedy": 1,
    "bridge_consistency": {
     "bridge_l2|bridge_native": 1.0
@@ -2706,181 +950,345 @@
    "probe_token_lens": {
     "units": {
      "bridge_l2": {
-      "pl": [
-       4,
-       2
-      ]
-     },
-     "bridge_native": {
-      "en": [
-       3,
-       3
-      ],
-      "zh": [
-       4,
-       3
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2
-      ],
-      "pl": [
-       4,
-       3,
-       4
-      ]
-     }
-    },
-    "target": 4
-   },
-   "mc": {
-    "bridge_native": {
-     "gold": "Mount Tambora",
-     "distractors": [
-      "Krakatoa",
-      "Mount Merapi",
-      "Mount Pinatubo",
-      "Mount Kelud"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mlmh-pl-waksman-streptomycyna",
-   "subfamily": "2hop",
-   "prompt": "Pierwszy skuteczny lek przeciwgruźliczy, wyodrębniony w 1943 roku w laboratorium ukraińsko-amerykańskiego mikrobiologa nagrodzonego Noblem w 1952 roku, to",
-   "target": "streptomycyna",
-   "target_alts": [
-    "streptomycyny",
-    "streptomycynę",
-    "streptomycyną",
-    "streptomycynie"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "pl",
-   "intermediates": [
-    "Selman Waksman"
-   ],
-   "units": [
-    {
-     "role": "bridge_l2",
-     "required": false,
-     "multi_token": true,
-     "forms": {
-      "pl": [
-       "Waksmana",
-       "Selmana Waksmana",
-       "Waksmanem"
-      ]
-     },
-     "match": [
-      "Waksmana",
-      "Selmana Waksmana",
-      "Waksmanem"
-     ]
-    },
-    {
-     "role": "bridge_native",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Selman Waksman",
-       "Selman Abraham Waksman"
-      ],
-      "zh": [
-       "瓦克斯曼",
-       "赛尔曼·瓦克斯曼"
-      ]
-     },
-     "match": [
-      "Selman Waksman",
-      "Selman Abraham Waksman",
-      "瓦克斯曼",
-      "赛尔曼·瓦克斯曼"
-     ]
-    },
-    {
-     "role": "language",
-     "required": false,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Polish"
-      ],
-      "zh": [
-       "波兰语"
-      ],
-      "pl": [
-       "język polski",
-       "po polsku",
-       "polszczyzna"
-      ]
-     },
-     "match": [
-      "Polish",
-      "波兰语",
-      "język polski",
-      "po polsku",
-      "polszczyzna"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which Ukrainian-born American microbiologist, who coined the term 'antibiotic', received the 1952 Nobel Prize in Physiology or Medicine? Answer with just the name.",
-     "units": [
-      "bridge_l2",
-      "bridge_native"
-     ],
-     "answers": [
-      "Waksman",
-      "Selman Waksman",
-      "Selman Abraham Waksman",
-      "Waksmana",
-      "Selmana Waksmana",
-      "Zelman Waksman",
-      "瓦克斯曼",
-      "赛尔曼·瓦克斯曼",
-      "Waksmanem"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge_l2|bridge_native": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge_l2": {
-      "pl": [
-       3,
+      "ko": [
        5,
-       4
-      ]
-     },
-     "bridge_native": {
-      "en": [
-       5,
+       4,
        6
+      ]
+     },
+     "bridge_native": {
+      "en": [
+       2,
+       5,
+       3
+      ],
+      "zh": [
+       4,
+       3,
+       6
+      ]
+     },
+     "language": {
+      "en": [
+       1
+      ],
+      "zh": [
+       1,
+       2
+      ],
+      "ko": [
+       1,
+       2,
+       2
+      ]
+     }
+    },
+    "target": 3
+   },
+   "mc": {
+    "bridge_native": {
+     "gold": "Svalbard",
+     "distractors": [
+      "Franz Josef Land",
+      "Novaya Zemlya",
+      "Jan Mayen",
+      "Severnaya Zemlya"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mlmh-ko-irri-ir8-philippines",
+   "subfamily": "2hop",
+   "prompt": "'기적의 볍씨'로 불린 IR8 벼 품종을 1966년에 세상에 내놓은 농업 기관이 자리 잡은 나라는",
+   "target": "필리핀",
+   "target_alts": [
+    "필리핀",
+    "필리핀이다",
+    "필리핀입니다",
+    "필리핀 공화국",
+    "필리핀공화국"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "lang": "ko",
+   "intermediates": [
+    "International Rice Research Institute"
+   ],
+   "units": [
+    {
+     "role": "bridge_l2",
+     "required": false,
+     "multi_token": true,
+     "forms": {
+      "ko": [
+       "국제미작연구소",
+       "국제 미작 연구소",
+       "국제벼연구소"
+      ]
+     },
+     "match": [
+      "국제미작연구소",
+      "국제 미작 연구소",
+      "국제벼연구소"
+     ]
+    },
+    {
+     "role": "bridge_native",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "International Rice Research Institute",
+       "IRRI"
+      ],
+      "zh": [
+       "国际水稻研究所"
+      ]
+     },
+     "match": [
+      "International Rice Research Institute",
+      "IRRI",
+      "国际水稻研究所"
+     ]
+    },
+    {
+     "role": "language",
+     "required": false,
+     "multi_token": false,
+     "forms": {
+      "en": [
+       "Korean"
+      ],
+      "zh": [
+       "韩语",
+       "韩国语"
+      ],
+      "ko": [
+       "한국어",
+       "한국말",
+       "우리말"
+      ]
+     },
+     "match": [
+      "Korean",
+      "韩语",
+      "韩国语",
+      "한국어",
+      "한국말",
+      "우리말"
+     ]
+    }
+   ],
+   "bridges": [
+    {
+     "question": "Which agricultural institute developed the high-yield IR8 rice variety released in 1966? Answer with just the name.",
+     "units": [
+      "bridge_l2",
+      "bridge_native"
+     ],
+     "answers": [
+      "International Rice Research Institute",
+      "IRRI",
+      "국제미작연구소",
+      "국제 미작 연구소",
+      "국제벼연구소",
+      "国际水稻研究所"
+     ]
+    }
+   ],
+   "consistency": 0.8,
+   "consistency_strict": 0.8,
+   "consistency_greedy": 1,
+   "bridge_consistency": {
+    "bridge_l2|bridge_native": 0.9
+   },
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "bridge_l2": {
+      "ko": [
+       4,
+       5,
+       3
+      ]
+     },
+     "bridge_native": {
+      "en": [
+       4,
+       2
+      ],
+      "zh": [
+       3
+      ]
+     },
+     "language": {
+      "en": [
+       1
+      ],
+      "zh": [
+       1,
+       2
+      ],
+      "ko": [
+       1,
+       2,
+       2
+      ]
+     }
+    },
+    "target": 3
+   },
+   "mc": {
+    "bridge_native": {
+     "gold": "International Rice Research Institute",
+     "distractors": [
+      "International Maize and Wheat Improvement Center",
+      "International Institute of Tropical Agriculture",
+      "International Potato Center",
+      "International Livestock Research Institute"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mlmh-pl-najruchliwsza-droga-wodna-morze",
+   "subfamily": "2hop",
+   "prompt": "Najbardziej ruchliwa sztuczna droga wodna dla statków na świecie łączy Bałtyk z morzem",
+   "target": "Północnym",
+   "target_alts": [
+    "Północnym",
+    "Północne",
+    "Północnego",
+    "północnym",
+    "północne"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "lang": "pl",
+   "intermediates": [
+    "Kiel Canal"
+   ],
+   "units": [
+    {
+     "role": "bridge_l2",
+     "required": false,
+     "multi_token": true,
+     "forms": {
+      "pl": [
+       "Kanał Kiloński",
+       "Kanału Kilońskiego",
+       "Kanałem Kilońskim"
+      ]
+     },
+     "match": [
+      "Kanał Kiloński",
+      "Kanału Kilońskiego",
+      "Kanałem Kilońskim"
+     ]
+    },
+    {
+     "role": "bridge_native",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "Kiel Canal",
+       "Kiel Ship Canal"
+      ],
+      "zh": [
+       "基尔运河",
+       "北海-波罗的海运河"
+      ]
+     },
+     "match": [
+      "Kiel Canal",
+      "Kiel Ship Canal",
+      "基尔运河",
+      "北海-波罗的海运河"
+     ]
+    },
+    {
+     "role": "language",
+     "required": false,
+     "multi_token": false,
+     "forms": {
+      "en": [
+       "Polish"
+      ],
+      "zh": [
+       "波兰语"
+      ],
+      "pl": [
+       "po polsku",
+       "język polski"
+      ]
+     },
+     "match": [
+      "Polish",
+      "波兰语",
+      "po polsku",
+      "język polski"
+     ]
+    }
+   ],
+   "bridges": [
+    {
+     "question": "Which canal in northern Germany, opened in 1895, is the world's busiest artificial waterway by number of ships? Answer with just the name.",
+     "units": [
+      "bridge_l2",
+      "bridge_native"
+     ],
+     "answers": [
+      "Kiel Canal",
+      "Kiel",
+      "the Kiel Canal",
+      "Kiel Ship Canal",
+      "Nord-Ostsee-Kanal",
+      "Kanał Kiloński",
+      "Kanału Kilońskiego",
+      "Kanałem Kilońskim",
+      "基尔运河",
+      "北海-波罗的海运河"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "bridge_consistency": {
+    "bridge_l2|bridge_native": 1.0
+   },
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "bridge_l2": {
+      "pl": [
+       4,
+       4,
+       5
+      ]
+     },
+     "bridge_native": {
+      "en": [
+       2,
+       3
       ],
       "zh": [
        3,
-       7
+       5
       ]
      },
      "language": {
@@ -2891,22 +1299,21 @@
        2
       ],
       "pl": [
-       4,
        3,
        4
       ]
      }
     },
-    "target": 4
+    "target": 3
    },
    "mc": {
     "bridge_native": {
-     "gold": "Selman Waksman",
+     "gold": "Kiel Canal",
      "distractors": [
-      "Alexander Fleming",
-      "Ernst Boris Chain",
-      "Gerhard Domagk",
-      "René Dubos"
+      "Corinth Canal",
+      "Göta Canal",
+      "Mittelland Canal",
+      "Suez Canal"
      ]
     }
    }
@@ -3084,342 +1491,6 @@
    }
   },
   {
-   "name": "mlmh-ru-pernicious-cobalt",
-   "subfamily": "2hop",
-   "prompt": "Молекула витамина, нехватка которого приводит к пернициозной анемии, содержит в центре своего корринового кольца атом металла под названием",
-   "target": "кобальт",
-   "target_alts": [
-    "кобальта",
-    "кобальтом",
-    "Кобальт",
-    "кобальту"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "ru",
-   "intermediates": [
-    "vitamin B12"
-   ],
-   "units": [
-    {
-     "role": "bridge_l2",
-     "required": false,
-     "multi_token": true,
-     "forms": {
-      "ru": [
-       "цианокобаламин",
-       "кобаламин",
-       "цианокобаламина"
-      ]
-     },
-     "match": [
-      "цианокобаламин",
-      "кобаламин",
-      "цианокобаламина"
-     ]
-    },
-    {
-     "role": "bridge_native",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "vitamin B12",
-       "cyanocobalamin",
-       "cobalamin"
-      ],
-      "zh": [
-       "维生素B12",
-       "钴胺素",
-       "氰钴胺"
-      ]
-     },
-     "match": [
-      "vitamin B12",
-      "cyanocobalamin",
-      "cobalamin",
-      "维生素B12",
-      "钴胺素",
-      "氰钴胺"
-     ]
-    },
-    {
-     "role": "language",
-     "required": false,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Russian"
-      ],
-      "zh": [
-       "俄语"
-      ],
-      "ru": [
-       "русский язык",
-       "по-русски",
-       "русском"
-      ]
-     },
-     "match": [
-      "Russian",
-      "俄语",
-      "русский язык",
-      "по-русски",
-      "русском"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "A deficiency of which vitamin causes pernicious anemia? Answer with just the name.",
-     "units": [
-      "bridge_l2",
-      "bridge_native"
-     ],
-     "answers": [
-      "vitamin B12",
-      "B12",
-      "cobalamin",
-      "cyanocobalamin",
-      "витамин B12",
-      "витамина B12",
-      "цианокобаламин",
-      "кобаламин",
-      "B-12",
-      "цианокобаламина",
-      "维生素B12",
-      "钴胺素",
-      "氰钴胺"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge_l2|bridge_native": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge_l2": {
-      "ru": [
-       6,
-       4,
-       6
-      ]
-     },
-     "bridge_native": {
-      "en": [
-       4,
-       5,
-       3
-      ],
-      "zh": [
-       4,
-       3,
-       3
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       1
-      ],
-      "ru": [
-       2,
-       4,
-       1
-      ]
-     }
-    },
-    "target": 4
-   },
-   "mc": {
-    "bridge_native": {
-     "gold": "vitamin B12",
-     "distractors": [
-      "folic acid",
-      "thiamine",
-      "riboflavin",
-      "biotin"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mlmh-ru-teide-tenerife",
-   "subfamily": "2hop",
-   "prompt": "Высочайшая вершина Испании, поднимающаяся над водами Атлантики, находится на острове",
-   "target": "Тенерифе",
-   "target_alts": [
-    "Тенерифе",
-    "острове Тенерифе",
-    "Тенериф"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "ru",
-   "intermediates": [
-    "Mount Teide"
-   ],
-   "units": [
-    {
-     "role": "bridge_l2",
-     "required": false,
-     "multi_token": true,
-     "forms": {
-      "ru": [
-       "Тейде",
-       "Пико-дель-Тейде",
-       "Тейдэ"
-      ]
-     },
-     "match": [
-      "Тейде",
-      "Пико-дель-Тейде",
-      "Тейдэ"
-     ]
-    },
-    {
-     "role": "bridge_native",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Mount Teide",
-       "Pico del Teide",
-       "El Teide"
-      ],
-      "zh": [
-       "泰德峰",
-       "泰德火山"
-      ]
-     },
-     "match": [
-      "Mount Teide",
-      "Pico del Teide",
-      "El Teide",
-      "泰德峰",
-      "泰德火山"
-     ]
-    },
-    {
-     "role": "language",
-     "required": false,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Russian"
-      ],
-      "zh": [
-       "俄语"
-      ],
-      "ru": [
-       "по-русски",
-       "русский язык",
-       "на русском языке"
-      ]
-     },
-     "match": [
-      "Russian",
-      "俄语",
-      "по-русски",
-      "русский язык",
-      "на русском языке"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which volcano, rising above the Atlantic Ocean, is the highest summit of Spain? Answer with just the name.",
-     "units": [
-      "bridge_l2",
-      "bridge_native"
-     ],
-     "answers": [
-      "Teide",
-      "Mount Teide",
-      "Pico del Teide",
-      "El Teide",
-      "Тейде",
-      "Тейдэ",
-      "Пико-дель-Тейде",
-      "泰德峰",
-      "泰德火山"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge_l2|bridge_native": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge_l2": {
-      "ru": [
-       2,
-       7,
-       3
-      ]
-     },
-     "bridge_native": {
-      "en": [
-       3,
-       4,
-       3
-      ],
-      "zh": [
-       3,
-       3
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       1
-      ],
-      "ru": [
-       4,
-       2,
-       3
-      ]
-     }
-    },
-    "target": 4
-   },
-   "mc": {
-    "bridge_native": {
-     "gold": "Mount Teide",
-     "distractors": [
-      "Mount Etna",
-      "Mulhacén",
-      "Cumbre Vieja",
-      "Roque de los Muchachos"
-     ]
-    }
-   }
-  },
-  {
    "name": "mlmh-ru-suriname-netherlands",
    "subfamily": "2hop",
    "prompt": "Государство, столицей которого является Парамарибо, в 1975 году обрело независимость от",
@@ -3582,14 +1653,15 @@
    }
   },
   {
-   "name": "mlmh-ru-stradivari-cremona",
+   "name": "mlmh-ru-sarez-tajikistan",
    "subfamily": "2hop",
-   "prompt": "Скрипичный мастер, изготовивший прославленный инструмент «Мессия», почти всю жизнь проработал в итальянском городе",
-   "target": "Кремона",
+   "prompt": "Высокогорный водоём, образовавшийся в 1911 году после обвала, запрудившего реку Мургаб на Памире, целиком лежит в пределах государства",
+   "target": "Таджикистан",
    "target_alts": [
-    "Кремоне",
-    "Кремону",
-    "Кремоны"
+    "Таджикистана",
+    "Таджикистане",
+    "Таджикистану",
+    "Таджикистаном"
    ],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -3601,7 +1673,7 @@
    },
    "lang": "ru",
    "intermediates": [
-    "Antonio Stradivari"
+    "Lake Sarez"
    ],
    "units": [
     {
@@ -3610,13 +1682,15 @@
      "multi_token": true,
      "forms": {
       "ru": [
-       "Антонио Страдивари",
-       "Страдивари"
+       "Сарезское озеро",
+       "Сарезского озера",
+       "Сарез"
       ]
      },
      "match": [
-      "Антонио Страдивари",
-      "Страдивари"
+      "Сарезское озеро",
+      "Сарезского озера",
+      "Сарез"
      ]
     },
     {
@@ -3625,21 +1699,19 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "Antonio Stradivari",
-       "Stradivari",
-       "Stradivarius"
+       "Lake Sarez",
+       "Sarez Lake"
       ],
       "zh": [
-       "安东尼奥·斯特拉迪瓦里",
-       "斯特拉迪瓦里"
+       "萨雷兹湖",
+       "萨列兹湖"
       ]
      },
      "match": [
-      "Antonio Stradivari",
-      "Stradivari",
-      "Stradivarius",
-      "安东尼奥·斯特拉迪瓦里",
-      "斯特拉迪瓦里"
+      "Lake Sarez",
+      "Sarez Lake",
+      "萨雷兹湖",
+      "萨列兹湖"
      ]
     },
     {
@@ -3656,7 +1728,7 @@
       "ru": [
        "русский язык",
        "по-русски",
-       "на русском"
+       "русском"
       ]
      },
      "match": [
@@ -3664,30 +1736,31 @@
       "俄语",
       "русский язык",
       "по-русски",
-      "на русском"
+      "русском"
      ]
     }
    ],
    "bridges": [
     {
-     "question": "Which luthier built the violin known as 'the Messiah' (Le Messie), dated 1716? Answer with just the name.",
+     "question": "Which high-altitude body of water in the Pamir mountains was created in 1911 when the Usoi landslide dammed the Murghab river? Answer with just the name.",
      "units": [
       "bridge_l2",
       "bridge_native"
      ],
      "answers": [
-      "Antonio Stradivari",
-      "Stradivari",
-      "Stradivarius",
-      "Страдивари",
-      "Антонио Страдивари",
-      "斯特拉迪瓦里",
-      "安东尼奥·斯特拉迪瓦里"
+      "Lake Sarez",
+      "Sarez",
+      "Sarez Lake",
+      "Сарезское озеро",
+      "Сарез",
+      "萨雷兹湖",
+      "Сарезского озера",
+      "萨列兹湖"
      ]
     }
    ],
    "consistency": 0.8,
-   "consistency_strict": 0.8,
+   "consistency_strict": 0.7,
    "consistency_greedy": 1,
    "bridge_consistency": {
     "bridge_l2|bridge_native": 1.0
@@ -3697,19 +1770,19 @@
     "units": {
      "bridge_l2": {
       "ru": [
-       6,
-       3
+       5,
+       5,
+       2
       ]
      },
      "bridge_native": {
       "en": [
-       5,
        3,
        3
       ],
       "zh": [
-       8,
-       5
+       4,
+       4
       ]
      },
      "language": {
@@ -3722,7 +1795,7 @@
       "ru": [
        2,
        4,
-       2
+       1
       ]
      }
     },
@@ -3730,176 +1803,12 @@
    },
    "mc": {
     "bridge_native": {
-     "gold": "Antonio Stradivari",
+     "gold": "Lake Sarez",
      "distractors": [
-      "Giuseppe Guarneri",
-      "Nicolò Amati",
-      "Jacob Stainer",
-      "Giovanni Battista Guadagnini"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mlmh-tr-lind-citrus-protein",
-   "subfamily": "2hop",
-   "prompt": "James Lind'in 1747'de turunçgillerle yaptığı denemeyle tedavi edilebildiği gösterilen beslenme bozukluğunda hidroksilasyonu aksadığı için sağlıklı üretilemeyen yapısal protein",
-   "target": "kollajen",
-   "target_alts": [
-    "kollajendir",
-    "kolajen",
-    "kolajendir",
-    "kollagen",
-    "kollajeni"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "tr",
-   "intermediates": [
-    "scurvy"
-   ],
-   "units": [
-    {
-     "role": "bridge_l2",
-     "required": false,
-     "multi_token": true,
-     "forms": {
-      "tr": [
-       "skorbüt",
-       "skorbüt tablosu",
-       "skorbüte"
-      ]
-     },
-     "match": [
-      "skorbüt",
-      "skorbüt tablosu",
-      "skorbüte"
-     ]
-    },
-    {
-     "role": "bridge_native",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "scurvy",
-       "sailor's scurvy"
-      ],
-      "zh": [
-       "坏血病",
-       "维生素C缺乏病"
-      ]
-     },
-     "match": [
-      "scurvy",
-      "sailor's scurvy",
-      "坏血病",
-      "维生素C缺乏病"
-     ]
-    },
-    {
-     "role": "language",
-     "required": false,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Turkish"
-      ],
-      "zh": [
-       "土耳其语"
-      ],
-      "tr": [
-       "Türkçe",
-       "Türkçedir",
-       "Türk dili"
-      ]
-     },
-     "match": [
-      "Turkish",
-      "土耳其语",
-      "Türkçe",
-      "Türkçedir",
-      "Türk dili"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which nutritional deficiency disease, long common among sailors, was shown to be treatable with citrus fruit in James Lind's 1747 shipboard trial? Answer with just the name.",
-     "units": [
-      "bridge_l2",
-      "bridge_native"
-     ],
-     "answers": [
-      "scurvy",
-      "Scurvy",
-      "skorbüt",
-      "skorbut",
-      "坏血病",
-      "维生素C缺乏病",
-      "维生素C缺乏症",
-      "skorbüt tablosu",
-      "skorbüte",
-      "sailor's scurvy"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge_l2|bridge_native": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge_l2": {
-      "tr": [
-       3,
-       6,
-       3
-      ]
-     },
-     "bridge_native": {
-      "en": [
-       3,
-       5
-      ],
-      "zh": [
-       3,
-       4
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2
-      ],
-      "tr": [
-       2,
-       3,
-       2
-      ]
-     }
-    },
-    "target": 3
-   },
-   "mc": {
-    "bridge_native": {
-     "gold": "scurvy",
-     "distractors": [
-      "rickets",
-      "beriberi",
-      "pellagra",
-      "kwashiorkor"
+      "Lake Karakul",
+      "Iskanderkul",
+      "Yashilkul",
+      "Lake Zorkul"
      ]
     }
    }
@@ -4059,175 +1968,6 @@
       "bronze",
       "brass",
       "Damascus steel"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mlmh-tr-atp7b-metal",
-   "subfamily": "2hop",
-   "prompt": "ATP7B genindeki mutasyonlar sonucu ortaya çıkan kalıtsal bozuklukta karaciğerde ve beyinde aşırı biriken metal",
-   "target": "bakır",
-   "target_alts": [
-    "bakırdır",
-    "bakırın",
-    "bakırdır (Cu)",
-    "Bakır"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "tr",
-   "intermediates": [
-    "Wilson's disease"
-   ],
-   "units": [
-    {
-     "role": "bridge_l2",
-     "required": false,
-     "multi_token": true,
-     "forms": {
-      "tr": [
-       "Wilson hastalığı",
-       "Wilson hastalığında",
-       "hepatolentiküler dejenerasyon"
-      ]
-     },
-     "match": [
-      "Wilson hastalığı",
-      "Wilson hastalığında",
-      "hepatolentiküler dejenerasyon"
-     ]
-    },
-    {
-     "role": "bridge_native",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Wilson's disease",
-       "Wilson disease",
-       "hepatolenticular degeneration"
-      ],
-      "zh": [
-       "肝豆状核变性",
-       "威尔逊病",
-       "威尔森氏症"
-      ]
-     },
-     "match": [
-      "Wilson's disease",
-      "Wilson disease",
-      "hepatolenticular degeneration",
-      "肝豆状核变性",
-      "威尔逊病",
-      "威尔森氏症"
-     ]
-    },
-    {
-     "role": "language",
-     "required": false,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Turkish"
-      ],
-      "zh": [
-       "土耳其语"
-      ],
-      "tr": [
-       "Türkçe",
-       "Türkçedir",
-       "Türk dili"
-      ]
-     },
-     "match": [
-      "Turkish",
-      "土耳其语",
-      "Türkçe",
-      "Türkçedir",
-      "Türk dili"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which inherited disorder, caused by mutations in the ATP7B gene, leads to abnormal metal accumulation in the liver and brain and produces Kayser-Fleischer rings? Answer with just the name.",
-     "units": [
-      "bridge_l2",
-      "bridge_native"
-     ],
-     "answers": [
-      "Wilson's disease",
-      "Wilson disease",
-      "Wilson",
-      "Wilson hastalığı",
-      "hepatolenticular degeneration",
-      "hepatolentiküler dejenerasyon",
-      "肝豆状核变性",
-      "威尔逊病",
-      "威尔森氏症",
-      "Wilson hastalığında"
-     ]
-    }
-   ],
-   "consistency": 0.8,
-   "consistency_strict": 0.8,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge_l2|bridge_native": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge_l2": {
-      "tr": [
-       4,
-       4,
-       8
-      ]
-     },
-     "bridge_native": {
-      "en": [
-       3,
-       2,
-       6
-      ],
-      "zh": [
-       5,
-       3,
-       4
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2
-      ],
-      "tr": [
-       2,
-       3,
-       2
-      ]
-     }
-    },
-    "target": 2
-   },
-   "mc": {
-    "bridge_native": {
-     "gold": "Wilson's disease",
-     "distractors": [
-      "hereditary hemochromatosis",
-      "Menkes disease",
-      "Gaucher disease",
-      "alpha-1 antitrypsin deficiency"
      ]
     }
    }

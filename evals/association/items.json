@@ -38,23 +38,6 @@
    }
   },
   {
-   "name": "child-h",
-   "prompt": "The crayon drawings on the fridge had started with houses and suns and now included something that was either a dragon or a truck — she'd learned not to ask which.",
-   "intermediates": [
-    "child"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "death-h",
    "prompt": "The flowers on the table had been changed twice already, and the black dress still hung on the closet door where she'd put it out the night before the service.",
    "intermediates": [
@@ -106,10 +89,10 @@
    }
   },
   {
-   "name": "pennsylvania",
-   "prompt": "The scrapple was already on the table when he came down, and through the window the hex sign on the neighbor's barn caught the early light.",
+   "name": "neighbors",
+   "prompt": "She knew what time his car left and what night the bins went out, and had waved at him for six years without learning either of his names.",
    "intermediates": [
-    "Pennsylvania"
+    "neighbors"
    ],
    "source": "jlens_source",
    "consistency": 1.0,
@@ -123,10 +106,10 @@
    }
   },
   {
-   "name": "pentagon",
-   "prompt": "The building had five sides and she'd walked the inside of all of them that morning, and the badge at her neck still didn't open the door she needed.",
+   "name": "noir",
+   "prompt": "The neon bled through the blinds in stripes across the desk, and the dame in the doorway had a problem and a cigarette and no intention of telling him which was which.",
    "intermediates": [
-    "Pentagon"
+    "noir"
    ],
    "source": "jlens_source",
    "consistency": 1.0,
@@ -174,12 +157,12 @@
    }
   },
   {
-   "name": "bf-baseball",
-   "prompt": "He tipped his cap on the mound, checked the runner at first, and threw the full-count pitch.",
+   "name": "unesco",
+   "prompt": "The emblem had been Julian Huxley's idea, or near enough, and now it hung beside a thousand temple gates and a thousand ruins the world had agreed to keep.",
    "intermediates": [
-    "baseball"
+    "UNESCO"
    ],
-   "source": "staging",
+   "source": "jlens_source",
    "consistency": 1.0,
    "gate_variant": "referent",
    "eval_render": "plain",
@@ -195,6 +178,23 @@
    "prompt": "She castled early, sacrificed her bishop, and smiled at the trap her knight had set.",
    "intermediates": [
     "chess"
+   ],
+   "source": "staging",
+   "consistency": 1.0,
+   "gate_variant": "referent",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   }
+  },
+  {
+   "name": "bf-christmas",
+   "prompt": "The children left cookies by the fireplace and were asleep long before the sound of sleigh bells.",
+   "intermediates": [
+    "Christmas"
    ],
    "source": "staging",
    "consistency": 1.0,
@@ -225,10 +225,44 @@
    }
   },
   {
+   "name": "bf-fire",
+   "prompt": "Smoke curled under the door, the alarm shrieked, and the extinguisher's pin was already pulled.",
+   "intermediates": [
+    "fire"
+   ],
+   "source": "staging",
+   "consistency": 1.0,
+   "gate_variant": "referent",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   }
+  },
+  {
    "name": "bf-halloween",
    "prompt": "Carved pumpkins flickered on every porch as costumed children rang doorbell after doorbell.",
    "intermediates": [
     "Halloween"
+   ],
+   "source": "staging",
+   "consistency": 1.0,
+   "gate_variant": "referent",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   }
+  },
+  {
+   "name": "bf-library",
+   "prompt": "She whispered at the front desk, stamped the due date, and wheeled the cart between the silent shelves.",
+   "intermediates": [
+    "library"
    ],
    "source": "staging",
    "consistency": 1.0,
@@ -327,10 +361,10 @@
    }
   },
   {
-   "name": "bf-wedding",
-   "prompt": "She walked slowly down the aisle as the organ played and everyone rose from the pews.",
+   "name": "bf2-earthquake",
+   "prompt": "The chandelier swayed first, then every glass in the cabinet chattered, and the dog was under the table before the first shelf let go.",
    "intermediates": [
-    "wedding"
+    "earthquake"
    ],
    "source": "staging",
    "consistency": 1.0,
@@ -344,10 +378,10 @@
    }
   },
   {
-   "name": "bf2-earthquake",
-   "prompt": "The chandelier swayed first, then every glass in the cabinet chattered, and the dog was under the table before the first shelf let go.",
+   "name": "bf2-graduation",
+   "prompt": "The tassels turned in one motion, the caps went up, and two hundred families lost sight of their own child in the air.",
    "intermediates": [
-    "earthquake"
+    "graduation"
    ],
    "source": "staging",
    "consistency": 1.0,
@@ -395,61 +429,10 @@
    }
   },
   {
-   "name": "b3-as-casino",
-   "prompt": "The wheel clattered, the dice flew across the felt, and the lights never let anyone know it was morning.",
-   "intermediates": [
-    "casino"
-   ],
-   "source": "staging_b3",
-   "consistency": 1.0,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "b3-as-cleopatra",
-   "prompt": "The queen sailed up the river on a barge of gold, and Rome's hardest general forgot the war.",
-   "intermediates": [
-    "Cleopatra"
-   ],
-   "source": "staging_b3",
-   "consistency": 1.0,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "b3-as-golf",
    "prompt": "He read the green twice, tapped the ball, and the small crowd released its breath at the rattle of the cup.",
    "intermediates": [
     "golf"
-   ],
-   "source": "staging_b3",
-   "consistency": 1.0,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "b3-as-icarus",
-   "prompt": "His father shouted from below about the sun, but the boy climbed higher on his waxen wings.",
-   "intermediates": [
-    "Icarus"
    ],
    "source": "staging_b3",
    "consistency": 1.0,
@@ -514,10 +497,10 @@
    }
   },
   {
-   "name": "b3-as-prison",
-   "prompt": "The gates buzzed three times a day, the yard emptied at the whistle, and every letter went out already opened.",
+   "name": "b3-as-skateboard",
+   "prompt": "He dropped into the bowl, wheels clattering, and the whole park heard the deck snap on the last trick.",
    "intermediates": [
-    "prison"
+    "skateboarding"
    ],
    "source": "staging_b3",
    "consistency": 1.0,
@@ -531,10 +514,10 @@
    }
   },
   {
-   "name": "b3-as-skateboard",
-   "prompt": "He dropped into the bowl, wheels clattering, and the whole park heard the deck snap on the last trick.",
+   "name": "b3-as-subway",
+   "prompt": "The doors chimed shut as the platform slid away, and everyone swayed together into the tunnel's dark.",
    "intermediates": [
-    "skateboarding"
+    "subway"
    ],
    "source": "staging_b3",
    "consistency": 1.0,
@@ -599,6 +582,23 @@
    }
   },
   {
+   "name": "b4-as-avalanche",
+   "prompt": "The mountainside let go with a crack, and the white wall swallowed the tree line in seconds.",
+   "intermediates": [
+    "avalanche"
+   ],
+   "source": "staging_b3",
+   "consistency": 1.0,
+   "gate_variant": "referent",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   }
+  },
+  {
    "name": "b4-as-fireworks",
    "prompt": "The first boom rolled across the river, and colors bloomed and faded over the upturned faces.",
    "intermediates": [
@@ -633,13 +633,13 @@
    }
   },
   {
-   "name": "b5-as-goldrush",
-   "prompt": "They knelt in the cold creek with their pans, and every glint in the gravel stopped a man's breath.",
+   "name": "dawn",
+   "prompt": "The first bird started before the sky did, and the cold had that thin quality that wouldn't last another hour.",
    "intermediates": [
-    "gold rush"
+    "dawn"
    ],
-   "source": "staging_b3",
-   "consistency": 1.0,
+   "source": "jlens_source",
+   "consistency": 0.9,
    "gate_variant": "referent",
    "eval_render": "plain",
    "readout": {
@@ -650,12 +650,12 @@
    }
   },
   {
-   "name": "grief",
-   "prompt": "She kept his coffee mug on the counter, washed it every morning and put it back, though no one had used it in eleven months.",
+   "name": "bf-dentist",
+   "prompt": "She flossed twice that morning, then spent an hour answering questions asked around a mirror in her mouth.",
    "intermediates": [
-    "grief"
+    "dentist"
    ],
-   "source": "jlens_source",
+   "source": "staging",
    "consistency": 0.9,
    "gate_variant": "referent",
    "eval_render": "plain",
@@ -703,23 +703,6 @@
    }
   },
   {
-   "name": "b3-as-davinci",
-   "prompt": "He wrote his notes in mirror script between sketches of flying machines and a woman's half-smile.",
-   "intermediates": [
-    "Leonardo"
-   ],
-   "source": "staging_b3",
-   "consistency": 0.9,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "b3-as-museum",
    "prompt": "They spoke in whispers past the marble figures, and a guard reminded them, again, not to touch.",
    "intermediates": [
@@ -737,27 +720,10 @@
    }
   },
   {
-   "name": "b3-as-opera",
-   "prompt": "She held the highest note as the chandelier blazed, and the man in the box seat wept behind his program.",
+   "name": "b5-as-piano",
+   "prompt": "The metronome ticked while small fingers stumbled through the scales, and the teacher counted softly along.",
    "intermediates": [
-    "opera"
-   ],
-   "source": "staging_b3",
-   "consistency": 0.9,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "b5-as-icefishing",
-   "prompt": "He drilled through two feet of ice, dropped the line into the dark circle, and pulled his stool closer to the heater.",
-   "intermediates": [
-    "ice fishing"
+    "piano"
    ],
    "source": "staging_b3",
    "consistency": 0.9,
@@ -805,10 +771,10 @@
    }
   },
   {
-   "name": "game-h",
-   "prompt": "She moved the piece, looked up, and waited — and in his face she saw exactly the three moves he hadn't seen coming.",
+   "name": "desert",
+   "prompt": "The horizon shook in the heat and his shadow had shrunk to a puddle at his feet; the last of the water was three swallows, maybe four.",
    "intermediates": [
-    "game"
+    "desert"
    ],
    "source": "jlens_source",
    "consistency": 0.8,
@@ -822,10 +788,10 @@
    }
   },
   {
-   "name": "time-h",
-   "prompt": "She caught her reflection in the shop window and for a second didn't recognize the face — not older exactly, just further along than she'd noticed getting.",
+   "name": "game-h",
+   "prompt": "She moved the piece, looked up, and waited — and in his face she saw exactly the three moves he hadn't seen coming.",
    "intermediates": [
-    "time"
+    "game"
    ],
    "source": "jlens_source",
    "consistency": 0.8,
@@ -845,40 +811,6 @@
     "submarine"
    ],
    "source": "staging",
-   "consistency": 0.8,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "b3-as-archery",
-   "prompt": "She drew the string back to her cheek, held her breath, and the distant rings waited downrange.",
-   "intermediates": [
-    "archery"
-   ],
-   "source": "staging_b3",
-   "consistency": 0.8,
-   "gate_variant": "referent",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "b3-as-barbecue",
-   "prompt": "The coals had gone white by noon, and the smell of smoked ribs drifted over the fence into every yard.",
-   "intermediates": [
-    "barbecue"
-   ],
-   "source": "staging_b3",
    "consistency": 0.8,
    "gate_variant": "referent",
    "eval_render": "plain",

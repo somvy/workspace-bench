@@ -395,20 +395,20 @@
    }
   },
   {
-   "name": "arabic-color-blood",
-   "prompt": "الدم لونه ",
-   "target": "أحمر",
+   "name": "pt-time-after-night",
+   "prompt": "Depois da noite vem o \"",
+   "target": "dia",
    "intermediates": [
-    "red"
+    "day"
    ],
    "reference_concepts": [
-    "Arabic",
-    "color",
-    "blood"
+    "português",
+    "time",
+    "night"
    ],
    "source": "jlens_source",
    "consistency": 1.0,
-   "gate_variant": "plain_stripped",
+   "gate_variant": "plain",
    "eval_render": "plain",
    "readout": {
     "kind": "final_prompt_token",
@@ -441,16 +441,16 @@
    }
   },
   {
-   "name": "filipino-opposite-up",
-   "prompt": "Ang kabaligtaran ng \"taas\" ay \"",
-   "target": "baba",
+   "name": "french-family-nephew",
+   "prompt": "Le fils de ta sœur est ton \"",
+   "target": "neveu",
    "intermediates": [
-    "down"
+    "nephew"
    ],
    "reference_concepts": [
-    "Filipino",
-    "opposite",
-    "up"
+    "French",
+    "family",
+    "son"
    ],
    "source": "jlens_source",
    "consistency": 1.0,
@@ -694,29 +694,6 @@
    }
   },
   {
-   "name": "turkish-opposite-fast",
-   "prompt": "\"Hızlı\" kelimesinin zıttı \"",
-   "target": "yavaş",
-   "intermediates": [
-    "slow"
-   ],
-   "reference_concepts": [
-    "Turkish",
-    "opposite",
-    "fast"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "ukrainian-opposite-day",
    "prompt": "Протилежність \"день\" - це \"",
    "target": "ніч",
@@ -887,6 +864,28 @@
    "reference_concepts": [
     "Spanish",
     "France"
+   ],
+   "source": "staging_b3",
+   "consistency": 1.0,
+   "gate_variant": "chat",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   }
+  },
+  {
+   "name": "b3-ml-es-color-blood",
+   "prompt": "El color de la sangre es el",
+   "target": "rojo",
+   "intermediates": [
+    "red"
+   ],
+   "reference_concepts": [
+    "Spanish",
+    "blood"
    ],
    "source": "staging_b3",
    "consistency": 1.0,
@@ -1703,29 +1702,6 @@
    }
   },
   {
-   "name": "irish-opposite-big",
-   "prompt": "Is é an focal atá contrártha le \"mór\" ná \"",
-   "target": "beag",
-   "intermediates": [
-    "small"
-   ],
-   "reference_concepts": [
-    "Irish",
-    "opposite",
-    "big"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.9,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "japanese-day-monday",
    "prompt": "月曜日の次の日は",
    "target": "火曜日",
@@ -1749,20 +1725,20 @@
    }
   },
   {
-   "name": "korean-opposite-hot",
-   "prompt": "뜨거운의 반대는 ",
-   "target": "차가운",
+   "name": "slovak-opposite-young",
+   "prompt": "Opak slova \"mladý\" je \"",
+   "target": "starý",
    "intermediates": [
-    "cold"
+    "old"
    ],
    "reference_concepts": [
-    "Korean",
+    "Slovak",
     "opposite",
-    "hot"
+    "young"
    ],
    "source": "jlens_source",
    "consistency": 0.9,
-   "gate_variant": "chat",
+   "gate_variant": "plain",
    "eval_render": "plain",
    "readout": {
     "kind": "final_prompt_token",

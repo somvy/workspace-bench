@@ -1,89 +1,91 @@
 {
- "subject": "Qwen/Qwen3.5-9B",
+ "subject": "Qwen/Qwen2.5-7B-Instruct",
  "built_from": "Qwen3.6-27B banks (main @ 92d763e722377f5bfae045e829a308ab5919a820)",
  "gate": "chat render (bench ANSWER_SYSTEM, thinking off), 10 samples T=0.7 top_p=1 top_k=0 + greedy; greedy right AND >= 0.8 sampled ({'chain_intermediates': 1.0, 'brew_intermediates': 1.0}); grader Qwen3.6-27B with the bench GRADE prompt",
- "layers": "every bank layer l -> l // 2 (64 -> 32 layers)",
+ "layers": "every bank layer l -> min(int(l * 28 / 64 + 0.5), 27) (64 -> 28 layers)",
  "min_items": 20,
  "families": {
   "association": {
    "rule": "chat gate",
    "bank": 100,
    "asked": 100,
-   "kept": 54
+   "kept": 50
   },
   "basic_readout": {
    "rule": "chat gate",
    "bank": 100,
    "asked": 68,
-   "kept": 69,
-   "implicit_rebuilt": 3,
+   "kept": 89,
+   "implicit_rebuilt": 22,
    "implicit_bank": 32
   },
   "multihop": {
    "rule": "chat gate",
    "bank": 100,
    "asked": 100,
-   "kept": 78
+   "kept": 79
   },
   "multilingual": {
    "rule": "chat gate",
    "bank": 100,
    "asked": 100,
-   "kept": 91
+   "kept": 90
   },
   "typo": {
    "rule": "chat gate",
    "bank": 100,
    "asked": 100,
-   "kept": 100
+   "kept": 94
   },
   "basic_readout_mt": {
    "rule": "chat gate",
    "bank": 100,
    "asked": 100,
-   "kept": 64
+   "kept": 37
   },
   "multihop_mt": {
    "rule": "chat gate",
    "bank": 100,
    "asked": 100,
-   "kept": 36
+   "kept": 21
   },
   "multilingual_mt": {
    "rule": "chat gate",
    "bank": 100,
    "asked": 100,
-   "kept": 29
+   "kept": 7,
+   "dropped": "fewer than 20 passing items"
   },
   "multilingual_multihop": {
    "rule": "chat gate",
    "bank": 98,
    "asked": 98,
-   "kept": 27
+   "kept": 13,
+   "dropped": "fewer than 20 passing items"
   },
   "multilingual_typo": {
    "rule": "chat gate",
    "bank": 100,
    "asked": 100,
-   "kept": 56
+   "kept": 33
   },
   "typo_mt": {
    "rule": "chat gate",
    "bank": 100,
    "asked": 100,
-   "kept": 59
+   "kept": 60
   },
   "arithmetic_intermediates": {
    "rule": "chat gate",
    "bank": 596,
    "asked": 596,
-   "kept": 253
+   "kept": 194
   },
   "chain_intermediates": {
    "rule": "chat gate",
    "bank": 120,
    "asked": 120,
-   "kept": 40
+   "kept": 57
   },
   "brew_intermediates": {
    "rule": "chat gate",
@@ -96,65 +98,66 @@
    "rule": "chat gate",
    "bank": 100,
    "asked": 100,
-   "kept": 18,
-   "dropped": "fewer than 20 passing items"
+   "kept": 38
   },
   "conjunctive_association": {
    "rule": "chat gate",
    "bank": 100,
    "asked": 100,
-   "kept": 10,
+   "kept": 14,
    "dropped": "fewer than 20 passing items"
   },
   "role_bound_association": {
    "rule": "chat gate",
    "bank": 100,
    "asked": 100,
-   "kept": 32
+   "kept": 2,
+   "dropped": "fewer than 20 passing items",
+   "emptied": "judge needs >= 4 items (had 2)"
   },
   "user_modeling": {
    "rule": "chat gate",
    "bank": 100,
    "asked": 100,
-   "kept": 83
+   "kept": 94
   },
   "buggy_code": {
    "rule": "chat gate",
    "bank": 49,
    "asked": 49,
-   "kept": 21
+   "kept": 23
   },
   "poetry": {
    "rule": "rebuilt gold: subject's own committed rhyme",
    "bank": 100,
-   "kept": 76,
+   "kept": 71,
    "failed": {
-    "chat inconsistent": 18,
-    "plain differs": 6
+    "plain differs": 15,
+    "chat inconsistent": 14
    },
-   "rhyme_changed": 0
+   "rhyme_changed": 2
   },
   "directed_modulation": {
    "rule": "compliance re-screened on subject (free generation)",
    "bank": 100,
-   "kept": 100
+   "kept": 88
   },
   "moral_rationale": {
    "rule": "rebuilt: subject's side split; reasons clustered by Qwen3.6-27B from the subject's own explanations; variant mixed",
    "bank": 200,
    "kept": 199,
    "classes": {
-    "committed": 129,
-    "deliberative": 70
+    "committed": 177,
+    "deliberative": 22
    },
-   "from_bank": 117
+   "from_bank": 121
   },
   "multi_concept_directed_modulation": {
-   "rule": "unchanged: no model gate, renders byte-identical to Qwen3.6-27B",
+   "rule": "no model gate; items unchanged; last_n read selects the same text (poscheck.py)",
    "kept": 27
   },
   "jailbreak_recognition": {
-   "rule": "unchanged: no model gate, renders byte-identical to Qwen3.6-27B",
+   "rule": "no model gate; items unchanged; read span re-derived on the subject's render (remap.py)",
    "kept": 86
   },
   "hallucination": {
@@ -163,7 +166,7 @@
   }
  },
  "deferred": {
-  "agentic_misalignment": "needs 9B rollouts that misbehave (emptied on this branch)",
-  "jlens_concept_pr": "needs 9B rollouts, activations and source prompts (private repo) (emptied on this branch)"
+  "agentic_misalignment": "needs subject rollouts that misbehave (emptied on this branch)",
+  "jlens_concept_pr": "needs subject rollouts, activations and source prompts (private repo) (emptied on this branch)"
  }
 }

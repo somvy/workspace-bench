@@ -1,6 +1,6 @@
 # Hallucination (chat)
 
-> **Branch `port-qwen3.5-9b`:** the bank below is rebuilt on Qwen3.5-9B's own responses (149 items, 1,127 sites);
+> **Branch `port-qwen2.5-7b`:** the bank below is rebuilt on Qwen2.5-7B-Instruct's own responses (149 items, 1,096 sites);
 > see `evals/PORT.md`. The text describes the original Qwen3.6-27B bank.
 
 **Does an activation-reading lens make things up about the conversation it is reading?**

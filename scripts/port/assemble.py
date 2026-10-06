@@ -1,18 +1,19 @@
-# Build the Qwen3.5-9B WorkspaceBench overlay: filter every bank to the items the subject passes, rebuild the
+# Build a WorkspaceBench overlay for a subject model (Qwen2.5-7B-Instruct on this branch): filter every bank to the items the subject passes, rebuild the
 # model-specific golds, map layers by depth. Writes into the workspace-bench clone (branch port-qwen3.5-9b).
 import json, re, unicodedata, hashlib, subprocess
 from collections import Counter, defaultdict
 from pathlib import Path
 
 # ---- config
-SUBJECT, SUBJECT_ID = "q35_9b", "Qwen/Qwen3.5-9B"
+SUBJECT, SUBJECT_ID = "q25_7b", "Qwen/Qwen2.5-7B-Instruct"
 CONTROL = "q36_27b"  # same moral pipeline on the bank's own model = fidelity control
 BENCH = Path("/mnt/nfs_share2/dontsov/projects/workspace-bench")
 GATE = Path("/mnt/nfs_share2/dontsov/projects/ao/artf/wsbench_repro/gate")  # chat answers + Qwen3.6-27B grades
 PORT = Path("/mnt/nfs_share2/dontsov/projects/ao/artf/wsbench_repro/port")  # port.py outputs
 DRAWS, THR, CHAIN_THR = 10, 0.8, {"chain_intermediates": 1.0, "brew_intermediates": 1.0}
 MIN_N = 20  # a family with fewer passing items is dropped (listed in the manifest)
-LAYER = lambda l: l // 2  # 64-layer Qwen3.6-27B -> 32-layer Qwen3.5-9B, same relative depth
+JUDGE_MIN = {"role_bound_association": 4}  # its judge samples 3 distractor scenes from the other items
+LAYER = lambda l: min(int(l * 28 / 64 + 0.5), 27)  # 64-layer Qwen3.6-27B -> 28-layer Qwen2.5-7B, same relative depth
 GATED = ["association", "basic_readout", "multihop", "multilingual", "typo", "basic_readout_mt", "multihop_mt",
          "multilingual_mt", "multilingual_multihop", "multilingual_typo", "typo_mt", "arithmetic_intermediates",
          "chain_intermediates", "brew_intermediates", "relational_multihop", "conjunctive_association",
@@ -20,10 +21,10 @@ GATED = ["association", "basic_readout", "multihop", "multilingual", "typo", "ba
 REFUSAL = {"none", "n", "i", "no", "nothing", "unknown", "not", "as"}  # never a favourite
 MORAL_COMMIT, MORAL_MINORITY = 8, 2  # committed: majority >= 8/10 and greedy agrees; deliberative: minority >= 2/10 + reasons on both sides
 MORAL_VARIANT = "mixed"  # user's choice: keep bank reasons where the subject agrees with the bank, rebuild the rest
-UNCHANGED = ["multi_concept_directed_modulation", "jailbreak_recognition"]  # no model gate; renders byte-identical (tplcheck.py)
+UNCHANGED = ["multi_concept_directed_modulation", "jailbreak_recognition"]  # no model gate; jailbreak reads re-derived by remap.py
 HAL_RULE = "rebuilt by scripts/port/hallucination.py: same prompts, subject's own on-policy responses, sites re-derived"
-DEFERRED = {"agentic_misalignment": "needs 9B rollouts that misbehave",
-            "jlens_concept_pr": "needs 9B rollouts, activations and source prompts (private repo)"}
+DEFERRED = {"agentic_misalignment": "needs subject rollouts that misbehave",
+            "jlens_concept_pr": "needs subject rollouts, activations and source prompts (private repo)"}
 
 SIDE = {"yes": "yes", "true": "yes", "no": "no", "false": "no"}
 jl = lambda p: [json.loads(l) for l in open(p) if l.strip()]
@@ -144,7 +145,7 @@ def moral_items(bank, kept, variant):
 def main():
     manifest = {"subject": SUBJECT_ID, "built_from": "Qwen3.6-27B banks (main @ " + subprocess.run(["git", "-C", str(BENCH), "rev-parse", "main"], capture_output=True, text=True, check=True).stdout.strip() + ")",
                 "gate": f"chat render (bench ANSWER_SYSTEM, thinking off), {DRAWS} samples T=0.7 top_p=1 top_k=0 + greedy; greedy right AND >= {THR} sampled ({CHAIN_THR}); grader Qwen3.6-27B with the bench GRADE prompt",
-                "layers": "every bank layer l -> l // 2 (64 -> 32 layers)", "min_items": MIN_N, "families": {}}
+                "layers": "every bank layer l -> min(int(l * 28 / 64 + 0.5), 27) (64 -> 28 layers)", "min_items": MIN_N, "families": {}}
     ok, rows = gate_pass()
     # 1. gated families: an item survives when all its questions (surface + bridges) pass
     for f in GATED:
@@ -239,12 +240,16 @@ def main():
     save("multi_concept_directed_modulation", header, items)
     print("buggy read_cells", load_cur("buggy_code")[0]["read_cells"], "mcdm layers", header["layers"])
     for f in UNCHANGED:
-        manifest["families"][f] = {"rule": "unchanged: no model gate, renders byte-identical to Qwen3.6-27B", "kept": len(load(f)[1])}
+        manifest["families"][f] = {"rule": "no model gate; items unchanged" + ("; read span re-derived on the subject's render (remap.py)" if f == "jailbreak_recognition" else "; last_n read selects the same text (poscheck.py)"), "kept": len(load(f)[1])}
     # 7. drop thin families
     for f, m in manifest["families"].items():
         if m["kept"] < MIN_N:
             m["dropped"] = f"fewer than {MIN_N} passing items"
-    # 8. not-ported families are emptied: their banks carry Qwen3.6-27B ids/rollouts and would score silently on the 9B
+        if m["kept"] < JUDGE_MIN.get(f, 0):  # the judge itself cannot run on so few items: empty the bank
+            header, items = load_cur(f)
+            save(f, header, [])
+            m["emptied"] = f"judge needs >= {JUDGE_MIN[f]} items (had {m['kept']})"
+    # 8. not-ported families are emptied: their banks carry Qwen3.6-27B ids/rollouts and would score silently on the subject
     raw = lambda rel: json.loads(subprocess.run(["git", "-C", str(BENCH), "show", f"main:evals/{rel}"], capture_output=True, check=True).stdout)
     put = lambda rel, d: (BENCH / "evals" / rel).write_text(json.dumps(d, ensure_ascii=False, indent=1) + "\n")
     hal = json.loads((BENCH / "evals/hallucination/items.json").read_text())  # owned by hallucination.py, left as is

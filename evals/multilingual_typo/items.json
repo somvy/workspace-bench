@@ -10,10 +10,10 @@
  "frozen": "2026-09-10",
  "items": [
   {
-   "name": "mlt-ar-adrenaline-rush",
+   "name": "mlt-ar-anthropology",
    "subfamily": "typo",
-   "prompt": "عند الشعور بالخطر المفاجئ تفرز الغدة الكظرية هرمون الاستجابة السريعة المسمى الأدريناللين",
-   "target": "الأدرينالين",
+   "prompt": "درست مارغريت ميد المجتمعات الجزرية في المحيط الهادئ ضمن حقل الأنثروبولوحيا",
+   "target": "الأنثروبولوجيا",
    "target_alts": [],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -24,9 +24,9 @@
     ]
    },
    "lang": "ar",
-   "typo_word": "الأدريناللين",
+   "typo_word": "الأنثروبولوحيا",
    "intermediates": [
-    "الأدرينالين"
+    "الأنثروبولوجيا"
    ],
    "units": [
     {
@@ -35,23 +35,23 @@
      "multi_token": true,
      "forms": {
       "ar": [
-       "الأدرينالين"
+       "الأنثروبولوجيا"
       ],
       "en": [
-       "the hormone adrenaline",
-       "adrenaline hormone rush"
+       "cultural anthropology",
+       "the study of anthropology"
       ],
       "zh": [
-       "肾上腺素",
-       "肾上腺素激素"
+       "人类学",
+       "文化人类学"
       ]
      },
      "match": [
-      "الأدرينالين",
-      "the hormone adrenaline",
-      "adrenaline hormone rush",
-      "肾上腺素",
-      "肾上腺素激素"
+      "الأنثروبولوجيا",
+      "cultural anthropology",
+      "the study of anthropology",
+      "人类学",
+      "文化人类学"
      ]
     },
     {
@@ -66,15 +66,15 @@
        "阿拉伯语"
       ],
       "ar": [
-       "الأدرينالين",
-       "الإبينفرين"
+       "الأنثروبولوجيا",
+       "علم الإنسان"
       ]
      },
      "match": [
       "Arabic",
       "阿拉伯语",
-      "الأدرينالين",
-      "الإبينفرين"
+      "الأنثروبولوجيا",
+      "علم الإنسان"
      ]
     }
    ],
@@ -89,8 +89,8 @@
        5
       ],
       "en": [
-       3,
-       3
+       2,
+       4
       ],
       "zh": [
        2,
@@ -106,7 +106,7 @@
       ],
       "ar": [
        5,
-       4
+       2
       ]
      }
     },
@@ -114,10 +114,10 @@
    }
   },
   {
-   "name": "mlt-ar-biruqratiyya",
+   "name": "mlt-ar-arabisk",
    "subfamily": "typo",
-   "prompt": "انتقد المواطنون بطء الإجراءات وكثرة الأوراق المطلوبة في الدوائر الحكومية بسبب البيروقرطية",
-   "target": "البيروقراطية",
+   "prompt": "يشتهر نجارو القاهرة بتطعيم الخشب بقطع صغيرة متشابكة من الصدف والعاج على طراز الأرابسيك",
+   "target": "الأرابيسك",
    "target_alts": [],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -128,9 +128,9 @@
     ]
    },
    "lang": "ar",
-   "typo_word": "البيروقرطية",
+   "typo_word": "الأرابسيك",
    "intermediates": [
-    "البيروقراطية"
+    "الأرابيسك"
    ],
    "units": [
     {
@@ -139,23 +139,23 @@
      "multi_token": true,
      "forms": {
       "ar": [
-       "البيروقراطية"
+       "الأرابيسك"
       ],
       "en": [
-       "administrative bureaucracy",
-       "bureaucratic red tape"
+       "arabesque woodwork",
+       "arabesque ornamental design"
       ],
       "zh": [
-       "官僚主义",
-       "官僚体制"
+       "阿拉伯式花纹",
+       "阿拉伯风格镶嵌工艺"
       ]
      },
      "match": [
-      "البيروقراطية",
-      "administrative bureaucracy",
-      "bureaucratic red tape",
-      "官僚主义",
-      "官僚体制"
+      "الأرابيسك",
+      "arabesque woodwork",
+      "arabesque ornamental design",
+      "阿拉伯式花纹",
+      "阿拉伯风格镶嵌工艺"
      ]
     },
     {
@@ -170,15 +170,15 @@
        "阿拉伯语"
       ],
       "ar": [
-       "البيروقراطية",
-       "النظام البيروقراطي"
+       "الأرابيسك",
+       "زخرفة الأرابيسك"
       ]
      },
      "match": [
       "Arabic",
       "阿拉伯语",
-      "البيروقراطية",
-      "النظام البيروقراطي"
+      "الأرابيسك",
+      "زخرفة الأرابيسك"
      ]
     }
    ],
@@ -190,15 +190,15 @@
     "units": {
      "correction": {
       "ar": [
-       3
+       4
       ],
       "en": [
-       2,
-       3
+       5,
+       6
       ],
       "zh": [
-       2,
-       2
+       5,
+       6
       ]
      },
      "language": {
@@ -209,12 +209,12 @@
        4
       ],
       "ar": [
-       3,
-       4
+       4,
+       7
       ]
      }
     },
-    "target": 3
+    "target": 4
    }
   },
   {
@@ -426,10 +426,10 @@
    }
   },
   {
-   "name": "mlt-el-aftokinitodromos",
+   "name": "mlt-fi-hammaslaakari",
    "subfamily": "typo",
-   "prompt": "Ταξιδεύοντας από την Αθήνα προς τη Θεσσαλονίκη, το λεωφορείο κινήθηκε όλο το βράδυ πάνω στον καινούργιο αυτοκινητόδορμο",
-   "target": "αυτοκινητόδρομο",
+   "prompt": "Suun terveydenhoidon asiantuntija, joka poraa ja paikkaa reikiä sekä juurihoitaa tulehtuneita juurikanavia, on koulutukseltaan hammaslääkri",
+   "target": "hammaslääkäri",
    "target_alts": [],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -439,10 +439,10 @@
      -1
     ]
    },
-   "lang": "el",
-   "typo_word": "αυτοκινητόδορμο",
+   "lang": "fi",
+   "typo_word": "hammaslääkri",
    "intermediates": [
-    "αυτοκινητόδρομο"
+    "hammaslääkäri"
    ],
    "units": [
     {
@@ -450,24 +450,24 @@
      "required": true,
      "multi_token": true,
      "forms": {
-      "el": [
-       "αυτοκινητόδρομο"
+      "fi": [
+       "hammaslääkäri"
       ],
       "en": [
-       "motorway highway",
-       "controlled-access highway"
+       "a dental surgeon",
+       "a dentist by profession"
       ],
       "zh": [
-       "高速公路",
-       "汽车专用道路"
+       "牙科医生",
+       "口腔医师"
       ]
      },
      "match": [
-      "αυτοκινητόδρομο",
-      "motorway highway",
-      "controlled-access highway",
-      "高速公路",
-      "汽车专用道路"
+      "hammaslääkäri",
+      "a dental surgeon",
+      "a dentist by profession",
+      "牙科医生",
+      "口腔医师"
      ]
     },
     {
@@ -476,23 +476,23 @@
      "multi_token": false,
      "forms": {
       "en": [
-       "Greek"
+       "Finnish"
       ],
       "zh": [
-       "希腊语"
+       "芬兰语"
       ],
-      "el": [
-       "αυτοκινητόδρομος",
-       "αυτοκινητόδρομο",
-       "αυτοκινητοδρόμων"
+      "fi": [
+       "hammaslääkäri",
+       "hammaslääkärit",
+       "hammaslääkärin tutkinto"
       ]
      },
      "match": [
-      "Greek",
-      "希腊语",
-      "αυτοκινητόδρομος",
-      "αυτοκινητόδρομο",
-      "αυτοκινητοδρόμων"
+      "Finnish",
+      "芬兰语",
+      "hammaslääkäri",
+      "hammaslääkärit",
+      "hammaslääkärin tutkinto"
      ]
     }
    ],
@@ -503,224 +503,12 @@
    "probe_token_lens": {
     "units": {
      "correction": {
-      "el": [
-       6
-      ],
-      "en": [
-       3,
-       3
-      ],
-      "zh": [
-       1,
-       3
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2
-      ],
-      "el": [
-       6,
-       6,
-       7
-      ]
-     }
-    },
-    "target": 6
-   }
-  },
-  {
-   "name": "mlt-el-aftokinitodromos-2",
-   "subfamily": "typo",
-   "prompt": "Η Εθνική Οδός που συνδέει την Αθήνα με τη Θεσσαλονίκη είναι σήμερα ένας σύγχρονος κλειστός αυτοκινητόδορμος",
-   "target": "αυτοκινητόδρομος",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "el",
-   "typo_word": "αυτοκινητόδορμος",
-   "intermediates": [
-    "αυτοκινητόδρομος"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "el": [
-       "αυτοκινητόδρομος"
-      ],
-      "en": [
-       "controlled-access highway",
-       "high-speed motorway"
-      ],
-      "zh": [
-       "高速公路",
-       "封闭式高速道路"
-      ]
-     },
-     "match": [
-      "αυτοκινητόδρομος",
-      "controlled-access highway",
-      "high-speed motorway",
-      "高速公路",
-      "封闭式高速道路"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Greek"
-      ],
-      "zh": [
-       "希腊语"
-      ],
-      "el": [
-       "αυτοκινητόδρομος",
-       "αυτοκινητόδρομοι",
-       "αυτοκινητοδρόμου"
-      ]
-     },
-     "match": [
-      "Greek",
-      "希腊语",
-      "αυτοκινητόδρομος",
-      "αυτοκινητόδρομοι",
-      "αυτοκινητοδρόμου"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "el": [
+      "fi": [
        6
       ],
       "en": [
        3,
        4
-      ],
-      "zh": [
-       1,
-       3
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2
-      ],
-      "el": [
-       6,
-       7,
-       7
-      ]
-     }
-    },
-    "target": 6
-   }
-  },
-  {
-   "name": "mlt-el-aktinotherapeia",
-   "subfamily": "typo",
-   "prompt": "Οι κακοήθεις όγκοι συχνά αντιμετωπίζονται με δέσμες υψηλής ενέργειας, μέθοδος γνωστή ως ακτινοθερραπεία",
-   "target": "ακτινοθεραπεία",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "el",
-   "typo_word": "ακτινοθερραπεία",
-   "intermediates": [
-    "ακτινοθεραπεία"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "el": [
-       "ακτινοθεραπεία"
-      ],
-      "en": [
-       "radiation therapy for tumors",
-       "radiotherapy treatment"
-      ],
-      "zh": [
-       "放射治疗",
-       "放疗方法"
-      ]
-     },
-     "match": [
-      "ακτινοθεραπεία",
-      "radiation therapy for tumors",
-      "radiotherapy treatment",
-      "放射治疗",
-      "放疗方法"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Greek"
-      ],
-      "zh": [
-       "希腊语"
-      ],
-      "el": [
-       "ακτινοθεραπεία",
-       "ακτινοβολιοθεραπεία"
-      ]
-     },
-     "match": [
-      "Greek",
-      "希腊语",
-      "ακτινοθεραπεία",
-      "ακτινοβολιοθεραπεία"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "el": [
-       8
-      ],
-      "en": [
-       4,
-       3
       ],
       "zh": [
        2,
@@ -734,542 +522,14 @@
       "zh": [
        2
       ],
-      "el": [
-       8,
+      "fi": [
+       6,
+       6,
        10
       ]
      }
     },
-    "target": 8
-   }
-  },
-  {
-   "name": "mlt-el-anemostrovilos",
-   "subfamily": "typo",
-   "prompt": "Ένας βίαιος άνεμος σε σχήμα χωνιού που σαρώνει την πεδιάδα και ξεριζώνει δέντρα λέγεται ανεμοστόρβιλος",
-   "target": "ανεμοστρόβιλος",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "el",
-   "typo_word": "ανεμοστόρβιλος",
-   "intermediates": [
-    "ανεμοστρόβιλος"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "el": [
-       "ανεμοστρόβιλος"
-      ],
-      "en": [
-       "tornado whirlwind",
-       "funnel-shaped wind vortex"
-      ],
-      "zh": [
-       "龙卷风",
-       "旋风气旋"
-      ]
-     },
-     "match": [
-      "ανεμοστρόβιλος",
-      "tornado whirlwind",
-      "funnel-shaped wind vortex",
-      "龙卷风",
-      "旋风气旋"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Greek"
-      ],
-      "zh": [
-       "希腊语"
-      ],
-      "el": [
-       "ανεμοστρόβιλος",
-       "ανεμοστρόβιλοι",
-       "ανεμοστρόβιλου"
-      ]
-     },
-     "match": [
-      "Greek",
-      "希腊语",
-      "ανεμοστρόβιλος",
-      "ανεμοστρόβιλοι",
-      "ανεμοστρόβιλου"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "el": [
-       7
-      ],
-      "en": [
-       3,
-       4
-      ],
-      "zh": [
-       3,
-       3
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2
-      ],
-      "el": [
-       7,
-       7,
-       7
-      ]
-     }
-    },
-    "target": 7
-   }
-  },
-  {
-   "name": "mlt-el-anosokatastoli",
-   "subfamily": "typo",
-   "prompt": "Οι λήπτες οργάνων παίρνουν για πάντα φάρμακα που προκαλούν ανοσοκατασστολή",
-   "target": "ανοσοκαταστολή",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "el",
-   "typo_word": "ανοσοκατασστολή",
-   "intermediates": [
-    "ανοσοκαταστολή"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "el": [
-       "ανοσοκαταστολή"
-      ],
-      "en": [
-       "suppression of the immune system",
-       "immune system suppression"
-      ],
-      "zh": [
-       "免疫抑制",
-       "免疫系统抑制"
-      ]
-     },
-     "match": [
-      "ανοσοκαταστολή",
-      "suppression of the immune system",
-      "immune system suppression",
-      "免疫抑制",
-      "免疫系统抑制"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Greek"
-      ],
-      "zh": [
-       "希腊语"
-      ],
-      "el": [
-       "ανοσοκαταστολή",
-       "ανοσοκατασταλτική αγωγή"
-      ]
-     },
-     "match": [
-      "Greek",
-      "希腊语",
-      "ανοσοκαταστολή",
-      "ανοσοκατασταλτική αγωγή"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "el": [
-       6
-      ],
-      "en": [
-       5,
-       3
-      ],
-      "zh": [
-       2,
-       2
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2
-      ],
-      "el": [
-       6,
-       9
-      ]
-     }
-    },
     "target": 6
-   }
-  },
-  {
-   "name": "mlt-el-apokryptografisi",
-   "subfamily": "typo",
-   "prompt": "Το μεγαλύτερο επίτευγμα των Βρετανών στο Μπλέτσλεϊ Παρκ κατά τον Δεύτερο Παγκόσμιο Πόλεμο ήταν η αποκρυπτοργάφηση των μηνυμάτων της γερμανικής μηχανής Enigma, δηλαδή η αποκρυπτοργάφηση",
-   "target": "αποκρυπτογράφηση",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "el",
-   "typo_word": "αποκρυπτοργάφηση",
-   "intermediates": [
-    "αποκρυπτογράφηση"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "el": [
-       "αποκρυπτογράφηση"
-      ],
-      "en": [
-       "code decryption",
-       "the decryption of ciphers"
-      ],
-      "zh": [
-       "密码破译",
-       "密文解密"
-      ]
-     },
-     "match": [
-      "αποκρυπτογράφηση",
-      "code decryption",
-      "the decryption of ciphers",
-      "密码破译",
-      "密文解密"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Greek"
-      ],
-      "zh": [
-       "希腊语"
-      ],
-      "el": [
-       "αποκρυπτογράφηση",
-       "αποκρυπτογράφησης",
-       "αποκρυπτογραφήσεως"
-      ]
-     },
-     "match": [
-      "Greek",
-      "希腊语",
-      "αποκρυπτογράφηση",
-      "αποκρυπτογράφησης",
-      "αποκρυπτογραφήσεως"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "el": [
-       6
-      ],
-      "en": [
-       2,
-       5
-      ],
-      "zh": [
-       3,
-       3
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2
-      ],
-      "el": [
-       6,
-       7,
-       8
-      ]
-     }
-    },
-    "target": 6
-   }
-  },
-  {
-   "name": "mlt-fi-kansanedustajana",
-   "subfamily": "typo",
-   "prompt": "Hän toimi kaksi vaalikautta eduskunnassa kansanedustaana",
-   "target": "kansanedustajana",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "fi",
-   "typo_word": "kansanedustaana",
-   "intermediates": [
-    "kansanedustajana"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "fi": [
-       "kansanedustajana"
-      ],
-      "en": [
-       "member of parliament",
-       "elected legislator"
-      ],
-      "zh": [
-       "国会议员",
-       "议会代表"
-      ]
-     },
-     "match": [
-      "kansanedustajana",
-      "member of parliament",
-      "elected legislator",
-      "国会议员",
-      "议会代表"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Finnish"
-      ],
-      "zh": [
-       "芬兰语"
-      ],
-      "fi": [
-       "kansanedustaja",
-       "kansanedustajana"
-      ]
-     },
-     "match": [
-      "Finnish",
-      "芬兰语",
-      "kansanedustaja",
-      "kansanedustajana"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "fi": [
-       5
-      ],
-      "en": [
-       3,
-       3
-      ],
-      "zh": [
-       3,
-       2
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2
-      ],
-      "fi": [
-       4,
-       5
-      ]
-     }
-    },
-    "target": 5
-   }
-  },
-  {
-   "name": "mlt-fi-mikroaaltouuni",
-   "subfamily": "typo",
-   "prompt": "Eilinen ruoka lämpiää muutamassa minuutissa laitteessa nimeltä mikroaaltouni",
-   "target": "mikroaaltouuni",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "fi",
-   "typo_word": "mikroaaltouni",
-   "intermediates": [
-    "mikroaaltouuni"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "fi": [
-       "mikroaaltouuni"
-      ],
-      "en": [
-       "microwave oven",
-       "kitchen microwave oven"
-      ],
-      "zh": [
-       "微波炉",
-       "家用微波炉"
-      ]
-     },
-     "match": [
-      "mikroaaltouuni",
-      "microwave oven",
-      "kitchen microwave oven",
-      "微波炉",
-      "家用微波炉"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Finnish"
-      ],
-      "zh": [
-       "芬兰语"
-      ],
-      "fi": [
-       "mikroaaltouuni",
-       "mikroaaltouunin",
-       "mikrouuni"
-      ]
-     },
-     "match": [
-      "Finnish",
-      "芬兰语",
-      "mikroaaltouuni",
-      "mikroaaltouunin",
-      "mikrouuni"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "fi": [
-       5
-      ],
-      "en": [
-       2,
-       3
-      ],
-      "zh": [
-       1,
-       2
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2
-      ],
-      "fi": [
-       5,
-       6,
-       3
-      ]
-     }
-    },
-    "target": 5
    }
   },
   {
@@ -1377,422 +637,6 @@
    }
   },
   {
-   "name": "mlt-he-antisemitism",
-   "subfamily": "typo",
-   "prompt": "ארגון הגג של הקהילות היהודיות פרסם דוח שנתי על עלייה חדה בביטויי אנטשימיות",
-   "target": "אנטישמיות",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "he",
-   "typo_word": "אנטשימיות",
-   "intermediates": [
-    "אנטישמיות"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "he": [
-       "אנטישמיות"
-      ],
-      "en": [
-       "hatred of Jews",
-       "anti-Jewish prejudice"
-      ],
-      "zh": [
-       "反犹主义",
-       "仇视犹太人"
-      ]
-     },
-     "match": [
-      "אנטישמיות",
-      "hatred of Jews",
-      "anti-Jewish prejudice",
-      "反犹主义",
-      "仇视犹太人"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Hebrew"
-      ],
-      "zh": [
-       "希伯来语"
-      ],
-      "he": [
-       "אנטישמיות",
-       "שנאת ישראל"
-      ]
-     },
-     "match": [
-      "Hebrew",
-      "希伯来语",
-      "אנטישמיות",
-      "שנאת ישראל"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "he": [
-       4
-      ],
-      "en": [
-       3,
-       4
-      ],
-      "zh": [
-       3,
-       3
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       4
-      ],
-      "he": [
-       4,
-       3
-      ]
-     }
-    },
-    "target": 4
-   }
-  },
-  {
-   "name": "mlt-he-archaeology",
-   "subfamily": "typo",
-   "prompt": "המדע העוסק בחפירת שרידים חומריים של תרבויות עתיקות ובפענוחם מכונה ארכיאולגויה",
-   "target": "ארכיאולוגיה",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "he",
-   "typo_word": "ארכיאולגויה",
-   "intermediates": [
-    "ארכיאולוגיה"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "he": [
-       "ארכיאולוגיה"
-      ],
-      "en": [
-       "archaeological science",
-       "archaeology as a discipline"
-      ],
-      "zh": [
-       "考古学研究",
-       "考古学科"
-      ]
-     },
-     "match": [
-      "ארכיאולוגיה",
-      "archaeological science",
-      "archaeology as a discipline",
-      "考古学研究",
-      "考古学科"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Hebrew"
-      ],
-      "zh": [
-       "希伯来语"
-      ],
-      "he": [
-       "ארכיאולוגיה",
-       "הארכיאולוגיה"
-      ]
-     },
-     "match": [
-      "Hebrew",
-      "希伯来语",
-      "ארכיאולוגיה",
-      "הארכיאולוגיה"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "he": [
-       6
-      ],
-      "en": [
-       2,
-       5
-      ],
-      "zh": [
-       2,
-       2
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       4
-      ],
-      "he": [
-       6,
-       6
-      ]
-     }
-    },
-    "target": 6
-   }
-  },
-  {
-   "name": "mlt-he-detergents-typo",
-   "subfamily": "typo",
-   "prompt": "כדי להמיס שומן מהצלחות במדיח משתמשים בתרכיבים פעילי שטח המכונים דטרנגטים",
-   "target": "דטרגנטים",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "he",
-   "typo_word": "דטרנגטים",
-   "intermediates": [
-    "דטרגנטים"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "he": [
-       "דטרגנטים"
-      ],
-      "en": [
-       "surfactant detergents",
-       "synthetic cleaning detergents"
-      ],
-      "zh": [
-       "合成洗涤剂",
-       "表面活性洗涤剂"
-      ]
-     },
-     "match": [
-      "דטרגנטים",
-      "surfactant detergents",
-      "synthetic cleaning detergents",
-      "合成洗涤剂",
-      "表面活性洗涤剂"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Hebrew"
-      ],
-      "zh": [
-       "希伯来语"
-      ],
-      "he": [
-       "דטרגנטים",
-       "חומרי ניקוי סינתטיים"
-      ]
-     },
-     "match": [
-      "Hebrew",
-      "希伯来语",
-      "דטרגנטים",
-      "חומרי ניקוי סינתטיים"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "he": [
-       5
-      ],
-      "en": [
-       6,
-       5
-      ],
-      "zh": [
-       2,
-       2
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       4
-      ],
-      "he": [
-       5,
-       10
-      ]
-     }
-    },
-    "target": 5
-   }
-  },
-  {
-   "name": "mlt-he-elektroda",
-   "subfamily": "typo",
-   "prompt": "המוט המתכלה שנשרף בקשת החשמלית וממלא את המרווח בין שני חלקי המתכת המחוברים נקרא אלקרטודה",
-   "target": "אלקטרודה",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "he",
-   "typo_word": "אלקרטודה",
-   "intermediates": [
-    "אלקטרודה"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "he": [
-       "אלקטרודה"
-      ],
-      "en": [
-       "welding electrode",
-       "arc welding rod"
-      ],
-      "zh": [
-       "焊接电极",
-       "电焊条"
-      ]
-     },
-     "match": [
-      "אלקטרודה",
-      "welding electrode",
-      "arc welding rod",
-      "焊接电极",
-      "电焊条"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Hebrew"
-      ],
-      "zh": [
-       "希伯来语"
-      ],
-      "he": [
-       "אלקטרודה",
-       "אלקטרודת ריתוך"
-      ]
-     },
-     "match": [
-      "Hebrew",
-      "希伯来语",
-      "אלקטרודה",
-      "אלקטרודת ריתוך"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "he": [
-       4
-      ],
-      "en": [
-       2,
-       3
-      ],
-      "zh": [
-       2,
-       3
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       4
-      ],
-      "he": [
-       4,
-       8
-      ]
-     }
-    },
-    "target": 4
-   }
-  },
-  {
    "name": "mlt-he-encyclopedia",
    "subfamily": "typo",
    "prompt": "אוסף מסודר של ערכי ידע מכל תחומי המדע והתרבות, הערוכים לפי סדר האלפבית, נקרא אנציקלופידה",
@@ -1894,633 +738,6 @@
      }
     },
     "target": 7
-   }
-  },
-  {
-   "name": "mlt-he-endocrinologia",
-   "subfamily": "typo",
-   "prompt": "מחלות הנובעות מעודף או ממחסור של הורמונים בגוף נחקרות בענף הרפואי הנקרא אנדוקירנולוגיה",
-   "target": "אנדוקרינולוגיה",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "he",
-   "typo_word": "אנדוקירנולוגיה",
-   "intermediates": [
-    "אנדוקרינולוגיה"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "he": [
-       "אנדוקרינולוגיה"
-      ],
-      "en": [
-       "endocrinology medical field",
-       "study of hormone glands"
-      ],
-      "zh": [
-       "内分泌学科",
-       "激素医学研究"
-      ]
-     },
-     "match": [
-      "אנדוקרינולוגיה",
-      "endocrinology medical field",
-      "study of hormone glands",
-      "内分泌学科",
-      "激素医学研究"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Hebrew"
-      ],
-      "zh": [
-       "希伯来语"
-      ],
-      "he": [
-       "אנדוקרינולוגיה"
-      ]
-     },
-     "match": [
-      "Hebrew",
-      "希伯来语",
-      "אנדוקרינולוגיה"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "he": [
-       8
-      ],
-      "en": [
-       5,
-       4
-      ],
-      "zh": [
-       2,
-       3
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       4
-      ],
-      "he": [
-       8
-      ]
-     }
-    },
-    "target": 8
-   }
-  },
-  {
-   "name": "mlt-hu-anyakonyvvezeto",
-   "subfamily": "typo",
-   "prompt": "A városházán a polgári esküvőt levezető és a házasságot bejegyző az anyaköynvvezető",
-   "target": "anyakönyvvezető",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "hu",
-   "typo_word": "anyaköynvvezető",
-   "intermediates": [
-    "anyakönyvvezető"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "hu": [
-       "anyakönyvvezető"
-      ],
-      "en": [
-       "civil registrar official",
-       "marriage registration officer"
-      ],
-      "zh": [
-       "户籍登记员",
-       "婚姻登记官"
-      ]
-     },
-     "match": [
-      "anyakönyvvezető",
-      "civil registrar official",
-      "marriage registration officer",
-      "户籍登记员",
-      "婚姻登记官"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Hungarian"
-      ],
-      "zh": [
-       "匈牙利语"
-      ],
-      "hu": [
-       "anyakönyvvezető",
-       "anyakönyvi ügyintéző"
-      ]
-     },
-     "match": [
-      "Hungarian",
-      "匈牙利语",
-      "anyakönyvvezető",
-      "anyakönyvi ügyintéző"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "hu": [
-       5
-      ],
-      "en": [
-       3,
-       3
-      ],
-      "zh": [
-       3,
-       3
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2
-      ],
-      "hu": [
-       5,
-       7
-      ]
-     }
-    },
-    "target": 5
-   }
-  },
-  {
-   "name": "mlt-hu-csavarhuzo",
-   "subfamily": "typo",
-   "prompt": "A szekrényajtó meglazult zsanérjának rögzítéséhez elővett a fiókból egy keresztfejű csavarhózót",
-   "target": "csavarhúzót",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "hu",
-   "typo_word": "csavarhózót",
-   "intermediates": [
-    "csavarhúzót"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "hu": [
-       "csavarhúzót"
-      ],
-      "en": [
-       "a screwdriver tool",
-       "hand screwdriver"
-      ],
-      "zh": [
-       "螺丝刀",
-       "螺丝起子"
-      ]
-     },
-     "match": [
-      "csavarhúzót",
-      "a screwdriver tool",
-      "hand screwdriver",
-      "螺丝刀",
-      "螺丝起子"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Hungarian"
-      ],
-      "zh": [
-       "匈牙利语"
-      ],
-      "hu": [
-       "csavarhúzó",
-       "csavarhúzót",
-       "csavarhúzóval"
-      ]
-     },
-     "match": [
-      "Hungarian",
-      "匈牙利语",
-      "csavarhúzó",
-      "csavarhúzót",
-      "csavarhúzóval"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "hu": [
-       5
-      ],
-      "en": [
-       4,
-       3
-      ],
-      "zh": [
-       2,
-       3
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2
-      ],
-      "hu": [
-       5,
-       5,
-       6
-      ]
-     }
-    },
-    "target": 5
-   }
-  },
-  {
-   "name": "mlt-hu-elengedhetetlen-01",
-   "subfamily": "typo",
-   "prompt": "A sikeres nyelvvizsgához a rendszeres gyakorlás szinte elengedhetettlen",
-   "target": "elengedhetetlen",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "hu",
-   "typo_word": "elengedhetettlen",
-   "intermediates": [
-    "elengedhetetlen"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "hu": [
-       "elengedhetetlen"
-      ],
-      "en": [
-       "absolutely indispensable",
-       "utterly essential"
-      ],
-      "zh": [
-       "不可或缺",
-       "必不可少"
-      ]
-     },
-     "match": [
-      "elengedhetetlen",
-      "absolutely indispensable",
-      "utterly essential",
-      "不可或缺",
-      "必不可少"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Hungarian"
-      ],
-      "zh": [
-       "匈牙利语"
-      ],
-      "hu": [
-       "elengedhetetlen",
-       "nélkülözhetetlen"
-      ]
-     },
-     "match": [
-      "Hungarian",
-      "匈牙利语",
-      "elengedhetetlen",
-      "nélkülözhetetlen"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "hu": [
-       5
-      ],
-      "en": [
-       2,
-       2
-      ],
-      "zh": [
-       1,
-       1
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2
-      ],
-      "hu": [
-       5,
-       4
-      ]
-     }
-    },
-    "target": 5
-   }
-  },
-  {
-   "name": "mlt-hu-erelmeszesedes",
-   "subfamily": "typo",
-   "prompt": "A tartósan magas koleszterinszint és a dohányzás évtizedek alatt kialakuló szövődménye az érelmesszesedés",
-   "target": "érelmeszesedés",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "hu",
-   "typo_word": "érelmesszesedés",
-   "intermediates": [
-    "érelmeszesedés"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "hu": [
-       "érelmeszesedés"
-      ],
-      "en": [
-       "hardening of the arteries",
-       "arterial plaque buildup"
-      ],
-      "zh": [
-       "动脉硬化",
-       "动脉粥样硬化"
-      ]
-     },
-     "match": [
-      "érelmeszesedés",
-      "hardening of the arteries",
-      "arterial plaque buildup",
-      "动脉硬化",
-      "动脉粥样硬化"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Hungarian"
-      ],
-      "zh": [
-       "匈牙利语"
-      ],
-      "hu": [
-       "érelmeszesedés",
-       "atheroszklerózis"
-      ]
-     },
-     "match": [
-      "Hungarian",
-      "匈牙利语",
-      "érelmeszesedés",
-      "atheroszklerózis"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "hu": [
-       5
-      ],
-      "en": [
-       5,
-       3
-      ],
-      "zh": [
-       1,
-       3
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2
-      ],
-      "hu": [
-       5,
-       5
-      ]
-     }
-    },
-    "target": 5
-   }
-  },
-  {
-   "name": "mlt-id-berkesinambungan",
-   "subfamily": "typo",
-   "prompt": "Pemerintah menekankan bahwa program bantuan pangan itu harus dijalankan secara berkesinambugan",
-   "target": "berkesinambungan",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "id",
-   "typo_word": "berkesinambugan",
-   "intermediates": [
-    "berkesinambungan"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "id": [
-       "berkesinambungan"
-      ],
-      "en": [
-       "sustained continuity",
-       "carried out continuously"
-      ],
-      "zh": [
-       "持续不断",
-       "连续进行"
-      ]
-     },
-     "match": [
-      "berkesinambungan",
-      "sustained continuity",
-      "carried out continuously",
-      "持续不断",
-      "连续进行"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Indonesian"
-      ],
-      "zh": [
-       "印尼语",
-       "印度尼西亚语"
-      ],
-      "id": [
-       "berkesinambungan",
-       "kesinambungan"
-      ]
-     },
-     "match": [
-      "Indonesian",
-      "印尼语",
-      "印度尼西亚语",
-      "berkesinambungan",
-      "kesinambungan"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "id": [
-       5
-      ],
-      "en": [
-       2,
-       3
-      ],
-      "zh": [
-       2,
-       2
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2,
-       2
-      ],
-      "id": [
-       5,
-       3
-      ]
-     }
-    },
-    "target": 5
    }
   },
   {
@@ -2738,6 +955,113 @@
    }
   },
   {
+   "name": "mlt-id-keberlanjutan",
+   "subfamily": "typo",
+   "prompt": "Para peneliti meragukan apakah pola konsumsi energi saat ini masih bisa menjamin keberlanjuttan",
+   "target": "keberlanjutan",
+   "target_alts": [],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "lang": "id",
+   "typo_word": "keberlanjuttan",
+   "intermediates": [
+    "keberlanjutan"
+   ],
+   "units": [
+    {
+     "role": "correction",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "id": [
+       "keberlanjutan"
+      ],
+      "en": [
+       "environmental sustainability",
+       "long-term continuity"
+      ],
+      "zh": [
+       "可持续性",
+       "长期延续"
+      ]
+     },
+     "match": [
+      "keberlanjutan",
+      "environmental sustainability",
+      "long-term continuity",
+      "可持续性",
+      "长期延续"
+     ]
+    },
+    {
+     "role": "language",
+     "required": true,
+     "multi_token": false,
+     "forms": {
+      "en": [
+       "Indonesian"
+      ],
+      "zh": [
+       "印尼语",
+       "印度尼西亚语"
+      ],
+      "id": [
+       "keberlanjutan",
+       "keberlanjutan lingkungan"
+      ]
+     },
+     "match": [
+      "Indonesian",
+      "印尼语",
+      "印度尼西亚语",
+      "keberlanjutan",
+      "keberlanjutan lingkungan"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "correction": {
+      "id": [
+       3
+      ],
+      "en": [
+       2,
+       3
+      ],
+      "zh": [
+       1,
+       2
+      ]
+     },
+     "language": {
+      "en": [
+       1
+      ],
+      "zh": [
+       2,
+       2
+      ],
+      "id": [
+       3,
+       4
+      ]
+     }
+    },
+    "target": 3
+   }
+  },
+  {
    "name": "mlt-id-kekeringan",
    "subfamily": "typo",
    "prompt": "Sawah petani retak dan gagal panen karena bencana kekiringan",
@@ -2845,117 +1169,10 @@
    }
   },
   {
-   "name": "mlt-id-kepompong",
+   "name": "mlt-ko-air-pollutants",
    "subfamily": "typo",
-   "prompt": "Sebelum berubah bentuk menjadi kupu-kupu dewasa, larva itu berdiam diri di dalam kepompang",
-   "target": "kepompong",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "id",
-   "typo_word": "kepompang",
-   "intermediates": [
-    "kepompong"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "id": [
-       "kepompong"
-      ],
-      "en": [
-       "insect cocoon",
-       "butterfly pupa"
-      ],
-      "zh": [
-       "昆虫的茧",
-       "蝴蝶的蛹"
-      ]
-     },
-     "match": [
-      "kepompong",
-      "insect cocoon",
-      "butterfly pupa",
-      "昆虫的茧",
-      "蝴蝶的蛹"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Indonesian"
-      ],
-      "zh": [
-       "印尼语",
-       "印度尼西亚语"
-      ],
-      "id": [
-       "kepompong",
-       "kepompong sutra"
-      ]
-     },
-     "match": [
-      "Indonesian",
-      "印尼语",
-      "印度尼西亚语",
-      "kepompong",
-      "kepompong sutra"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "id": [
-       3
-      ],
-      "en": [
-       3,
-       3
-      ],
-      "zh": [
-       3,
-       3
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2,
-       2
-      ],
-      "id": [
-       3,
-       5
-      ]
-     }
-    },
-    "target": 3
-   }
-  },
-  {
-   "name": "mlt-ko-artificial-neural-network",
-   "subfamily": "typo",
-   "prompt": "여러 층의 노드가 가중치로 연결되어 사람의 뇌를 본떠 만든 계산 모형을 흔히 인콩신경망",
-   "target": "인공신경망",
+   "prompt": "매연과 미세먼지처럼 공기를 더럽혀 사람의 호흡기를 해치는 성분을 통틀어 이르는 말은 대기오염불질",
+   "target": "대기오염물질",
    "target_alts": [],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -2966,9 +1183,9 @@
     ]
    },
    "lang": "ko",
-   "typo_word": "인콩신경망",
+   "typo_word": "대기오염불질",
    "intermediates": [
-    "인공신경망"
+    "대기오염물질"
    ],
    "units": [
     {
@@ -2977,23 +1194,23 @@
      "multi_token": true,
      "forms": {
       "ko": [
-       "인공신경망"
+       "대기오염물질"
       ],
       "en": [
-       "artificial neural network",
-       "artificial neuron model"
+       "air pollutant substances",
+       "atmospheric pollution materials"
       ],
       "zh": [
-       "人工神经网络",
-       "神经网络模型"
+       "大气污染物",
+       "空气污染物质"
       ]
      },
      "match": [
-      "인공신경망",
-      "artificial neural network",
-      "artificial neuron model",
-      "人工神经网络",
-      "神经网络模型"
+      "대기오염물질",
+      "air pollutant substances",
+      "atmospheric pollution materials",
+      "大气污染物",
+      "空气污染物质"
      ]
     },
     {
@@ -3009,16 +1226,18 @@
        "韩国语"
       ],
       "ko": [
-       "인공신경망",
-       "인공 신경망"
+       "대기오염물질",
+       "대기오염 물질",
+       "대기오염물질배출"
       ]
      },
      "match": [
       "Korean",
       "韩语",
       "韩国语",
-      "인공신경망",
-      "인공 신경망"
+      "대기오염물질",
+      "대기오염 물질",
+      "대기오염물질배출"
      ]
     }
    ],
@@ -3030,10 +1249,10 @@
     "units": {
      "correction": {
       "ko": [
-       5
+       4
       ],
       "en": [
-       3,
+       4,
        3
       ],
       "zh": [
@@ -3050,12 +1269,435 @@
        2
       ],
       "ko": [
-       5,
+       4,
+       4,
+       6
+      ]
+     }
+    },
+    "target": 4
+   }
+  },
+  {
+   "name": "mlt-ko-airpurifier",
+   "subfamily": "typo",
+   "prompt": "실내에 떠다니는 미세 먼지와 냄새 물질을 필터로 걸러 내는 가전을 보통 공기청전기",
+   "target": "공기청정기",
+   "target_alts": [],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "lang": "ko",
+   "typo_word": "공기청전기",
+   "intermediates": [
+    "공기청정기"
+   ],
+   "units": [
+    {
+     "role": "correction",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "ko": [
+       "공기청정기"
+      ],
+      "en": [
+       "air purifier",
+       "indoor air cleaning device"
+      ],
+      "zh": [
+       "空气净化器",
+       "室内净气机"
+      ]
+     },
+     "match": [
+      "공기청정기",
+      "air purifier",
+      "indoor air cleaning device",
+      "空气净化器",
+      "室内净气机"
+     ]
+    },
+    {
+     "role": "language",
+     "required": true,
+     "multi_token": false,
+     "forms": {
+      "en": [
+       "Korean"
+      ],
+      "zh": [
+       "韩语",
+       "韩国语"
+      ],
+      "ko": [
+       "공기청정기"
+      ]
+     },
+     "match": [
+      "Korean",
+      "韩语",
+      "韩国语",
+      "공기청정기"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "correction": {
+      "ko": [
+       4
+      ],
+      "en": [
+       3,
+       4
+      ],
+      "zh": [
+       1,
+       4
+      ]
+     },
+     "language": {
+      "en": [
+       1
+      ],
+      "zh": [
+       1,
+       2
+      ],
+      "ko": [
        4
       ]
      }
     },
-    "target": 5
+    "target": 4
+   }
+  },
+  {
+   "name": "mlt-ko-cabg",
+   "subfamily": "typo",
+   "prompt": "심장에 피를 보내는 혈관이 막혔을 때 다리의 정맥이나 가슴 안쪽 혈관을 떼어 새 통로를 만들어 주는 수술은 관상동멕우회술",
+   "target": "관상동맥우회술",
+   "target_alts": [],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "lang": "ko",
+   "typo_word": "관상동멕우회술",
+   "intermediates": [
+    "관상동맥우회술"
+   ],
+   "units": [
+    {
+     "role": "correction",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "ko": [
+       "관상동맥우회술"
+      ],
+      "en": [
+       "coronary artery bypass grafting",
+       "heart bypass operation"
+      ],
+      "zh": [
+       "冠状动脉旁路移植术",
+       "心脏搭桥手术"
+      ]
+     },
+     "match": [
+      "관상동맥우회술",
+      "coronary artery bypass grafting",
+      "heart bypass operation",
+      "冠状动脉旁路移植术",
+      "心脏搭桥手术"
+     ]
+    },
+    {
+     "role": "language",
+     "required": true,
+     "multi_token": false,
+     "forms": {
+      "en": [
+       "Korean"
+      ],
+      "zh": [
+       "韩语",
+       "韩国语"
+      ],
+      "ko": [
+       "관상동맥우회술",
+       "관상동맥우회수술"
+      ]
+     },
+     "match": [
+      "Korean",
+      "韩语",
+      "韩国语",
+      "관상동맥우회술",
+      "관상동맥우회수술"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "correction": {
+      "ko": [
+       7
+      ],
+      "en": [
+       5,
+       3
+      ],
+      "zh": [
+       6,
+       4
+      ]
+     },
+     "language": {
+      "en": [
+       1
+      ],
+      "zh": [
+       1,
+       2
+      ],
+      "ko": [
+       7,
+       8
+      ]
+     }
+    },
+    "target": 7
+   }
+  },
+  {
+   "name": "mlt-ko-cfrp",
+   "subfamily": "typo",
+   "prompt": "무게가 가벼우면서도 강도가 매우 뛰어나 항공기 동체와 경주용 자전거 뼈대에 널리 쓰이는 그 첨단 재료의 이름은 탄소섬유강화플라스칙",
+   "target": "탄소섬유강화플라스틱",
+   "target_alts": [],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "lang": "ko",
+   "typo_word": "탄소섬유강화플라스칙",
+   "intermediates": [
+    "탄소섬유강화플라스틱"
+   ],
+   "units": [
+    {
+     "role": "correction",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "ko": [
+       "탄소섬유강화플라스틱"
+      ],
+      "en": [
+       "carbon fiber reinforced plastic",
+       "carbon fibre composite material"
+      ],
+      "zh": [
+       "碳纤维增强塑料",
+       "碳纤维复合材料"
+      ]
+     },
+     "match": [
+      "탄소섬유강화플라스틱",
+      "carbon fiber reinforced plastic",
+      "carbon fibre composite material",
+      "碳纤维增强塑料",
+      "碳纤维复合材料"
+     ]
+    },
+    {
+     "role": "language",
+     "required": true,
+     "multi_token": false,
+     "forms": {
+      "en": [
+       "Korean"
+      ],
+      "zh": [
+       "韩语",
+       "韩国语"
+      ],
+      "ko": [
+       "탄소섬유강화플라스틱"
+      ]
+     },
+     "match": [
+      "Korean",
+      "韩语",
+      "韩国语",
+      "탄소섬유강화플라스틱"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "correction": {
+      "ko": [
+       7
+      ],
+      "en": [
+       4,
+       4
+      ],
+      "zh": [
+       3,
+       2
+      ]
+     },
+     "language": {
+      "en": [
+       1
+      ],
+      "zh": [
+       1,
+       2
+      ],
+      "ko": [
+       7
+      ]
+     }
+    },
+    "target": 7
+   }
+  },
+  {
+   "name": "mlt-ko-copd",
+   "subfamily": "typo",
+   "prompt": "오랜 흡연으로 숨길이 좁아지고 기류 제한이 되돌아오지 않는 상태를 가리키는 호흡기 진단명은 만성폐쇄성폐진환",
+   "target": "만성폐쇄성폐질환",
+   "target_alts": [],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "lang": "ko",
+   "typo_word": "만성폐쇄성폐진환",
+   "intermediates": [
+    "만성폐쇄성폐질환"
+   ],
+   "units": [
+    {
+     "role": "correction",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "ko": [
+       "만성폐쇄성폐질환"
+      ],
+      "en": [
+       "chronic obstructive pulmonary disease",
+       "obstructive lung disorder"
+      ],
+      "zh": [
+       "慢性阻塞性肺疾病",
+       "慢性阻塞性肺病"
+      ]
+     },
+     "match": [
+      "만성폐쇄성폐질환",
+      "chronic obstructive pulmonary disease",
+      "obstructive lung disorder",
+      "慢性阻塞性肺疾病",
+      "慢性阻塞性肺病"
+     ]
+    },
+    {
+     "role": "language",
+     "required": true,
+     "multi_token": false,
+     "forms": {
+      "en": [
+       "Korean"
+      ],
+      "zh": [
+       "韩语",
+       "韩国语"
+      ],
+      "ko": [
+       "만성폐쇄성폐질환",
+       "만성 폐쇄성 폐질환"
+      ]
+     },
+     "match": [
+      "Korean",
+      "韩语",
+      "韩国语",
+      "만성폐쇄성폐질환",
+      "만성 폐쇄성 폐질환"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "correction": {
+      "ko": [
+       6
+      ],
+      "en": [
+       5,
+       4
+      ],
+      "zh": [
+       5,
+       5
+      ]
+     },
+     "language": {
+      "en": [
+       1
+      ],
+      "zh": [
+       1,
+       2
+      ],
+      "ko": [
+       6,
+       6
+      ]
+     }
+    },
+    "target": 6
    }
   },
   {
@@ -3270,110 +1912,6 @@
    }
   },
   {
-   "name": "mlt-pl-echolokacja",
-   "subfamily": "typo",
-   "prompt": "Zmysłem pozwalającym nietoperzom polować w całkowitej ciemności jest echlokacja",
-   "target": "echolokacja",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "pl",
-   "typo_word": "echlokacja",
-   "intermediates": [
-    "echolokacja"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "pl": [
-       "echolokacja"
-      ],
-      "en": [
-       "acoustic echolocation",
-       "echo-based navigation"
-      ],
-      "zh": [
-       "回声定位",
-       "超声波定位"
-      ]
-     },
-     "match": [
-      "echolokacja",
-      "acoustic echolocation",
-      "echo-based navigation",
-      "回声定位",
-      "超声波定位"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Polish"
-      ],
-      "zh": [
-       "波兰语"
-      ],
-      "pl": [
-       "echolokacja",
-       "echolokacja ultradźwiękowa"
-      ]
-     },
-     "match": [
-      "Polish",
-      "波兰语",
-      "echolokacja",
-      "echolokacja ultradźwiękowa"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "pl": [
-       4
-      ],
-      "en": [
-       3,
-       3
-      ],
-      "zh": [
-       2,
-       2
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2
-      ],
-      "pl": [
-       4,
-       8
-      ]
-     }
-    },
-    "target": 4
-   }
-  },
-  {
    "name": "mlt-pl-fotosynteza",
    "subfamily": "typo",
    "prompt": "Dzięki chlorofilowi rośliny przetwarzają światło słoneczne w energię chemiczną w procesie zwanym fotosytnezą",
@@ -3474,110 +2012,6 @@
        4,
        4,
        4
-      ]
-     }
-    },
-    "target": 4
-   }
-  },
-  {
-   "name": "mlt-pl-jedwabnictwo",
-   "subfamily": "typo",
-   "prompt": "Gałąź rolnictwa polegająca na chowie gąsienic motyla morwowego dla pozyskania nici to jedwabictwo",
-   "target": "jedwabnictwo",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "pl",
-   "typo_word": "jedwabictwo",
-   "intermediates": [
-    "jedwabnictwo"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "pl": [
-       "jedwabnictwo"
-      ],
-      "en": [
-       "silk production",
-       "silkworm farming"
-      ],
-      "zh": [
-       "养蚕业",
-       "蚕丝生产"
-      ]
-     },
-     "match": [
-      "jedwabnictwo",
-      "silk production",
-      "silkworm farming",
-      "养蚕业",
-      "蚕丝生产"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Polish"
-      ],
-      "zh": [
-       "波兰语"
-      ],
-      "pl": [
-       "jedwabnictwo",
-       "hodowla jedwabników"
-      ]
-     },
-     "match": [
-      "Polish",
-      "波兰语",
-      "jedwabnictwo",
-      "hodowla jedwabników"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "pl": [
-       4
-      ],
-      "en": [
-       2,
-       4
-      ],
-      "zh": [
-       3,
-       2
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2
-      ],
-      "pl": [
-       4,
-       6
       ]
      }
     },
@@ -3689,110 +2123,6 @@
      }
     },
     "target": 4
-   }
-  },
-  {
-   "name": "mlt-ru-anticyclone",
-   "subfamily": "typo",
-   "prompt": "Ясное морозное небо без осадков принёс мощный антицеклон",
-   "target": "антициклон",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "ru",
-   "typo_word": "антицеклон",
-   "intermediates": [
-    "антициклон"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "ru": [
-       "антициклон"
-      ],
-      "en": [
-       "anticyclone system",
-       "high-pressure area"
-      ],
-      "zh": [
-       "反气旋",
-       "高压系统"
-      ]
-     },
-     "match": [
-      "антициклон",
-      "anticyclone system",
-      "high-pressure area",
-      "反气旋",
-      "高压系统"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Russian"
-      ],
-      "zh": [
-       "俄语"
-      ],
-      "ru": [
-       "антициклон",
-       "область высокого давления"
-      ]
-     },
-     "match": [
-      "Russian",
-      "俄语",
-      "антициклон",
-      "область высокого давления"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "ru": [
-       3
-      ],
-      "en": [
-       4,
-       3
-      ],
-      "zh": [
-       3,
-       2
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       1
-      ],
-      "ru": [
-       3,
-       3
-      ]
-     }
-    },
-    "target": 3
    }
   },
   {
@@ -4114,10 +2444,10 @@
    }
   },
   {
-   "name": "mlt-ru-elektrifikatsiya",
+   "name": "mlt-ru-elektrolobzik",
    "subfamily": "typo",
-   "prompt": "Главной целью принятого в 1920 году плана ГОЭЛРО была всеобщая электрифиакция",
-   "target": "электрификация",
+   "prompt": "Для выпиливания фигурных отверстий в листе фанеры мастер включил элктролобзик",
+   "target": "электролобзик",
    "target_alts": [],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -4128,9 +2458,9 @@
     ]
    },
    "lang": "ru",
-   "typo_word": "электрифиакция",
+   "typo_word": "элктролобзик",
    "intermediates": [
-    "электрификация"
+    "электролобзик"
    ],
    "units": [
     {
@@ -4139,23 +2469,23 @@
      "multi_token": true,
      "forms": {
       "ru": [
-       "электрификация"
+       "электролобзик"
       ],
       "en": [
-       "large-scale electrification",
-       "electric power supply rollout"
+       "electric jigsaw",
+       "powered jigsaw tool"
       ],
       "zh": [
-       "全面电气化",
-       "电力化建设"
+       "电动曲线锯",
+       "电动线锯"
       ]
      },
      "match": [
-      "электрификация",
-      "large-scale electrification",
-      "electric power supply rollout",
-      "全面电气化",
-      "电力化建设"
+      "электролобзик",
+      "electric jigsaw",
+      "powered jigsaw tool",
+      "电动曲线锯",
+      "电动线锯"
      ]
     },
     {
@@ -4170,15 +2500,15 @@
        "俄语"
       ],
       "ru": [
-       "электрификация",
-       "электрификации"
+       "электролобзик",
+       "электрический лобзик"
       ]
      },
      "match": [
       "Russian",
       "俄语",
-      "электрификация",
-      "электрификации"
+      "электролобзик",
+      "электрический лобзик"
      ]
     }
    ],
@@ -4190,10 +2520,10 @@
     "units": {
      "correction": {
       "ru": [
-       2
+       4
       ],
       "en": [
-       4,
+       3,
        4
       ],
       "zh": [
@@ -4209,743 +2539,12 @@
        1
       ],
       "ru": [
-       2,
-       2
-      ]
-     }
-    },
-    "target": 2
-   }
-  },
-  {
-   "name": "mlt-ru-estestvoispytatel",
-   "subfamily": "typo",
-   "prompt": "Ломоносова в старых гимназических учебниках называли великим русским естествоиспитателем",
-   "target": "естествоиспытателем",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "ru",
-   "typo_word": "естествоиспитателем",
-   "intermediates": [
-    "естествоиспытателем"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "ru": [
-       "естествоиспытателем"
-      ],
-      "en": [
-       "student of natural science",
-       "naturalist scholar of nature"
-      ],
-      "zh": [
-       "博物学家",
-       "自然科学研究者"
-      ]
-     },
-     "match": [
-      "естествоиспытателем",
-      "student of natural science",
-      "naturalist scholar of nature",
-      "博物学家",
-      "自然科学研究者"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Russian"
-      ],
-      "zh": [
-       "俄语"
-      ],
-      "ru": [
-       "естествоиспытатель",
-       "учёный-натуралист"
-      ]
-     },
-     "match": [
-      "Russian",
-      "俄语",
-      "естествоиспытатель",
-      "учёный-натуралист"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "ru": [
-       7
-      ],
-      "en": [
        4,
        5
-      ],
-      "zh": [
-       2,
-       2
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       1
-      ],
-      "ru": [
-       5,
-       6
-      ]
-     }
-    },
-    "target": 7
-   }
-  },
-  {
-   "name": "mlt-sw-maendeleo",
-   "subfamily": "typo",
-   "prompt": "Serikali ilitangaza mpango wa miaka mitano wa kuboresha barabara, shule na hospitali ili kuharakisha maendeloe",
-   "target": "maendeleo",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "sw",
-   "typo_word": "maendeloe",
-   "intermediates": [
-    "maendeleo"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "sw": [
-       "maendeleo"
-      ],
-      "en": [
-       "economic development",
-       "national progress"
-      ],
-      "zh": [
-       "经济发展",
-       "国家进步"
-      ]
-     },
-     "match": [
-      "maendeleo",
-      "economic development",
-      "national progress",
-      "经济发展",
-      "国家进步"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Swahili"
-      ],
-      "zh": [
-       "斯瓦希里语"
-      ],
-      "sw": [
-       "maendeleo",
-       "maendeleo ya kijamii"
-      ]
-     },
-     "match": [
-      "Swahili",
-      "斯瓦希里语",
-      "maendeleo",
-      "maendeleo ya kijamii"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "sw": [
-       4
-      ],
-      "en": [
-       2,
-       2
-      ],
-      "zh": [
-       1,
-       2
-      ]
-     },
-     "language": {
-      "en": [
-       3
-      ],
-      "zh": [
-       5
-      ],
-      "sw": [
-       4,
-       8
       ]
      }
     },
     "target": 4
-   }
-  },
-  {
-   "name": "mlt-sw-mafuriko",
-   "subfamily": "typo",
-   "prompt": "Mvua kubwa za msimu husababisha mito kujaa na kufunika mashamba, jambo linaloitwa mafurkio",
-   "target": "mafuriko",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "sw",
-   "typo_word": "mafurkio",
-   "intermediates": [
-    "mafuriko"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "sw": [
-       "mafuriko"
-      ],
-      "en": [
-       "river flooding",
-       "flood waters"
-      ],
-      "zh": [
-       "洪水泛滥",
-       "水灾"
-      ]
-     },
-     "match": [
-      "mafuriko",
-      "river flooding",
-      "flood waters",
-      "洪水泛滥",
-      "水灾"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Swahili"
-      ],
-      "zh": [
-       "斯瓦希里语"
-      ],
-      "sw": [
-       "mafuriko",
-       "mafuriko ya ghafla"
-      ]
-     },
-     "match": [
-      "Swahili",
-      "斯瓦希里语",
-      "mafuriko",
-      "mafuriko ya ghafla"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "sw": [
-       3
-      ],
-      "en": [
-       2,
-       2
-      ],
-      "zh": [
-       2,
-       2
-      ]
-     },
-     "language": {
-      "en": [
-       3
-      ],
-      "zh": [
-       5
-      ],
-      "sw": [
-       3,
-       8
-      ]
-     }
-    },
-    "target": 3
-   }
-  },
-  {
-   "name": "mlt-sw-mapinduzi",
-   "subfamily": "typo",
-   "prompt": "Mwaka 1964 huko Zanzibar, utawala wa sultani uliangushwa kwa nguvu za wananchi katika tukio linaloitwa mapunduzi",
-   "target": "mapinduzi",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "sw",
-   "typo_word": "mapunduzi",
-   "intermediates": [
-    "mapinduzi"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "sw": [
-       "mapinduzi"
-      ],
-      "en": [
-       "political revolution",
-       "violent overthrow"
-      ],
-      "zh": [
-       "革命",
-       "政治革命"
-      ]
-     },
-     "match": [
-      "mapinduzi",
-      "political revolution",
-      "violent overthrow",
-      "革命",
-      "政治革命"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Swahili"
-      ],
-      "zh": [
-       "斯瓦希里语"
-      ],
-      "sw": [
-       "mapinduzi",
-       "mapinduzi ya kisiasa"
-      ]
-     },
-     "match": [
-      "Swahili",
-      "斯瓦希里语",
-      "mapinduzi",
-      "mapinduzi ya kisiasa"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "sw": [
-       4
-      ],
-      "en": [
-       2,
-       2
-      ],
-      "zh": [
-       1,
-       2
-      ]
-     },
-     "language": {
-      "en": [
-       3
-      ],
-      "zh": [
-       5
-      ],
-      "sw": [
-       4,
-       8
-      ]
-     }
-    },
-    "target": 4
-   }
-  },
-  {
-   "name": "mlt-sw-mawasiliano",
-   "subfamily": "typo",
-   "prompt": "Kampuni hiyo ya simu inaboresha mitandao ya mawasilaino",
-   "target": "mawasiliano",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "sw",
-   "typo_word": "mawasilaino",
-   "intermediates": [
-    "mawasiliano"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "sw": [
-       "mawasiliano"
-      ],
-      "en": [
-       "means of communication",
-       "telecommunications links"
-      ],
-      "zh": [
-       "通信联络",
-       "通讯手段"
-      ]
-     },
-     "match": [
-      "mawasiliano",
-      "means of communication",
-      "telecommunications links",
-      "通信联络",
-      "通讯手段"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Swahili"
-      ],
-      "zh": [
-       "斯瓦希里语"
-      ],
-      "sw": [
-       "mawasiliano",
-       "mawasiliano ya kidijitali"
-      ]
-     },
-     "match": [
-      "Swahili",
-      "斯瓦希里语",
-      "mawasiliano",
-      "mawasiliano ya kidijitali"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "sw": [
-       4
-      ],
-      "en": [
-       3,
-       2
-      ],
-      "zh": [
-       2,
-       2
-      ]
-     },
-     "language": {
-      "en": [
-       3
-      ],
-      "zh": [
-       5
-      ],
-      "sw": [
-       4,
-       9
-      ]
-     }
-    },
-    "target": 4
-   }
-  },
-  {
-   "name": "mlt-sw-mchanganyiko",
-   "subfamily": "typo",
-   "prompt": "Alikoroga unga, mayai na sukari ndani ya bakuli hadi kupata mchangayniko",
-   "target": "mchanganyiko",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "sw",
-   "typo_word": "mchangayniko",
-   "intermediates": [
-    "mchanganyiko"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "sw": [
-       "mchanganyiko"
-      ],
-      "en": [
-       "blended mixture",
-       "mixture of ingredients"
-      ],
-      "zh": [
-       "混合物",
-       "混合料"
-      ]
-     },
-     "match": [
-      "mchanganyiko",
-      "blended mixture",
-      "mixture of ingredients",
-      "混合物",
-      "混合料"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Swahili"
-      ],
-      "zh": [
-       "斯瓦希里语"
-      ],
-      "sw": [
-       "mchanganyiko",
-       "michanganyiko"
-      ]
-     },
-     "match": [
-      "Swahili",
-      "斯瓦希里语",
-      "mchanganyiko",
-      "michanganyiko"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "sw": [
-       4
-      ],
-      "en": [
-       2,
-       3
-      ],
-      "zh": [
-       1,
-       2
-      ]
-     },
-     "language": {
-      "en": [
-       3
-      ],
-      "zh": [
-       5
-      ],
-      "sw": [
-       4,
-       4
-      ]
-     }
-    },
-    "target": 4
-   }
-  },
-  {
-   "name": "mlt-tr-bagimsizlik",
-   "subfamily": "typo",
-   "prompt": "Uzun yıllar süren silahlı mücadelenin ardından sömürge halkının elde ettiği en değerli hak bağımsızlk",
-   "target": "bağımsızlık",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "tr",
-   "typo_word": "bağımsızlk",
-   "intermediates": [
-    "bağımsızlık"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "tr": [
-       "bağımsızlık"
-      ],
-      "en": [
-       "national independence",
-       "political independence"
-      ],
-      "zh": [
-       "国家独立",
-       "政治独立"
-      ]
-     },
-     "match": [
-      "bağımsızlık",
-      "national independence",
-      "political independence",
-      "国家独立",
-      "政治独立"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Turkish"
-      ],
-      "zh": [
-       "土耳其语"
-      ],
-      "tr": [
-       "bağımsızlık",
-       "bağımsızlığı",
-       "bağımsızlığın"
-      ]
-     },
-     "match": [
-      "Turkish",
-      "土耳其语",
-      "bağımsızlık",
-      "bağımsızlığı",
-      "bağımsızlığın"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "tr": [
-       5
-      ],
-      "en": [
-       2,
-       2
-      ],
-      "zh": [
-       2,
-       2
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2
-      ],
-      "tr": [
-       5,
-       5,
-       6
-      ]
-     }
-    },
-    "target": 5
    }
   },
   {
@@ -5050,6 +2649,110 @@
      }
     },
     "target": 6
+   }
+  },
+  {
+   "name": "mlt-tr-buharlasma",
+   "subfamily": "typo",
+   "prompt": "Deniz yüzeyinde sıvı hâlden gaz hâline geçişe verilen ad buhralaşma",
+   "target": "buharlaşma",
+   "target_alts": [],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "lang": "tr",
+   "typo_word": "buhralaşma",
+   "intermediates": [
+    "buharlaşma"
+   ],
+   "units": [
+    {
+     "role": "correction",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "tr": [
+       "buharlaşma"
+      ],
+      "en": [
+       "water evaporation",
+       "the evaporation process"
+      ],
+      "zh": [
+       "水的蒸发",
+       "蒸发过程"
+      ]
+     },
+     "match": [
+      "buharlaşma",
+      "water evaporation",
+      "the evaporation process",
+      "水的蒸发",
+      "蒸发过程"
+     ]
+    },
+    {
+     "role": "language",
+     "required": true,
+     "multi_token": false,
+     "forms": {
+      "en": [
+       "Turkish"
+      ],
+      "zh": [
+       "土耳其语"
+      ],
+      "tr": [
+       "buharlaşma",
+       "suyun buharlaşması"
+      ]
+     },
+     "match": [
+      "Turkish",
+      "土耳其语",
+      "buharlaşma",
+      "suyun buharlaşması"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "correction": {
+      "tr": [
+       4
+      ],
+      "en": [
+       3,
+       4
+      ],
+      "zh": [
+       2,
+       2
+      ]
+     },
+     "language": {
+      "en": [
+       1
+      ],
+      "zh": [
+       2
+      ],
+      "tr": [
+       4,
+       6
+      ]
+     }
+    },
+    "target": 4
    }
   },
   {
@@ -5368,114 +3071,10 @@
    }
   },
   {
-   "name": "mlt-tr-comlekcilik",
+   "name": "mlt-vi-co-sinh-vat-hoc",
    "subfamily": "typo",
-   "prompt": "Anadolu'da binlerce yıldır sürdürülen, kili çarkta biçimlendirip fırınlayarak testi ve küp yapma zanaatı çömelkçilik",
-   "target": "çömlekçilik",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "tr",
-   "typo_word": "çömelkçilik",
-   "intermediates": [
-    "çömlekçilik"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "tr": [
-       "çömlekçilik"
-      ],
-      "en": [
-       "pottery making",
-       "ceramic vessel craft"
-      ],
-      "zh": [
-       "制陶工艺",
-       "陶器手艺"
-      ]
-     },
-     "match": [
-      "çömlekçilik",
-      "pottery making",
-      "ceramic vessel craft",
-      "制陶工艺",
-      "陶器手艺"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Turkish"
-      ],
-      "zh": [
-       "土耳其语"
-      ],
-      "tr": [
-       "çömlekçilik",
-       "çanak çömlek yapımı"
-      ]
-     },
-     "match": [
-      "Turkish",
-      "土耳其语",
-      "çömlekçilik",
-      "çanak çömlek yapımı"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "tr": [
-       5
-      ],
-      "en": [
-       2,
-       3
-      ],
-      "zh": [
-       3,
-       3
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2
-      ],
-      "tr": [
-       5,
-       7
-      ]
-     }
-    },
-    "target": 5
-   }
-  },
-  {
-   "name": "mlt-vi-cuc-quang",
-   "subfamily": "typo",
-   "prompt": "Những dải sáng nhiều màu trên bầu trời vùng vĩ độ cao, sinh ra khi hạt mang điện từ gió mặt trời va chạm với các phân tử ở tầng cao của Trái Đất, được gọi là cực quagn",
-   "target": "cực quang",
+   "prompt": "Bộ môn nghiên cứu hóa thạch của các loài đã tuyệt chủng, chẳng hạn loài khủng long bạo chúa, được gọi là cổ sing vật học",
+   "target": "cổ sinh vật học",
    "target_alts": [],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -5486,9 +3085,9 @@
     ]
    },
    "lang": "vi",
-   "typo_word": "cực quagn",
+   "typo_word": "cổ sing vật học",
    "intermediates": [
-    "cực quang"
+    "cổ sinh vật học"
    ],
    "units": [
     {
@@ -5497,23 +3096,23 @@
      "multi_token": true,
      "forms": {
       "vi": [
-       "cực quang"
+       "cổ sinh vật học"
       ],
       "en": [
-       "the polar aurora",
-       "northern lights display"
+       "the study of ancient life",
+       "paleontological science"
       ],
       "zh": [
-       "极光",
-       "极地极光"
+       "古生物学",
+       "古生物科学"
       ]
      },
      "match": [
-      "cực quang",
-      "the polar aurora",
-      "northern lights display",
-      "极光",
-      "极地极光"
+      "cổ sinh vật học",
+      "the study of ancient life",
+      "paleontological science",
+      "古生物学",
+      "古生物科学"
      ]
     },
     {
@@ -5528,32 +3127,135 @@
        "越南语"
       ],
       "vi": [
-       "cực quang"
+       "cổ sinh vật học"
       ]
      },
      "match": [
       "Vietnamese",
       "越南语",
-      "cực quang"
+      "cổ sinh vật học"
      ]
     }
    ],
    "consistency": 1.0,
-   "consistency_strict": 1.0,
+   "consistency_strict": 0.5,
    "consistency_greedy": 1,
    "gate_variant": "chat",
    "probe_token_lens": {
     "units": {
      "correction": {
       "vi": [
-       2
+       4
       ],
       "en": [
-       3,
+       5,
+       4
+      ],
+      "zh": [
+       2,
+       3
+      ]
+     },
+     "language": {
+      "en": [
+       1
+      ],
+      "zh": [
+       2
+      ],
+      "vi": [
+       4
+      ]
+     }
+    },
+    "target": 4
+   }
+  },
+  {
+   "name": "mlt-vi-di-truyen-hoc",
+   "subfamily": "typo",
+   "prompt": "Gregor Mendel đã thực hiện các thí nghiệm lai giống trên cây đậu Hà Lan trong vườn tu viện ở Brno và được coi là cha đẻ của ngành di truền học",
+   "target": "di truyền học",
+   "target_alts": [],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "lang": "vi",
+   "typo_word": "di truền học",
+   "intermediates": [
+    "di truyền học"
+   ],
+   "units": [
+    {
+     "role": "correction",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "vi": [
+       "di truyền học"
+      ],
+      "en": [
+       "the science of genetics",
+       "hereditary science"
+      ],
+      "zh": [
+       "遗传学",
+       "遗传科学"
+      ]
+     },
+     "match": [
+      "di truyền học",
+      "the science of genetics",
+      "hereditary science",
+      "遗传学",
+      "遗传科学"
+     ]
+    },
+    {
+     "role": "language",
+     "required": true,
+     "multi_token": false,
+     "forms": {
+      "en": [
+       "Vietnamese"
+      ],
+      "zh": [
+       "越南语"
+      ],
+      "vi": [
+       "di truyền học",
+       "khoa di truyền"
+      ]
+     },
+     "match": [
+      "Vietnamese",
+      "越南语",
+      "di truyền học",
+      "khoa di truyền"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 0.1,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "correction": {
+      "vi": [
+       3
+      ],
+      "en": [
+       4,
        3
       ],
       "zh": [
-       1,
+       2,
        2
       ]
      },
@@ -5565,11 +3267,12 @@
        2
       ],
       "vi": [
-       2
+       3,
+       3
       ]
      }
     },
-    "target": 2
+    "target": 3
    }
   },
   {
@@ -5778,110 +3481,6 @@
      }
     },
     "target": 4
-   }
-  },
-  {
-   "name": "mlt-vi-khi-quyen",
-   "subfamily": "typo",
-   "prompt": "Lớp ozon bao quanh Trái Đất nằm trong khí qyuển",
-   "target": "khí quyển",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "vi",
-   "typo_word": "khí qyuển",
-   "intermediates": [
-    "khí quyển"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "vi": [
-       "khí quyển"
-      ],
-      "en": [
-       "Earth's atmosphere",
-       "atmospheric envelope"
-      ],
-      "zh": [
-       "大气层",
-       "大气圈"
-      ]
-     },
-     "match": [
-      "khí quyển",
-      "Earth's atmosphere",
-      "atmospheric envelope",
-      "大气层",
-      "大气圈"
-     ]
-    },
-    {
-     "role": "language",
-     "required": true,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Vietnamese"
-      ],
-      "zh": [
-       "越南语"
-      ],
-      "vi": [
-       "khí quyển",
-       "bầu khí quyển"
-      ]
-     },
-     "match": [
-      "Vietnamese",
-      "越南语",
-      "khí quyển",
-      "bầu khí quyển"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "vi": [
-       2
-      ],
-      "en": [
-       3,
-       2
-      ],
-      "zh": [
-       2,
-       2
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2
-      ],
-      "vi": [
-       2,
-       3
-      ]
-     }
-    },
-    "target": 2
    }
   }
  ]

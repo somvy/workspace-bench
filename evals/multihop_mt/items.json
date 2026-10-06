@@ -10,90 +10,6 @@
  "frozen": "2026-09-10",
  "items": [
   {
-   "name": "mhh-adwa-victor-accord",
-   "subfamily": "2hop",
-   "prompt": "Fact: The Ethiopian ruler whose army annihilated an Italian invasion force in 1896 at Adwa had earlier signed an accord whose deliberately mistranslated seventeenth article helped provoke that war, an accord known as the",
-   "target": "Treaty of Wuchale",
-   "target_alts": [
-    "Treaty of Ucciali",
-    "Wuchale accord"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "intermediates": [
-    "Menelik II"
-   ],
-   "units": [
-    {
-     "role": "bridge1",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Menelik II",
-       "Sahle Maryam"
-      ]
-     },
-     "match": [
-      "Menelik II",
-      "Sahle Maryam"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which Ethiopian ruler's army destroyed an Italian invasion force at Adwa in 1896?",
-     "units": [
-      "bridge1"
-     ],
-     "answers": [
-      "Menelik II",
-      "Emperor Menelik II",
-      "Sahle Maryam"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge1": 0.9
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge1": {
-      "en": [
-       3,
-       4
-      ]
-     }
-    },
-    "target": 5,
-    "target_alts": [
-     5,
-     4
-    ]
-   },
-   "mc": {
-    "bridge1": {
-     "gold": "Menelik II",
-     "distractors": [
-      "Yohannes IV",
-      "Tewodros II",
-      "Haile Selassie I",
-      "Iyasu V"
-     ]
-    }
-   }
-  },
-  {
    "name": "mhh-akbar-dinilahi",
    "subfamily": "2hop",
    "prompt": "Fact: the Mughal ruler who built and then abandoned a red sandstone capital west of Agra promoted at his court a syncretic creed known as",
@@ -267,13 +183,12 @@
    }
   },
   {
-   "name": "mhh-barber-menotti-spoleto",
+   "name": "mhh-motherdemos-lab-town",
    "subfamily": "2hop",
-   "prompt": "Fact: the American composer of the much-arranged Adagio for Strings shared his life with a fellow composer who founded a Festival of Two Worlds in an Umbrian hill town called",
-   "target": "Spoleto",
+   "prompt": "Fact: the nonprofit lab employing the man who led the 1968 event later nicknamed 'The Mother of All Demos' had its headquarters in the town of",
+   "target": "Menlo Park",
    "target_alts": [
-    "Spoleto, Umbria",
-    "Spoleto, Italy"
+    "Menlo Park, California"
    ],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -284,7 +199,7 @@
     ]
    },
    "intermediates": [
-    "Samuel Barber"
+    "Douglas Engelbart"
    ],
    "units": [
     {
@@ -293,23 +208,193 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "Samuel Barber"
+       "Douglas Engelbart",
+       "Douglas Carl Engelbart"
       ]
      },
      "match": [
-      "Samuel Barber"
+      "Douglas Engelbart",
+      "Douglas Carl Engelbart"
      ]
     }
    ],
    "bridges": [
     {
-     "question": "Who composed Adagio for Strings?",
+     "question": "Who led the December 1968 presentation later nicknamed 'The Mother of All Demos'?",
      "units": [
       "bridge1"
      ],
      "answers": [
-      "Samuel Barber",
-      "Barber"
+      "Douglas Engelbart",
+      "Doug Engelbart",
+      "Engelbart",
+      "Douglas Carl Engelbart"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "bridge_consistency": {
+    "bridge1": 1.0
+   },
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "bridge1": {
+      "en": [
+       3,
+       4
+      ]
+     }
+    },
+    "target": 3,
+    "target_alts": [
+     5
+    ]
+   },
+   "mc": {
+    "bridge1": {
+     "gold": "Douglas Engelbart",
+     "distractors": [
+      "Ivan Sutherland",
+      "Alan Kay",
+      "Vannevar Bush",
+      "Ted Nelson"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mhh-norse-ratatoskr-worldtree",
+   "subfamily": "2hop",
+   "prompt": "Fact: the chattering squirrel of Norse myth who ferries insults between the eagle perched above and the serpent gnawing below scurries along the trunk of the great ash called",
+   "target": "Yggdrasil",
+   "target_alts": [
+    "Yggdrasill",
+    "Ygdrasil"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "intermediates": [
+    "Ratatoskr"
+   ],
+   "units": [
+    {
+     "role": "bridge1",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "Ratatoskr",
+       "Ratatosk"
+      ]
+     },
+     "match": [
+      "Ratatoskr",
+      "Ratatosk"
+     ]
+    }
+   ],
+   "bridges": [
+    {
+     "question": "In Norse myth, what is the name of the squirrel that runs up and down the world tree carrying messages between the eagle at its top and Níðhöggr at its roots?",
+     "units": [
+      "bridge1"
+     ],
+     "answers": [
+      "Ratatoskr",
+      "Ratatosk",
+      "Ratatoskr the squirrel"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "bridge_consistency": {
+    "bridge1": 1.0
+   },
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "bridge1": {
+      "en": [
+       3,
+       3
+      ]
+     }
+    },
+    "target": 4,
+    "target_alts": [
+     5,
+     3
+    ]
+   },
+   "mc": {
+    "bridge1": {
+     "gold": "Ratatoskr",
+     "distractors": [
+      "Nidhogg",
+      "Vedrfolnir",
+      "Heidrun",
+      "Hraesvelgr"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mhh-plinyelder-naturalis",
+   "subfamily": "2hop",
+   "prompt": "Fact: the Roman fleet commander who died in 79 AD after sailing toward the erupting volcano to rescue those trapped on the shore was the author of an encyclopedic work titled",
+   "target": "Naturalis Historia",
+   "target_alts": [
+    "Natural History",
+    "Historia Naturalis"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "intermediates": [
+    "Pliny the Elder"
+   ],
+   "units": [
+    {
+     "role": "bridge1",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "Pliny the Elder",
+       "Gaius Plinius Secundus"
+      ]
+     },
+     "match": [
+      "Pliny the Elder",
+      "Gaius Plinius Secundus"
+     ]
+    }
+   ],
+   "bridges": [
+    {
+     "question": "Which Roman admiral and encyclopedist died during the eruption of Vesuvius in 79 AD?",
+     "units": [
+      "bridge1"
+     ],
+     "answers": [
+      "Pliny the Elder",
+      "Gaius Plinius Secundus"
      ]
     }
    ],
@@ -324,782 +409,25 @@
     "units": {
      "bridge1": {
       "en": [
-       2
-      ]
-     }
-    },
-    "target": 3,
-    "target_alts": [
-     6,
-     5
-    ]
-   },
-   "mc": {
-    "bridge1": {
-     "gold": "Samuel Barber",
-     "distractors": [
-      "Aaron Copland",
-      "Leonard Bernstein",
-      "Virgil Thomson",
-      "Howard Hanson"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mhh-cshell-author-firm-buyer",
-   "subfamily": "2hop",
-   "prompt": "Fact: the Berkeley graduate student who wrote the C shell and much of the early BSD networking code went on in 1982 to co-found a workstation maker that was bought in 2010 by the database giant",
-   "target": "Oracle Corporation",
-   "target_alts": [
-    "Oracle",
-    "Oracle Corp."
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "intermediates": [
-    "Bill Joy"
-   ],
-   "units": [
-    {
-     "role": "bridge1",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Bill Joy",
-       "William Nelson Joy"
-      ]
-     },
-     "match": [
-      "Bill Joy",
-      "William Nelson Joy"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which Berkeley graduate student wrote the C shell and much of the early BSD networking code?",
-     "units": [
-      "bridge1"
-     ],
-     "answers": [
-      "Bill Joy",
-      "William Nelson Joy",
-      "Joy"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge1": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge1": {
-      "en": [
-       2,
-       3
-      ]
-     }
-    },
-    "target": 2,
-    "target_alts": [
-     1,
-     3
-    ]
-   },
-   "mc": {
-    "bridge1": {
-     "gold": "Bill Joy",
-     "distractors": [
-      "Andy Bechtolsheim",
-      "Scott McNealy",
-      "Vinod Khosla",
-      "Ken Thompson"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mhh-derbyshire-unit",
-   "subfamily": "2hop",
-   "prompt": "Fact: The electronic music pioneer who realised Ron Grainer's original 1963 Doctor Who theme was on the staff of the broadcaster's in-house sound unit known as the",
-   "target": "BBC Radiophonic Workshop",
-   "target_alts": [
-    "Radiophonic Workshop"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "intermediates": [
-    "Delia Derbyshire"
-   ],
-   "units": [
-    {
-     "role": "bridge1",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Delia Derbyshire",
-       "Delia Ann Derbyshire"
-      ]
-     },
-     "match": [
-      "Delia Derbyshire",
-      "Delia Ann Derbyshire"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which electronic music pioneer realised the original 1963 Doctor Who theme tune?",
-     "units": [
-      "bridge1"
-     ],
-     "answers": [
-      "Delia Derbyshire",
-      "Derbyshire",
-      "Delia Ann Derbyshire"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge1": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge1": {
-      "en": [
        4,
-       5
-      ]
-     }
-    },
-    "target": 5,
-    "target_alts": [
-     4
-    ]
-   },
-   "mc": {
-    "bridge1": {
-     "gold": "Delia Derbyshire",
-     "distractors": [
-      "Daphne Oram",
-      "Maddalena Fagandini",
-      "Pauline Oliveros",
-      "Wendy Carlos"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mhh-endpermian-volcanic-province",
-   "subfamily": "2hop",
-   "prompt": "Fact: the largest of the five biological crises recorded in the fossil record, roughly 252 million years ago, is often blamed on the eruption of the volcanic province called the",
-   "target": "Siberian Traps",
-   "target_alts": [
-    "Siberian Trap basalts",
-    "Siberian flood basalts"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "intermediates": [
-    "Permian–Triassic extinction event"
-   ],
-   "units": [
-    {
-     "role": "bridge1",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Permian–Triassic extinction event",
-       "the Great Dying",
-       "end-Permian mass extinction"
-      ]
-     },
-     "match": [
-      "Permian–Triassic extinction event",
-      "the Great Dying",
-      "end-Permian mass extinction"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which mass extinction, about 252 million years ago, was the largest in the fossil record?",
-     "units": [
-      "bridge1"
-     ],
-     "answers": [
-      "the Permian–Triassic extinction event",
-      "Permian-Triassic extinction",
-      "the Great Dying",
-      "end-Permian extinction",
-      "P–T extinction",
-      "Permian–Triassic extinction event",
-      "end-Permian mass extinction"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge1": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge1": {
-      "en": [
-       7,
-       3,
        6
       ]
      }
     },
-    "target": 4,
-    "target_alts": [
-     5,
-     5
-    ]
-   },
-   "mc": {
-    "bridge1": {
-     "gold": "Permian–Triassic extinction event",
-     "distractors": [
-      "Cretaceous–Paleogene extinction event",
-      "Triassic–Jurassic extinction event",
-      "Late Devonian extinction",
-      "Ordovician–Silurian extinction event"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mhh-hedren-daughter-film",
-   "subfamily": "2hop",
-   "prompt": "Fact: the leading lady who played the compulsive thief in Hitchcock's 1964 psychological drama is the mother of a performer nominated for an Academy Award for a 1988 Mike Nichols comedy called",
-   "target": "Working Girl",
-   "target_alts": [
-    "Working Girl (1988)"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "intermediates": [
-    "Tippi Hedren"
-   ],
-   "units": [
-    {
-     "role": "bridge1",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Tippi Hedren",
-       "Nathalie Kay Hedren"
-      ]
-     },
-     "match": [
-      "Tippi Hedren",
-      "Nathalie Kay Hedren"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which actress played the title role in Hitchcock's 1964 film Marnie?",
-     "units": [
-      "bridge1"
-     ],
-     "answers": [
-      "Tippi Hedren",
-      "Hedren",
-      "Nathalie Kay Hedren"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge1": 0.8
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge1": {
-      "en": [
-       4,
-       4
-      ]
-     }
-    },
-    "target": 2,
-    "target_alts": [
-     8
-    ]
-   },
-   "mc": {
-    "bridge1": {
-     "gold": "Tippi Hedren",
-     "distractors": [
-      "Kim Novak",
-      "Eva Marie Saint",
-      "Vera Miles",
-      "Janet Leigh"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mhh-isenheim-unterlinden",
-   "subfamily": "2hop",
-   "prompt": "Fact: The Grünewald polyptych painted for an Antonite hospital chapel in Alsace now anchors the holdings of a former Dominican convent in Colmar called the",
-   "target": "Musée Unterlinden",
-   "target_alts": [
-    "Unterlinden Museum",
-    "Musee Unterlinden"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "intermediates": [
-    "Isenheim Altarpiece"
-   ],
-   "units": [
-    {
-     "role": "bridge1",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Isenheim Altarpiece",
-       "Isenheimer Altar"
-      ]
-     },
-     "match": [
-      "Isenheim Altarpiece",
-      "Isenheimer Altar"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which altarpiece did Matthias Grünewald paint for the Antonite hospital chapel in Alsace?",
-     "units": [
-      "bridge1"
-     ],
-     "answers": [
-      "Isenheim Altarpiece",
-      "The Isenheim Altarpiece",
-      "Isenheimer Altar"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge1": 0.9
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge1": {
-      "en": [
-       5,
-       3
-      ]
-     }
-    },
-    "target": 4,
-    "target_alts": [
-     4,
-     5
-    ]
-   },
-   "mc": {
-    "bridge1": {
-     "gold": "Isenheim Altarpiece",
-     "distractors": [
-      "Ghent Altarpiece",
-      "Portinari Altarpiece",
-      "Mérode Altarpiece",
-      "Beaune Altarpiece"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mhh-jpsi-slac",
-   "subfamily": "2hop",
-   "prompt": "Fact: The bound state of a charm quark and its antiquark, announced simultaneously in November 1974 by teams at Brookhaven and in California, was detected on the West Coast at a facility then named",
-   "target": "Stanford Linear Accelerator Center",
-   "target_alts": [
-    "SLAC",
-    "SLAC National Accelerator Laboratory",
-    "the Stanford Linear Accelerator Center (SLAC)"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "intermediates": [
-    "J/psi meson"
-   ],
-   "units": [
-    {
-     "role": "bridge1",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "J/psi meson",
-       "J/ψ particle"
-      ]
-     },
-     "match": [
-      "J/psi meson",
-      "J/ψ particle"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which subatomic particle, a charm–anticharm bound state, was announced simultaneously by two American teams in November 1974?",
-     "units": [
-      "bridge1"
-     ],
-     "answers": [
-      "J/psi meson",
-      "J/psi",
-      "J/ψ",
-      "J/psi particle",
-      "J/ψ particle"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 0.7,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge1": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge1": {
-      "en": [
-       5,
-       4
-      ]
-     }
-    },
-    "target": 5,
-    "target_alts": [
-     2,
-     5,
-     10
-    ]
-   },
-   "mc": {
-    "bridge1": {
-     "gold": "J/psi meson",
-     "distractors": [
-      "Upsilon meson",
-      "phi meson",
-      "D meson",
-      "B meson"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mhh-kinski-paristexas",
-   "subfamily": "2hop",
-   "prompt": "Fact: the volatile German performer who played the mutinous conquistador in Aguirre, the Wrath of God had a daughter who starred opposite Harry Dean Stanton in Wim Wenders's 1984 road movie",
-   "target": "Paris, Texas",
-   "target_alts": [
-    "Paris Texas"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "intermediates": [
-    "Klaus Kinski"
-   ],
-   "units": [
-    {
-     "role": "bridge1",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Klaus Kinski"
-      ]
-     },
-     "match": [
-      "Klaus Kinski"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which actor played the title role in Aguirre, the Wrath of God?",
-     "units": [
-      "bridge1"
-     ],
-     "answers": [
-      "Klaus Kinski",
-      "Kinski"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge1": 0.9
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge1": {
-      "en": [
-       3
-      ]
-     }
-    },
-    "target": 3,
-    "target_alts": [
-     2
-    ]
-   },
-   "mc": {
-    "bridge1": {
-     "gold": "Klaus Kinski",
-     "distractors": [
-      "Bruno Ganz",
-      "Armin Mueller-Stahl",
-      "Curd Jürgens",
-      "Otto Sander"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mhh-moho-mohole",
-   "subfamily": "2hop",
-   "prompt": "Fact: The seismic boundary separating the Earth's crust from the mantle, inferred in 1909 by a Croatian scientist from wave travel times, was the goal of an American deep-drilling attempt of the early 1960s code-named",
-   "target": "Project Mohole",
-   "target_alts": [
-    "Mohole",
-    "the Mohole drilling attempt"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "intermediates": [
-    "Mohorovičić discontinuity"
-   ],
-   "units": [
-    {
-     "role": "bridge1",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Mohorovičić discontinuity",
-       "the Moho"
-      ]
-     },
-     "match": [
-      "Mohorovičić discontinuity",
-      "the Moho"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "What is the name of the boundary between the Earth's crust and mantle, identified in 1909 by a Croatian seismologist?",
-     "units": [
-      "bridge1"
-     ],
-     "answers": [
-      "Mohorovičić discontinuity",
-      "the Moho",
-      "Moho"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge1": 0.9
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge1": {
-      "en": [
-       6,
-       3
-      ]
-     }
-    },
     "target": 3,
     "target_alts": [
      2,
-     5
-    ]
-   },
-   "mc": {
-    "bridge1": {
-     "gold": "Mohorovičić discontinuity",
-     "distractors": [
-      "Gutenberg discontinuity",
-      "Lehmann discontinuity",
-      "Conrad discontinuity",
-      "Repetti discontinuity"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mhh-pitchblende-jachymov",
-   "subfamily": "2hop",
-   "prompt": "Fact: Marie and Pierre Curie won radium from tonnes of a black, tarry, strongly radioactive ore, and the Bohemian mining settlement that is the classic source of that ore is today the spa town of",
-   "target": "Jáchymov",
-   "target_alts": [
-    "Jachymov",
-    "Sankt Joachimsthal",
-    "Joachimsthal"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "intermediates": [
-    "pitchblende"
-   ],
-   "units": [
-    {
-     "role": "bridge1",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "pitchblende",
-       "uraninite"
-      ]
-     },
-     "match": [
-      "pitchblende",
-      "uraninite"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which ore, an oxide mineral of uranium, did the Curies process by the tonne to isolate radium?",
-     "units": [
-      "bridge1"
-     ],
-     "answers": [
-      "pitchblende",
-      "uraninite"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge1": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge1": {
-      "en": [
-       3,
-       2
-      ]
-     }
-    },
-    "target": 4,
-    "target_alts": [
-     3,
-     6,
      3
     ]
    },
    "mc": {
     "bridge1": {
-     "gold": "pitchblende",
+     "gold": "Pliny the Elder",
      "distractors": [
-      "carnotite",
-      "galena",
-      "cinnabar",
-      "monazite"
+      "Strabo",
+      "Marcus Terentius Varro",
+      "Aulus Cornelius Celsus",
+      "Pomponius Mela"
      ]
     }
    }
@@ -1355,13 +683,13 @@
    }
   },
   {
-   "name": "mhh-saratov-botanist-persecutor",
+   "name": "mhh-summer-winter-gold-host-town",
    "subfamily": "2hop",
-   "prompt": "Fact: The Soviet botanist who mapped the world's centres of crop domestication and died of starvation in a Saratov prison in 1943 had been hounded from his post by the pseudoscientific agronomist",
-   "target": "Trofim Lysenko",
+   "prompt": "Fact: the only competitor to win gold medals at both the Summer and Winter Olympics in two different sports took his snow-and-ice title in the four-man bobsleigh at the 1932 Games hosted by",
+   "target": "Lake Placid, New York",
    "target_alts": [
-    "Trofim Denisovich Lysenko",
-    "Lysenko"
+    "Lake Placid",
+    "Lake Placid in New York State"
    ],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -1372,7 +700,7 @@
     ]
    },
    "intermediates": [
-    "Nikolai Vavilov"
+    "Eddie Eagan"
    ],
    "units": [
     {
@@ -1381,26 +709,29 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "Nikolai Vavilov",
-       "Nikolai Ivanovich Vavilov"
+       "Eddie Eagan",
+       "Edward Eagan",
+       "Edward Patrick Francis Eagan"
       ]
      },
      "match": [
-      "Nikolai Vavilov",
-      "Nikolai Ivanovich Vavilov"
+      "Eddie Eagan",
+      "Edward Eagan",
+      "Edward Patrick Francis Eagan"
      ]
     }
    ],
    "bridges": [
     {
-     "question": "Which Soviet botanist mapped the centres of origin of cultivated plants and died in a Saratov prison in 1943?",
+     "question": "Who is the only athlete to have won gold medals at both the Summer and Winter Olympics in different sports?",
      "units": [
       "bridge1"
      ],
      "answers": [
-      "Nikolai Vavilov",
-      "Vavilov",
-      "Nikolai Ivanovich Vavilov"
+      "Eddie Eagan",
+      "Edward Eagan",
+      "Eagan",
+      "Edward Patrick Francis Eagan"
      ]
     }
    ],
@@ -1408,410 +739,7 @@
    "consistency_strict": 1.0,
    "consistency_greedy": 1,
    "bridge_consistency": {
-    "bridge1": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge1": {
-      "en": [
-       6,
-       8
-      ]
-     }
-    },
-    "target": 4,
-    "target_alts": [
-     7,
-     2
-    ]
-   },
-   "mc": {
-    "bridge1": {
-     "gold": "Nikolai Vavilov",
-     "distractors": [
-      "Ivan Michurin",
-      "Nikolai Koltsov",
-      "Sergei Chetverikov",
-      "Georgy Karpechenko"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mhh-streptomycin-griseus",
-   "subfamily": "2hop",
-   "prompt": "Fact: The first antibiotic that proved effective against tuberculosis, isolated in 1943 in a soil microbiology laboratory at Rutgers, is made naturally by the actinobacterium",
-   "target": "Streptomyces griseus",
-   "target_alts": [
-    "S. griseus"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "intermediates": [
-    "streptomycin"
-   ],
-   "units": [
-    {
-     "role": "bridge1",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "streptomycin"
-      ]
-     },
-     "match": [
-      "streptomycin"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which antibiotic, isolated in Selman Waksman's Rutgers laboratory in 1943, was the first effective drug against tuberculosis?",
-     "units": [
-      "bridge1"
-     ],
-     "answers": [
-      "streptomycin"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge1": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge1": {
-      "en": [
-       3
-      ]
-     }
-    },
-    "target": 7,
-    "target_alts": [
-     5
-    ]
-   },
-   "mc": {
-    "bridge1": {
-     "gold": "streptomycin",
-     "distractors": [
-      "kanamycin",
-      "neomycin",
-      "chloramphenicol",
-      "tetracycline"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mhh-tanganyika-outflow-3hop",
-   "subfamily": "2hop",
-   "prompt": "Fact: the single outflowing stream of the deepest freshwater body in Africa runs westward and empties, near Kabalo, into the great waterway known along its upper course as the",
-   "target": "Lualaba River",
-   "target_alts": [
-    "Lualaba",
-    "Upper Congo"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "intermediates": [
-    "Lake Tanganyika"
-   ],
-   "units": [
-    {
-     "role": "bridge1",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Lake Tanganyika",
-       "Tanganyika"
-      ]
-     },
-     "match": [
-      "Lake Tanganyika",
-      "Tanganyika"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "What is the deepest lake in Africa?",
-     "units": [
-      "bridge1"
-     ],
-     "answers": [
-      "Lake Tanganyika",
-      "Tanganyika"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge1": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge1": {
-      "en": [
-       4,
-       3
-      ]
-     }
-    },
-    "target": 4,
-    "target_alts": [
-     3,
-     2
-    ]
-   },
-   "mc": {
-    "bridge1": {
-     "gold": "Lake Tanganyika",
-     "distractors": [
-      "Lake Malawi",
-      "Lake Victoria",
-      "Lake Kivu",
-      "Lake Turkana"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mhh-toland-wuthering",
-   "subfamily": "2hop",
-   "prompt": "Fact: the cinematographer of Citizen Kane took his only Academy Award for shooting William Wyler's 1939 adaptation of an Emily Brontë novel, released as",
-   "target": "Wuthering Heights",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "intermediates": [
-    "Gregg Toland"
-   ],
-   "units": [
-    {
-     "role": "bridge1",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Gregg Toland"
-      ]
-     },
-     "match": [
-      "Gregg Toland"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Who was the cinematographer of Citizen Kane?",
-     "units": [
-      "bridge1"
-     ],
-     "answers": [
-      "Gregg Toland",
-      "Toland"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge1": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge1": {
-      "en": [
-       3
-      ]
-     }
-    },
-    "target": 4,
-    "target_alts": []
-   },
-   "mc": {
-    "bridge1": {
-     "gold": "Gregg Toland",
-     "distractors": [
-      "James Wong Howe",
-      "Leon Shamroy",
-      "Stanley Cortez",
-      "Arthur C. Miller"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mhh-tordesillas-zaragoza",
-   "subfamily": "2hop",
-   "prompt": "Fact: the 1494 accord that drew a north-south meridian dividing newly claimed lands between Castile and Portugal was later complemented, for the Moluccas in 1529, by the",
-   "target": "Treaty of Zaragoza",
-   "target_alts": [
-    "Treaty of Saragossa",
-    "Zaragoza agreement of 1529"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "intermediates": [
-    "Treaty of Tordesillas"
-   ],
-   "units": [
-    {
-     "role": "bridge1",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Treaty of Tordesillas",
-       "Tordesillas"
-      ]
-     },
-     "match": [
-      "Treaty of Tordesillas",
-      "Tordesillas"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which 1494 agreement divided newly discovered lands outside Europe between Castile and Portugal along a meridian?",
-     "units": [
-      "bridge1"
-     ],
-     "answers": [
-      "Treaty of Tordesillas",
-      "Tordesillas",
-      "the Tordesillas treaty"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge1": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge1": {
-      "en": [
-       5,
-       3
-      ]
-     }
-    },
-    "target": 3,
-    "target_alts": [
-     5,
-     8
-    ]
-   },
-   "mc": {
-    "bridge1": {
-     "gold": "Treaty of Tordesillas",
-     "distractors": [
-      "Treaty of Alcáçovas",
-      "Treaty of Madrid (1750)",
-      "Treaty of San Ildefonso",
-      "Treaty of Utrecht"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mhh-valerian-shapur-relief",
-   "subfamily": "2hop",
-   "prompt": "Fact: The Roman ruler taken alive by Shapur I in 260 appears kneeling in a rock carving at the royal burial cliff near Persepolis, the place called",
-   "target": "Naqsh-e Rustam",
-   "target_alts": [
-    "Naqsh-i Rustam",
-    "Naqsh-e Rostam"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "intermediates": [
-    "Emperor Valerian"
-   ],
-   "units": [
-    {
-     "role": "bridge1",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Emperor Valerian",
-       "Publius Licinius Valerianus"
-      ]
-     },
-     "match": [
-      "Emperor Valerian",
-      "Publius Licinius Valerianus"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which Roman emperor was captured alive by the Sasanian king Shapur I in AD 260?",
-     "units": [
-      "bridge1"
-     ],
-     "answers": [
-      "Emperor Valerian",
-      "Valerian",
-      "Valerian I",
-      "Publius Licinius Valerianus"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge1": 0.9
+    "bridge1": 0.8
    },
    "gate_variant": "chat",
    "probe_token_lens": {
@@ -1819,112 +747,25 @@
      "bridge1": {
       "en": [
        3,
-       7
+       3,
+       5
       ]
      }
     },
     "target": 6,
     "target_alts": [
-     6,
-     6
-    ]
-   },
-   "mc": {
-    "bridge1": {
-     "gold": "Emperor Valerian",
-     "distractors": [
-      "Emperor Gordian III",
-      "Emperor Philip the Arab",
-      "Emperor Aurelian",
-      "Emperor Decius"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mhh-vavilov-lysenkoism",
-   "subfamily": "2hop",
-   "prompt": "Fact: The Soviet plant geneticist who mapped the world's centres of origin of crop species and starved to death in a Saratov prison in 1943 was ruined professionally by the pseudoscientific doctrine now called",
-   "target": "Lysenkoism",
-   "target_alts": [
-    "Michurinism",
-    "Lysenkoist biology"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "intermediates": [
-    "Nikolai Vavilov"
-   ],
-   "units": [
-    {
-     "role": "bridge1",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Nikolai Vavilov",
-       "Nikolai Ivanovich Vavilov",
-       "N. I. Vavilov"
-      ]
-     },
-     "match": [
-      "Nikolai Vavilov",
-      "Nikolai Ivanovich Vavilov",
-      "N. I. Vavilov"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which Soviet plant geneticist mapped the centres of origin of cultivated crops and died of starvation in a Saratov prison in 1943?",
-     "units": [
-      "bridge1"
-     ],
-     "answers": [
-      "Nikolai Vavilov",
-      "Vavilov",
-      "Nikolai Ivanovich Vavilov",
-      "N. I. Vavilov"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge1": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge1": {
-      "en": [
-       6,
-       8,
-       8
-      ]
-     }
-    },
-    "target": 3,
-    "target_alts": [
      3,
-     4
+     7
     ]
    },
    "mc": {
     "bridge1": {
-     "gold": "Nikolai Vavilov",
+     "gold": "Eddie Eagan",
      "distractors": [
-      "Nikolai Koltsov",
-      "Sergei Chetverikov",
-      "Georgii Karpechenko",
-      "Nikolay Timofeev-Ressovsky"
+      "Billy Fiske",
+      "Jay O'Brien",
+      "Jack Shea",
+      "Irving Jaffee"
      ]
     }
    }
@@ -2174,13 +1015,13 @@
    }
   },
   {
-   "name": "mhh-alexiad-adriatic-defeat",
-   "subfamily": "3hop",
-   "prompt": "Fact: the Byzantine princess who chronicled her father's reign in a fifteen-book epic history saw that emperor beaten in 1081 on the Adriatic shore by the Hauteville ruler of Apulia and Calabria known as",
-   "target": "Robert Guiscard",
+   "name": "mhh-adwa-baratieri",
+   "subfamily": "2hop",
+   "prompt": "Fact: the 1896 Ethiopian victory that wrecked Italy's attempt to impose a protectorate on the country was won against an invading force commanded by the general",
+   "target": "Oreste Baratieri",
    "target_alts": [
-    "Guiscard",
-    "Robert de Hauteville"
+    "Baratieri",
+    "General Oreste Baratieri"
    ],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -2191,8 +1032,7 @@
     ]
    },
    "intermediates": [
-    "Anna Komnene",
-    "Alexios I Komnenos"
+    "Battle of Adwa"
    ],
    "units": [
     {
@@ -2201,101 +1041,60 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "Anna Komnene",
-       "Anna Comnena"
+       "Battle of Adwa",
+       "Battle of Adowa"
       ]
      },
      "match": [
-      "Anna Komnene",
-      "Anna Comnena"
-     ]
-    },
-    {
-     "role": "bridge2",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Alexios I Komnenos",
-       "Alexius I Comnenus"
-      ]
-     },
-     "match": [
-      "Alexios I Komnenos",
-      "Alexius I Comnenus"
+      "Battle of Adwa",
+      "Battle of Adowa"
      ]
     }
    ],
    "bridges": [
     {
-     "question": "Which Byzantine princess wrote the Alexiad, a fifteen-book history of her father's reign?",
+     "question": "Which 1896 battle did Ethiopian forces win against an invading Italian army?",
      "units": [
       "bridge1"
      ],
      "answers": [
-      "Anna Komnene",
-      "Anna Comnena",
-      "Anna Komnena"
-     ]
-    },
-    {
-     "question": "Whose reign is chronicled in the Alexiad, written by Anna Komnene?",
-     "units": [
-      "bridge2"
-     ],
-     "answers": [
-      "Alexios I Komnenos",
-      "Alexios I",
-      "Alexius I Comnenus"
+      "Battle of Adwa",
+      "Adwa",
+      "Adowa",
+      "Battle of Adowa"
      ]
     }
    ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
+   "consistency": 0.9,
+   "consistency_strict": 0.9,
    "consistency_greedy": 1,
    "bridge_consistency": {
-    "bridge1": 1.0,
-    "bridge2": 0.9
+    "bridge1": 1.0
    },
    "gate_variant": "chat",
    "probe_token_lens": {
     "units": {
      "bridge1": {
       "en": [
-       3,
+       4,
        4
-      ]
-     },
-     "bridge2": {
-      "en": [
-       6,
-       6
       ]
      }
     },
-    "target": 3,
+    "target": 4,
     "target_alts": [
      2,
-     4
+     5
     ]
    },
    "mc": {
     "bridge1": {
-     "gold": "Anna Komnene",
+     "gold": "Battle of Adwa",
      "distractors": [
-      "Michael Psellos",
-      "Niketas Choniates",
-      "Irene Doukaina",
-      "Eudokia Makrembolitissa"
-     ]
-    },
-    "bridge2": {
-     "gold": "Alexios I Komnenos",
-     "distractors": [
-      "Michael VII Doukas",
-      "Nikephoros III Botaneiates",
-      "Romanos IV Diogenes",
-      "John II Komnenos"
+      "Battle of Dogali",
+      "Battle of Omdurman",
+      "Battle of Isandlwana",
+      "Battle of Maychew"
      ]
     }
    }
@@ -2420,13 +1219,13 @@
    }
   },
   {
-   "name": "mhh-vaneyck-goldenfleece",
+   "name": "mhh-brock-thermus-taq",
    "subfamily": "3hop",
-   "prompt": "Fact: the Flemish master who painted the 1434 double portrait of a merchant and his wife in a Bruges interior served as court painter to a Burgundian duke who in 1430 founded the knightly society called the",
-   "target": "Order of the Golden Fleece",
+   "prompt": "Fact: The ecologist who in 1969 pulled a heat-loving bacterium out of a scalding Yellowstone hot spring named the new species after its watery habitat; the DNA-copying enzyme later harvested from that microbe, the workhorse of gene amplification, is known as",
+   "target": "Taq polymerase",
    "target_alts": [
-    "Golden Fleece",
-    "Ordre de la Toison d'Or"
+    "Taq DNA polymerase",
+    "Taq"
    ],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -2437,8 +1236,8 @@
     ]
    },
    "intermediates": [
-    "Jan van Eyck",
-    "Philip the Good"
+    "Thomas Brock",
+    "Thermus aquaticus"
    ],
    "units": [
     {
@@ -2447,13 +1246,13 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "Jan van Eyck",
-       "van Eyck"
+       "Thomas Brock",
+       "Thomas D. Brock"
       ]
      },
      "match": [
-      "Jan van Eyck",
-      "van Eyck"
+      "Thomas Brock",
+      "Thomas D. Brock"
      ]
     },
     {
@@ -2462,36 +1261,285 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "Philip the Good",
-       "Philip III the Good"
+       "Thermus aquaticus"
       ]
      },
      "match": [
-      "Philip the Good",
-      "Philip III the Good"
+      "Thermus aquaticus"
      ]
     }
    ],
    "bridges": [
     {
-     "question": "Which Flemish painter created the 1434 Arnolfini Portrait?",
+     "question": "Which microbiologist isolated a thermophilic bacterium from a Yellowstone hot spring in 1969?",
      "units": [
       "bridge1"
      ],
      "answers": [
-      "Jan van Eyck",
-      "van Eyck"
+      "Thomas Brock",
+      "Thomas D. Brock",
+      "Brock"
      ]
     },
     {
-     "question": "Which Burgundian ruler employed Jan van Eyck as his court painter and valet de chambre?",
+     "question": "Which bacterial species did Thomas Brock describe from Yellowstone's hot springs in 1969?",
      "units": [
       "bridge2"
      ],
      "answers": [
-      "Philip the Good",
-      "Philip III the Good",
-      "Philippe le Bon"
+      "Thermus aquaticus",
+      "T. aquaticus"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "bridge_consistency": {
+    "bridge1": 0.9,
+    "bridge2": 0.8
+   },
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "bridge1": {
+      "en": [
+       2,
+       4
+      ]
+     },
+     "bridge2": {
+      "en": [
+       4
+      ]
+     }
+    },
+    "target": 4,
+    "target_alts": [
+     5,
+     2
+    ]
+   },
+   "mc": {
+    "bridge1": {
+     "gold": "Thomas Brock",
+     "distractors": [
+      "Carl Woese",
+      "Norman Pace",
+      "Ralph Wolfe",
+      "Holger Jannasch"
+     ]
+    },
+    "bridge2": {
+     "gold": "Thermus aquaticus",
+     "distractors": [
+      "Pyrococcus furiosus",
+      "Thermococcus litoralis",
+      "Sulfolobus acidocaldarius",
+      "Deinococcus radiodurans"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mhh-deinonychus-yale-newhaven",
+   "subfamily": "3hop",
+   "prompt": "Fact: the paleontologist who named Deinonychus in 1969 and revived the idea that birds descend from theropod dinosaurs spent his entire career at an Ivy League school whose main campus lies in the coastal town of",
+   "target": "New Haven, Connecticut",
+   "target_alts": [
+    "New Haven"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "intermediates": [
+    "John Ostrom",
+    "Yale University"
+   ],
+   "units": [
+    {
+     "role": "bridge1",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "John Ostrom",
+       "John H. Ostrom"
+      ]
+     },
+     "match": [
+      "John Ostrom",
+      "John H. Ostrom"
+     ]
+    },
+    {
+     "role": "bridge2",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "Yale University",
+       "Yale Peabody Museum"
+      ]
+     },
+     "match": [
+      "Yale University",
+      "Yale Peabody Museum"
+     ]
+    }
+   ],
+   "bridges": [
+    {
+     "question": "Which American paleontologist named Deinonychus in 1969 and revived the dinosaur-to-bird hypothesis?",
+     "units": [
+      "bridge1"
+     ],
+     "answers": [
+      "John Ostrom",
+      "John H. Ostrom",
+      "Ostrom"
+     ]
+    },
+    {
+     "question": "At which Ivy League institution did John Ostrom spend his academic career?",
+     "units": [
+      "bridge2"
+     ],
+     "answers": [
+      "Yale",
+      "Yale University",
+      "Yale College",
+      "Yale Peabody Museum"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "bridge_consistency": {
+    "bridge1": 0.9,
+    "bridge2": 1.0
+   },
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "bridge1": {
+      "en": [
+       3,
+       5
+      ]
+     },
+     "bridge2": {
+      "en": [
+       2,
+       5
+      ]
+     }
+    },
+    "target": 4,
+    "target_alts": [
+     2
+    ]
+   },
+   "mc": {
+    "bridge1": {
+     "gold": "John Ostrom",
+     "distractors": [
+      "Robert Bakker",
+      "Edwin H. Colbert",
+      "Barnum Brown",
+      "Jack Horner"
+     ]
+    },
+    "bridge2": {
+     "gold": "Yale University",
+     "distractors": [
+      "Harvard University",
+      "Princeton University",
+      "Brown University",
+      "Columbia University"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mhh-meitner-meitnerium-armbruster",
+   "subfamily": "3hop",
+   "prompt": "Fact: the transuranium metal named for the physicist who, with her nephew Otto Frisch, first explained nuclear fission was created in 1982 by a Darmstadt team headed by",
+   "target": "Peter Armbruster",
+   "target_alts": [
+    "Armbruster"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "intermediates": [
+    "Lise Meitner",
+    "meitnerium"
+   ],
+   "units": [
+    {
+     "role": "bridge1",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "Lise Meitner",
+       "Elise Meitner"
+      ]
+     },
+     "match": [
+      "Lise Meitner",
+      "Elise Meitner"
+     ]
+    },
+    {
+     "role": "bridge2",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "meitnerium",
+       "element 109"
+      ]
+     },
+     "match": [
+      "meitnerium",
+      "element 109"
+     ]
+    }
+   ],
+   "bridges": [
+    {
+     "question": "Which physicist, together with her nephew Otto Frisch, first gave a theoretical explanation of nuclear fission in 1939?",
+     "units": [
+      "bridge1"
+     ],
+     "answers": [
+      "Lise Meitner",
+      "Meitner",
+      "Elise Meitner"
+     ]
+    },
+    {
+     "question": "Which chemical element is named in honour of Lise Meitner?",
+     "units": [
+      "bridge2"
+     ],
+     "answers": [
+      "meitnerium",
+      "element 109",
+      "Mt"
      ]
     }
    ],
@@ -2508,51 +1556,51 @@
      "bridge1": {
       "en": [
        4,
-       3
+       5
       ]
      },
      "bridge2": {
       "en": [
-       3,
-       4
+       4,
+       5
       ]
      }
     },
-    "target": 5,
+    "target": 4,
     "target_alts": [
-     2,
-     8
+     3
     ]
    },
    "mc": {
     "bridge1": {
-     "gold": "Jan van Eyck",
+     "gold": "Lise Meitner",
      "distractors": [
-      "Rogier van der Weyden",
-      "Hans Memling",
-      "Hugo van der Goes",
-      "Petrus Christus"
+      "Irène Joliot-Curie",
+      "Ida Noddack",
+      "Marietta Blau",
+      "Hedwig Kohn"
      ]
     },
     "bridge2": {
-     "gold": "Philip the Good",
+     "gold": "meitnerium",
      "distractors": [
-      "Charles the Bold",
-      "John the Fearless",
-      "Philip the Bold",
-      "Charles VII of France"
+      "bohrium",
+      "hassium",
+      "darmstadtium",
+      "roentgenium"
      ]
     }
    }
   },
   {
-   "name": "mhh-wyeth-chaddsford",
+   "name": "mhh-rufus-henry-whiteship",
    "subfamily": "3hop",
-   "prompt": "Fact: the American realist who painted Christina's World learned his craft from his father, a celebrated illustrator of adventure classics, who was killed in 1945 when a train struck his car at a crossing in the Brandywine Valley village of",
-   "target": "Chadds Ford",
+   "prompt": "Fact: The English king struck down by an arrow while hunting in the New Forest in 1100 was succeeded by his younger brother, whose only legitimate son drowned when a vessel foundered off Barfleur in 1120; that ill-fated vessel was called",
+   "target": "the White Ship",
    "target_alts": [
-    "Chadds Ford, Pennsylvania",
-    "Chadd's Ford"
+    "White Ship",
+    "La Blanche-Nef",
+    "Blanche-Nef"
    ],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -2563,8 +1611,8 @@
     ]
    },
    "intermediates": [
-    "Andrew Wyeth",
-    "N. C. Wyeth"
+    "William Rufus",
+    "Henry I of England"
    ],
    "units": [
     {
@@ -2573,13 +1621,13 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "Andrew Wyeth",
-       "Andrew Newell Wyeth"
+       "William Rufus",
+       "William II of England"
       ]
      },
      "match": [
-      "Andrew Wyeth",
-      "Andrew Newell Wyeth"
+      "William Rufus",
+      "William II of England"
      ]
     },
     {
@@ -2588,36 +1636,37 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "N. C. Wyeth",
-       "Newell Convers Wyeth"
+       "Henry I of England",
+       "Henry Beauclerc"
       ]
      },
      "match": [
-      "N. C. Wyeth",
-      "Newell Convers Wyeth"
+      "Henry I of England",
+      "Henry Beauclerc"
      ]
     }
    ],
    "bridges": [
     {
-     "question": "Which American painter created the 1948 tempera picture Christina's World?",
+     "question": "Which English king was killed by an arrow while hunting in the New Forest in 1100?",
      "units": [
       "bridge1"
      ],
      "answers": [
-      "Andrew Wyeth",
-      "Andrew Newell Wyeth"
+      "William II",
+      "William Rufus",
+      "William II of England"
      ]
     },
     {
-     "question": "Who was the illustrator father and teacher of Andrew Wyeth?",
+     "question": "Who succeeded William Rufus as king of England in 1100?",
      "units": [
       "bridge2"
      ],
      "answers": [
-      "N. C. Wyeth",
-      "Newell Convers Wyeth",
-      "NC Wyeth"
+      "Henry I",
+      "Henry I of England",
+      "Henry Beauclerc"
      ]
     }
    ],
@@ -2625,261 +1674,7 @@
    "consistency_strict": 1.0,
    "consistency_greedy": 1,
    "bridge_consistency": {
-    "bridge1": 0.8,
-    "bridge2": 0.9
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge1": {
-      "en": [
-       3,
-       5
-      ]
-     },
-     "bridge2": {
-      "en": [
-       6,
-       5
-      ]
-     }
-    },
-    "target": 3,
-    "target_alts": [
-     5,
-     4
-    ]
-   },
-   "mc": {
-    "bridge1": {
-     "gold": "Andrew Wyeth",
-     "distractors": [
-      "Edward Hopper",
-      "Grant Wood",
-      "Thomas Hart Benton",
-      "Winslow Homer"
-     ]
-    },
-    "bridge2": {
-     "gold": "N. C. Wyeth",
-     "distractors": [
-      "Howard Pyle",
-      "Maxfield Parrish",
-      "Frank Schoonover",
-      "Harvey Dunn"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mhh-wyeth-ncwyeth-stevenson",
-   "subfamily": "3hop",
-   "prompt": "Fact: the American realist who painted the 1948 tempera Christina's World was the son of an illustrator celebrated above all for his 1911 color plates to the Robert Louis Stevenson pirate novel",
-   "target": "Treasure Island",
-   "target_alts": [
-    "Treasure Island (1883 novel)"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "intermediates": [
-    "Andrew Wyeth",
-    "N. C. Wyeth"
-   ],
-   "units": [
-    {
-     "role": "bridge1",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Andrew Wyeth",
-       "Andrew Newell Wyeth"
-      ]
-     },
-     "match": [
-      "Andrew Wyeth",
-      "Andrew Newell Wyeth"
-     ]
-    },
-    {
-     "role": "bridge2",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "N. C. Wyeth",
-       "Newell Convers Wyeth"
-      ]
-     },
-     "match": [
-      "N. C. Wyeth",
-      "Newell Convers Wyeth"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which artist painted the 1948 tempera Christina's World?",
-     "units": [
-      "bridge1"
-     ],
-     "answers": [
-      "Andrew Wyeth",
-      "Wyeth",
-      "Andrew Newell Wyeth"
-     ]
-    },
-    {
-     "question": "Who was the illustrator father of the painter Andrew Wyeth?",
-     "units": [
-      "bridge2"
-     ],
-     "answers": [
-      "N. C. Wyeth",
-      "Newell Convers Wyeth",
-      "N.C. Wyeth"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge1": 0.9,
-    "bridge2": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge1": {
-      "en": [
-       3,
-       5
-      ]
-     },
-     "bridge2": {
-      "en": [
-       6,
-       5
-      ]
-     }
-    },
-    "target": 2,
-    "target_alts": [
-     9
-    ]
-   },
-   "mc": {
-    "bridge1": {
-     "gold": "Andrew Wyeth",
-     "distractors": [
-      "Edward Hopper",
-      "Norman Rockwell",
-      "Thomas Hart Benton",
-      "Grant Wood"
-     ]
-    },
-    "bridge2": {
-     "gold": "N. C. Wyeth",
-     "distractors": [
-      "Howard Pyle",
-      "Maxfield Parrish",
-      "Jessie Willcox Smith",
-      "Harvey Dunn"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mhh-yuezhi-envoy-capital",
-   "subfamily": "3hop",
-   "prompt": "Fact: the sovereign who dispatched the envoy sent far westward to seek allies against the Xiongnu ruled his realm from the capital of",
-   "target": "Chang'an",
-   "target_alts": [
-    "Changan",
-    "the city of Chang'an"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "intermediates": [
-    "Zhang Qian",
-    "Emperor Wu of Han"
-   ],
-   "units": [
-    {
-     "role": "bridge1",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Zhang Qian",
-       "Chang Ch'ien"
-      ]
-     },
-     "match": [
-      "Zhang Qian",
-      "Chang Ch'ien"
-     ]
-    },
-    {
-     "role": "bridge2",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Emperor Wu of Han",
-       "Han Wudi",
-       "Liu Che"
-      ]
-     },
-     "match": [
-      "Emperor Wu of Han",
-      "Han Wudi",
-      "Liu Che"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which Han envoy was sent west to seek an alliance with the Yuezhi against the Xiongnu?",
-     "units": [
-      "bridge1"
-     ],
-     "answers": [
-      "Zhang Qian",
-      "Chang Ch'ien"
-     ]
-    },
-    {
-     "question": "Which Han emperor dispatched Zhang Qian on his mission to the west?",
-     "units": [
-      "bridge2"
-     ],
-     "answers": [
-      "Emperor Wu of Han",
-      "Han Wudi",
-      "Emperor Wu",
-      "Liu Che"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge1": 0.9,
+    "bridge1": 1.0,
     "bridge2": 1.0
    },
    "gate_variant": "chat",
@@ -2894,34 +1689,34 @@
      "bridge2": {
       "en": [
        4,
-       3,
-       2
+       4
       ]
      }
     },
-    "target": 2,
+    "target": 3,
     "target_alts": [
      2,
-     5
+     4,
+     3
     ]
    },
    "mc": {
     "bridge1": {
-     "gold": "Zhang Qian",
+     "gold": "William Rufus",
      "distractors": [
-      "Ban Chao",
-      "Gan Ying",
-      "Su Wu",
-      "Wang Xuance"
+      "Henry I of England",
+      "Robert Curthose",
+      "Stephen of Blois",
+      "Edgar the Aetheling"
      ]
     },
     "bridge2": {
-     "gold": "Emperor Wu of Han",
+     "gold": "Henry I of England",
      "distractors": [
-      "Emperor Gaozu of Han",
-      "Emperor Wen of Han",
-      "Emperor Xuan of Han",
-      "Emperor Guangwu of Han"
+      "William II of England",
+      "Stephen, King of England",
+      "Henry II of England",
+      "Richard I of England"
      ]
     }
    }
@@ -3330,128 +2125,6 @@
       "Fernando Alvarez de Toledo, Duke of Alba",
       "Marcantonio Colonna",
       "Alvaro de Bazan, Marquis of Santa Cruz"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mhh-riverblindness-ivermectin-strep",
-   "subfamily": "3hop",
-   "prompt": "Fact: the parasitic worm responsible for the illness commonly called river blindness is killed by a macrocyclic lactone medicine that was developed from a soil-dwelling bacterium named",
-   "target": "Streptomyces avermitilis",
-   "target_alts": [
-    "Streptomyces avermectinius",
-    "S. avermitilis"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "intermediates": [
-    "Onchocerca volvulus",
-    "ivermectin"
-   ],
-   "units": [
-    {
-     "role": "bridge1",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Onchocerca volvulus"
-      ]
-     },
-     "match": [
-      "Onchocerca volvulus"
-     ]
-    },
-    {
-     "role": "bridge2",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "ivermectin",
-       "Mectizan"
-      ]
-     },
-     "match": [
-      "ivermectin",
-      "Mectizan"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which parasitic nematode causes onchocerciasis, the disease known as river blindness?",
-     "units": [
-      "bridge1"
-     ],
-     "answers": [
-      "Onchocerca volvulus",
-      "O. volvulus"
-     ]
-    },
-    {
-     "question": "Which macrocyclic lactone drug is used to treat infection with Onchocerca volvulus?",
-     "units": [
-      "bridge2"
-     ],
-     "answers": [
-      "ivermectin",
-      "Mectizan"
-     ]
-    }
-   ],
-   "consistency": 0.8,
-   "consistency_strict": 0.8,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge1": 0.8,
-    "bridge2": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge1": {
-      "en": [
-       6
-      ]
-     },
-     "bridge2": {
-      "en": [
-       4,
-       3
-      ]
-     }
-    },
-    "target": 7,
-    "target_alts": [
-     8,
-     5
-    ]
-   },
-   "mc": {
-    "bridge1": {
-     "gold": "Onchocerca volvulus",
-     "distractors": [
-      "Wuchereria bancrofti",
-      "Brugia malayi",
-      "Loa loa",
-      "Dracunculus medinensis"
-     ]
-    },
-    "bridge2": {
-     "gold": "ivermectin",
-     "distractors": [
-      "albendazole",
-      "praziquantel",
-      "moxidectin",
-      "diethylcarbamazine"
      ]
     }
    }

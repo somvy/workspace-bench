@@ -1,73 +1,73 @@
-# Qwen3.5-9B port (branch `port-qwen3.5-9b`)
+# Qwen2.5-7B-Instruct port (branch `port-qwen2.5-7b`)
 
-> **Not ported, emptied on this branch:** agentic_misalignment, jlens_concept_pr. Their banks are
-> Qwen3.6-27B token ids and rollouts. **hallucination** is rebuilt on the 9B's own responses (below). **Below 20 items:** brew 0, relational_multihop 18, conjunctive_association 10.
-> **Judging** of every non-regex family, and the token-lens summarizer, go through OpenRouter (Gemini 3.8 Flash) by
-> default, or through a local server with `WSBENCH_BASE_URL` (README, "Local judge").
+> **Not ported, emptied on this branch:** agentic_misalignment, jlens_concept_pr (their banks are Qwen3.6-27B rollouts and
+> activations). **Below 20 items:** multilingual_mt 7, multilingual_multihop 13, conjunctive_association 14,
+> brew_intermediates 0; role_bound_association kept 2 and is emptied (its judge draws 3 distractor scenes from other
+> items). **No J-lens / R-lens exists for this model:** `method=jlens|rlens` fails at load. **Judging** goes through
+> OpenRouter (Gemini 3.8 Flash) by default, or a local server with `WSBENCH_BASE_URL` (README, "Local judge").
 
-Every bank on this branch is the Qwen3.6-27B bank from `main`, filtered to the items `Qwen/Qwen3.5-9B` (post-trained) passes,
-with the model-specific golds rebuilt. `PORT.json` has per-family counts and rules. Build scripts: `scripts/port/` (README there).
+Built like the Qwen3.5-9B port (branch `port-qwen3.5-9b`), with one difference that matters: Qwen2.5 has a different
+tokenizer (151,665 vs 248,077 tokens) and chat template (no think block; the template inserts its default system prompt,
+"You are Qwen, created by Alibaba Cloud. You are a helpful assistant.", when an item has none, and it is kept, as the
+model is normally run). Every chat render on this branch is Qwen2.5's own template. `PORT.json` has per-family counts.
+Build scripts: `scripts/port/` (README there).
 
 ## Gate (chat only)
-The bench's `capable` question in chat format (bench ANSWER_SYSTEM, thinking off), 10 samples at T=0.7 (top_p=1, top_k=0) plus
-greedy. Each answer is graded by local Qwen3.6-27B with the bench GRADE prompt. An item passes if the greedy answer is right
-and at least 8/10 samples are right (10/10 for chain and brew). A multihop item needs its surface question AND every bridge
-question to pass. Sampling with no top_p/top_k cut-off is stricter than the banks' own gate, so the kept items are a
-conservative subset.
+Same rule as the 9B port: the bench's `capable` question in chat format (bench ANSWER_SYSTEM), 10 samples at T=0.7
+(top_p=1, top_k=0) plus greedy, graded by local Qwen3.6-27B with the bench GRADE prompt. An item passes if the greedy
+answer is right and at least 8/10 samples are right (10/10 for chain and brew); a multihop item needs every bridge
+question to pass too. Kept: typo 94, user_modeling 94, multilingual 90, multihop 79, basic_readout 67 (+22 implicit),
+typo_mt 60, chain 57, association 50, relational_multihop 38, basic_readout_mt 37, multilingual_typo 33, buggy_code 23,
+multihop_mt 21, arithmetic 194. Total over all families: 1,579 items.
 
 ## Rebuilt families
-- **poetry** (re-gated; no gold changed): kept if the 9B commits to a rhyme (chat greedy, at least 8/10 samples give the same
-  word, and the plain-render greedy continuation agrees). 76/100 kept, and every kept rhyme equals Qwen3.6's.
-- **basic_readout implicit**: gold = the 9B's own favourite (chat_prefill render, at least 8/10 the same answer; "none" etc.
-  excluded). Only 3/32 kept: the 9B mostly answers "None".
-- **directed_modulation**: compliance re-screened with free generation (copies the carrier verbatim, never names the concept;
-  greedy + at least 8/10; pairs kept whole). 100/100.
-- **moral_rationale**: side split = the 9B's 10 chat answers. Reasons = Qwen3.6-27B clustering of the 9B's own explanations,
-  one follow-up "main reason" turn per sample, conditioned on that sample's answer.
-  - Committed: greedy = majority and majority at least 8/10. Deliberative: minority at least 2/10 and reasons on both sides.
-  - The 9B is more split than the 27B: 70 deliberative vs 34 in the bank. The same rule on the 27B gives 38, so this is the
-    9B's behaviour, not the rule. Deliberative items need both sides read, so this family is harder on the 9B by composition.
-  - Variant "mixed" (shipped): where the 9B agrees with the bank (same class, and same side if committed), the bank's
-    reasons are kept (117 items); the other 82 are rebuilt. The all-rebuilt variant can be produced by setting `MORAL_VARIANT = "rebuilt"` in `scripts/port/assemble.py`.
-  - Fidelity control (same pipeline with Qwen3.6-27B as the model being read): side agrees with the bank on 194/199 items,
-    class on 143/199, and the top reason is judged the same as the bank's look_for_reasons[0] on 77/135. The rebuilt reasons
-    come from a related but not identical instrument; about 25% of items tie for the top reason.
-  - Blind lucky-guessing floor (Qwen3.6-27B guesser, 5 draws T=1): original 0.193 (bench's frozen Gemini number 0.195),
-    mixed 0.171, rebuilt 0.177; chance 0.20.
+- **poetry**: kept if the 7B commits to a rhyme (chat greedy, at least 8/10 the same word, and the plain-render greedy
+  continuation agrees). 71/100 kept (15 plain continuation differs, 14 chat inconsistent); 69 of 71 rhymes equal Qwen3.6's.
+- **basic_readout implicit**: gold = the 7B's own favourite (chat_prefill render, at least 8/10 the same answer).
+  22/32 kept, 9 the same as the bank's.
+- **directed_modulation**: compliance re-screened with free generation (copies the carrier verbatim, never names the
+  concept; greedy + at least 8/10; pairs kept whole). 94 items pass, 88 kept as whole pairs.
+- **moral_rationale**: side split = the 7B's 10 chat answers; reasons = Qwen3.6-27B clustering of the 7B's own
+  explanations (same pipeline as the 9B). 199/200 kept: 177 committed, 22 deliberative (bank 166 / 34). Same direction as
+  the bank on 139/199 items, same class on 153. Variant "mixed" (shipped): 121 items keep the bank's reasons, 78 rebuilt.
+  The 7B's top committed reason is judged the same as the bank's look_for_reasons[0] on 49/116 (Qwen3.6-27B on its own
+  bank, the fidelity control from the 9B port: 77/135). The blind lucky-guessing floor was not re-measured.
+- **hallucination**: same 149 prompts, the 7B's own on-policy responses (vLLM, T=1.0, top-p 1.0, top-k 0, 512 new tokens,
+  seed 7, EOS dropped), read sites re-derived on its tokens by `scripts/port/hallucination.py` (whose `check` mode
+  reproduces all 1,123 original sites). 149 items, 1,096 sites (clause 458, sentence 362, newline 142, markup 109,
+  quote 25); responses are shorter than Qwen3.6-27B's (median 126 tokens vs 228; 26 hit the 512 cap vs 35).
 
-- **hallucination**: same 149 prompts; the 9B answers each one on-policy (vLLM, T=1.0, top-p 1.0, top-k 0, 512 new
-  tokens, seed 7, empty think block, EOS dropped; the original used HF generate with the same settings). Read sites
-  are re-derived on the 9B's tokens. The source repo's site code (`hallucination_bench.sites`) is not public;
-  `scripts/port/hallucination.py` reimplements it from the bank's meta, and its `check` mode reproduces all 1,123
-  original sites (position, token, kind, char offset) from the Qwen3.6-27B capture rows, 149/149 items.
-  - Result: 149 items (none dropped), 1,127 sites (original 1,123); kinds clause 438, sentence 305, markup 217,
-    newline 120, quote 47. The 9B's responses are shorter (median 173 tokens vs 228); 38 hit the 512-token cap
-    (original 35). Prompt renders are token-identical to the original bank, 149/149.
-  - Checked end to end: logit-lens readouts on the 9B (5,635 rows = 1,127 sites x 5 layers), then a 4-item slice
-    judged by local Gemma-4-31B-it through summarizer, span judge and verify, 0 unjudged cells.
-  - The original items were "screened" (source meta); no screening was redone on the 9B's responses.
-
-## Unchanged
-multi_concept_directed_modulation and jailbreak_recognition have no model gate. `tplcheck.py`: Qwen3.5-9B has the same
-tokenizer and renders every read render of every family to identical token ids, so their positions carry over.
+## Read positions (tokenizer-dependent)
+`scripts/port/poscheck.py` renders every plan row with both tokenizers, resolves its positions rule under each and
+compares the selected text.
+- **Text rules carry over** (final_token, offset_from_end, line_one_newline, from_token, suffix_text, last_n,
+  from_last_sentence_start). Where the selected text differs it is because Qwen2.5 splits a word differently: the final
+  token of 6 basic_readout_mt, 4 typo_mt, 2 typo, 1 multilingual and most Arabic/Hebrew/Greek multilingual items is a
+  different piece of the same last word (`' milion'` vs `'ion'`); poetry's line-one newline is `',\n'` (one token in
+  Qwen2.5) instead of `'\n'`. The chat families read the same user text followed by Qwen2.5's own, 4-token-shorter tail.
+- **moral_rationale** reads the last 5 positions, "the assistant-header tail". On Qwen3.6 those are `\n<think>\n\n</think>\n\n`;
+  on Qwen2.5 they are `<|im_end|>\n<|im_start|>assistant\n`. The rule is unchanged; what it reads differs by template.
+- **jailbreak_recognition** stored token indices; `scripts/port/remap.py` re-derives each item's read (every token of the
+  last user turn through its `<|im_end|>`) on Qwen2.5's render. The same code rebuilds all 86 original reads exactly
+  under the Qwen3.6-27B tokenizer (`remap.py check`); on Qwen2.5 every span equals the last user turn + `<|im_end|>`, 86/86.
+- **arithmetic_intermediates** frozen cells were offsets in the chat tail (-8 = the newline after `<|im_end|>`,
+  -7 = `<|im_start|>`); mapped by token identity to -4 / -3. They were the best cells on the 27B, so on the 7B they are
+  a guess: use `opts=cells=all` until they are re-selected.
+- **hallucination** is captured token ids, rebuilt above.
 
 ## Layers
-Every layer l becomes l // 2 (64 to 32 layers): GRID 10..30 step 2, SIX/FIVE likewise; arithmetic 28/30 and its frozen
-cells (the frozen cells were the best cell per variant on the 27B; on the 9B the mapped cell is a guess, so use
-`opts=cells=all` until they are re-selected); buggy_code 30/28; MCDM [22,26,28,30]; agentic 31; producer default 22.
-Layer 30 is the 9B J/R-lens target layer: J = identity there, so those lenses become logit-lens-like at 30.
-JLens/RLens default to `camilablank/workspace-lenses` `qwen3.5-9b/{j,r}-lens/lens.pt` (n=25). No n=1000 J-lens exists for 9B.
-Smoke test (typo_mt): with the cosine readout the J-lens peaks at layer 10 and falls to 0 at layers 24-28. Check it before trusting it.
+Every layer l becomes min(int(l * 28 / 64 + 0.5), 27) (64 to 28 layers): GRID [9, 11, 12, 14, 16, 18, 19, 21, 23, 25, 26],
+SIX [9, 12, 16, 19, 23, 26], FIVE [9, 16, 19, 23, 26]; arithmetic 25/26; buggy_code 26/25; MCDM [19, 23, 25, 26];
+agentic [*GRID, 27]; producer default 19.
 
 ## Checks run
-- `scripts/port/fullcheck.sh` on Qwen3.5-9B: `wsbench produce method=logit_lens` for all 27 families (exit 0), then
-  `wsbench run all=True dry_run=True`. Every family reaches its judge with the expected item count; the six regex families
-  score with 0 missing cells. No judge/summarizer API call was made, so no lens score on the LLM-judged families exists yet.
+- `scripts/port/fullcheck.sh` on Qwen2.5-7B-Instruct: `wsbench produce method=logit_lens` for all 27 families (exit 0),
+  then `wsbench run all=True dry_run=True` (exit 0): every family reaches its judge with the expected item count, the six
+  regex families score with 0 missing cells, hallucination expects 5,480 cells (1,096 sites x 5 layers), 0 missing.
+  No judge call was made; no lens has been scored on this branch.
+- Tests: the code tests pass; 133 tests that pin the original banks (item counts, golden prompts, bank positions/layers)
+  fail, as on the 9B branch (119 there; the extra ones pin jailbreak positions, typo/typo_mt items and 27B layer numbers).
 
-## Dropped / not ported
-- Fewer than 20 items, left in place but flagged in PORT.json: brew 0, relational_multihop 18, conjunctive_association 10.
-- Not ported, item lists emptied: agentic_misalignment (needs 9B rollouts), jlens_concept_pr (needs 9B rollouts and
-  activations; source prompts are private).
-- The NLA method still points at the 27B NLA; no 9B NLA exists.
-- `tests/golden` and the per-family bank tests (`test_bank*`, golden prompts, item counts) pin the original banks and
-  fail on this branch (119 tests); the code tests pass.
+## Not ported
+- agentic_misalignment (needs 7B rollouts), jlens_concept_pr (needs 7B rollouts and activations; source prompts are private).
+- The NLA method still points at the 27B NLA; a released Qwen2.5-7B NLA exists (layer 20) but is not wired in.

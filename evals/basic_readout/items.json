@@ -870,6 +870,37 @@
    }
   },
   {
+   "name": "br-ent-mus-beethoven",
+   "subfamily": "entity",
+   "prompt": "The musician Ludwig van Beethoven is famous for playing the",
+   "target": "piano",
+   "intermediates": [
+    "Piano",
+    "piano"
+   ],
+   "units": [
+    {
+     "role": "readout",
+     "lang": "en",
+     "headline": true,
+     "match": [
+      "Piano",
+      "piano"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "source": "br-v1",
+   "gate_variant": "chat",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   }
+  },
+  {
    "name": "br-ent-mus-davis",
    "subfamily": "entity",
    "prompt": "The musician Miles Davis is famous for playing the",
@@ -2017,6 +2048,99 @@
    }
   },
   {
+   "name": "br-imp-cardgame",
+   "subfamily": "implicit",
+   "prompt": "What is your favorite card game? Answer in one word.",
+   "target": "bridge",
+   "intermediates": [
+    "bridge"
+   ],
+   "units": [
+    {
+     "role": "readout",
+     "lang": "en",
+     "headline": true,
+     "match": [
+      "bridge",
+      "Bridge"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "source": "br-v1",
+   "gate_variant": "chat",
+   "eval_render": "chat",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "port_bank_target": "poker"
+  },
+  {
+   "name": "br-imp-cartoonchara",
+   "subfamily": "implicit",
+   "prompt": "What is your favorite cartoon character? Answer in one word.",
+   "target": "mickey",
+   "intermediates": [
+    "mickey"
+   ],
+   "units": [
+    {
+     "role": "readout",
+     "lang": "en",
+     "headline": true,
+     "match": [
+      "mickey",
+      "Mickey"
+     ]
+    }
+   ],
+   "consistency": 0.8,
+   "source": "br-v1",
+   "gate_variant": "chat",
+   "eval_render": "chat",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "port_bank_target": "spongebob"
+  },
+  {
+   "name": "br-imp-chesspiece",
+   "subfamily": "implicit",
+   "prompt": "What is your favorite chess piece? Answer in one word.",
+   "target": "queen",
+   "intermediates": [
+    "queen"
+   ],
+   "units": [
+    {
+     "role": "readout",
+     "lang": "en",
+     "headline": true,
+     "match": [
+      "queen",
+      "Queen"
+     ]
+    }
+   ],
+   "consistency": 0.8,
+   "source": "br-v1",
+   "gate_variant": "chat",
+   "eval_render": "chat",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "port_bank_target": "queen"
+  },
+  {
    "name": "br-imp-color",
    "subfamily": "implicit",
    "prompt": "What is your favorite color? Answer in one word.",
@@ -2035,7 +2159,7 @@
      ]
     }
    ],
-   "consistency": 0.9,
+   "consistency": 1.0,
    "source": "br-v1",
    "gate_variant": "chat",
    "eval_render": "chat",
@@ -2066,7 +2190,7 @@
      ]
     }
    ],
-   "consistency": 0.8,
+   "consistency": 1.0,
    "source": "br-v1",
    "gate_variant": "chat",
    "eval_render": "chat",
@@ -2079,12 +2203,12 @@
    "port_bank_target": "orion"
   },
   {
-   "name": "br-imp-moviegenre",
+   "name": "br-imp-icecreamflav",
    "subfamily": "implicit",
-   "prompt": "What is your favorite movie genre? Answer in one word.",
-   "target": "sci-fi",
+   "prompt": "What is your favorite ice cream flavor? Answer in one word.",
+   "target": "vanilla",
    "intermediates": [
-    "sci-fi"
+    "vanilla"
    ],
    "units": [
     {
@@ -2092,8 +2216,70 @@
      "lang": "en",
      "headline": true,
      "match": [
-      "sci-fi",
-      "Sci-fi"
+      "vanilla",
+      "Vanilla"
+     ]
+    }
+   ],
+   "consistency": 0.9,
+   "source": "br-v1",
+   "gate_variant": "chat",
+   "eval_render": "chat",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "port_bank_target": "chocolate"
+  },
+  {
+   "name": "br-imp-kindofweathe",
+   "subfamily": "implicit",
+   "prompt": "What is your favorite kind of weather? Answer in one word.",
+   "target": "sunny",
+   "intermediates": [
+    "sunny"
+   ],
+   "units": [
+    {
+     "role": "readout",
+     "lang": "en",
+     "headline": true,
+     "match": [
+      "sunny",
+      "Sunny"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "source": "br-v1",
+   "gate_variant": "chat",
+   "eval_render": "chat",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "port_bank_target": "sunny"
+  },
+  {
+   "name": "br-imp-moviegenre",
+   "subfamily": "implicit",
+   "prompt": "What is your favorite movie genre? Answer in one word.",
+   "target": "drama",
+   "intermediates": [
+    "drama"
+   ],
+   "units": [
+    {
+     "role": "readout",
+     "lang": "en",
+     "headline": true,
+     "match": [
+      "drama",
+      "Drama"
      ]
     }
    ],
@@ -2108,6 +2294,440 @@
     ]
    },
    "port_bank_target": "sci-fi"
+  },
+  {
+   "name": "br-imp-programmingl",
+   "subfamily": "implicit",
+   "prompt": "What is your favorite programming language? Answer in one word.",
+   "target": "python",
+   "intermediates": [
+    "python"
+   ],
+   "units": [
+    {
+     "role": "readout",
+     "lang": "en",
+     "headline": true,
+     "match": [
+      "python",
+      "Python"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "source": "br-v1",
+   "gate_variant": "chat",
+   "eval_render": "chat",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "port_bank_target": "python"
+  },
+  {
+   "name": "br-imp-seacreature",
+   "subfamily": "implicit",
+   "prompt": "What is your favorite sea creature? Answer in one word.",
+   "target": "dolphin",
+   "intermediates": [
+    "dolphin"
+   ],
+   "units": [
+    {
+     "role": "readout",
+     "lang": "en",
+     "headline": true,
+     "match": [
+      "dolphin",
+      "Dolphin"
+     ]
+    }
+   ],
+   "consistency": 0.9,
+   "source": "br-v1",
+   "gate_variant": "chat",
+   "eval_render": "chat",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "port_bank_target": "octopus"
+  },
+  {
+   "name": "br-imp-tree",
+   "subfamily": "implicit",
+   "prompt": "What is your favorite tree? Answer in one word.",
+   "target": "oak",
+   "intermediates": [
+    "oak"
+   ],
+   "units": [
+    {
+     "role": "readout",
+     "lang": "en",
+     "headline": true,
+     "match": [
+      "oak",
+      "Oak"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "source": "br-v1",
+   "gate_variant": "chat",
+   "eval_render": "chat",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "port_bank_target": "oak"
+  },
+  {
+   "name": "br-imp-countrytovis",
+   "subfamily": "implicit",
+   "prompt": "What is your favorite country to visit? Answer in one word.",
+   "target": "china",
+   "intermediates": [
+    "china"
+   ],
+   "units": [
+    {
+     "role": "readout",
+     "lang": "en",
+     "headline": true,
+     "match": [
+      "china",
+      "China"
+     ]
+    }
+   ],
+   "consistency": 0.9,
+   "source": "br-v1",
+   "gate_variant": "chat",
+   "eval_render": "chat",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "port_bank_target": "japan"
+  },
+  {
+   "name": "br-imp-kindofberry",
+   "subfamily": "implicit",
+   "prompt": "What is your favorite kind of berry? Answer in one word.",
+   "target": "blueberry",
+   "intermediates": [
+    "blueberry"
+   ],
+   "units": [
+    {
+     "role": "readout",
+     "lang": "en",
+     "headline": true,
+     "match": [
+      "blueberry",
+      "Blueberry"
+     ]
+    }
+   ],
+   "consistency": 0.9,
+   "source": "br-v1",
+   "gate_variant": "chat",
+   "eval_render": "chat",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "port_bank_target": "strawberry"
+  },
+  {
+   "name": "br-imp-kindofcandy",
+   "subfamily": "implicit",
+   "prompt": "What is your favorite kind of candy? Answer in one word.",
+   "target": "chocolate",
+   "intermediates": [
+    "chocolate"
+   ],
+   "units": [
+    {
+     "role": "readout",
+     "lang": "en",
+     "headline": true,
+     "match": [
+      "chocolate",
+      "Chocolate"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "source": "br-v1",
+   "gate_variant": "chat",
+   "eval_render": "chat",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "port_bank_target": "chocolate"
+  },
+  {
+   "name": "br-imp-kindofpepper",
+   "subfamily": "implicit",
+   "prompt": "What is your favorite kind of pepper? Answer in one word.",
+   "target": "jalapeño",
+   "intermediates": [
+    "jalapeño"
+   ],
+   "units": [
+    {
+     "role": "readout",
+     "lang": "en",
+     "headline": true,
+     "match": [
+      "jalapeño",
+      "Jalapeño"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "source": "br-v1",
+   "gate_variant": "chat",
+   "eval_render": "chat",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "port_bank_target": "bell"
+  },
+  {
+   "name": "br-imp-mythicalcrea",
+   "subfamily": "implicit",
+   "prompt": "What is your favorite mythical creature? Answer in one word.",
+   "target": "dragon",
+   "intermediates": [
+    "dragon"
+   ],
+   "units": [
+    {
+     "role": "readout",
+     "lang": "en",
+     "headline": true,
+     "match": [
+      "dragon",
+      "Dragon"
+     ]
+    }
+   ],
+   "consistency": 0.8,
+   "source": "br-v1",
+   "gate_variant": "chat",
+   "eval_render": "chat",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "port_bank_target": "dragon"
+  },
+  {
+   "name": "br-imp-pet",
+   "subfamily": "implicit",
+   "prompt": "What is your favorite pet? Answer in one word.",
+   "target": "cat",
+   "intermediates": [
+    "cat"
+   ],
+   "units": [
+    {
+     "role": "readout",
+     "lang": "en",
+     "headline": true,
+     "match": [
+      "cat",
+      "Cat"
+     ]
+    }
+   ],
+   "consistency": 0.9,
+   "source": "br-v1",
+   "gate_variant": "chat",
+   "eval_render": "chat",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "port_bank_target": "dog"
+  },
+  {
+   "name": "br-imp-pizzatopping",
+   "subfamily": "implicit",
+   "prompt": "What is your favorite pizza topping? Answer in one word.",
+   "target": "pepperoni",
+   "intermediates": [
+    "pepperoni"
+   ],
+   "units": [
+    {
+     "role": "readout",
+     "lang": "en",
+     "headline": true,
+     "match": [
+      "pepperoni",
+      "Pepperoni"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "source": "br-v1",
+   "gate_variant": "chat",
+   "eval_render": "chat",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "port_bank_target": "pepperoni"
+  },
+  {
+   "name": "br-imp-typeofdance",
+   "subfamily": "implicit",
+   "prompt": "What is your favorite type of dance? Answer in one word.",
+   "target": "ballet",
+   "intermediates": [
+    "ballet"
+   ],
+   "units": [
+    {
+     "role": "readout",
+     "lang": "en",
+     "headline": true,
+     "match": [
+      "ballet",
+      "Ballet"
+     ]
+    }
+   ],
+   "consistency": 0.9,
+   "source": "br-v1",
+   "gate_variant": "chat",
+   "eval_render": "chat",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "port_bank_target": "salsa"
+  },
+  {
+   "name": "br-imp-bookgenre",
+   "subfamily": "implicit",
+   "prompt": "What is your favorite book genre? Answer in one word.",
+   "target": "fantasy",
+   "intermediates": [
+    "fantasy"
+   ],
+   "units": [
+    {
+     "role": "readout",
+     "lang": "en",
+     "headline": true,
+     "match": [
+      "fantasy",
+      "Fantasy"
+     ]
+    }
+   ],
+   "consistency": 0.9,
+   "source": "br-v1",
+   "gate_variant": "chat",
+   "eval_render": "chat",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "port_bank_target": "science"
+  },
+  {
+   "name": "br-imp-dessert",
+   "subfamily": "implicit",
+   "prompt": "What is your favorite dessert? Answer in one word.",
+   "target": "cookie",
+   "intermediates": [
+    "cookie"
+   ],
+   "units": [
+    {
+     "role": "readout",
+     "lang": "en",
+     "headline": true,
+     "match": [
+      "cookie",
+      "Cookie"
+     ]
+    }
+   ],
+   "consistency": 0.8,
+   "source": "br-v1",
+   "gate_variant": "chat",
+   "eval_render": "chat",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "port_bank_target": "chocolate"
+  },
+  {
+   "name": "br-imp-season",
+   "subfamily": "implicit",
+   "prompt": "What is your favorite season? Answer in one word.",
+   "target": "spring",
+   "intermediates": [
+    "spring"
+   ],
+   "units": [
+    {
+     "role": "readout",
+     "lang": "en",
+     "headline": true,
+     "match": [
+      "spring",
+      "Spring"
+     ]
+    }
+   ],
+   "consistency": 0.9,
+   "source": "br-v1",
+   "gate_variant": "chat",
+   "eval_render": "chat",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "port_bank_target": "autumn"
   }
  ]
 }

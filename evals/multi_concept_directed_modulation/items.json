@@ -8,10 +8,10 @@
  "read_cells": "every token of the prefilled target sentence (12 tokens: The committee will meet on Thursday to review the annual budget .), offsets -12 .. -1 from the end of the render",
  "read_cells_changed": "2026-09-23 (Camila: \"we aren't prefilling the sentence, we are just including it as part of the user message, so fix that and rerun all the methods on the written sentence tokens\"). Before: bare render of the prompt text followed by a greedy rollout, read cells = the last 20 tokens of the rollout (offsets -1 .. -20), which mixed the written sentence, the model's <think> block and its re-write of the prompt.",
  "layers": [
-  22,
-  26,
-  28,
-  30
+  19,
+  23,
+  25,
+  26
  ],
  "items": [
   {

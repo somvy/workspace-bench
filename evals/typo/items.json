@@ -106,44 +106,10 @@
    }
   },
   {
-   "name": "typo-against",
-   "prompt": "The final vote was nine to two aganst",
-   "intermediates": [
-    "against"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "family_chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "typo-already",
    "prompt": "By noon the tickets were alredy",
    "intermediates": [
     "already"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "family_chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "typo-although",
-   "prompt": "She agreed to help even allthough",
-   "intermediates": [
-    "although"
    ],
    "source": "jlens_source",
    "consistency": 1.0,
@@ -259,23 +225,6 @@
    }
   },
   {
-   "name": "typo-college",
-   "prompt": "After high school she applied to colege",
-   "intermediates": [
-    "college"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "family_chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "typo-company",
    "prompt": "He worked at the same software compny",
    "intermediates": [
@@ -314,23 +263,6 @@
    "prompt": "She had never traveled outside of her own contry",
    "intermediates": [
     "country"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "family_chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "typo-course",
-   "prompt": "She signed up for the evening coruse",
-   "intermediates": [
-    "course"
    ],
    "source": "jlens_source",
    "consistency": 1.0,
@@ -518,23 +450,6 @@
    "prompt": "He was surprised by the building's enormous hieght",
    "intermediates": [
     "height"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "family_chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "typo-house",
-   "prompt": "They moved into the new hosue",
-   "intermediates": [
-    "house"
    ],
    "source": "jlens_source",
    "consistency": 1.0,
@@ -807,23 +722,6 @@
    "prompt": "She said she did not visit very offten",
    "intermediates": [
     "often"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "family_chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "typo-order",
-   "prompt": "He placed the same lunch ordder",
-   "intermediates": [
-    "order"
    ],
    "source": "jlens_source",
    "consistency": 1.0,

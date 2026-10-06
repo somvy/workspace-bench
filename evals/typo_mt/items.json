@@ -10,55 +10,6 @@
  "frozen": "2026-09-10",
  "items": [
   {
-   "name": "tyh-novel-interpretability-hand",
-   "subfamily": "novel",
-   "prompt": "There's a really cool field in AI safety research called mechanistic interpretibility",
-   "target": "interpretability",
-   "target_alts": [],
-   "source": "hand-authored (Camila, 2026-09-10)",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "typo_word": "interpretibility",
-   "intermediates": [
-    "interpretability"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "interpretability"
-      ]
-     },
-     "match": [
-      "interpretability"
-     ]
-    }
-   ],
-   "pinned": true,
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "en": [
-       2
-      ]
-     }
-    },
-    "target": 2
-   }
-  },
-  {
    "name": "tyh-novel-narcissism-hand",
    "subfamily": "novel",
    "prompt": "Ann only ever thought of herself and manipulated those around her, but Bob soon grew tired of Ann's narciscism",
@@ -153,6 +104,54 @@
      }
     },
     "target": 2
+   }
+  },
+  {
+   "name": "tyh-novel-aleatoric",
+   "subfamily": "novel",
+   "prompt": "Music in which significant choices are surrendered to chance operations, as in Cage's Music of Changes, is called aleotoric",
+   "target": "aleatoric",
+   "target_alts": [],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "typo_word": "aleotoric",
+   "intermediates": [
+    "aleatoric"
+   ],
+   "units": [
+    {
+     "role": "correction",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "aleatoric"
+      ]
+     },
+     "match": [
+      "aleatoric"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "correction": {
+      "en": [
+       3
+      ]
+     }
+    },
+    "target": 3
    }
   },
   {
@@ -396,10 +395,10 @@
    }
   },
   {
-   "name": "tyh-novel-anticyclone",
+   "name": "tyh-novel-antihistamine",
    "subfamily": "novel",
-   "prompt": "A broad high-pressure system whose surface winds spiral outward in a clockwise sense north of the equator is termed an anticylcone",
-   "target": "anticyclone",
+   "prompt": "Diphenhydramine is the classic first-generation sedating antihistimine",
+   "target": "antihistamine",
    "target_alts": [],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -409,9 +408,9 @@
      -1
     ]
    },
-   "typo_word": "anticylcone",
+   "typo_word": "antihistimine",
    "intermediates": [
-    "anticyclone"
+    "antihistamine"
    ],
    "units": [
     {
@@ -420,11 +419,11 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "anticyclone"
+       "antihistamine"
       ]
      },
      "match": [
-      "anticyclone"
+      "antihistamine"
      ]
     }
    ],
@@ -436,11 +435,11 @@
     "units": {
      "correction": {
       "en": [
-       3
+       4
       ]
      }
     },
-    "target": 3
+    "target": 4
    }
   },
   {
@@ -1020,54 +1019,6 @@
    }
   },
   {
-   "name": "tyh-novel-carbonara",
-   "subfamily": "novel",
-   "prompt": "Roman purists insist that guanciale, pecorino, egg yolk and black pepper — never cream — belong in a plate of spaghetti alla carbanara",
-   "target": "carbonara",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "typo_word": "carbanara",
-   "intermediates": [
-    "carbonara"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "carbonara"
-      ]
-     },
-     "match": [
-      "carbonara"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "en": [
-       2
-      ]
-     }
-    },
-    "target": 2
-   }
-  },
-  {
    "name": "tyh-novel-cartography",
    "subfamily": "novel",
    "prompt": "The scholarly craft of surveying, projecting and engraving maps, once dominated by Dutch and Flemish workshops, is known as cartograhpy",
@@ -1212,6 +1163,54 @@
    }
   },
   {
+   "name": "tyh-novel-chaparral",
+   "subfamily": "novel",
+   "prompt": "The dense, drought-hardy evergreen shrubland covering the coastal hills of southern California is called chapparral",
+   "target": "chaparral",
+   "target_alts": [],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "typo_word": "chapparral",
+   "intermediates": [
+    "chaparral"
+   ],
+   "units": [
+    {
+     "role": "correction",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "chaparral"
+      ]
+     },
+     "match": [
+      "chaparral"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "correction": {
+      "en": [
+       3
+      ]
+     }
+    },
+    "target": 3
+   }
+  },
+  {
    "name": "tyh-novel-charcuterie",
    "subfamily": "novel",
    "prompt": "Pates, terrines, rillettes and dry-cured sausages all belong to the French butcher's craft called charcuteire",
@@ -1308,10 +1307,10 @@
    }
   },
   {
-   "name": "tyh-novel-chemosynthesis",
+   "name": "tyh-novel-chelicerates",
    "subfamily": "novel",
-   "prompt": "Giant tube worms clustered around deep-sea hydrothermal vents survive thanks to symbiotic bacteria that produce food by chemosynthesys",
-   "target": "chemosynthesis",
+   "prompt": "Spiders, scorpions, mites, and horseshoe crabs all lack antennae and belong to the arthropod group called chelicrates",
+   "target": "chelicerates",
    "target_alts": [],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -1321,9 +1320,9 @@
      -1
     ]
    },
-   "typo_word": "chemosynthesys",
+   "typo_word": "chelicrates",
    "intermediates": [
-    "chemosynthesis"
+    "chelicerates"
    ],
    "units": [
     {
@@ -1332,11 +1331,11 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "chemosynthesis"
+       "chelicerates"
       ]
      },
      "match": [
-      "chemosynthesis"
+      "chelicerates"
      ]
     }
    ],
@@ -1404,6 +1403,54 @@
    }
   },
   {
+   "name": "tyh-novel-chimichurri",
+   "subfamily": "novel",
+   "prompt": "The uncooked Argentine sauce of parsley, garlic, oregano and vinegar spooned over grilled beef is chimmichurri",
+   "target": "chimichurri",
+   "target_alts": [],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "typo_word": "chimmichurri",
+   "intermediates": [
+    "chimichurri"
+   ],
+   "units": [
+    {
+     "role": "correction",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "chimichurri"
+      ]
+     },
+     "match": [
+      "chimichurri"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "correction": {
+      "en": [
+       4
+      ]
+     }
+    },
+    "target": 4
+   }
+  },
+  {
    "name": "tyh-novel-chinoiserie",
    "subfamily": "novel",
    "prompt": "The eighteenth-century European vogue for lacquered cabinets, pagoda motifs and fanciful Far Eastern ornament is known as chinoisserie",
@@ -1449,54 +1496,6 @@
      }
     },
     "target": 2
-   }
-  },
-  {
-   "name": "tyh-novel-chitinous",
-   "subfamily": "novel",
-   "prompt": "The tough outer cuticle of a beetle is stiffened by a nitrogen-bearing polysaccharide, which is why entomologists describe the covering as chittinous",
-   "target": "chitinous",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "typo_word": "chittinous",
-   "intermediates": [
-    "chitinous"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "chitinous"
-      ]
-     },
-     "match": [
-      "chitinous"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "en": [
-       3
-      ]
-     }
-    },
-    "target": 3
    }
   },
   {
@@ -1593,54 +1592,6 @@
      }
     },
     "target": 4
-   }
-  },
-  {
-   "name": "tyh-novel-chromatophores",
-   "subfamily": "novel",
-   "prompt": "Cuttlefish and octopuses shift their skin color within milliseconds by expanding and contracting pigment-filled sacs called chromotophores",
-   "target": "chromatophores",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "typo_word": "chromotophores",
-   "intermediates": [
-    "chromatophores"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "chromatophores"
-      ]
-     },
-     "match": [
-      "chromatophores"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "en": [
-       3
-      ]
-     }
-    },
-    "target": 3
    }
   },
   {
@@ -1929,6 +1880,54 @@
      }
     },
     "target": 2
+   }
+  },
+  {
+   "name": "tyh-novel-contrabassoon",
+   "subfamily": "novel",
+   "prompt": "The lowest double-reed voice in the symphonic woodwind section, sounding an octave below its more common relative, is the contrabasoon",
+   "target": "contrabassoon",
+   "target_alts": [],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "typo_word": "contrabasoon",
+   "intermediates": [
+    "contrabassoon"
+   ],
+   "units": [
+    {
+     "role": "correction",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "contrabassoon"
+      ]
+     },
+     "match": [
+      "contrabassoon"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "correction": {
+      "en": [
+       4
+      ]
+     }
+    },
+    "target": 4
    }
   },
   {
@@ -2412,54 +2411,6 @@
    }
   },
   {
-   "name": "tyh-real-insolvent",
-   "subfamily": "realword",
-   "prompt": "With debts far exceeding its aircraft and cash reserves, the carrier was declared by the commercial court to be legally insolent",
-   "target": "insolvent",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "typo_word": "insolent",
-   "intermediates": [
-    "insolvent"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "insolvent"
-      ]
-     },
-     "match": [
-      "insolvent"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "en": [
-       2
-      ]
-     }
-    },
-    "target": 2
-   }
-  },
-  {
    "name": "tyh-real-phosphorus",
    "subfamily": "realword",
    "prompt": "Boiling down vats of urine in his Hamburg cellar in 1669, the alchemist Hennig Brand became the first person on record to isolate the eerily glowing element we now call phosphorous",
@@ -2508,6 +2459,54 @@
    }
   },
   {
+   "name": "tyh-real-prophesy-batch5",
+   "subfamily": "realword",
+   "prompt": "Before the vapors rose from the cleft, the Pythia would fall into a trance and begin to prophecy",
+   "target": "prophesy",
+   "target_alts": [],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "typo_word": "prophecy",
+   "intermediates": [
+    "prophesy"
+   ],
+   "units": [
+    {
+     "role": "correction",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "prophesy"
+      ]
+     },
+     "match": [
+      "prophesy"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "correction": {
+      "en": [
+       2
+      ]
+     }
+    },
+    "target": 2
+   }
+  },
+  {
    "name": "tyh-real-prostrate",
    "subfamily": "realword",
    "prompt": "The monks filed into the chapel and lay face down on the cold flagstones, arms flung wide and bodies fully prostate",
@@ -2537,54 +2536,6 @@
      },
      "match": [
       "prostrate"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "en": [
-       2
-      ]
-     }
-    },
-    "target": 2
-   }
-  },
-  {
-   "name": "tyh-real-stationery",
-   "subfamily": "realword",
-   "prompt": "The office manager filed a purchase request for envelopes, ink cartridges, paper clips and other stationary",
-   "target": "stationery",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "typo_word": "stationary",
-   "intermediates": [
-    "stationery"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "stationery"
-      ]
-     },
-     "match": [
-      "stationery"
      ]
     }
    ],
@@ -2700,54 +2651,6 @@
    }
   },
   {
-   "name": "tyh-real-conformation",
-   "subfamily": "realword",
-   "prompt": "X-ray data showed that the six-membered ring in the crystal adopts a chair rather than a boat confirmation",
-   "target": "conformation",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "typo_word": "confirmation",
-   "intermediates": [
-    "conformation"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "conformation"
-      ]
-     },
-     "match": [
-      "conformation"
-     ]
-    }
-   ],
-   "consistency": 0.9,
-   "consistency_strict": 0.9,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "en": [
-       2
-      ]
-     }
-    },
-    "target": 2
-   }
-  },
-  {
    "name": "tyh-real-immanence",
    "subfamily": "realword",
    "prompt": "Spinoza taught that the divine is not beyond the world at all but wholly indwelling within it, a doctrine of pure imminence",
@@ -2825,6 +2728,150 @@
      },
      "match": [
       "234"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "correction": {
+      "en": [
+       3
+      ]
+     }
+    },
+    "target": 3
+   }
+  },
+  {
+   "name": "tyh-arith-add-47-76",
+   "subfamily": "arith",
+   "prompt": "47 + 76 = 213",
+   "target": "123",
+   "target_alts": [],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "typo_word": "213",
+   "intermediates": [
+    "123"
+   ],
+   "units": [
+    {
+     "role": "correction",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "123"
+      ]
+     },
+     "match": [
+      "123"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "correction": {
+      "en": [
+       3
+      ]
+     }
+    },
+    "target": 3
+   }
+  },
+  {
+   "name": "tyh-arith-b2-01-2",
+   "subfamily": "arith",
+   "prompt": "47 + 89 = 163",
+   "target": "136",
+   "target_alts": [],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "typo_word": "163",
+   "intermediates": [
+    "136"
+   ],
+   "units": [
+    {
+     "role": "correction",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "136"
+      ]
+     },
+     "match": [
+      "136"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "correction": {
+      "en": [
+       3
+      ]
+     }
+    },
+    "target": 3
+   }
+  },
+  {
+   "name": "tyh-arith-b2-01-3",
+   "subfamily": "arith",
+   "prompt": "184 + 112 = 269",
+   "target": "296",
+   "target_alts": [],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "typo_word": "269",
+   "intermediates": [
+    "296"
+   ],
+   "units": [
+    {
+     "role": "correction",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "296"
+      ]
+     },
+     "match": [
+      "296"
      ]
     }
    ],

@@ -93,8 +93,8 @@ class JLens:
 
     name: str = "jlens"
     layers: list[int] | None = None
-    repo: str = "camilablank/workspace-lenses"  # Qwen3.5-9B port: the paper-recipe n=25 J-lens (no n=1000 wikitext lens exists for 9B)
-    filename: str = "qwen3.5-9b/j-lens/lens.pt"
+    repo: str = "camilablank/workspace-lenses"  # Qwen2.5-7B port: no J-lens exists for this model; loading fails until one is fitted
+    filename: str = "qwen2.5-7b/j-lens/lens.pt"
     k: int = TOP_K
     _b: Backend | None = field(default=None, repr=False)
     _jac: Any = field(default=None, repr=False)
@@ -132,7 +132,7 @@ class RLens:
     name: str = "rlens"
     layers: list[int] | None = None
     repo: str = "camilablank/workspace-lenses"
-    filename: str = "qwen3.5-9b/r-lens/lens.pt"
+    filename: str = "qwen2.5-7b/r-lens/lens.pt"  # Qwen2.5-7B port: no R-lens exists for this model
     k: int = TOP_K
     _b: Backend | None = field(default=None, repr=False)
     _jac: Any = field(default=None, repr=False)

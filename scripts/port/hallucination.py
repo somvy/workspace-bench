@@ -7,7 +7,7 @@ import json, subprocess, sys, unicodedata
 from pathlib import Path
 
 # ---- config
-SUBJECT_ID = "Qwen/Qwen3.5-9B"
+SUBJECT_ID = "Qwen/Qwen2.5-7B-Instruct"
 ORIG_ID = "Qwen/Qwen3.6-27B"  # model of the original bank (main)
 BENCH = Path(__file__).resolve().parents[2]
 OUT = BENCH / "evals/hallucination"
@@ -56,7 +56,7 @@ def main_bank():
     return raw("items.json"), {r["id"]: r for r in raw("capture_rows.json")}
 
 
-def render(tok, prompt):  # chat template with an empty think block, as the original rollouts
+def render(tok, prompt):  # the subject's chat template with thinking off, as the original rollouts
     return tok.apply_chat_template([{"role": "user", "content": prompt}], add_generation_prompt=True, enable_thinking=False, tokenize=False)
 
 
@@ -110,7 +110,7 @@ def main():
         meta = dict(bank["meta"], model=SUBJECT_ID, n_items=len(new_items), n_sites=sum(len(it["sites"]) for it in new_items),
                     dropped_no_sites=bank["meta"]["dropped_no_sites"] + dropped,
                     rollouts=f"{SUBJECT_ID} on-policy, vLLM generate, T={TEMP}, top-p {TOP_P}, top-k 0, max {MAX_NEW} new tokens, seed {SEED} "
-                             "(per request); chat template with an empty think block; EOS not kept. Prompts = the original bank's 149.",
+                             "(per request); the subject's chat template, thinking off (apply_chat_template enable_thinking=False); EOS not kept. Prompts = the original bank's 149.",
                     read_sites="scripts/port/hallucination.py response_sites/select_sites (reimplementation of hallucination_bench.sites; "
                                "reproduces all 1,123 original sites exactly, `check` mode), thinned to 8 per item",
                     ported_from=f"{ORIG_ID} bank on main (prompts, ids, sources)")

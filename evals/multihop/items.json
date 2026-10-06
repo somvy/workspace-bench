@@ -59,24 +59,6 @@
    }
   },
   {
-   "name": "chem-bones-Z",
-   "prompt": "Fact: The atomic number of the metal most abundant in human bones is ",
-   "target": "20",
-   "intermediates": [
-    "calcium"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -2
-    ]
-   }
-  },
-  {
    "name": "chem-organic-Z",
    "prompt": "Fact: The atomic number of the element present in all organic compounds by definition is ",
    "target": "6",
@@ -113,6 +95,43 @@
    }
   },
   {
+   "name": "dbl-altitude-antonym",
+   "prompt": "Fact: The antonym of how you would describe an airplane's cruising altitude is \"",
+   "target": "low",
+   "intermediates": [
+    "high"
+   ],
+   "source": "jlens_source",
+   "consistency": 1.0,
+   "gate_variant": "plain",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "last_word_token",
+    "offsets": [
+     -1
+    ]
+   }
+  },
+  {
+   "name": "double-dice-faces",
+   "prompt": "Fact: Double the number of faces on a standard die is ",
+   "target": "12",
+   "intermediates": [
+    "6",
+    "six"
+   ],
+   "source": "jlens_source",
+   "consistency": 1.0,
+   "gate_variant": "plain",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "last_word_token",
+    "offsets": [
+     -2
+    ]
+   }
+  },
+  {
    "name": "etym-caesar-monthnum",
    "prompt": "Fact: The month named after Julius Caesar is month number ",
    "target": "7",
@@ -127,6 +146,24 @@
     "kind": "last_word_token",
     "offsets": [
      -2
+    ]
+   }
+  },
+  {
+   "name": "firstletter-valentines-month",
+   "prompt": "Fact: The first letter of the month containing Valentine's Day is \"",
+   "target": "F",
+   "intermediates": [
+    "February"
+   ],
+   "source": "jlens_source",
+   "consistency": 1.0,
+   "gate_variant": "plain",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "last_word_token",
+    "offsets": [
+     -1
     ]
    }
   },
@@ -154,6 +191,42 @@
    "target": "4",
    "intermediates": [
     "heart"
+   ],
+   "source": "jlens_source",
+   "consistency": 1.0,
+   "gate_variant": "plain",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "last_word_token",
+    "offsets": [
+     -2
+    ]
+   }
+  },
+  {
+   "name": "holiday-christmas-monthnum",
+   "prompt": "Fact: Christmas Day is celebrated in month number ",
+   "target": "12",
+   "intermediates": [
+    "December"
+   ],
+   "source": "jlens_source",
+   "consistency": 1.0,
+   "gate_variant": "plain",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "last_word_token",
+    "offsets": [
+     -2
+    ]
+   }
+  },
+  {
+   "name": "holiday-halloween-monthnum",
+   "prompt": "Fact: Halloween is celebrated in month number ",
+   "target": "10",
+   "intermediates": [
+    "October"
    ],
    "source": "jlens_source",
    "consistency": 1.0,
@@ -221,24 +294,6 @@
    }
   },
   {
-   "name": "inv-roots-opposite",
-   "prompt": "Fact: The direction opposite to the one tree roots grow is \"",
-   "target": "up",
-   "intermediates": [
-    "down"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "inv-sunrise-opposite",
    "prompt": "Fact: The cardinal direction opposite to the one where the sun rises is ",
    "target": "west",
@@ -257,15 +312,16 @@
    }
   },
   {
-   "name": "month-7-namedafter",
-   "prompt": "Fact: The seventh month of the year is named after the Roman leader Julius ",
-   "target": "Caesar",
+   "name": "nhop-cube-element",
+   "prompt": "Count the items in a dozen. The element at that position on the periodic table is magnesium. Count the faces on a cube. The element at that position on the periodic table is ",
+   "target": "carbon",
    "intermediates": [
-    "July"
+    "6",
+    "six"
    ],
    "source": "jlens_source",
    "consistency": 1.0,
-   "gate_variant": "plain",
+   "gate_variant": "plain_stripped",
    "eval_render": "plain",
    "readout": {
     "kind": "last_word_token",
@@ -275,20 +331,20 @@
    }
   },
   {
-   "name": "pred-valentines-prevmonth",
-   "prompt": "Fact: The month immediately before the one containing Valentine's Day is \"",
-   "target": "January",
+   "name": "spaceneedle-border",
+   "prompt": "Fact: The US state where the Space Needle is located shares its northern border with ",
+   "target": "Canada",
    "intermediates": [
-    "February"
+    "Seattle"
    ],
    "source": "jlens_source",
    "consistency": 1.0,
-   "gate_variant": "plain",
+   "gate_variant": "plain_stripped",
    "eval_render": "plain",
    "readout": {
     "kind": "last_word_token",
     "offsets": [
-     -1
+     -2
     ]
    }
   },
@@ -334,24 +390,6 @@
    "target": "Rome",
    "intermediates": [
     "Italy"
-   ],
-   "source": "staging",
-   "consistency": 1.0,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "bf-bordeaux-fruit",
-   "prompt": "Fact: The fruit fermented to make the drink Bordeaux is famous for is the",
-   "target": "grape",
-   "intermediates": [
-    "wine"
    ],
    "source": "staging",
    "consistency": 1.0,
@@ -437,24 +475,6 @@
    }
   },
   {
-   "name": "bf-kathmandu-mountain",
-   "prompt": "Fact: The tallest mountain in the country whose capital is Kathmandu is",
-   "target": "Everest",
-   "intermediates": [
-    "Nepal"
-   ],
-   "source": "staging",
-   "consistency": 1.0,
-   "gate_variant": "chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "bf-madrid-language",
    "prompt": "Fact: The language spoken in the country whose capital is Madrid is",
    "target": "Spanish",
@@ -478,24 +498,6 @@
    "target": "Neil",
    "intermediates": [
     "Armstrong"
-   ],
-   "source": "staging",
-   "consistency": 1.0,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "bf-rio2016-language",
-   "prompt": "Fact: The language of the country that hosted the 2016 Summer Olympics is",
-   "target": "Portuguese",
-   "intermediates": [
-    "Brazil"
    ],
    "source": "staging",
    "consistency": 1.0,
@@ -550,6 +552,24 @@
    "target": "8",
    "intermediates": [
     "octagon"
+   ],
+   "source": "staging",
+   "consistency": 1.0,
+   "gate_variant": "plain",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "last_word_token",
+    "offsets": [
+     -1
+    ]
+   }
+  },
+  {
+   "name": "bf-sushi-capital",
+   "prompt": "Fact: The capital city of the country where sushi originated is",
+   "target": "Tokyo",
+   "intermediates": [
+    "Japan"
    ],
    "source": "staging",
    "consistency": 1.0,
@@ -725,24 +745,6 @@
    }
   },
   {
-   "name": "b3-mh-goldengate-ocean",
-   "prompt": "Fact: The ocean beside the city of the Golden Gate Bridge is the",
-   "target": "Pacific",
-   "intermediates": [
-    "San Francisco"
-   ],
-   "source": "staging_b3",
-   "consistency": 1.0,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "b3-mh-gravity-fruit",
    "prompt": "Fact: The fruit that famously fell in the story of gravity's discovery is the",
    "target": "apple",
@@ -887,15 +889,15 @@
    }
   },
   {
-   "name": "b3-mh-nokia-capital",
-   "prompt": "Fact: The capital of the country where Nokia was founded is",
-   "target": "Helsinki",
+   "name": "b3-mh-longestriver-sea",
+   "prompt": "Fact: The sea into which the world's longest river empties is the",
+   "target": "Mediterranean",
    "intermediates": [
-    "Finland"
+    "Nile"
    ],
    "source": "staging_b3",
    "consistency": 1.0,
-   "gate_variant": "chat",
+   "gate_variant": "plain",
    "eval_render": "plain",
    "readout": {
     "kind": "last_word_token",
@@ -905,15 +907,15 @@
    }
   },
   {
-   "name": "b3-mh-samba-river",
-   "prompt": "Fact: The great river of the country famous for samba and Carnival is the",
-   "target": "Amazon",
+   "name": "b3-mh-nokia-capital",
+   "prompt": "Fact: The capital of the country where Nokia was founded is",
+   "target": "Helsinki",
    "intermediates": [
-    "Brazil"
+    "Finland"
    ],
    "source": "staging_b3",
    "consistency": 1.0,
-   "gate_variant": "plain",
+   "gate_variant": "chat",
    "eval_render": "plain",
    "readout": {
     "kind": "last_word_token",
@@ -1050,6 +1052,24 @@
    }
   },
   {
+   "name": "super-smallest-continent",
+   "prompt": "Fact: The smallest country in the world is located on the continent of ",
+   "target": "Europe",
+   "intermediates": [
+    "Vatican"
+   ],
+   "source": "jlens_source",
+   "consistency": 0.9,
+   "gate_variant": "plain",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "last_word_token",
+    "offsets": [
+     -2
+    ]
+   }
+  },
+  {
    "name": "bf-eiffel-continent",
    "prompt": "Fact: The continent home to the country of the Eiffel Tower is",
    "target": "Europe",
@@ -1158,6 +1178,24 @@
    }
   },
   {
+   "name": "b3-mh-operahouse-country",
+   "prompt": "Fact: The country of the famous sail-shaped opera house is",
+   "target": "Australia",
+   "intermediates": [
+    "Sydney"
+   ],
+   "source": "staging_b3",
+   "consistency": 0.9,
+   "gate_variant": "plain",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "last_word_token",
+    "offsets": [
+     -1
+    ]
+   }
+  },
+  {
    "name": "b3-mh-pizza-continent",
    "prompt": "Fact: The continent of the country where pizza originated is",
    "target": "Europe",
@@ -1248,24 +1286,6 @@
    }
   },
   {
-   "name": "dual-photosynthesis-opposite",
-   "prompt": "Fact: The opposite of the time when plants photosynthesize is \"",
-   "target": "night",
-   "intermediates": [
-    "day"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.8,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "firstletter-populous-country",
    "prompt": "Fact: The first letter of the name of the world's most populous country is ",
    "target": "C",
@@ -1275,6 +1295,25 @@
    "source": "jlens_source",
    "consistency": 0.8,
    "gate_variant": "chat",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "last_word_token",
+    "offsets": [
+     -2
+    ]
+   }
+  },
+  {
+   "name": "roman-rings-olympic",
+   "prompt": "Fact: Written as a Roman numeral, the number of Olympic rings is ",
+   "target": "V",
+   "intermediates": [
+    "5",
+    "five"
+   ],
+   "source": "jlens_source",
+   "consistency": 0.8,
+   "gate_variant": "plain_stripped",
    "eval_render": "plain",
    "readout": {
     "kind": "last_word_token",
@@ -1366,24 +1405,6 @@
    "source": "staging",
    "consistency": 0.8,
    "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "b3-mh-aztec-language",
-   "prompt": "Fact: The language spoken today in the country of the ancient Aztecs is",
-   "target": "Spanish",
-   "intermediates": [
-    "Mexico"
-   ],
-   "source": "staging_b3",
-   "consistency": 0.8,
-   "gate_variant": "chat",
    "eval_render": "plain",
    "readout": {
     "kind": "last_word_token",

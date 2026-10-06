@@ -1,6 +1,7 @@
-# full no-API check of the Qwen3.5-9B branch: logit-lens readouts for every family on the 9B (2 GPUs), raw-text form, judge dry run
-cd /workspace/wsb9 && export PYTHONPATH=/workspace/wsb9/src HF_HOME=/workspace/hf HF_HUB_OFFLINE=1 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
-PY=/workspace/workspace-bench/.venv/bin/python; O=/workspace/wsb9_full; mkdir -p $O/logs $O/readouts/logit_lens $O/readouts/raw
+# full no-API check of a port branch: logit-lens readouts for every family on the branch's default model (2 GPUs), raw-text form, judge dry run
+R=$(cd "$(dirname "$0")/../.." && pwd)
+cd $R && export PYTHONPATH=$R/src HF_HOME=/workspace/hf HF_HUB_OFFLINE=1 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+PY=/workspace/workspace-bench/.venv/bin/python; O=${O:-/workspace/wsb_full}; mkdir -p $O/logs $O/readouts/logit_lens $O/readouts/raw
 FAMS=$($PY -c "from wsbench.registry import FAMILIES, load_all; load_all(); print(' '.join(sorted(FAMILIES)))")
 echo families $FAMS
 i=0

@@ -5,22 +5,6 @@
  "read": "the newline token that ends line one of the couplet (one position per item, every judged layer); changed 2026-09-23 from the final prompt token, the space before the rhyme word",
  "items": [
   {
-   "name": "couplet-ahead-head",
-   "prompt": "A rhyming couplet:\nThe captain pointed at the route ahead,\nAnd told his crew to follow where he'd ",
-   "intermediates": [
-    "led"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.9,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "line_one_newline"
-   },
-   "port_bank_rhyme": "led",
-   "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
-  },
-  {
    "name": "couplet-blame-game",
    "prompt": "A rhyming couplet:\nThey pointed fingers, passing round the blame,\nBut knew that they were playing the same ",
    "intermediates": [
@@ -37,54 +21,6 @@
    "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
   },
   {
-   "name": "couplet-crack-black",
-   "prompt": "A rhyming couplet:\nThe storm clouds gathered with a thunder crack,\nAnd turned the midday sky to total ",
-   "intermediates": [
-    "black"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "plain_stripped",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "line_one_newline"
-   },
-   "port_bank_rhyme": "black",
-   "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
-  },
-  {
-   "name": "couplet-divine-wine",
-   "prompt": "A rhyming couplet:\nThe chapel glowed with light almost divine,\nThe priest raised up the consecrated ",
-   "intermediates": [
-    "wine"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "line_one_newline"
-   },
-   "port_bank_rhyme": "wine",
-   "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
-  },
-  {
-   "name": "couplet-divine-wine-to-sign",
-   "prompt": "A rhyming couplet:\nThe chapel glowed with light almost divine,\nThe priest raised up the consecrated ",
-   "intermediates": [
-    "wine"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "line_one_newline"
-   },
-   "port_bank_rhyme": "wine",
-   "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
-  },
-  {
    "name": "couplet-gray-day",
    "prompt": "A rhyming couplet:\nThe dawn broke through the clouds of silver gray,\nAnd ushered in another working ",
    "intermediates": [
@@ -98,22 +34,6 @@
     "kind": "line_one_newline"
    },
    "port_bank_rhyme": "day",
-   "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
-  },
-  {
-   "name": "couplet-mistake-make",
-   "prompt": "A rhyming couplet:\nThe student learned from every old mistake,\nAnd vowed a better effort he would ",
-   "intermediates": [
-    "make"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.9,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "line_one_newline"
-   },
-   "port_bank_rhyme": "make",
    "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
   },
   {
@@ -155,7 +75,7 @@
     "star"
    ],
    "source": "jlens_source",
-   "consistency": 1.0,
+   "consistency": 0.9,
    "gate_variant": "chat",
    "eval_render": "plain",
    "readout": {
@@ -197,19 +117,51 @@
    "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
   },
   {
+   "name": "couplet-tall-small",
+   "prompt": "A rhyming couplet:\nThe giant loomed above them, dark and tall,\nAnd made the bravest knight feel very ",
+   "intermediates": [
+    "small"
+   ],
+   "source": "jlens_source",
+   "consistency": 1.0,
+   "gate_variant": "chat",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "line_one_newline"
+   },
+   "port_bank_rhyme": "small",
+   "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
+  },
+  {
    "name": "couplet-throne-alone",
    "prompt": "A rhyming couplet:\nThe king grew weary on his gilded throne,\nWith all his gold, he'd never felt more ",
    "intermediates": [
     "alone"
    ],
    "source": "jlens_source",
-   "consistency": 0.9,
+   "consistency": 1.0,
    "gate_variant": "plain_stripped",
    "eval_render": "plain",
    "readout": {
     "kind": "line_one_newline"
    },
    "port_bank_rhyme": "alone",
+   "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
+  },
+  {
+   "name": "couplet-war-door",
+   "prompt": "A rhyming couplet:\nHe'd given both his sons now to the war,\nAnd couldn't bear a third knock at his ",
+   "intermediates": [
+    "door"
+   ],
+   "source": "jlens_source",
+   "consistency": 1.0,
+   "gate_variant": "plain",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "line_one_newline"
+   },
+   "port_bank_rhyme": "door",
    "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
   },
   {
@@ -251,13 +203,29 @@
     "look"
    ],
    "source": "staging_b3",
-   "consistency": 0.9,
+   "consistency": 1.0,
    "gate_variant": "chat",
    "eval_render": "plain",
    "readout": {
     "kind": "line_one_newline"
    },
    "port_bank_rhyme": "look",
+   "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
+  },
+  {
+   "name": "b3-po-bread-fed",
+   "prompt": "A rhyming couplet:\nThe baker rose at dawn to bake the bread,\nAnd never slept until the town was ",
+   "intermediates": [
+    "fed"
+   ],
+   "source": "staging_b3",
+   "consistency": 1.0,
+   "gate_variant": "chat",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "line_one_newline"
+   },
+   "port_bank_rhyme": "fed",
    "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
   },
   {
@@ -331,7 +299,7 @@
     "plain"
    ],
    "source": "staging_b3",
-   "consistency": 0.9,
+   "consistency": 1.0,
    "gate_variant": "chat",
    "eval_render": "plain",
    "readout": {
@@ -357,19 +325,35 @@
    "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
   },
   {
-   "name": "b3-po-moon-soon",
-   "prompt": "A rhyming couplet:\nThe owl called softly to the rising moon,\nThe night was young; the dawn would come too ",
+   "name": "b3-po-nail-mail",
+   "prompt": "A rhyming couplet:\nThe carpenter drove home the final nail,\nAnd hung the letterbox to catch the ",
    "intermediates": [
-    "soon"
+    "mail"
    ],
    "source": "staging_b3",
    "consistency": 1.0,
-   "gate_variant": "plain",
+   "gate_variant": "chat",
    "eval_render": "plain",
    "readout": {
     "kind": "line_one_newline"
    },
-   "port_bank_rhyme": "soon",
+   "port_bank_rhyme": "mail",
+   "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
+  },
+  {
+   "name": "b3-po-pen-den",
+   "prompt": "A rhyming couplet:\nThe fox slipped past the farmer's chicken pen,\nAnd vanished to the safety of its ",
+   "intermediates": [
+    "den"
+   ],
+   "source": "staging_b3",
+   "consistency": 1.0,
+   "gate_variant": "chat",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "line_one_newline"
+   },
+   "port_bank_rhyme": "den",
    "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
   },
   {
@@ -386,22 +370,6 @@
     "kind": "line_one_newline"
    },
    "port_bank_rhyme": "hope",
-   "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
-  },
-  {
-   "name": "b3-po-rose-nose",
-   "prompt": "A rhyming couplet:\nShe leaned in close to smell the garden rose,\nAnd felt a petal brush against her ",
-   "intermediates": [
-    "nose"
-   ],
-   "source": "staging_b3",
-   "consistency": 1.0,
-   "gate_variant": "chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "line_one_newline"
-   },
-   "port_bank_rhyme": "nose",
    "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
   },
   {
@@ -507,7 +475,7 @@
     "warm"
    ],
    "source": "staging_b3",
-   "consistency": 0.8,
+   "consistency": 1.0,
    "gate_variant": "chat",
    "eval_render": "plain",
    "readout": {
@@ -517,29 +485,13 @@
    "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
   },
   {
-   "name": "b3-po-thread-bed",
-   "prompt": "A rhyming couplet:\nGrandmother sewed the quilt with silver thread,\nAnd spread it out across the child's ",
-   "intermediates": [
-    "bed"
-   ],
-   "source": "staging_b3",
-   "consistency": 0.9,
-   "gate_variant": "chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "line_one_newline"
-   },
-   "port_bank_rhyme": "bed",
-   "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
-  },
-  {
    "name": "b3-po-track-back",
    "prompt": "A rhyming couplet:\nThe old dog chased the rabbit down the track,\nAnd hours later came limping slowly ",
    "intermediates": [
     "back"
    ],
    "source": "staging_b3",
-   "consistency": 1.0,
+   "consistency": 0.9,
    "gate_variant": "plain",
    "eval_render": "plain",
    "readout": {
@@ -571,7 +523,7 @@
     "fell"
    ],
    "source": "staging_b3",
-   "consistency": 0.9,
+   "consistency": 1.0,
    "gate_variant": "chat",
    "eval_render": "plain",
    "readout": {
@@ -603,29 +555,13 @@
     "death"
    ],
    "source": "jlens_source",
-   "consistency": 0.9,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "line_one_newline"
-   },
-   "port_bank_rhyme": "death",
-   "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
-  },
-  {
-   "name": "couplet-chase-face",
-   "prompt": "A rhyming couplet:\nThrough alleys dark she led him on the chase,\nBut turned at last and let him see her ",
-   "intermediates": [
-    "face"
-   ],
-   "source": "jlens_source",
    "consistency": 1.0,
    "gate_variant": "plain",
    "eval_render": "plain",
    "readout": {
     "kind": "line_one_newline"
    },
-   "port_bank_rhyme": "face",
+   "port_bank_rhyme": "death",
    "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
   },
   {
@@ -648,7 +584,7 @@
    "name": "couplet-eyes-lies",
    "prompt": "A rhyming couplet:\nShe searched his face but couldn't read his eyes,\nAnd wondered which of all his words were ",
    "intermediates": [
-    "lies"
+    "true"
    ],
    "source": "jlens_source",
    "consistency": 1.0,
@@ -667,7 +603,7 @@
     "wall"
    ],
    "source": "jlens_source",
-   "consistency": 0.9,
+   "consistency": 1.0,
    "gate_variant": "plain",
    "eval_render": "plain",
    "readout": {
@@ -677,13 +613,29 @@
    "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
   },
   {
+   "name": "couplet-fate-great",
+   "prompt": "A rhyming couplet:\nThe hero stood before the gates of fate,\nAnd knew that what awaited would be ",
+   "intermediates": [
+    "great"
+   ],
+   "source": "jlens_source",
+   "consistency": 1.0,
+   "gate_variant": "plain_stripped",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "line_one_newline"
+   },
+   "port_bank_rhyme": "great",
+   "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
+  },
+  {
    "name": "couplet-fear-near",
    "prompt": "A rhyming couplet:\nShe heard the footsteps and was gripped by fear,\nFor step by step the danger drew more ",
    "intermediates": [
     "near"
    ],
    "source": "jlens_source",
-   "consistency": 0.9,
+   "consistency": 1.0,
    "gate_variant": "plain",
    "eval_render": "plain",
    "readout": {
@@ -722,22 +674,6 @@
     "kind": "line_one_newline"
    },
    "port_bank_rhyme": "same",
-   "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
-  },
-  {
-   "name": "couplet-gown-down",
-   "prompt": "A rhyming couplet:\nShe tripped upon the hem of her long gown,\nAnd, stumbling on the stairway, tumbled ",
-   "intermediates": [
-    "down"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.9,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "line_one_newline"
-   },
-   "port_bank_rhyme": "down",
    "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
   },
   {
@@ -811,7 +747,7 @@
     "old"
    ],
    "source": "jlens_source",
-   "consistency": 0.9,
+   "consistency": 1.0,
    "gate_variant": "plain_stripped",
    "eval_render": "plain",
    "readout": {
@@ -834,6 +770,22 @@
     "kind": "line_one_newline"
    },
    "port_bank_rhyme": "find",
+   "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
+  },
+  {
+   "name": "couplet-shook-took",
+   "prompt": "A rhyming couplet:\nThe thief reached in before the guards' hands shook,\nHe grabbed the jewel and everything he ",
+   "intermediates": [
+    "could"
+   ],
+   "source": "jlens_source",
+   "consistency": 0.9,
+   "gate_variant": "chat",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "line_one_newline"
+   },
+   "port_bank_rhyme": "took",
    "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
   },
   {
@@ -891,7 +843,7 @@
     "write"
    ],
    "source": "jlens_source",
-   "consistency": 0.9,
+   "consistency": 0.8,
    "gate_variant": "plain",
    "eval_render": "plain",
    "readout": {
@@ -917,19 +869,19 @@
    "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
   },
   {
-   "name": "b3-po-bell-spell",
-   "prompt": "A rhyming couplet:\nThe tower rang its deep and solemn bell,\nAnd broke the sleeping village's quiet ",
+   "name": "bf-couplet-gold-told",
+   "prompt": "A rhyming couplet:\nShe wore a crown of silver and of gold,\nA queen whose story never will be ",
    "intermediates": [
-    "spell"
+    "told"
    ],
-   "source": "staging_b3",
-   "consistency": 1.0,
+   "source": "staging",
+   "consistency": 0.8,
    "gate_variant": "chat",
    "eval_render": "plain",
    "readout": {
     "kind": "line_one_newline"
    },
-   "port_bank_rhyme": "spell",
+   "port_bank_rhyme": "told",
    "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
   },
   {
@@ -949,13 +901,29 @@
    "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
   },
   {
+   "name": "b3-po-door-roar",
+   "prompt": "A rhyming couplet:\nThe lion paced behind the iron door,\nAnd shook the circus tent with every ",
+   "intermediates": [
+    "roar"
+   ],
+   "source": "staging_b3",
+   "consistency": 1.0,
+   "gate_variant": "plain",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "line_one_newline"
+   },
+   "port_bank_rhyme": "roar",
+   "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
+  },
+  {
    "name": "b3-po-heart-start",
    "prompt": "A rhyming couplet:\nShe held the letter close against her heart,\nAnd read it over, always from the ",
    "intermediates": [
     "start"
    ],
    "source": "staging_b3",
-   "consistency": 0.8,
+   "consistency": 1.0,
    "gate_variant": "plain",
    "eval_render": "plain",
    "readout": {
@@ -997,22 +965,6 @@
    "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
   },
   {
-   "name": "b3-po-night-light",
-   "prompt": "A rhyming couplet:\nThe stars came out to end the fading night,\nAnd every window slowly lost its ",
-   "intermediates": [
-    "light"
-   ],
-   "source": "staging_b3",
-   "consistency": 1.0,
-   "gate_variant": "chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "line_one_newline"
-   },
-   "port_bank_rhyme": "light",
-   "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
-  },
-  {
    "name": "b3-po-road-load",
    "prompt": "A rhyming couplet:\nThe oxen strained along the mountain road,\nTheir wagon creaking under its heavy ",
    "intermediates": [
@@ -1035,29 +987,13 @@
     "free"
    ],
    "source": "staging_b3",
-   "consistency": 1.0,
+   "consistency": 0.9,
    "gate_variant": "chat",
    "eval_render": "plain",
    "readout": {
     "kind": "line_one_newline"
    },
    "port_bank_rhyme": "free",
-   "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
-  },
-  {
-   "name": "b3-po-street-feet",
-   "prompt": "A rhyming couplet:\nThe dancers spun along the cobbled street,\nWith music in their hands and in their ",
-   "intermediates": [
-    "feet"
-   ],
-   "source": "staging_b3",
-   "consistency": 0.8,
-   "gate_variant": "chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "line_one_newline"
-   },
-   "port_bank_rhyme": "feet",
    "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
   },
   {
@@ -1074,6 +1010,22 @@
     "kind": "line_one_newline"
    },
    "port_bank_rhyme": "down",
+   "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
+  },
+  {
+   "name": "b3-po-train-chain",
+   "prompt": "A rhyming couplet:\nThe prisoners were marched onto the train,\nEach ankle bound by iron to a ",
+   "intermediates": [
+    "chain"
+   ],
+   "source": "staging_b3",
+   "consistency": 1.0,
+   "gate_variant": "plain",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "line_one_newline"
+   },
+   "port_bank_rhyme": "chain",
    "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
   },
   {
@@ -1099,7 +1051,7 @@
     "case"
    ],
    "source": "jlens_source",
-   "consistency": 0.8,
+   "consistency": 1.0,
    "gate_variant": "plain",
    "eval_render": "plain",
    "readout": {
@@ -1115,29 +1067,13 @@
     "dead"
    ],
    "source": "jlens_source",
-   "consistency": 0.9,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "line_one_newline"
-   },
-   "port_bank_rhyme": "dead",
-   "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
-  },
-  {
-   "name": "couplet-crown-town",
-   "prompt": "A rhyming couplet:\nThe king rode through in velvet robe and crown,\nTo greet the people gathered in the ",
-   "intermediates": [
-    "town"
-   ],
-   "source": "jlens_source",
    "consistency": 1.0,
    "gate_variant": "plain",
    "eval_render": "plain",
    "readout": {
     "kind": "line_one_newline"
    },
-   "port_bank_rhyme": "town",
+   "port_bank_rhyme": "dead",
    "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
   },
   {
@@ -1173,29 +1109,13 @@
    "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
   },
   {
-   "name": "couplet-rain-pain",
-   "prompt": "A rhyming couplet:\nShe pressed her palm against the window's rain,\nAs if the glass could wash away her ",
-   "intermediates": [
-    "pain"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "line_one_newline"
-   },
-   "port_bank_rhyme": "pain",
-   "port_gate": "chat greedy + >=8/10 same word; plain greedy agrees"
-  },
-  {
    "name": "couplet-shoe-blue",
    "prompt": "A rhyming couplet:\nShe searched the closet for the missing shoe,\nAnd found it hiding, painted oddly ",
    "intermediates": [
     "blue"
    ],
    "source": "jlens_source",
-   "consistency": 0.9,
+   "consistency": 1.0,
    "gate_variant": "plain",
    "eval_render": "plain",
    "readout": {

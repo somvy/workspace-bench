@@ -1,5 +1,261 @@
 [
  {
+  "id": "q01_b",
+  "cluster": "q01",
+  "level": "L3",
+  "anchor": "emotion",
+  "varied_axes": [
+   "state",
+   "relation"
+  ],
+  "cell": {
+   "state_type": "emotion",
+   "state": "grief",
+   "relation": "spouse",
+   "content": "sudden accidental death"
+  },
+  "stimulus": "His reading glasses stayed folded on the nightstand, the sedan still at the tow yard on Route 9, the sympathy cards still coming. Nora slept on her half of the bed when she slept, and locked the back door twice.",
+  "read_position": "end_of_stimulus",
+  "inferable_from": 1,
+  "gold_label": "grief over the sudden accidental death of her spouse",
+  "mc_options": [
+   "grief over the sudden accidental death of her young child",
+   "grief over the sudden accidental death of her spouse",
+   "grief over the sudden accidental death of her parent",
+   "grief over the sudden accidental death of her longtime mentor",
+   "grief over the sudden accidental death of a stranger whose accident she witnessed",
+   "guilt over the sudden accidental death of her young child",
+   "guilt over the sudden accidental death of her spouse",
+   "guilt over the sudden accidental death of her parent",
+   "guilt over the sudden accidental death of her longtime mentor",
+   "guilt over the sudden accidental death of a stranger whose accident she witnessed"
+  ],
+  "asked_question": "first, in one sentence, state what Nora is feeling and what you infer happened — the underlying event, including how it came about, not her surface actions. Then summarize: FEELING: <one word>; THE EVENT: <plain words>; WHO THE PERSON WAS TO NORA: <one word>.",
+  "contrast_label": "guilt over the sudden accidental death of her spouse",
+  "contrast_axis": "state",
+  "credit": {
+   "state": [
+    [
+     "grief",
+     "grieve",
+     "grieves",
+     "grieved",
+     "grieving",
+     "mourn",
+     "mourns",
+     "mourned",
+     "mourning",
+     "bereaved",
+     "bereavement",
+     "sorrow",
+     "sorrowful",
+     "heartbroken",
+     "heartbreak",
+     "anguish"
+    ]
+   ],
+   "content": [
+    [
+     "death",
+     "deaths",
+     "dead",
+     "die",
+     "died",
+     "dies",
+     "dying",
+     "killed",
+     "fatal",
+     "fatality",
+     "loss",
+     "lost",
+     "passed",
+     "perished"
+    ],
+    [
+     "accident",
+     "accidental",
+     "accidentally",
+     "crash",
+     "crashed",
+     "collision",
+     "wreck",
+     "wrecked",
+     "sudden",
+     "suddenly"
+    ]
+   ],
+   "relation": [
+    [
+     "spouse",
+     "husband",
+     "wife",
+     "widow",
+     "widowed",
+     "widower",
+     "married",
+     "marriage"
+    ]
+   ]
+  },
+  "competitors": {
+   "state": [
+    "guilt",
+    "guilty",
+    "blame",
+    "blames",
+    "blamed",
+    "self-blame",
+    "fault",
+    "remorse",
+    "remorseful",
+    "self-reproach"
+   ],
+   "relation": [
+    "child",
+    "children",
+    "kid",
+    "kids",
+    "son",
+    "daughter",
+    "toddler",
+    "parent",
+    "parents",
+    "mother",
+    "father",
+    "mom",
+    "dad",
+    "mentor",
+    "mentors",
+    "mentored",
+    "advisor",
+    "adviser",
+    "stranger",
+    "strangers"
+   ]
+  },
+  "scored_axes": [
+   "state",
+   "content",
+   "relation"
+  ],
+  "axis_concepts": {
+   "state": "grief",
+   "content": "a sudden accidental death",
+   "relation": "her spouse"
+  },
+  "blocklist": {
+   "block": [
+    "accident",
+    "accidental",
+    "accidentally",
+    "anguish",
+    "autopsy",
+    "bereaved",
+    "bereavement",
+    "blame",
+    "blamed",
+    "blames",
+    "burial",
+    "buried",
+    "casket",
+    "coffin",
+    "collision",
+    "condolence",
+    "condolences",
+    "coroner",
+    "crash",
+    "crashed",
+    "dead",
+    "death",
+    "deaths",
+    "deceased",
+    "decedent",
+    "devastated",
+    "die",
+    "died",
+    "dies",
+    "dying",
+    "fatal",
+    "fatality",
+    "fault",
+    "funeral",
+    "grave",
+    "grief",
+    "grieve",
+    "grieved",
+    "grieves",
+    "grieving",
+    "guilt",
+    "guilty",
+    "heartbreak",
+    "heartbroken",
+    "husband",
+    "killed",
+    "loss",
+    "lost",
+    "marriage",
+    "married",
+    "memorial",
+    "mourn",
+    "mourned",
+    "mourning",
+    "mourns",
+    "obituary",
+    "orphan",
+    "orphaned",
+    "passed",
+    "perished",
+    "remorse",
+    "remorseful",
+    "self-blame",
+    "self-reproach",
+    "sorrow",
+    "sorrowful",
+    "spouse",
+    "sudden",
+    "suddenly",
+    "widow",
+    "widowed",
+    "widower",
+    "wife",
+    "wreck",
+    "wrecked"
+   ],
+   "warn": [
+    "adviser",
+    "advisor",
+    "child",
+    "children",
+    "dad",
+    "daughter",
+    "father",
+    "kid",
+    "kids",
+    "mentor",
+    "mentored",
+    "mentors",
+    "mom",
+    "mother",
+    "parent",
+    "parents",
+    "son",
+    "stranger",
+    "strangers",
+    "toddler"
+   ]
+  },
+  "qa": {
+   "lemma_scan": "pass",
+   "opus_gate": "pass"
+  },
+  "provenance": {
+   "generator": "claude-fable-5",
+   "date": "2026-08-04",
+   "style": "A",
+   "edits": []
+  }
+ },
+ {
   "id": "q01_c",
   "cluster": "q01",
   "level": "L3",
@@ -233,6 +489,518 @@
     "mentor",
     "mentored",
     "mentors",
+    "son",
+    "spouse",
+    "stranger",
+    "strangers",
+    "toddler",
+    "widow",
+    "widowed",
+    "widower",
+    "wife"
+   ]
+  },
+  "qa": {
+   "lemma_scan": "pass",
+   "opus_gate": "pass"
+  },
+  "provenance": {
+   "generator": "claude-fable-5",
+   "date": "2026-08-04",
+   "style": "A",
+   "edits": []
+  }
+ },
+ {
+  "id": "q01_e",
+  "cluster": "q01",
+  "level": "L3",
+  "anchor": "emotion",
+  "varied_axes": [
+   "state",
+   "relation"
+  ],
+  "cell": {
+   "state_type": "emotion",
+   "state": "grief",
+   "relation": "stranger",
+   "content": "sudden accidental death"
+  },
+  "stimulus": "The flowers zip-tied to the signpost at the intersection were new again; Nora had only stopped that day to give a statement and had never learned more than a name. The man's name, torn from the newspaper, stayed folded small in her glovebox — she had only been the second car back, the officer had written as much, and no part of it had been hers to prevent, and still, some mornings, she sat wet-eyed in the car for a man she had never met; she took the long way to work, merged onto the parkway, and turned the radio down.",
+  "read_position": "end_of_stimulus",
+  "inferable_from": 1,
+  "gold_label": "grief over the sudden accidental death of a stranger whose accident she witnessed",
+  "mc_options": [
+   "grief over the sudden accidental death of her young child",
+   "grief over the sudden accidental death of her spouse",
+   "grief over the sudden accidental death of her parent",
+   "grief over the sudden accidental death of her longtime mentor",
+   "grief over the sudden accidental death of a stranger whose accident she witnessed",
+   "guilt over the sudden accidental death of her young child",
+   "guilt over the sudden accidental death of her spouse",
+   "guilt over the sudden accidental death of her parent",
+   "guilt over the sudden accidental death of her longtime mentor",
+   "guilt over the sudden accidental death of a stranger whose accident she witnessed"
+  ],
+  "asked_question": "first, in one sentence, state what Nora is feeling and what you infer happened — the underlying event, including how it came about, not her surface actions. Then summarize: FEELING: <one word>; THE EVENT: <plain words>; WHO THE PERSON WAS TO NORA: <one word>.",
+  "contrast_label": "grief over the sudden accidental death of her young child",
+  "contrast_axis": "relation",
+  "credit": {
+   "state": [
+    [
+     "grief",
+     "grieve",
+     "grieves",
+     "grieved",
+     "grieving",
+     "mourn",
+     "mourns",
+     "mourned",
+     "mourning",
+     "bereaved",
+     "bereavement",
+     "sorrow",
+     "sorrowful",
+     "heartbroken",
+     "heartbreak",
+     "anguish"
+    ]
+   ],
+   "content": [
+    [
+     "death",
+     "deaths",
+     "dead",
+     "die",
+     "died",
+     "dies",
+     "dying",
+     "killed",
+     "fatal",
+     "fatality",
+     "loss",
+     "lost",
+     "passed",
+     "perished"
+    ],
+    [
+     "accident",
+     "accidental",
+     "accidentally",
+     "crash",
+     "crashed",
+     "collision",
+     "wreck",
+     "wrecked",
+     "sudden",
+     "suddenly"
+    ]
+   ],
+   "relation": [
+    [
+     "stranger",
+     "strangers"
+    ]
+   ]
+  },
+  "competitors": {
+   "state": [
+    "guilt",
+    "guilty",
+    "blame",
+    "blames",
+    "blamed",
+    "self-blame",
+    "fault",
+    "remorse",
+    "remorseful",
+    "self-reproach"
+   ],
+   "relation": [
+    "child",
+    "children",
+    "kid",
+    "kids",
+    "son",
+    "daughter",
+    "toddler",
+    "spouse",
+    "husband",
+    "wife",
+    "widow",
+    "widowed",
+    "widower",
+    "married",
+    "marriage",
+    "parent",
+    "parents",
+    "mother",
+    "father",
+    "mom",
+    "dad",
+    "mentor",
+    "mentors",
+    "mentored",
+    "advisor",
+    "adviser"
+   ]
+  },
+  "scored_axes": [
+   "state",
+   "content",
+   "relation"
+  ],
+  "axis_concepts": {
+   "state": "grief",
+   "content": "a sudden accidental death",
+   "relation": "a stranger whose accident she witnessed"
+  },
+  "blocklist": {
+   "block": [
+    "accident",
+    "accidental",
+    "accidentally",
+    "anguish",
+    "autopsy",
+    "bereaved",
+    "bereavement",
+    "blame",
+    "blamed",
+    "blames",
+    "burial",
+    "buried",
+    "casket",
+    "coffin",
+    "collision",
+    "condolence",
+    "condolences",
+    "coroner",
+    "crash",
+    "crashed",
+    "dead",
+    "death",
+    "deaths",
+    "deceased",
+    "decedent",
+    "devastated",
+    "die",
+    "died",
+    "dies",
+    "dying",
+    "fatal",
+    "fatality",
+    "fault",
+    "funeral",
+    "grave",
+    "grief",
+    "grieve",
+    "grieved",
+    "grieves",
+    "grieving",
+    "guilt",
+    "guilty",
+    "heartbreak",
+    "heartbroken",
+    "killed",
+    "loss",
+    "lost",
+    "memorial",
+    "mourn",
+    "mourned",
+    "mourning",
+    "mourns",
+    "obituary",
+    "orphan",
+    "orphaned",
+    "passed",
+    "perished",
+    "remorse",
+    "remorseful",
+    "self-blame",
+    "self-reproach",
+    "sorrow",
+    "sorrowful",
+    "stranger",
+    "strangers",
+    "sudden",
+    "suddenly",
+    "wreck",
+    "wrecked"
+   ],
+   "warn": [
+    "adviser",
+    "advisor",
+    "child",
+    "children",
+    "dad",
+    "daughter",
+    "father",
+    "husband",
+    "kid",
+    "kids",
+    "marriage",
+    "married",
+    "mentor",
+    "mentored",
+    "mentors",
+    "mom",
+    "mother",
+    "parent",
+    "parents",
+    "son",
+    "spouse",
+    "toddler",
+    "widow",
+    "widowed",
+    "widower",
+    "wife"
+   ]
+  },
+  "qa": {
+   "lemma_scan": "pass",
+   "opus_gate": "pass"
+  },
+  "provenance": {
+   "generator": "claude-fable-5",
+   "date": "2026-08-04",
+   "style": "A",
+   "edits": []
+  }
+ },
+ {
+  "id": "q01_i",
+  "cluster": "q01",
+  "level": "L3",
+  "anchor": "emotion",
+  "varied_axes": [
+   "state",
+   "relation"
+  ],
+  "cell": {
+   "state_type": "emotion",
+   "state": "guilt",
+   "relation": "mentor",
+   "content": "sudden accidental death"
+  },
+  "stimulus": "It should have been her site visit — she had begged him to take it so she could rehearse the defense he had supervised for five years, and the vans came back from the washed-out ridge road without him. The whole lab signed the card by Friday; Nora put her first manuscript, red ink and all, back on the shelf and switched off the lamp.",
+  "read_position": "end_of_stimulus",
+  "inferable_from": 1,
+  "gold_label": "guilt over the sudden accidental death of her longtime mentor",
+  "mc_options": [
+   "grief over the sudden accidental death of her young child",
+   "grief over the sudden accidental death of her spouse",
+   "grief over the sudden accidental death of her parent",
+   "grief over the sudden accidental death of her longtime mentor",
+   "grief over the sudden accidental death of a stranger whose accident she witnessed",
+   "guilt over the sudden accidental death of her young child",
+   "guilt over the sudden accidental death of her spouse",
+   "guilt over the sudden accidental death of her parent",
+   "guilt over the sudden accidental death of her longtime mentor",
+   "guilt over the sudden accidental death of a stranger whose accident she witnessed"
+  ],
+  "asked_question": "first, in one sentence, state what Nora is feeling and what you infer happened — the underlying event, including how it came about, not her surface actions. Then summarize: FEELING: <one word>; THE EVENT: <plain words>; WHO THE PERSON WAS TO NORA: <one word>.",
+  "contrast_label": "guilt over the sudden accidental death of a stranger whose accident she witnessed",
+  "contrast_axis": "relation",
+  "credit": {
+   "state": [
+    [
+     "guilt",
+     "guilty",
+     "blame",
+     "blames",
+     "blamed",
+     "self-blame",
+     "fault",
+     "remorse",
+     "remorseful",
+     "self-reproach"
+    ]
+   ],
+   "content": [
+    [
+     "death",
+     "deaths",
+     "dead",
+     "die",
+     "died",
+     "dies",
+     "dying",
+     "killed",
+     "fatal",
+     "fatality",
+     "loss",
+     "lost",
+     "passed",
+     "perished"
+    ],
+    [
+     "accident",
+     "accidental",
+     "accidentally",
+     "crash",
+     "crashed",
+     "collision",
+     "wreck",
+     "wrecked",
+     "sudden",
+     "suddenly"
+    ]
+   ],
+   "relation": [
+    [
+     "mentor",
+     "mentors",
+     "mentored",
+     "advisor",
+     "adviser"
+    ]
+   ]
+  },
+  "competitors": {
+   "state": [
+    "grief",
+    "grieve",
+    "grieves",
+    "grieved",
+    "grieving",
+    "mourn",
+    "mourns",
+    "mourned",
+    "mourning",
+    "bereaved",
+    "bereavement",
+    "sorrow",
+    "sorrowful",
+    "heartbroken",
+    "heartbreak",
+    "anguish"
+   ],
+   "relation": [
+    "child",
+    "children",
+    "kid",
+    "kids",
+    "son",
+    "daughter",
+    "toddler",
+    "spouse",
+    "husband",
+    "wife",
+    "widow",
+    "widowed",
+    "widower",
+    "married",
+    "marriage",
+    "parent",
+    "parents",
+    "mother",
+    "father",
+    "mom",
+    "dad",
+    "stranger",
+    "strangers"
+   ]
+  },
+  "scored_axes": [
+   "state",
+   "content",
+   "relation"
+  ],
+  "axis_concepts": {
+   "state": "guilt",
+   "content": "a sudden accidental death",
+   "relation": "her longtime mentor"
+  },
+  "blocklist": {
+   "block": [
+    "accident",
+    "accidental",
+    "accidentally",
+    "adviser",
+    "advisor",
+    "anguish",
+    "autopsy",
+    "bereaved",
+    "bereavement",
+    "blame",
+    "blamed",
+    "blames",
+    "burial",
+    "buried",
+    "casket",
+    "coffin",
+    "collision",
+    "condolence",
+    "condolences",
+    "coroner",
+    "crash",
+    "crashed",
+    "dead",
+    "death",
+    "deaths",
+    "deceased",
+    "decedent",
+    "devastated",
+    "die",
+    "died",
+    "dies",
+    "dying",
+    "fatal",
+    "fatality",
+    "fault",
+    "funeral",
+    "grave",
+    "grief",
+    "grieve",
+    "grieved",
+    "grieves",
+    "grieving",
+    "guilt",
+    "guilty",
+    "heartbreak",
+    "heartbroken",
+    "killed",
+    "loss",
+    "lost",
+    "memorial",
+    "mentor",
+    "mentored",
+    "mentors",
+    "mourn",
+    "mourned",
+    "mourning",
+    "mourns",
+    "obituary",
+    "orphan",
+    "orphaned",
+    "passed",
+    "perished",
+    "remorse",
+    "remorseful",
+    "self-blame",
+    "self-reproach",
+    "sorrow",
+    "sorrowful",
+    "sudden",
+    "suddenly",
+    "wreck",
+    "wrecked"
+   ],
+   "warn": [
+    "child",
+    "children",
+    "dad",
+    "daughter",
+    "father",
+    "husband",
+    "kid",
+    "kids",
+    "marriage",
+    "married",
+    "mom",
+    "mother",
+    "parent",
+    "parents",
     "son",
     "spouse",
     "stranger",
@@ -512,185 +1280,6 @@
   }
  },
  {
-  "id": "q04_a",
-  "cluster": "q04",
-  "level": "L3",
-  "anchor": "motive",
-  "varied_axes": [
-   "state",
-   "relation"
-  ],
-  "cell": {
-   "state_type": "motive",
-   "state": "conceal",
-   "relation": "colleague",
-   "content": "her own mistake"
-  },
-  "stimulus": "The misprint had been Renata's math, and the reprint invoice could not reach the desk beside hers before Thursday's reconciliation. She renamed the folder, moved the original proof into the archive tier nobody audited, and topped off the shared coffee pot on her way back.",
-  "read_position": "end_of_stimulus",
-  "inferable_from": 1,
-  "gold_label": "the intent to conceal her own mistake from a colleague",
-  "mc_options": [
-   "the intent to conceal her own mistake from a colleague",
-   "the intent to conceal her own mistake from her longtime mentor",
-   "the intent to conceal her own mistake from her closest friend",
-   "the intent to conceal her own mistake from her sibling",
-   "the intent to conceal her own mistake from a client",
-   "the intent to take credit for a colleague's work",
-   "the intent to take credit for her longtime mentor's work",
-   "the intent to take credit for her closest friend's work",
-   "the intent to take credit for her sibling's work",
-   "the intent to take credit for a client's work"
-  ],
-  "asked_question": "first, in one sentence, state what Renata intends and regarding what. Then summarize: HER INTENT: <plain words>; CONCERNING: <the thing>; THE OTHER PERSON: <relation to her, one or two words>.",
-  "contrast_label": "the intent to take credit for a colleague's work",
-  "contrast_axis": "state",
-  "credit": {
-   "state": [
-    [
-     "conceal",
-     "concealed",
-     "concealing",
-     "hide",
-     "hid",
-     "hidden",
-     "cover",
-     "covering",
-     "cover-up"
-    ]
-   ],
-   "content": [
-    [
-     "mistake",
-     "mistakes",
-     "error",
-     "errors",
-     "blunder",
-     "flaw"
-    ]
-   ],
-   "relation": [
-    [
-     "colleague",
-     "colleagues",
-     "coworker",
-     "coworkers",
-     "co-worker",
-     "workmate"
-    ]
-   ]
-  },
-  "competitors": {
-   "state": [
-    "credit",
-    "credited",
-    "claiming",
-    "claimed",
-    "plagiarize",
-    "plagiarism",
-    "steal",
-    "stole",
-    "stolen",
-    "appropriated"
-   ],
-   "relation": [
-    "mentor",
-    "mentors",
-    "mentored",
-    "advisor",
-    "adviser",
-    "friend",
-    "friends",
-    "friendship",
-    "buddy",
-    "pal",
-    "sibling",
-    "siblings",
-    "brother",
-    "sister",
-    "twin",
-    "client",
-    "clients",
-    "customer"
-   ]
-  },
-  "scored_axes": [
-   "state",
-   "content",
-   "relation"
-  ],
-  "axis_concepts": {
-   "state": "concealing / hiding something",
-   "content": "her own mistake",
-   "relation": "a colleague"
-  },
-  "blocklist": {
-   "block": [
-    "appropriated",
-    "blunder",
-    "claimed",
-    "claiming",
-    "co-worker",
-    "colleague",
-    "colleagues",
-    "conceal",
-    "concealed",
-    "concealing",
-    "cover",
-    "cover-up",
-    "covering",
-    "coworker",
-    "coworkers",
-    "credit",
-    "credited",
-    "error",
-    "errors",
-    "flaw",
-    "hid",
-    "hidden",
-    "hide",
-    "mistake",
-    "mistakes",
-    "plagiarism",
-    "plagiarize",
-    "steal",
-    "stole",
-    "stolen",
-    "workmate"
-   ],
-   "warn": [
-    "adviser",
-    "advisor",
-    "brother",
-    "buddy",
-    "client",
-    "clients",
-    "customer",
-    "friend",
-    "friends",
-    "friendship",
-    "mentor",
-    "mentored",
-    "mentors",
-    "pal",
-    "sibling",
-    "siblings",
-    "sister",
-    "twin"
-   ]
-  },
-  "qa": {
-   "lemma_scan": "pass",
-   "opus_gate": "pass"
-  },
-  "provenance": {
-   "generator": "claude-fable-5",
-   "date": "2026-08-04",
-   "style": "A",
-   "edits": []
-  }
- },
- {
   "id": "q04_b",
   "cluster": "q04",
   "level": "L3",
@@ -870,6 +1459,534 @@
   }
  },
  {
+  "id": "q05_b",
+  "cluster": "q05",
+  "level": "L3",
+  "anchor": "motive",
+  "varied_axes": [
+   "motive",
+   "relation"
+  ],
+  "cell": {
+   "state_type": "motive",
+   "state": "favoritism",
+   "motive": "debt",
+   "relation": "closest friend",
+   "content": "steering the contract"
+  },
+  "stimulus": "Iris rescored the final round on Sunday night — alone, after the panel had gone home — and Monday the award went to Aldana Workshop — run by the woman who had been her maid of honor, the one who had covered the studio's rent, quietly, the year Iris started out. She shredded her scratch sheets and watered the window box.",
+  "read_position": "end_of_stimulus",
+  "inferable_from": 1,
+  "gold_label": "favoritism steering the commission to her closest friend, to repay an old private debt",
+  "mc_options": [
+   "favoritism steering the commission to her sibling, to repay an old private debt",
+   "favoritism steering the commission to her closest friend, to repay an old private debt",
+   "favoritism steering the commission to her former mentor, to repay an old private debt",
+   "favoritism steering the commission to her neighbor, to repay an old private debt",
+   "favoritism steering the commission to her cousin, to repay an old private debt",
+   "favoritism steering the commission to her sibling, in exchange for a promised kickback",
+   "favoritism steering the commission to her closest friend, in exchange for a promised kickback",
+   "favoritism steering the commission to her former mentor, in exchange for a promised kickback",
+   "favoritism steering the commission to her neighbor, in exchange for a promised kickback",
+   "favoritism steering the commission to her cousin, in exchange for a promised kickback"
+  ],
+  "asked_question": "first, in one sentence, state what Iris did to the scoring and the personal reason behind it. Then summarize: WHAT SHE DID: <plain words>; HER REASON: <plain words>; THE WINNER: <relation to her, one word>.",
+  "contrast_label": "favoritism steering the commission to her closest friend, in exchange for a promised kickback",
+  "contrast_axis": "motive",
+  "credit": {
+   "act": [
+    [
+     "favoritism",
+     "favoritisms",
+     "rigged",
+     "rigging",
+     "steered",
+     "steering",
+     "biased",
+     "favors",
+     "favored",
+     "nepotism"
+    ]
+   ],
+   "motive": [
+    [
+     "debt",
+     "debts",
+     "repay",
+     "repayment",
+     "repaying",
+     "owed",
+     "owes",
+     "indebted",
+     "gratitude"
+    ]
+   ],
+   "relation": [
+    [
+     "friend",
+     "friends",
+     "friendship",
+     "buddy",
+     "pal"
+    ]
+   ]
+  },
+  "competitors": {
+   "motive": [
+    "kickback",
+    "kickbacks",
+    "bribe",
+    "bribed",
+    "bribery",
+    "payoff",
+    "payoffs"
+   ],
+   "relation": [
+    "sibling",
+    "siblings",
+    "brother",
+    "sister",
+    "twin",
+    "mentor",
+    "mentors",
+    "mentored",
+    "advisor",
+    "adviser",
+    "neighbor",
+    "neighbors",
+    "neighbour",
+    "neighbours",
+    "cousin",
+    "cousins"
+   ]
+  },
+  "scored_axes": [
+   "act",
+   "motive",
+   "relation"
+  ],
+  "axis_concepts": {
+   "act": "favoritism / rigging the selection",
+   "motive": "to repay an old private debt",
+   "relation": "her closest friend"
+  },
+  "blocklist": {
+   "block": [
+    "biased",
+    "bribe",
+    "bribed",
+    "bribery",
+    "buddy",
+    "debt",
+    "debts",
+    "favored",
+    "favoritism",
+    "favoritisms",
+    "favors",
+    "friend",
+    "friends",
+    "friendship",
+    "gratitude",
+    "indebted",
+    "kickback",
+    "kickbacks",
+    "nepotism",
+    "owed",
+    "owes",
+    "pal",
+    "payoff",
+    "payoffs",
+    "repay",
+    "repaying",
+    "repayment",
+    "rigged",
+    "rigging",
+    "steered",
+    "steering"
+   ],
+   "warn": [
+    "adviser",
+    "advisor",
+    "brother",
+    "cousin",
+    "cousins",
+    "mentor",
+    "mentored",
+    "mentors",
+    "neighbor",
+    "neighbors",
+    "neighbour",
+    "neighbours",
+    "sibling",
+    "siblings",
+    "sister",
+    "twin"
+   ]
+  },
+  "qa": {
+   "lemma_scan": "pass",
+   "opus_gate": "pass"
+  },
+  "provenance": {
+   "generator": "claude-fable-5",
+   "date": "2026-08-04",
+   "style": "A",
+   "edits": []
+  }
+ },
+ {
+  "id": "q05_c",
+  "cluster": "q05",
+  "level": "L3",
+  "anchor": "motive",
+  "varied_axes": [
+   "motive",
+   "relation"
+  ],
+  "cell": {
+   "state_type": "motive",
+   "state": "favoritism",
+   "motive": "debt",
+   "relation": "mentor",
+   "content": "steering the contract"
+  },
+  "stimulus": "Iris rescored the final round on Sunday night — alone, after the panel had gone home — and Monday the award went to Aldana Workshop — founded, after retirement, by the woman who had trained Iris up from apprentice and lent her the tools she still used. She shredded her scratch sheets and locked the office.",
+  "read_position": "end_of_stimulus",
+  "inferable_from": 1,
+  "gold_label": "favoritism steering the commission to her former mentor, to repay an old private debt",
+  "mc_options": [
+   "favoritism steering the commission to her sibling, to repay an old private debt",
+   "favoritism steering the commission to her closest friend, to repay an old private debt",
+   "favoritism steering the commission to her former mentor, to repay an old private debt",
+   "favoritism steering the commission to her neighbor, to repay an old private debt",
+   "favoritism steering the commission to her cousin, to repay an old private debt",
+   "favoritism steering the commission to her sibling, in exchange for a promised kickback",
+   "favoritism steering the commission to her closest friend, in exchange for a promised kickback",
+   "favoritism steering the commission to her former mentor, in exchange for a promised kickback",
+   "favoritism steering the commission to her neighbor, in exchange for a promised kickback",
+   "favoritism steering the commission to her cousin, in exchange for a promised kickback"
+  ],
+  "asked_question": "first, in one sentence, state what Iris did to the scoring and the personal reason behind it. Then summarize: WHAT SHE DID: <plain words>; HER REASON: <plain words>; THE WINNER: <relation to her, one word>.",
+  "contrast_label": "favoritism steering the commission to her former mentor, in exchange for a promised kickback",
+  "contrast_axis": "motive",
+  "credit": {
+   "act": [
+    [
+     "favoritism",
+     "favoritisms",
+     "rigged",
+     "rigging",
+     "steered",
+     "steering",
+     "biased",
+     "favors",
+     "favored",
+     "nepotism"
+    ]
+   ],
+   "motive": [
+    [
+     "debt",
+     "debts",
+     "repay",
+     "repayment",
+     "repaying",
+     "owed",
+     "owes",
+     "indebted",
+     "gratitude"
+    ]
+   ],
+   "relation": [
+    [
+     "mentor",
+     "mentors",
+     "mentored",
+     "advisor",
+     "adviser"
+    ]
+   ]
+  },
+  "competitors": {
+   "motive": [
+    "kickback",
+    "kickbacks",
+    "bribe",
+    "bribed",
+    "bribery",
+    "payoff",
+    "payoffs"
+   ],
+   "relation": [
+    "sibling",
+    "siblings",
+    "brother",
+    "sister",
+    "twin",
+    "friend",
+    "friends",
+    "friendship",
+    "buddy",
+    "pal",
+    "neighbor",
+    "neighbors",
+    "neighbour",
+    "neighbours",
+    "cousin",
+    "cousins"
+   ]
+  },
+  "scored_axes": [
+   "act",
+   "motive",
+   "relation"
+  ],
+  "axis_concepts": {
+   "act": "favoritism / rigging the selection",
+   "motive": "to repay an old private debt",
+   "relation": "her former mentor"
+  },
+  "blocklist": {
+   "block": [
+    "adviser",
+    "advisor",
+    "biased",
+    "bribe",
+    "bribed",
+    "bribery",
+    "debt",
+    "debts",
+    "favored",
+    "favoritism",
+    "favoritisms",
+    "favors",
+    "gratitude",
+    "indebted",
+    "kickback",
+    "kickbacks",
+    "mentor",
+    "mentored",
+    "mentors",
+    "nepotism",
+    "owed",
+    "owes",
+    "payoff",
+    "payoffs",
+    "repay",
+    "repaying",
+    "repayment",
+    "rigged",
+    "rigging",
+    "steered",
+    "steering"
+   ],
+   "warn": [
+    "brother",
+    "buddy",
+    "cousin",
+    "cousins",
+    "friend",
+    "friends",
+    "friendship",
+    "neighbor",
+    "neighbors",
+    "neighbour",
+    "neighbours",
+    "pal",
+    "sibling",
+    "siblings",
+    "sister",
+    "twin"
+   ]
+  },
+  "qa": {
+   "lemma_scan": "pass",
+   "opus_gate": "pass"
+  },
+  "provenance": {
+   "generator": "claude-fable-5",
+   "date": "2026-08-04",
+   "style": "A",
+   "edits": []
+  }
+ },
+ {
+  "id": "q05_g",
+  "cluster": "q05",
+  "level": "L3",
+  "anchor": "motive",
+  "varied_axes": [
+   "motive",
+   "relation"
+  ],
+  "cell": {
+   "state_type": "motive",
+   "state": "favoritism",
+   "motive": "kickback",
+   "relation": "closest friend",
+   "content": "steering the contract"
+  },
+  "stimulus": "Iris rescored the final round on Sunday night — alone, after the panel had gone home — and Monday the award went to Aldana Workshop, run by the woman who had been her maid of honor. The envelope of consulting fees from a firm that consulted on nothing had arrived the week the shortlist posted, the arrangement sketched over drinks back in June; Iris logged it under miscellaneous and watered the window box.",
+  "read_position": "end_of_stimulus",
+  "inferable_from": 1,
+  "gold_label": "favoritism steering the commission to her closest friend, in exchange for a promised kickback",
+  "mc_options": [
+   "favoritism steering the commission to her sibling, to repay an old private debt",
+   "favoritism steering the commission to her closest friend, to repay an old private debt",
+   "favoritism steering the commission to her former mentor, to repay an old private debt",
+   "favoritism steering the commission to her neighbor, to repay an old private debt",
+   "favoritism steering the commission to her cousin, to repay an old private debt",
+   "favoritism steering the commission to her sibling, in exchange for a promised kickback",
+   "favoritism steering the commission to her closest friend, in exchange for a promised kickback",
+   "favoritism steering the commission to her former mentor, in exchange for a promised kickback",
+   "favoritism steering the commission to her neighbor, in exchange for a promised kickback",
+   "favoritism steering the commission to her cousin, in exchange for a promised kickback"
+  ],
+  "asked_question": "first, in one sentence, state what Iris did to the scoring and the personal reason behind it. Then summarize: WHAT SHE DID: <plain words>; HER REASON: <plain words>; THE WINNER: <relation to her, one word>.",
+  "contrast_label": "favoritism steering the commission to her closest friend, to repay an old private debt",
+  "contrast_axis": "motive",
+  "credit": {
+   "act": [
+    [
+     "favoritism",
+     "favoritisms",
+     "rigged",
+     "rigging",
+     "steered",
+     "steering",
+     "biased",
+     "favors",
+     "favored",
+     "nepotism"
+    ]
+   ],
+   "motive": [
+    [
+     "kickback",
+     "kickbacks",
+     "bribe",
+     "bribed",
+     "bribery",
+     "payoff",
+     "payoffs"
+    ]
+   ],
+   "relation": [
+    [
+     "friend",
+     "friends",
+     "friendship",
+     "buddy",
+     "pal"
+    ]
+   ]
+  },
+  "competitors": {
+   "motive": [
+    "debt",
+    "debts",
+    "repay",
+    "repayment",
+    "repaying",
+    "owed",
+    "owes",
+    "indebted",
+    "gratitude"
+   ],
+   "relation": [
+    "sibling",
+    "siblings",
+    "brother",
+    "sister",
+    "twin",
+    "mentor",
+    "mentors",
+    "mentored",
+    "advisor",
+    "adviser",
+    "neighbor",
+    "neighbors",
+    "neighbour",
+    "neighbours",
+    "cousin",
+    "cousins"
+   ]
+  },
+  "scored_axes": [
+   "act",
+   "motive",
+   "relation"
+  ],
+  "axis_concepts": {
+   "act": "favoritism / rigging the selection",
+   "motive": "in exchange for a promised kickback",
+   "relation": "her closest friend"
+  },
+  "blocklist": {
+   "block": [
+    "biased",
+    "bribe",
+    "bribed",
+    "bribery",
+    "buddy",
+    "debt",
+    "debts",
+    "favored",
+    "favoritism",
+    "favoritisms",
+    "favors",
+    "friend",
+    "friends",
+    "friendship",
+    "gratitude",
+    "indebted",
+    "kickback",
+    "kickbacks",
+    "nepotism",
+    "owed",
+    "owes",
+    "pal",
+    "payoff",
+    "payoffs",
+    "repay",
+    "repaying",
+    "repayment",
+    "rigged",
+    "rigging",
+    "steered",
+    "steering"
+   ],
+   "warn": [
+    "adviser",
+    "advisor",
+    "brother",
+    "cousin",
+    "cousins",
+    "mentor",
+    "mentored",
+    "mentors",
+    "neighbor",
+    "neighbors",
+    "neighbour",
+    "neighbours",
+    "sibling",
+    "siblings",
+    "sister",
+    "twin"
+   ]
+  },
+  "qa": {
+   "lemma_scan": "pass",
+   "opus_gate": "pass"
+  },
+  "provenance": {
+   "generator": "claude-fable-5",
+   "date": "2026-08-04",
+   "style": "A",
+   "edits": []
+  }
+ },
+ {
   "id": "q06_b",
   "cluster": "q06",
   "level": "L3",
@@ -1005,195 +2122,128 @@
   }
  },
  {
-  "id": "q09_e",
-  "cluster": "q09",
-  "level": "L4",
+  "id": "q06_d",
+  "cluster": "q06",
+  "level": "L3",
   "anchor": "belief",
   "varied_axes": [
    "state",
-   "relation"
+   "content"
   ],
   "cell": {
    "state_type": "belief",
-   "state": "relief",
-   "relation": "closest friend",
-   "content": "the canceled move",
-   "blend": {
-    "holder": "he",
-    "about": "closest friend",
-    "state": "relief"
-   }
+   "state": "mistaken",
+   "content": "grant",
+   "relation": "self"
   },
-  "stimulus": "The posting fell through on a Tuesday. Ruben — his best man once, thirty years of Thursdays since — had the corner table booked by Thursday and toasted \"to bad luck\" with a face doing the opposite, and to Tomás it looked exactly like a man whose Thursdays had just been handed back to him; Tomás shredded the appeal draft on Friday morning.",
+  "stimulus": "The committee \"was still deliberating,\" and Talia kept the budget spreadsheet open on her second monitor, refreshing the portal between classes and pricing the equipment order for a decision she was sure was still coming. The department's fall newsletter, already at the printer's, listed the year's awardees on page two.",
   "read_position": "end_of_stimulus",
   "inferable_from": 1,
-  "gold_label": "his belief that his closest friend privately feels relief that the move was canceled",
+  "gold_label": "her mistaken belief that the grant is still undecided",
   "mc_options": [
-   "his belief that his spouse privately feels relief that the move was canceled",
-   "his belief that his parent privately feels relief that the move was canceled",
-   "his belief that his young child privately feels relief that the move was canceled",
-   "his belief that his sibling privately feels relief that the move was canceled",
-   "his belief that his closest friend privately feels relief that the move was canceled",
-   "his belief that his spouse privately feels disappointment that the move was canceled",
-   "his belief that his parent privately feels disappointment that the move was canceled",
-   "his belief that his young child privately feels disappointment that the move was canceled",
-   "his belief that his sibling privately feels disappointment that the move was canceled",
-   "his belief that his closest friend privately feels disappointment that the move was canceled"
+   "her mistaken belief that the job offer is still undecided",
+   "her mistaken belief that the apartment is still undecided",
+   "her mistaken belief that the casting is still undecided",
+   "her mistaken belief that the grant is still undecided",
+   "her mistaken belief that the team selection is still undecided",
+   "her unconfirmed but accurate suspicion that the job offer has already been settled",
+   "her unconfirmed but accurate suspicion that the apartment has already been settled",
+   "her unconfirmed but accurate suspicion that the casting has already been settled",
+   "her unconfirmed but accurate suspicion that the grant has already been settled",
+   "her unconfirmed but accurate suspicion that the team selection has already been settled"
   ],
-  "asked_question": "first, in one sentence, state what Tomás concludes the other person privately feels and about what. Then summarize: THE FEELING HE ATTRIBUTES: <one word>; ABOUT: <the event>; THAT PERSON: <relation to him, one word>.",
-  "contrast_label": "his belief that his closest friend privately feels disappointment that the move was canceled",
+  "asked_question": "first, in one sentence, state what Talia takes to be true and whether she is right. Then summarize: SHE TAKES TO BE TRUE: <plain words>; IS SHE RIGHT: <yes or no, plus what is actually so>; AT STAKE: <the thing>.",
+  "contrast_label": "her unconfirmed but accurate suspicion that the grant has already been settled",
   "contrast_axis": "state",
   "credit": {
-   "order": [
-    [
-     "belief",
-     "believes",
-     "thinks",
-     "senses",
-     "suspects",
-     "concludes",
-     "convinced"
-    ]
-   ],
    "state": [
     [
-     "relief",
-     "relieved",
-     "glad"
+     "mistaken",
+     "mistakenly",
+     "misled"
     ]
    ],
    "content": [
     [
-     "move",
-     "moving",
-     "relocation",
-     "transfer"
-    ],
-    [
-     "canceled",
-     "cancelled",
-     "scrapped",
-     "abandoned"
-    ]
-   ],
-   "relation": [
-    [
-     "friend",
-     "friends",
-     "friendship",
-     "buddy",
-     "pal"
+     "grant",
+     "funding"
     ]
    ]
   },
   "competitors": {
    "state": [
-    "disappointment",
-    "disappointed",
-    "deflated",
-    "crushed"
+    "suspects",
+    "suspicion",
+    "suspicious",
+    "senses",
+    "suspecting"
    ],
-   "relation": [
-    "spouse",
-    "husband",
-    "wife",
-    "widow",
-    "widowed",
-    "widower",
-    "married",
-    "marriage",
-    "parent",
-    "parents",
-    "mother",
-    "father",
-    "mom",
-    "dad",
-    "child",
-    "children",
-    "kid",
-    "kids",
-    "son",
-    "daughter",
-    "toddler",
-    "sibling",
-    "siblings",
-    "brother",
-    "sister",
-    "twin"
+   "content": [
+    "job",
+    "offer",
+    "hiring",
+    "apartment",
+    "lease",
+    "rental",
+    "flat",
+    "casting",
+    "cast",
+    "role",
+    "part",
+    "audition",
+    "team",
+    "roster",
+    "squad",
+    "selection",
+    "selected"
    ]
   },
   "scored_axes": [
-   "order",
    "state",
-   "relation"
+   "content"
   ],
   "axis_concepts": {
-   "order": "a conclusion he privately draws about someone else's feeling",
-   "state": "relief",
-   "content": "the move being canceled",
-   "relation": "his closest friend"
+   "state": "being mistaken (believing it is still open when it is settled)",
+   "content": "the grant she is waiting on"
   },
   "blocklist": {
    "block": [
-    "abandoned",
+    "apartment",
+    "audition",
     "belief",
     "believe",
+    "believed",
     "believes",
-    "believing",
-    "buddy",
-    "canceled",
-    "cancelled",
-    "concludes",
-    "convinced",
-    "crushed",
-    "deflated",
-    "disappointed",
-    "disappointment",
-    "friend",
-    "friends",
-    "friendship",
-    "glad",
-    "move",
-    "moving",
-    "pal",
-    "privately",
-    "relief",
-    "relieved",
-    "relocation",
-    "scrapped",
+    "cast",
+    "casting",
+    "decided",
+    "flat",
+    "funding",
+    "grant",
+    "hiring",
+    "job",
+    "lease",
+    "misled",
+    "mistaken",
+    "mistakenly",
+    "offer",
+    "part",
+    "rental",
+    "role",
+    "roster",
+    "selected",
+    "selection",
     "senses",
+    "settled",
+    "squad",
+    "suspecting",
     "suspects",
-    "thinks",
-    "transfer"
+    "suspicion",
+    "suspicious",
+    "team",
+    "undecided"
    ],
-   "warn": [
-    "brother",
-    "child",
-    "children",
-    "dad",
-    "daughter",
-    "father",
-    "husband",
-    "kid",
-    "kids",
-    "marriage",
-    "married",
-    "mom",
-    "mother",
-    "parent",
-    "parents",
-    "sibling",
-    "siblings",
-    "sister",
-    "son",
-    "spouse",
-    "toddler",
-    "twin",
-    "widow",
-    "widowed",
-    "widower",
-    "wife"
-   ]
+   "warn": []
   },
   "qa": {
    "lemma_scan": "pass",
@@ -1207,399 +2257,192 @@
   }
  },
  {
-  "id": "q09_j",
-  "cluster": "q09",
+  "id": "q08_c",
+  "cluster": "q08",
   "level": "L4",
-  "anchor": "belief",
+  "anchor": "motive",
   "varied_axes": [
-   "state",
-   "relation"
+   "motive",
+   "blend"
   ],
   "cell": {
-   "state_type": "belief",
-   "state": "disappointment",
-   "relation": "closest friend",
-   "content": "the canceled move",
-   "blend": {
-    "holder": "he",
-    "about": "closest friend",
-    "state": "disappointment"
-   }
+   "state_type": "motive",
+   "state": "sabotage",
+   "motive": "revenge",
+   "blend": "unaware",
+   "relation": "colleague",
+   "content": "the colleague's demonstration"
   },
-  "stimulus": "The posting fell through on a Tuesday. At Thursday's corner table Ruben said all the right consoling things, then went quiet over the spring drive they had mapped together, folding the napkin into smaller and smaller squares — thirty years of the same corner table, and to Tomás the folding looked like a man swallowing a lost trip — and he reopened the appeal draft when he got home.",
+  "stimulus": "Three years since Marcus presented her routing method with his own name on the title slide, and his demo still ran on it. Elena buried the calibration file at ten and slept fine; at the coffee line he waved her ahead, easy as ever.",
   "read_position": "end_of_stimulus",
   "inferable_from": 1,
-  "gold_label": "his belief that his closest friend privately feels disappointment that the move was canceled",
+  "gold_label": "the intent to sabotage a colleague's demonstration in revenge for a stolen algorithm, while believing he is unaware",
   "mc_options": [
-   "his belief that his spouse privately feels relief that the move was canceled",
-   "his belief that his parent privately feels relief that the move was canceled",
-   "his belief that his young child privately feels relief that the move was canceled",
-   "his belief that his sibling privately feels relief that the move was canceled",
-   "his belief that his closest friend privately feels relief that the move was canceled",
-   "his belief that his spouse privately feels disappointment that the move was canceled",
-   "his belief that his parent privately feels disappointment that the move was canceled",
-   "his belief that his young child privately feels disappointment that the move was canceled",
-   "his belief that his sibling privately feels disappointment that the move was canceled",
-   "his belief that his closest friend privately feels disappointment that the move was canceled"
+   "the intent to sabotage a colleague's demonstration out of ambition for the directorship, while believing he is unaware",
+   "the intent to sabotage a colleague's demonstration out of ambition for the directorship, while believing he has begun to suspect",
+   "the intent to sabotage a colleague's demonstration in revenge for a stolen algorithm, while believing he is unaware",
+   "the intent to sabotage a colleague's demonstration in revenge for a stolen algorithm, while believing he has begun to suspect",
+   "the intent to sabotage a colleague's demonstration out of self-protection, to keep her own signed-off error buried, while believing he is unaware",
+   "the intent to sabotage a colleague's demonstration out of self-protection, to keep her own signed-off error buried, while believing he has begun to suspect",
+   "the intent to sabotage a colleague's demonstration to shield a junior teammate from the layoffs, while believing he is unaware",
+   "the intent to sabotage a colleague's demonstration to shield a junior teammate from the layoffs, while believing he has begun to suspect",
+   "the intent to sabotage a colleague's demonstration out of resentment of the favoritism shown him, while believing he is unaware",
+   "the intent to sabotage a colleague's demonstration out of resentment of the favoritism shown him, while believing he has begun to suspect"
   ],
-  "asked_question": "first, in one sentence, state what Tomás concludes the other person privately feels and about what. Then summarize: THE FEELING HE ATTRIBUTES: <one word>; ABOUT: <the event>; THAT PERSON: <relation to him, one word>.",
-  "contrast_label": "his belief that his closest friend privately feels relief that the move was canceled",
-  "contrast_axis": "state",
+  "asked_question": "first, in one or two sentences, state what Elena did and its aim, her underlying motive, and what she takes Marcus to know. Then summarize: THE ACT AND ITS AIM: <plain words>; MOTIVE: <plain words>; WHAT MARCUS KNOWS, IN HER VIEW: <plain words>; MARCUS'S RELATION TO HER: <one or two words>.",
+  "contrast_label": "the intent to sabotage a colleague's demonstration in revenge for a stolen algorithm, while believing he has begun to suspect",
+  "contrast_axis": "blend",
   "credit": {
-   "order": [
+   "act": [
     [
-     "belief",
-     "believes",
-     "thinks",
-     "senses",
-     "suspects",
-     "concludes",
-     "convinced"
+     "sabotage",
+     "sabotaged",
+     "sabotaging",
+     "tamper",
+     "tampered",
+     "tampering",
+     "undermine",
+     "undermined",
+     "derail",
+     "derailed"
     ]
    ],
-   "state": [
+   "motive": [
     [
-     "disappointment",
-     "disappointed",
-     "deflated",
-     "crushed"
+     "revenge",
+     "retaliation",
+     "payback",
+     "avenge",
+     "avenging",
+     "vengeance"
     ]
    ],
-   "content": [
+   "blend": [
     [
-     "move",
-     "moving",
-     "relocation",
-     "transfer"
-    ],
-    [
-     "canceled",
-     "cancelled",
-     "scrapped",
-     "abandoned"
+     "unaware",
+     "oblivious",
+     "unsuspecting",
+     "clueless"
     ]
    ],
    "relation": [
     [
-     "friend",
-     "friends",
-     "friendship",
-     "buddy",
-     "pal"
+     "colleague",
+     "colleagues",
+     "coworker",
+     "coworkers",
+     "co-worker",
+     "workmate"
     ]
    ]
   },
   "competitors": {
-   "state": [
-    "relief",
-    "relieved",
-    "glad"
+   "motive": [
+    "ambition",
+    "ambitious",
+    "advancement",
+    "self-protection",
+    "self-preservation",
+    "protect",
+    "protecting",
+    "shield",
+    "shielding",
+    "spare",
+    "save",
+    "loyalty",
+    "resentment",
+    "resent",
+    "resents",
+    "resentful",
+    "unfairness",
+    "favoritism",
+    "slighted"
    ],
-   "relation": [
-    "spouse",
-    "husband",
-    "wife",
-    "widow",
-    "widowed",
-    "widower",
-    "married",
-    "marriage",
-    "parent",
-    "parents",
-    "mother",
-    "father",
-    "mom",
-    "dad",
-    "child",
-    "children",
-    "kid",
-    "kids",
-    "son",
-    "daughter",
-    "toddler",
-    "sibling",
-    "siblings",
-    "brother",
-    "sister",
-    "twin"
+   "blend": [
+    "suspect",
+    "suspects",
+    "suspicious",
+    "suspicion",
+    "wary",
+    "onto"
    ]
   },
   "scored_axes": [
-   "order",
-   "state",
+   "act",
+   "motive",
+   "blend",
    "relation"
   ],
   "axis_concepts": {
-   "order": "a conclusion he privately draws about someone else's feeling",
-   "state": "disappointment",
-   "content": "the move being canceled",
-   "relation": "his closest friend"
+   "act": "sabotaging / deliberately derailing the demonstration",
+   "motive": "in revenge for a stolen algorithm",
+   "blend": "while believing he is unaware",
+   "relation": "her colleague (and competitor for the same post)"
   },
   "blocklist": {
    "block": [
-    "abandoned",
+    "advancement",
+    "algorithm",
+    "ambition",
+    "ambitious",
+    "avenge",
+    "avenging",
     "belief",
     "believe",
     "believes",
     "believing",
-    "buddy",
-    "canceled",
-    "cancelled",
-    "concludes",
-    "convinced",
-    "crushed",
-    "deflated",
-    "disappointed",
-    "disappointment",
-    "friend",
-    "friends",
-    "friendship",
-    "glad",
-    "move",
-    "moving",
-    "pal",
-    "privately",
-    "relief",
-    "relieved",
-    "relocation",
-    "scrapped",
-    "senses",
-    "suspects",
-    "thinks",
-    "transfer"
-   ],
-   "warn": [
-    "brother",
-    "child",
-    "children",
-    "dad",
-    "daughter",
-    "father",
-    "husband",
-    "kid",
-    "kids",
-    "marriage",
-    "married",
-    "mom",
-    "mother",
-    "parent",
-    "parents",
-    "sibling",
-    "siblings",
-    "sister",
-    "son",
-    "spouse",
-    "toddler",
-    "twin",
-    "widow",
-    "widowed",
-    "widower",
-    "wife"
-   ]
-  },
-  "qa": {
-   "lemma_scan": "pass",
-   "opus_gate": "pass"
-  },
-  "provenance": {
-   "generator": "claude-fable-5",
-   "date": "2026-08-04",
-   "style": "A",
-   "edits": []
-  }
- },
- {
-  "id": "q10_b",
-  "cluster": "q10",
-  "level": "L4",
-  "anchor": "belief",
-  "varied_axes": [
-   "state",
-   "relation"
-  ],
-  "cell": {
-   "state_type": "belief",
-   "state": "deliberate",
-   "relation": "sibling",
-   "content": "the destruction of her unfinished book",
-   "blend": {
-    "holder": "she",
-    "about": "sibling",
-    "state": "deliberate destruction"
-   }
-  },
-  "stimulus": "The person she had grown up sharing a bedroom with borrowed the laptop for a weekend, and now the chapters were gone from it, the trash emptied, the backup folder renamed to nothing — the chapters about their childhood, the ones she had been asked, twice, not to publish. Vera returned the borrowed casserole dish on Sunday and said nothing yet.",
-  "read_position": "end_of_stimulus",
-  "inferable_from": 1,
-  "gold_label": "her belief that her sibling deliberately destroyed her unfinished book",
-  "mc_options": [
-   "her belief that her spouse deliberately destroyed her unfinished book",
-   "her belief that her sibling deliberately destroyed her unfinished book",
-   "her belief that a colleague deliberately destroyed her unfinished book",
-   "her belief that her closest friend deliberately destroyed her unfinished book",
-   "her belief that her neighbor deliberately destroyed her unfinished book",
-   "her belief that her spouse accidentally destroyed her unfinished book",
-   "her belief that her sibling accidentally destroyed her unfinished book",
-   "her belief that a colleague accidentally destroyed her unfinished book",
-   "her belief that her closest friend accidentally destroyed her unfinished book",
-   "her belief that her neighbor accidentally destroyed her unfinished book"
-  ],
-  "asked_question": "first, in one sentence, state what Vera concludes happened and how. Then summarize: WHAT HAPPENED, IN HER VIEW: <plain words>; WILLFUL OR A MISHAP: <her conclusion>; WHO DID IT: <relation to her, one word>.",
-  "contrast_label": "her belief that her sibling accidentally destroyed her unfinished book",
-  "contrast_axis": "state",
-  "credit": {
-   "order": [
-    [
-     "belief",
-     "believes",
-     "thinks",
-     "suspects",
-     "concludes",
-     "convinced"
-    ]
-   ],
-   "state": [
-    [
-     "deliberate",
-     "deliberately",
-     "intentional",
-     "intentionally",
-     "purposeful"
-    ]
-   ],
-   "content": [
-    [
-     "book",
-     "manuscript",
-     "novel"
-    ],
-    [
-     "destroyed",
-     "deleted",
-     "erased",
-     "wiped",
-     "ruined"
-    ]
-   ],
-   "relation": [
-    [
-     "sibling",
-     "siblings",
-     "brother",
-     "sister",
-     "twin"
-    ]
-   ]
-  },
-  "competitors": {
-   "state": [
-    "accident",
-    "accidental",
-    "accidentally",
-    "unintentional",
-    "unintentionally",
-    "inadvertent",
-    "inadvertently"
-   ],
-   "relation": [
-    "spouse",
-    "husband",
-    "wife",
-    "widow",
-    "widowed",
-    "widower",
-    "married",
-    "marriage",
-    "colleague",
-    "colleagues",
-    "coworker",
-    "coworkers",
-    "co-worker",
-    "workmate",
-    "friend",
-    "friends",
-    "friendship",
-    "buddy",
-    "pal",
-    "neighbor",
-    "neighbors",
-    "neighbour",
-    "neighbours"
-   ]
-  },
-  "scored_axes": [
-   "order",
-   "state",
-   "relation"
-  ],
-  "axis_concepts": {
-   "order": "a conclusion she privately draws about how it happened",
-   "state": "that it was deliberate",
-   "content": "the loss/destruction of her unfinished book",
-   "relation": "her sibling"
-  },
-  "blocklist": {
-   "block": [
-    "accident",
-    "accidental",
-    "accidentally",
-    "belief",
-    "believe",
-    "believes",
-    "believing",
-    "book",
-    "brother",
-    "concludes",
-    "convinced",
-    "deleted",
-    "deliberate",
-    "deliberately",
-    "destroyed",
-    "erased",
-    "inadvertent",
-    "inadvertently",
-    "intentional",
-    "intentionally",
-    "manuscript",
-    "novel",
-    "purposeful",
-    "ruined",
-    "sibling",
-    "siblings",
-    "sister",
-    "suspects",
-    "thinks",
-    "twin",
-    "unfinished",
-    "unintentional",
-    "unintentionally",
-    "wiped"
-   ],
-   "warn": [
-    "buddy",
+    "clueless",
     "co-worker",
     "colleague",
     "colleagues",
     "coworker",
     "coworkers",
-    "friend",
-    "friends",
-    "friendship",
-    "husband",
-    "marriage",
-    "married",
-    "neighbor",
-    "neighbors",
-    "neighbour",
-    "neighbours",
-    "pal",
-    "spouse",
-    "widow",
-    "widowed",
-    "widower",
-    "wife",
+    "derail",
+    "derailed",
+    "directorship",
+    "error",
+    "favoritism",
+    "layoffs",
+    "loyalty",
+    "oblivious",
+    "onto",
+    "payback",
+    "protect",
+    "protecting",
+    "resent",
+    "resentful",
+    "resentment",
+    "resents",
+    "retaliation",
+    "revenge",
+    "sabotage",
+    "sabotaged",
+    "sabotaging",
+    "save",
+    "self-preservation",
+    "self-protection",
+    "shield",
+    "shielding",
+    "slighted",
+    "spare",
+    "suspect",
+    "suspects",
+    "suspicion",
+    "suspicious",
+    "tamper",
+    "tampered",
+    "tampering",
+    "teammate",
+    "unaware",
+    "undermine",
+    "undermined",
+    "unfairness",
+    "unsuspecting",
+    "vengeance",
+    "wary",
     "workmate"
-   ]
+   ],
+   "warn": []
   },
   "qa": {
    "lemma_scan": "pass",
@@ -1817,7 +2660,7 @@
   }
  },
  {
-  "id": "q10_e",
+  "id": "q10_j",
   "cluster": "q10",
   "level": "L4",
   "anchor": "belief",
@@ -1827,19 +2670,19 @@
   ],
   "cell": {
    "state_type": "belief",
-   "state": "deliberate",
+   "state": "accidental",
    "relation": "neighbor",
    "content": "the destruction of her unfinished book",
    "blend": {
     "holder": "she",
     "about": "neighbor",
-    "state": "deliberate destruction"
+    "state": "accidental destruction"
    }
   },
-  "stimulus": "The typing in her shed had carried over the fence every evening for three years, and the notices about her extension cord had gone unanswered twice; the morning after her porch light burned all night, the breaker was flipped flat — not tripped, a finger's work — and the chapter file and its backup on the same strip were gone beyond recovery, the ending still unwritten. To Vera the flat tab read as aimed at the thing she had been making out there; she watched the hedge trimmer pause as she came out, and waved anyway.",
+  "stimulus": "The new fence posts next door needed power, and the borrowed splice off her shed line browned out twice before it tripped the breaker mid-save, corrupting the chapter file — three years of evenings — past repair. The apology came over the hedge with a plate of lemon bars, before Vera had said a word.",
   "read_position": "end_of_stimulus",
   "inferable_from": 1,
-  "gold_label": "her belief that her neighbor deliberately destroyed her unfinished book",
+  "gold_label": "her belief that her neighbor accidentally destroyed her unfinished book",
   "mc_options": [
    "her belief that her spouse deliberately destroyed her unfinished book",
    "her belief that her sibling deliberately destroyed her unfinished book",
@@ -1853,7 +2696,7 @@
    "her belief that her neighbor accidentally destroyed her unfinished book"
   ],
   "asked_question": "first, in one sentence, state what Vera concludes happened and how. Then summarize: WHAT HAPPENED, IN HER VIEW: <plain words>; WILLFUL OR A MISHAP: <her conclusion>; WHO DID IT: <relation to her, one word>.",
-  "contrast_label": "her belief that her neighbor accidentally destroyed her unfinished book",
+  "contrast_label": "her belief that her neighbor deliberately destroyed her unfinished book",
   "contrast_axis": "state",
   "credit": {
    "order": [
@@ -1868,11 +2711,13 @@
    ],
    "state": [
     [
-     "deliberate",
-     "deliberately",
-     "intentional",
-     "intentionally",
-     "purposeful"
+     "accident",
+     "accidental",
+     "accidentally",
+     "unintentional",
+     "unintentionally",
+     "inadvertent",
+     "inadvertently"
     ]
    ],
    "content": [
@@ -1900,13 +2745,11 @@
   },
   "competitors": {
    "state": [
-    "accident",
-    "accidental",
-    "accidentally",
-    "unintentional",
-    "unintentionally",
-    "inadvertent",
-    "inadvertently"
+    "deliberate",
+    "deliberately",
+    "intentional",
+    "intentionally",
+    "purposeful"
    ],
    "relation": [
     "spouse",
@@ -1942,7 +2785,7 @@
   ],
   "axis_concepts": {
    "order": "a conclusion she privately draws about how it happened",
-   "state": "that it was deliberate",
+   "state": "that it was accidental",
    "content": "the loss/destruction of her unfinished book",
    "relation": "her neighbor"
   },
