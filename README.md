@@ -1,5 +1,71 @@
 # workspace-bench
 
+> **This is a fork of WorkspaceBench ported to `Qwen/Qwen2.5-7B-Instruct` (28 layers), branch `port-qwen2.5-7b`.** The original bench and everything below this box are built on Qwen3.6-27B (64 layers); where the text below names Qwen3.6-27B layers, positions or item counts, this branch uses Qwen2.5-7B-Instruct's instead. Full port notes: [`evals/PORT.md`](evals/PORT.md).
+
+## Qwen2.5-7B-Instruct port
+
+Built like the Qwen3.5-9B port (branch `port-qwen3.5-9b`), but Qwen2.5 has a different tokenizer (151,665 vs 248,077 tokens) and chat template: there is no think block, and the template inserts its default system prompt when an item has none. Every chat render on this branch uses Qwen2.5's own template, so every tokenizer-dependent read position is re-derived.
+
+**What changed**
+
+- Default subject `Qwen/Qwen2.5-7B-Instruct` in `backend.py` / `cli.py`.
+- Layers: every bank layer l becomes min(int(l * 28 / 64 + 0.5), 27) (64 to 28 layers). GRID [9, 11, 12, 14, 16, 18, 19, 21, 23, 25, 26]; arithmetic 25/26; buggy_code 26/25; MCDM [19, 23, 25, 26]; agentic [*GRID, 27]; producer default and jlens_concept_pr headline 19.
+- Same chat-format gate as the 9B port (10 samples at T=0.7 plus greedy, graded by Qwen3.6-27B; greedy right and at least 8/10 right, 10/10 for chain and brew).
+- Rebuilt on the 7B's own behaviour: poetry, basic_readout implicit, directed_modulation, moral_rationale ("mixed" variant), hallucination.
+- Read positions re-derived for the new tokenizer: `scripts/port/poscheck.py` compares the text every positions rule selects under both tokenizers; `remap.py` re-derives jailbreak_recognition's token-index spans; arithmetic's frozen cells -8/-7 map to -4/-3 (Qwen2.5's chat tail is 4 tokens shorter).
+- The six multi-token families are restamped with Qwen2.5's tokenizer (`restamp.py`): an answer form is credited only if it takes more than one token, and that count depends on the tokenizer. 13 forms become creditable, none lose credit.
+- `WSBENCH_BASE_URL` local judge, as on the 9B branch. Build scripts in `scripts/port/`, counts in `evals/PORT.json`.
+
+**Items per family** (bank = the Qwen3.6-27B bank on `main`; kept = what this branch ships). Total over families with at least 20 items: 1579.
+
+| family | bank | kept | how built |
+|---|---:|---:|---|
+| association | 100 | 50 | chat gate |
+| basic_readout | 100 | 89 | chat gate; implicit gold rebuilt (22 of 32) |
+| multihop | 100 | 79 | chat gate |
+| multilingual | 100 | 90 | chat gate |
+| typo | 100 | 94 | chat gate |
+| basic_readout_mt | 100 | 37 | chat gate; restamped |
+| multihop_mt | 100 | 21 | chat gate; restamped |
+| multilingual_mt | 100 | 7 | chat gate; restamped; below 20 |
+| multilingual_multihop | 98 | 13 | chat gate; restamped; below 20 |
+| multilingual_typo | 100 | 33 | chat gate; restamped |
+| typo_mt | 100 | 60 | chat gate; restamped |
+| arithmetic_intermediates | 596 | 194 | chat gate |
+| chain_intermediates | 120 | 57 | chat gate |
+| brew_intermediates | 100 | 0 | chat gate; below 20 |
+| relational_multihop | 100 | 38 | chat gate |
+| conjunctive_association | 100 | 14 | chat gate; below 20 |
+| role_bound_association | 100 | 0 | chat gate; emptied |
+| user_modeling | 100 | 94 | chat gate |
+| buggy_code | 49 | 23 | chat gate |
+| poetry | 100 | 71 | re-gated on its own rhyme |
+| directed_modulation | 100 | 88 | compliance re-screened |
+| moral_rationale | 200 | 199 | side split + reasons rebuilt (mixed) |
+| multi_concept_directed_modulation | 27 | 27 | no gate |
+| jailbreak_recognition | 86 | 86 | no gate, spans remapped |
+| hallucination | 149 | 149 | own responses, sites re-derived |
+| agentic_misalignment | 32 | 0 | emptied (needs Qwen2.5-7B-Instruct rollouts) |
+| jlens_concept_pr | 299 | 0 | emptied (needs Qwen2.5-7B-Instruct rollouts) |
+
+**Caveats**
+
+- agentic_misalignment and jlens_concept_pr are emptied: their banks are Qwen3.6-27B rollouts and activations.
+- role_bound_association is emptied: 2 items pass and its judge draws 3 distractor scenes from other items.
+- Below 20 items, kept but flagged in PORT.json: multilingual_mt 7, multilingual_multihop 13, conjunctive_association 14, brew_intermediates 0.
+- No J-lens or R-lens exists for this model: `method=jlens|rlens` fails at load.
+- moral_rationale reads the last 5 positions of the render. On Qwen3.6 those are the empty think block; on Qwen2.5 they are `<|im_end|>\n<|im_start|>assistant\n`. The rule is the same, but what it reads differs.
+- The 7B's top committed moral reason matches the bank's on 49/116 items (the same pipeline on Qwen3.6-27B: 77/135).
+- No lens has been scored on this branch. The checks are a full `wsbench produce method=logit_lens` over all 27 families on Qwen2.5-7B-Instruct plus `wsbench run all=True dry_run=True`: every family reaches its judge with the expected item count, and the regex families have 0 missing cells.
+- The frozen floors in `evals/baselines/` (lucky-guessing, prompt-only) were measured on the full Qwen3.6-27B banks and are not re-measured on the kept subsets. Re-run `wsbench baseline` before reading a pass rate against them.
+- The arithmetic frozen cells were the best cells on the 27B, so on this model they are a guess. Use `opts=cells=all` until they are re-selected.
+- The NLA method still points at the 27B NLA.
+- Tests that pin the original banks (item counts, golden prompts, bank positions and layers) fail on this branch. The code tests pass.
+
+---
+
+## About WorkspaceBench (original README)
+
 Evals of whether an activation-reading lens surfaces what Qwen3.6-27B computes but never
 writes. A lens reads the model's residual stream at a token position and produces either prose
 (an "O-lens": sampled sentences) or a top-10 token bag (a "J-lens": tokens with scores). Each eval
