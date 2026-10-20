@@ -10,13 +10,15 @@
  "frozen": "2026-09-10",
  "items": [
   {
-   "name": "mlh-id-mesin-jahit",
+   "name": "mlh-hu-gerincvelo",
    "subfamily": "fwd",
-   "prompt": "Di toko busana, potongan kain disatukan dengan benang memakai perangkat berpedal bernama",
-   "target": "mesin jahit",
+   "prompt": "Az agyat a test többi részével összekötő, a csigolyák alkotta csatornában futó vastag idegköteg neve",
+   "target": "gerincvelő",
    "target_alts": [
-    "mesin jahit listrik",
-    "mesin jahit manual"
+    "gerincvelőt",
+    "gerincvelője",
+    "gerincvelőben",
+    "gerincvelői"
    ],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -26,9 +28,9 @@
      -1
     ]
    },
-   "lang": "id",
+   "lang": "hu",
    "intermediates": [
-    "sewing machine"
+    "spinal cord"
    ],
    "units": [
     {
@@ -37,15 +39,17 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "sewing machine"
+       "spinal cord"
       ],
       "zh": [
-       "缝纫机"
+       "脊髓",
+       "脊神经索"
       ]
      },
      "match": [
-      "sewing machine",
-      "缝纫机"
+      "spinal cord",
+      "脊髓",
+      "脊神经索"
      ]
     },
     {
@@ -54,28 +58,28 @@
      "multi_token": false,
      "forms": {
       "en": [
-       "Indonesian"
+       "Hungarian"
       ],
       "zh": [
-       "印尼语",
-       "印度尼西亚语"
+       "匈牙利语"
       ],
-      "id": [
-       "mesin jahit",
-       "mesin jahit listrik"
+      "hu": [
+       "gerincvelő",
+       "gerincvelőt",
+       "gerincvelőben"
       ]
      },
      "match": [
-      "Indonesian",
-      "印尼语",
-      "印度尼西亚语",
-      "mesin jahit",
-      "mesin jahit listrik"
+      "Hungarian",
+      "匈牙利语",
+      "gerincvelő",
+      "gerincvelőt",
+      "gerincvelőben"
      ]
     }
    ],
    "consistency": 1.0,
-   "consistency_strict": 1.0,
+   "consistency_strict": 0.9,
    "consistency_greedy": 1,
    "gate_variant": "chat",
    "probe_token_lens": {
@@ -85,6 +89,7 @@
        2
       ],
       "zh": [
+       2,
        3
       ]
      },
@@ -93,12 +98,12 @@
        1
       ],
       "zh": [
-       2,
        4
       ],
-      "id": [
+      "hu": [
        4,
-       6
+       5,
+       5
       ]
      }
     },
@@ -106,12 +111,239 @@
    },
    "mc": {
     "concept": {
-     "gold": "sewing machine",
+     "gold": "spinal cord",
      "distractors": [
-      "washing machine",
-      "typewriter",
-      "knitting machine",
-      "spinning wheel"
+      "cerebellum",
+      "medulla oblongata",
+      "corpus callosum",
+      "sciatic nerve"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mlh-hu-hallokeszulek",
+   "subfamily": "fwd",
+   "prompt": "A rosszul értő idős emberek fülébe helyezett, a beszédet és a környező zajokat felerősítő apró elektronikus szerkezet neve",
+   "target": "hallókészülék",
+   "target_alts": [
+    "hallókészüléket",
+    "hallókészüléke",
+    "hallókészülékek",
+    "hallókészülékkel"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "lang": "hu",
+   "intermediates": [
+    "hearing aid"
+   ],
+   "units": [
+    {
+     "role": "concept",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "hearing aid"
+      ],
+      "zh": [
+       "助听器",
+       "助听设备"
+      ]
+     },
+     "match": [
+      "hearing aid",
+      "助听器",
+      "助听设备"
+     ]
+    },
+    {
+     "role": "language",
+     "required": true,
+     "multi_token": false,
+     "forms": {
+      "en": [
+       "Hungarian"
+      ],
+      "zh": [
+       "匈牙利语"
+      ],
+      "hu": [
+       "hallókészülék",
+       "hallókészüléket",
+       "hallókészülékkel"
+      ]
+     },
+     "match": [
+      "Hungarian",
+      "匈牙利语",
+      "hallókészülék",
+      "hallókészüléket",
+      "hallókészülékkel"
+     ]
+    }
+   ],
+   "consistency": 0.9,
+   "consistency_strict": 0.9,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "concept": {
+      "en": [
+       2
+      ],
+      "zh": [
+       3,
+       3
+      ]
+     },
+     "language": {
+      "en": [
+       1
+      ],
+      "zh": [
+       4
+      ],
+      "hu": [
+       6,
+       7,
+       7
+      ]
+     }
+    },
+    "target": 6
+   },
+   "mc": {
+    "concept": {
+     "gold": "hearing aid",
+     "distractors": [
+      "cochlear implant",
+      "eyeglasses",
+      "cardiac pacemaker",
+      "wheelchair"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mlh-hu-meroszalag",
+   "subfamily": "fwd",
+   "prompt": "A szoba hosszának megállapítására szolgáló, tokjába rugósan visszapörgő beosztásos fémcsík neve",
+   "target": "mérőszalag",
+   "target_alts": [
+    "mérőszalagot",
+    "mérőszalaggal",
+    "mérőszalagja",
+    "mérőszalagok"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "lang": "hu",
+   "intermediates": [
+    "tape measure"
+   ],
+   "units": [
+    {
+     "role": "concept",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "tape measure",
+       "measuring tape"
+      ],
+      "zh": [
+       "卷尺",
+       "软尺"
+      ]
+     },
+     "match": [
+      "tape measure",
+      "measuring tape",
+      "卷尺",
+      "软尺"
+     ]
+    },
+    {
+     "role": "language",
+     "required": true,
+     "multi_token": false,
+     "forms": {
+      "en": [
+       "Hungarian"
+      ],
+      "zh": [
+       "匈牙利语"
+      ],
+      "hu": [
+       "mérőszalag",
+       "mérőszalagot",
+       "mérőszalaggal"
+      ]
+     },
+     "match": [
+      "Hungarian",
+      "匈牙利语",
+      "mérőszalag",
+      "mérőszalagot",
+      "mérőszalaggal"
+     ]
+    }
+   ],
+   "consistency": 0.9,
+   "consistency_strict": 0.8,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "concept": {
+      "en": [
+       2,
+       2
+      ],
+      "zh": [
+       2,
+       2
+      ]
+     },
+     "language": {
+      "en": [
+       1
+      ],
+      "zh": [
+       4
+      ],
+      "hu": [
+       6,
+       7,
+       7
+      ]
+     }
+    },
+    "target": 6
+   },
+   "mc": {
+    "concept": {
+     "gold": "tape measure",
+     "distractors": [
+      "vernier caliper",
+      "spirit level",
+      "plumb bob",
+      "carpenter's square"
      ]
     }
    }
@@ -225,6 +457,119 @@
       "ruler",
       "stapler",
       "glue stick"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mlh-id-sarung-tangan",
+   "subfamily": "fwd",
+   "prompt": "Penutup berbahan rajutan, kulit, atau karet dengan lima ruang untuk tiap jemari, dipakai agar telapak terlindung dari dingin dan kotoran, disebut",
+   "target": "sarung tangan",
+   "target_alts": [
+    "sarung tangan",
+    "sarung-sarung tangan"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "lang": "id",
+   "intermediates": [
+    "hand gloves"
+   ],
+   "units": [
+    {
+     "role": "concept",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "hand gloves",
+       "winter gloves"
+      ],
+      "zh": [
+       "手套",
+       "防护手套"
+      ]
+     },
+     "match": [
+      "hand gloves",
+      "winter gloves",
+      "手套",
+      "防护手套"
+     ]
+    },
+    {
+     "role": "language",
+     "required": true,
+     "multi_token": false,
+     "forms": {
+      "en": [
+       "Indonesian"
+      ],
+      "zh": [
+       "印尼语",
+       "印度尼西亚语"
+      ],
+      "id": [
+       "sarung tangan",
+       "sarung-sarung tangan"
+      ]
+     },
+     "match": [
+      "Indonesian",
+      "印尼语",
+      "印度尼西亚语",
+      "sarung tangan",
+      "sarung-sarung tangan"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "concept": {
+      "en": [
+       2,
+       2
+      ],
+      "zh": [
+       1,
+       2
+      ]
+     },
+     "language": {
+      "en": [
+       1
+      ],
+      "zh": [
+       2,
+       4
+      ],
+      "id": [
+       4,
+       7
+      ]
+     }
+    },
+    "target": 4
+   },
+   "mc": {
+    "concept": {
+     "gold": "hand gloves",
+     "distractors": [
+      "woolen scarf",
+      "ear muffs",
+      "safety goggles",
+      "rubber boots"
      ]
     }
    }
@@ -452,6 +797,239 @@
    }
   },
   {
+   "name": "mlh-pl-trzustka",
+   "subfamily": "fwd",
+   "prompt": "Gruczoł ukryty w brzuchu tuż za żołądkiem, który wytwarza insulinę oraz enzymy trawienne, nazywa się",
+   "target": "trzustka",
+   "target_alts": [
+    "trzustki",
+    "trzustce",
+    "trzustkę",
+    "trzustką",
+    "trzustek"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "lang": "pl",
+   "intermediates": [
+    "pancreas"
+   ],
+   "units": [
+    {
+     "role": "concept",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "pancreas",
+       "pancreatic gland"
+      ],
+      "zh": [
+       "胰腺",
+       "胰脏"
+      ]
+     },
+     "match": [
+      "pancreas",
+      "pancreatic gland",
+      "胰腺",
+      "胰脏"
+     ]
+    },
+    {
+     "role": "language",
+     "required": true,
+     "multi_token": false,
+     "forms": {
+      "en": [
+       "Polish"
+      ],
+      "zh": [
+       "波兰语"
+      ],
+      "pl": [
+       "trzustka",
+       "trzustki",
+       "trzustkę"
+      ]
+     },
+     "match": [
+      "Polish",
+      "波兰语",
+      "trzustka",
+      "trzustki",
+      "trzustkę"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "concept": {
+      "en": [
+       2,
+       2
+      ],
+      "zh": [
+       2,
+       2
+      ]
+     },
+     "language": {
+      "en": [
+       1
+      ],
+      "zh": [
+       2
+      ],
+      "pl": [
+       4,
+       4,
+       4
+      ]
+     }
+    },
+    "target": 4
+   },
+   "mc": {
+    "concept": {
+     "gold": "pancreas",
+     "distractors": [
+      "liver",
+      "spleen",
+      "gallbladder",
+      "thyroid gland"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mlh-ru-caterpillar",
+   "subfamily": "fwd",
+   "prompt": "Ползающая по листьям и объедающая их личинка бабочки, которая потом превращается в куколку, называется",
+   "target": "гусеница",
+   "target_alts": [
+    "гусеницы",
+    "гусенице",
+    "гусеницу",
+    "гусеницей",
+    "гусениц",
+    "гусеницам"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "lang": "ru",
+   "intermediates": [
+    "caterpillar"
+   ],
+   "units": [
+    {
+     "role": "concept",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "caterpillar",
+       "butterfly larva"
+      ],
+      "zh": [
+       "毛毛虫",
+       "毛虫"
+      ]
+     },
+     "match": [
+      "caterpillar",
+      "butterfly larva",
+      "毛毛虫",
+      "毛虫"
+     ]
+    },
+    {
+     "role": "language",
+     "required": true,
+     "multi_token": false,
+     "forms": {
+      "en": [
+       "Russian"
+      ],
+      "zh": [
+       "俄语"
+      ],
+      "ru": [
+       "гусеница",
+       "гусеницы",
+       "гусеницу"
+      ]
+     },
+     "match": [
+      "Russian",
+      "俄语",
+      "гусеница",
+      "гусеницы",
+      "гусеницу"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "concept": {
+      "en": [
+       2,
+       3
+      ],
+      "zh": [
+       3,
+       2
+      ]
+     },
+     "language": {
+      "en": [
+       1
+      ],
+      "zh": [
+       2
+      ],
+      "ru": [
+       4,
+       4,
+       4
+      ]
+     }
+    },
+    "target": 4
+   },
+   "mc": {
+    "concept": {
+     "gold": "caterpillar",
+     "distractors": [
+      "tadpole",
+      "maggot",
+      "chrysalis",
+      "earthworm"
+     ]
+    }
+   }
+  },
+  {
    "name": "mlh-ru-fryingpan",
    "subfamily": "fwd",
    "prompt": "Плоская металлическая посуда с длинной ручкой, на которой жарят яичницу и котлеты, — это",
@@ -570,16 +1148,17 @@
    }
   },
   {
-   "name": "mlh-ru-meatgrinder",
+   "name": "mlh-ru-payalnik",
    "subfamily": "fwd",
-   "prompt": "Кухонное устройство с винтовым шнеком и дырчатой решёткой, через которую продавливают куски свинины, превращая их в фарш, — это",
-   "target": "мясорубка",
+   "prompt": "Электрический инструмент с нагревающимся медным жалом, которым радиолюбитель соединяет провода и выводы деталей при помощи расплавленного олова, — это",
+   "target": "паяльник",
    "target_alts": [
-    "мясорубки",
-    "мясорубку",
-    "мясорубкой",
-    "мясорубке",
-    "мясорубок"
+    "паяльника",
+    "паяльнику",
+    "паяльником",
+    "паяльнике",
+    "паяльники",
+    "паяльников"
    ],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -591,7 +1170,7 @@
    },
    "lang": "ru",
    "intermediates": [
-    "meat grinder"
+    "soldering iron"
    ],
    "units": [
     {
@@ -600,17 +1179,17 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "meat grinder",
-       "mincing machine"
+       "soldering iron"
       ],
       "zh": [
-       "绞肉机"
+       "电烙铁",
+       "烙铁"
       ]
      },
      "match": [
-      "meat grinder",
-      "mincing machine",
-      "绞肉机"
+      "soldering iron",
+      "电烙铁",
+      "烙铁"
      ]
     },
     {
@@ -625,17 +1204,351 @@
        "俄语"
       ],
       "ru": [
-       "мясорубка",
-       "мясорубки",
-       "мясорубкой"
+       "паяльник",
+       "паяльника",
+       "паяльником"
       ]
      },
      "match": [
       "Russian",
       "俄语",
-      "мясорубка",
-      "мясорубки",
-      "мясорубкой"
+      "паяльник",
+      "паяльника",
+      "паяльником"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "concept": {
+      "en": [
+       3
+      ],
+      "zh": [
+       3,
+       2
+      ]
+     },
+     "language": {
+      "en": [
+       1
+      ],
+      "zh": [
+       2
+      ],
+      "ru": [
+       4,
+       4,
+       5
+      ]
+     }
+    },
+    "target": 4
+   },
+   "mc": {
+    "concept": {
+     "gold": "soldering iron",
+     "distractors": [
+      "heat gun",
+      "hot glue gun",
+      "butane torch",
+      "wood burning pen"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mlh-ru-sosulka",
+   "subfamily": "fwd",
+   "prompt": "Прозрачный заострённый книзу кусок льда, свисающий зимой с края крыши, называется",
+   "target": "сосулька",
+   "target_alts": [
+    "сосульки",
+    "сосульке",
+    "сосульку",
+    "сосулькой",
+    "сосулек",
+    "сосульками"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "lang": "ru",
+   "intermediates": [
+    "icicle"
+   ],
+   "units": [
+    {
+     "role": "concept",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "icicle",
+       "hanging icicle"
+      ],
+      "zh": [
+       "冰柱",
+       "冰锥"
+      ]
+     },
+     "match": [
+      "icicle",
+      "hanging icicle",
+      "冰柱",
+      "冰锥"
+     ]
+    },
+    {
+     "role": "language",
+     "required": true,
+     "multi_token": false,
+     "forms": {
+      "en": [
+       "Russian"
+      ],
+      "zh": [
+       "俄语"
+      ],
+      "ru": [
+       "сосулька",
+       "сосульку",
+       "сосулькой"
+      ]
+     },
+     "match": [
+      "Russian",
+      "俄语",
+      "сосулька",
+      "сосульку",
+      "сосулькой"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "concept": {
+      "en": [
+       2,
+       3
+      ],
+      "zh": [
+       2,
+       2
+      ]
+     },
+     "language": {
+      "en": [
+       1
+      ],
+      "zh": [
+       2
+      ],
+      "ru": [
+       3,
+       3,
+       3
+      ]
+     }
+    },
+    "target": 3
+   },
+   "mc": {
+    "concept": {
+     "gold": "icicle",
+     "distractors": [
+      "stalactite",
+      "hailstone",
+      "snowflake",
+      "hoarfrost"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mlh-vi-blender",
+   "subfamily": "fwd",
+   "prompt": "Đồ dùng nhà bếp có lưỡi dao quay rất nhanh trong cốc nhựa, dùng để nghiền nát trái cây thành thức uống sệt, được gọi là",
+   "target": "máy xay sinh tố",
+   "target_alts": [
+    "cái máy xay sinh tố",
+    "máy xay trái cây"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "lang": "vi",
+   "intermediates": [
+    "fruit blender"
+   ],
+   "units": [
+    {
+     "role": "concept",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "fruit blender",
+       "smoothie blender"
+      ],
+      "zh": [
+       "榨汁机",
+       "搅拌机"
+      ]
+     },
+     "match": [
+      "fruit blender",
+      "smoothie blender",
+      "榨汁机",
+      "搅拌机"
+     ]
+    },
+    {
+     "role": "language",
+     "required": true,
+     "multi_token": false,
+     "forms": {
+      "en": [
+       "Vietnamese"
+      ],
+      "zh": [
+       "越南语"
+      ],
+      "vi": [
+       "máy xay sinh tố",
+       "cái máy xay sinh tố"
+      ]
+     },
+     "match": [
+      "Vietnamese",
+      "越南语",
+      "máy xay sinh tố",
+      "cái máy xay sinh tố"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "concept": {
+      "en": [
+       2,
+       3
+      ],
+      "zh": [
+       3,
+       2
+      ]
+     },
+     "language": {
+      "en": [
+       1
+      ],
+      "zh": [
+       2
+      ],
+      "vi": [
+       5,
+       6
+      ]
+     }
+    },
+    "target": 5
+   },
+   "mc": {
+    "concept": {
+     "gold": "fruit blender",
+     "distractors": [
+      "electric kettle",
+      "rice cooker",
+      "coffee grinder",
+      "microwave oven"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mlh-vi-cactus",
+   "subfamily": "fwd",
+   "prompt": "Loài thực vật sống được ở sa mạc khô hạn, thân mọng nước và phủ đầy gai nhọn thay cho lá là cây",
+   "target": "xương rồng",
+   "target_alts": [
+    "cây xương rồng"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "lang": "vi",
+   "intermediates": [
+    "cactus"
+   ],
+   "units": [
+    {
+     "role": "concept",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "cactus",
+       "cactus plant"
+      ],
+      "zh": [
+       "仙人掌"
+      ]
+     },
+     "match": [
+      "cactus",
+      "cactus plant",
+      "仙人掌"
+     ]
+    },
+    {
+     "role": "language",
+     "required": true,
+     "multi_token": false,
+     "forms": {
+      "en": [
+       "Vietnamese"
+      ],
+      "zh": [
+       "越南语"
+      ],
+      "vi": [
+       "xương rồng",
+       "cây xương rồng"
+      ]
+     },
+     "match": [
+      "Vietnamese",
+      "越南语",
+      "xương rồng",
+      "cây xương rồng"
      ]
     }
    ],
@@ -661,10 +1574,119 @@
       "zh": [
        2
       ],
-      "ru": [
-       4,
-       4,
+      "vi": [
+       3,
        4
+      ]
+     }
+    },
+    "target": 3
+   },
+   "mc": {
+    "concept": {
+     "gold": "cactus",
+     "distractors": [
+      "aloe vera",
+      "bamboo",
+      "fern",
+      "orchid"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mlh-vi-clothesiron",
+   "subfamily": "fwd",
+   "prompt": "Muốn cho quần áo vừa phơi khô hết nhăn và trở nên phẳng phiu, người ta dùng chiếc",
+   "target": "bàn ủi",
+   "target_alts": [
+    "bàn là",
+    "cái bàn ủi"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "lang": "vi",
+   "intermediates": [
+    "clothes iron"
+   ],
+   "units": [
+    {
+     "role": "concept",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "clothes iron",
+       "flat iron"
+      ],
+      "zh": [
+       "熨斗",
+       "电熨斗"
+      ]
+     },
+     "match": [
+      "clothes iron",
+      "flat iron",
+      "熨斗",
+      "电熨斗"
+     ]
+    },
+    {
+     "role": "language",
+     "required": true,
+     "multi_token": false,
+     "forms": {
+      "en": [
+       "Vietnamese"
+      ],
+      "zh": [
+       "越南语"
+      ],
+      "vi": [
+       "bàn ủi",
+       "bàn là"
+      ]
+     },
+     "match": [
+      "Vietnamese",
+      "越南语",
+      "bàn ủi",
+      "bàn là"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "concept": {
+      "en": [
+       2,
+       2
+      ],
+      "zh": [
+       2,
+       3
+      ]
+     },
+     "language": {
+      "en": [
+       1
+      ],
+      "zh": [
+       2
+      ],
+      "vi": [
+       4,
+       2
       ]
      }
     },
@@ -672,12 +1694,220 @@
    },
    "mc": {
     "concept": {
-     "gold": "meat grinder",
+     "gold": "clothes iron",
      "distractors": [
-      "food processor",
-      "coffee grinder",
+      "sewing machine",
+      "hair dryer",
+      "washing machine",
+      "vacuum cleaner"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mlh-vi-extinguisher",
+   "subfamily": "fwd",
+   "prompt": "Vật hình trụ màu đỏ treo trên tường nhà, bên trong có bọt và khí nén, dùng để dập tắt ngọn lửa khi có hỏa hoạn, được gọi là",
+   "target": "bình chữa cháy",
+   "target_alts": [
+    "cái bình chữa cháy",
+    "bình cứu hỏa"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "lang": "vi",
+   "intermediates": [
+    "fire extinguisher"
+   ],
+   "units": [
+    {
+     "role": "concept",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "fire extinguisher"
+      ],
+      "zh": [
+       "灭火器"
+      ]
+     },
+     "match": [
+      "fire extinguisher",
+      "灭火器"
+     ]
+    },
+    {
+     "role": "language",
+     "required": true,
+     "multi_token": false,
+     "forms": {
+      "en": [
+       "Vietnamese"
+      ],
+      "zh": [
+       "越南语"
+      ],
+      "vi": [
+       "bình chữa cháy",
+       "bình cứu hỏa"
+      ]
+     },
+     "match": [
+      "Vietnamese",
+      "越南语",
+      "bình chữa cháy",
+      "bình cứu hỏa"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "concept": {
+      "en": [
+       3
+      ],
+      "zh": [
+       2
+      ]
+     },
+     "language": {
+      "en": [
+       1
+      ],
+      "zh": [
+       2
+      ],
+      "vi": [
+       3,
+       4
+      ]
+     }
+    },
+    "target": 3
+   },
+   "mc": {
+    "concept": {
+     "gold": "fire extinguisher",
+     "distractors": [
+      "smoke detector",
+      "fire hydrant",
+      "fire blanket",
+      "first aid kit"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mlh-vi-pressurecooker",
+   "subfamily": "fwd",
+   "prompt": "Loại xoong có nắp khóa chặt, làm chín thức ăn rất nhanh nhờ hơi nước bị nén mạnh bên trong, được gọi là",
+   "target": "nồi áp suất",
+   "target_alts": [
+    "cái nồi áp suất",
+    "chiếc nồi áp suất"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "lang": "vi",
+   "intermediates": [
+    "pressure cooker"
+   ],
+   "units": [
+    {
+     "role": "concept",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "pressure cooker"
+      ],
+      "zh": [
+       "高压锅"
+      ]
+     },
+     "match": [
       "pressure cooker",
-      "pasta maker"
+      "高压锅"
+     ]
+    },
+    {
+     "role": "language",
+     "required": true,
+     "multi_token": false,
+     "forms": {
+      "en": [
+       "Vietnamese"
+      ],
+      "zh": [
+       "越南语"
+      ],
+      "vi": [
+       "nồi áp suất",
+       "cái nồi áp suất"
+      ]
+     },
+     "match": [
+      "Vietnamese",
+      "越南语",
+      "nồi áp suất",
+      "cái nồi áp suất"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "concept": {
+      "en": [
+       2
+      ],
+      "zh": [
+       2
+      ]
+     },
+     "language": {
+      "en": [
+       1
+      ],
+      "zh": [
+       2
+      ],
+      "vi": [
+       4,
+       5
+      ]
+     }
+    },
+    "target": 4
+   },
+   "mc": {
+    "concept": {
+     "gold": "pressure cooker",
+     "distractors": [
+      "slow cooker",
+      "rice cooker",
+      "air fryer",
+      "electric kettle"
      ]
     }
    }

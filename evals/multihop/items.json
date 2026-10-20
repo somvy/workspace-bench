@@ -77,24 +77,6 @@
    }
   },
   {
-   "name": "chem-photosynthesis-Z",
-   "prompt": "Fact: The atomic number of the gas that plants release during photosynthesis is ",
-   "target": "8",
-   "intermediates": [
-    "oxygen"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -2
-    ]
-   }
-  },
-  {
    "name": "dbl-altitude-antonym",
    "prompt": "Fact: The antonym of how you would describe an airplane's cruising altitude is \"",
    "target": "low",
@@ -132,42 +114,6 @@
    }
   },
   {
-   "name": "etym-caesar-monthnum",
-   "prompt": "Fact: The month named after Julius Caesar is month number ",
-   "target": "7",
-   "intermediates": [
-    "July"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -2
-    ]
-   }
-  },
-  {
-   "name": "firstletter-valentines-month",
-   "prompt": "Fact: The first letter of the month containing Valentine's Day is \"",
-   "target": "F",
-   "intermediates": [
-    "February"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "func-filters-count",
    "prompt": "Fact: In humans, the number of organs that filter blood to make urine is ",
    "target": "2",
@@ -191,6 +137,24 @@
    "target": "4",
    "intermediates": [
     "heart"
+   ],
+   "source": "jlens_source",
+   "consistency": 1.0,
+   "gate_variant": "plain",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "last_word_token",
+    "offsets": [
+     -2
+    ]
+   }
+  },
+  {
+   "name": "half-clock-hours",
+   "prompt": "Fact: Half the number of hours shown on a standard clock face is ",
+   "target": "6",
+   "intermediates": [
+    "12"
    ],
    "source": "jlens_source",
    "consistency": 1.0,
@@ -294,34 +258,33 @@
    }
   },
   {
-   "name": "inv-sunrise-opposite",
-   "prompt": "Fact: The cardinal direction opposite to the one where the sun rises is ",
-   "target": "west",
+   "name": "pred-valentines-prevmonth",
+   "prompt": "Fact: The month immediately before the one containing Valentine's Day is \"",
+   "target": "January",
    "intermediates": [
-    "east"
+    "February"
    ],
    "source": "jlens_source",
    "consistency": 1.0,
-   "gate_variant": "chat",
+   "gate_variant": "plain",
    "eval_render": "plain",
    "readout": {
     "kind": "last_word_token",
     "offsets": [
-     -2
+     -1
     ]
    }
   },
   {
-   "name": "nhop-cube-element",
-   "prompt": "Count the items in a dozen. The element at that position on the periodic table is magnesium. Count the faces on a cube. The element at that position on the periodic table is ",
-   "target": "carbon",
+   "name": "rhyme-tree-squared",
+   "prompt": "Fact: The square of the number whose name rhymes with tree is ",
+   "target": "9",
    "intermediates": [
-    "6",
-    "six"
+    "three"
    ],
    "source": "jlens_source",
    "consistency": 1.0,
-   "gate_variant": "plain_stripped",
+   "gate_variant": "plain",
    "eval_render": "plain",
    "readout": {
     "kind": "last_word_token",
@@ -367,29 +330,29 @@
    }
   },
   {
-   "name": "violin-strings",
-   "prompt": "Fact: The number of strings on the instrument that fiddlers play is ",
-   "target": "4",
+   "name": "bf-boot-capital",
+   "prompt": "Fact: The capital of the European country shaped like a boot is",
+   "target": "Rome",
    "intermediates": [
-    "violin"
+    "Italy"
    ],
-   "source": "jlens_source",
+   "source": "staging",
    "consistency": 1.0,
    "gate_variant": "plain",
    "eval_render": "plain",
    "readout": {
     "kind": "last_word_token",
     "offsets": [
-     -2
+     -1
     ]
    }
   },
   {
-   "name": "bf-boot-capital",
-   "prompt": "Fact: The capital of the European country shaped like a boot is",
-   "target": "Rome",
+   "name": "bf-bordeaux-fruit",
+   "prompt": "Fact: The fruit fermented to make the drink Bordeaux is famous for is the",
+   "target": "grape",
    "intermediates": [
-    "Italy"
+    "wine"
    ],
    "source": "staging",
    "consistency": 1.0,
@@ -475,6 +438,24 @@
    }
   },
   {
+   "name": "bf-kathmandu-mountain",
+   "prompt": "Fact: The tallest mountain in the country whose capital is Kathmandu is",
+   "target": "Everest",
+   "intermediates": [
+    "Nepal"
+   ],
+   "source": "staging",
+   "consistency": 1.0,
+   "gate_variant": "chat",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "last_word_token",
+    "offsets": [
+     -1
+    ]
+   }
+  },
+  {
    "name": "bf-madrid-language",
    "prompt": "Fact: The language spoken in the country whose capital is Madrid is",
    "target": "Spanish",
@@ -511,11 +492,11 @@
    }
   },
   {
-   "name": "bf-southpole-bird",
-   "prompt": "Fact: The flightless bird living on the continent surrounding the South Pole is the",
-   "target": "penguin",
+   "name": "bf-rio2016-language",
+   "prompt": "Fact: The language of the country that hosted the 2016 Summer Olympics is",
+   "target": "Portuguese",
    "intermediates": [
-    "Antarctica"
+    "Brazil"
    ],
    "source": "staging",
    "consistency": 1.0,
@@ -691,6 +672,24 @@
    }
   },
   {
+   "name": "b3-mh-cuckoo-mountains",
+   "prompt": "Fact: The mountain range of the country famous for cuckoo clocks and neutrality is the",
+   "target": "Alps",
+   "intermediates": [
+    "Switzerland"
+   ],
+   "source": "staging_b3",
+   "consistency": 1.0,
+   "gate_variant": "plain",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "last_word_token",
+    "offsets": [
+     -1
+    ]
+   }
+  },
+  {
    "name": "b3-mh-eiffel-capital",
    "prompt": "Fact: The capital of the country famous for the Eiffel Tower is",
    "target": "Paris",
@@ -745,11 +744,47 @@
    }
   },
   {
+   "name": "b3-mh-goldengate-ocean",
+   "prompt": "Fact: The ocean beside the city of the Golden Gate Bridge is the",
+   "target": "Pacific",
+   "intermediates": [
+    "San Francisco"
+   ],
+   "source": "staging_b3",
+   "consistency": 1.0,
+   "gate_variant": "plain",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "last_word_token",
+    "offsets": [
+     -1
+    ]
+   }
+  },
+  {
    "name": "b3-mh-gravity-fruit",
    "prompt": "Fact: The fruit that famously fell in the story of gravity's discovery is the",
    "target": "apple",
    "intermediates": [
     "Newton"
+   ],
+   "source": "staging_b3",
+   "consistency": 1.0,
+   "gate_variant": "plain",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "last_word_token",
+    "offsets": [
+     -1
+    ]
+   }
+  },
+  {
+   "name": "b3-mh-greatwall-river",
+   "prompt": "Fact: The longest river of the country that built the Great Wall is the",
+   "target": "Yangtze",
+   "intermediates": [
+    "China"
    ],
    "source": "staging_b3",
    "consistency": 1.0,
@@ -889,24 +924,6 @@
    }
   },
   {
-   "name": "b3-mh-longestriver-sea",
-   "prompt": "Fact: The sea into which the world's longest river empties is the",
-   "target": "Mediterranean",
-   "intermediates": [
-    "Nile"
-   ],
-   "source": "staging_b3",
-   "consistency": 1.0,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "b3-mh-nokia-capital",
    "prompt": "Fact: The capital of the country where Nokia was founded is",
    "target": "Helsinki",
@@ -925,11 +942,11 @@
    }
   },
   {
-   "name": "b3-mh-sphinx-capital",
-   "prompt": "Fact: The capital of the country of the Great Sphinx is",
-   "target": "Cairo",
+   "name": "b3-mh-samba-river",
+   "prompt": "Fact: The great river of the country famous for samba and Carnival is the",
+   "target": "Amazon",
    "intermediates": [
-    "Egypt"
+    "Brazil"
    ],
    "source": "staging_b3",
    "consistency": 1.0,
@@ -980,24 +997,6 @@
    }
   },
   {
-   "name": "carnival-ocean",
-   "prompt": "Fact: The ocean on the coast of the country where Carnival is most famously celebrated is the ",
-   "target": "Atlantic",
-   "intermediates": [
-    "Brazil"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.9,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -2
-    ]
-   }
-  },
-  {
    "name": "dual-stars-visible-opposite",
    "prompt": "Fact: The opposite of the time of day when stars are visible is \"",
    "target": "day",
@@ -1016,24 +1015,6 @@
    }
   },
   {
-   "name": "firstletter-greatwall-country",
-   "prompt": "Fact: The first letter of the name of the country that built the Great Wall is ",
-   "target": "C",
-   "intermediates": [
-    "China"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.9,
-   "gate_variant": "chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -2
-    ]
-   }
-  },
-  {
    "name": "firstletter-halloween-month",
    "prompt": "Fact: The first letter of the month containing Halloween is \"",
    "target": "O",
@@ -1048,24 +1029,6 @@
     "kind": "last_word_token",
     "offsets": [
      -1
-    ]
-   }
-  },
-  {
-   "name": "super-smallest-continent",
-   "prompt": "Fact: The smallest country in the world is located on the continent of ",
-   "target": "Europe",
-   "intermediates": [
-    "Vatican"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.9,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -2
     ]
    }
   },
@@ -1142,24 +1105,6 @@
    }
   },
   {
-   "name": "b3-mh-ikea-capital",
-   "prompt": "Fact: The capital of the country where IKEA was founded is",
-   "target": "Stockholm",
-   "intermediates": [
-    "Sweden"
-   ],
-   "source": "staging_b3",
-   "consistency": 0.9,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "b3-mh-lego-capital",
    "prompt": "Fact: The capital of the country where LEGO was invented is",
    "target": "Copenhagen",
@@ -1183,24 +1128,6 @@
    "target": "Australia",
    "intermediates": [
     "Sydney"
-   ],
-   "source": "staging_b3",
-   "consistency": 0.9,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "b3-mh-pizza-continent",
-   "prompt": "Fact: The continent of the country where pizza originated is",
-   "target": "Europe",
-   "intermediates": [
-    "Italy"
    ],
    "source": "staging_b3",
    "consistency": 0.9,
@@ -1282,43 +1209,6 @@
     "kind": "last_word_token",
     "offsets": [
      -1
-    ]
-   }
-  },
-  {
-   "name": "firstletter-populous-country",
-   "prompt": "Fact: The first letter of the name of the world's most populous country is ",
-   "target": "C",
-   "intermediates": [
-    "China"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.8,
-   "gate_variant": "chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -2
-    ]
-   }
-  },
-  {
-   "name": "roman-rings-olympic",
-   "prompt": "Fact: Written as a Roman numeral, the number of Olympic rings is ",
-   "target": "V",
-   "intermediates": [
-    "5",
-    "five"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.8,
-   "gate_variant": "plain_stripped",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "last_word_token",
-    "offsets": [
-     -2
     ]
    }
   },

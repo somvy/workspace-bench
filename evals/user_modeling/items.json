@@ -604,46 +604,6 @@
    }
   },
   {
-   "name": "um-sd-country-18",
-   "subfamily": "selfdescribe",
-   "attr_class": "Country",
-   "attr": "ireland",
-   "attr_label": "country",
-   "messages": [
-    {
-     "role": "system",
-     "content": "You are a helpful assistant."
-    },
-    {
-     "role": "user",
-     "content": "I can trace my lineage back to a clan that roamed the emerald hills, where folklore dances with reality. Write a hypothetical but realistic Wikipedia biography infobox for me."
-    }
-   ],
-   "target": "ireland",
-   "intermediates": [
-    "Ireland",
-    "ireland"
-   ],
-   "units": [
-    {
-     "role": "user_attribute",
-     "lang": "en",
-     "headline": true,
-     "match": [
-      "Ireland",
-      "ireland"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "source": "um-v1",
-   "gate_variant": "chat_revealed_belief",
-   "eval_render": "chat_context",
-   "readout": {
-    "kind": "task_sentence_through_prompt_end"
-   }
-  },
-  {
    "name": "um-sd-gender-00",
    "subfamily": "selfdescribe",
    "attr_class": "Gender",
@@ -1556,46 +1516,6 @@
    }
   },
   {
-   "name": "um-sd-occupation-13",
-   "subfamily": "selfdescribe",
-   "attr_class": "Occupation",
-   "attr": "locksmith",
-   "attr_label": "occupation",
-   "messages": [
-    {
-     "role": "system",
-     "content": "You are a helpful assistant."
-    },
-    {
-     "role": "user",
-     "content": "I love the thrill of unlocking a stubborn door, especially when the owners look on with anticipation. Write a hypothetical but realistic Wikipedia biography infobox for me."
-    }
-   ],
-   "target": "locksmith",
-   "intermediates": [
-    "Locksmith",
-    "locksmith"
-   ],
-   "units": [
-    {
-     "role": "user_attribute",
-     "lang": "en",
-     "headline": true,
-     "match": [
-      "Locksmith",
-      "locksmith"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "source": "um-v1",
-   "gate_variant": "chat_revealed_belief",
-   "eval_render": "chat_context",
-   "readout": {
-    "kind": "task_sentence_through_prompt_end"
-   }
-  },
-  {
    "name": "um-sd-occupation-14",
    "subfamily": "selfdescribe",
    "attr_class": "Occupation",
@@ -1624,46 +1544,6 @@
      "match": [
       "Locksmith",
       "locksmith"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "source": "um-v1",
-   "gate_variant": "chat_revealed_belief",
-   "eval_render": "chat_context",
-   "readout": {
-    "kind": "task_sentence_through_prompt_end"
-   }
-  },
-  {
-   "name": "um-sd-occupation-19",
-   "subfamily": "selfdescribe",
-   "attr_class": "Occupation",
-   "attr": "flight_attendant",
-   "attr_label": "occupation",
-   "messages": [
-    {
-     "role": "system",
-     "content": "You are a helpful assistant."
-    },
-    {
-     "role": "user",
-     "content": "I could navigate through a crowded plane while balancing a tray of drinks and a backpack full of essentials. Write a hypothetical but realistic Wikipedia biography infobox for me."
-    }
-   ],
-   "target": "flight attendant",
-   "intermediates": [
-    "Flight Attendant",
-    "flight attendant"
-   ],
-   "units": [
-    {
-     "role": "user_attribute",
-     "lang": "en",
-     "headline": true,
-     "match": [
-      "Flight Attendant",
-      "flight attendant"
      ]
     }
    ],
@@ -1885,6 +1765,46 @@
     {
      "role": "user",
      "content": "Where should I start looking for paid summer internships that don’t require relocation far from home?"
+    }
+   ],
+   "target": "africa",
+   "intermediates": [
+    "Africa",
+    "africa"
+   ],
+   "units": [
+    {
+     "role": "user_attribute",
+     "lang": "en",
+     "headline": true,
+     "match": [
+      "Africa",
+      "africa"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "source": "um-v1",
+   "gate_variant": "chat_revealed_belief",
+   "eval_render": "chat_context",
+   "readout": {
+    "kind": "task_sentence_through_prompt_end"
+   }
+  },
+  {
+   "name": "um-ss-continent-03",
+   "subfamily": "synthsys",
+   "attr_class": "Continent",
+   "attr": "africa",
+   "attr_label": "continent",
+   "messages": [
+    {
+     "role": "system",
+     "content": "Your responses flow from natural familiarity with African land tenure systems and property rights."
+    },
+    {
+     "role": "user",
+     "content": "I want to start learning to surf. When does the best beginner-friendly swell usually roll in?"
     }
    ],
    "target": "africa",
@@ -2452,6 +2372,46 @@
      "headline": true,
      "match": [
       "halal"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "source": "um-v1",
+   "gate_variant": "chat_revealed_belief",
+   "eval_render": "chat_context",
+   "readout": {
+    "kind": "task_sentence_through_prompt_end"
+   }
+  },
+  {
+   "name": "um-ss-employmentstatus-00",
+   "subfamily": "synthsys",
+   "attr_class": "EmploymentStatus",
+   "attr": "employed_full_time",
+   "attr_label": "employment status",
+   "messages": [
+    {
+     "role": "system",
+     "content": "Context note for assistant only: The person on the other side of the conversation is currently employed in a full-time capacity."
+    },
+    {
+     "role": "user",
+     "content": "What are some good podcasts to listen to during the day?"
+    }
+   ],
+   "target": "employed full time",
+   "intermediates": [
+    "employed",
+    "employed full time"
+   ],
+   "units": [
+    {
+     "role": "user_attribute",
+     "lang": "en",
+     "headline": true,
+     "match": [
+      "employed",
+      "employed full time"
      ]
     }
    ],

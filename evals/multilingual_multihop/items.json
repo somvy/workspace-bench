@@ -10,14 +10,15 @@
  "frozen": "2026-09-10",
  "items": [
   {
-   "name": "mlmh-ar-suryavarman-temple-country",
+   "name": "mlmh-ar-kente-accra",
    "subfamily": "2hop",
-   "prompt": "البناء الديني الضخم الذي شيّده الملك سوريافارمان الثاني في القرن الثاني عشر يقع اليوم في دولة",
-   "target": "كمبوديا",
+   "prompt": "الأثواب المنسوجة بشرائط ملونة التي يشتهر بحياكتها شعب الأشانتي تأتي من بلد عاصمته",
+   "target": "أكرا",
    "target_alts": [
-    "كمبوديا",
-    "كامبوديا",
-    "مملكة كمبوديا"
+    "أكرا",
+    "اكرا",
+    "مدينة أكرا",
+    "أكّرا"
    ],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -29,7 +30,7 @@
    },
    "lang": "ar",
    "intermediates": [
-    "Angkor Wat"
+    "kente"
    ],
    "units": [
     {
@@ -38,13 +39,15 @@
      "multi_token": true,
      "forms": {
       "ar": [
-       "أنغكور وات",
-       "معبد أنغكور وات"
+       "الكنتي",
+       "قماش الكنتي",
+       "كِنتي"
       ]
      },
      "match": [
-      "أنغكور وات",
-      "معبد أنغكور وات"
+      "الكنتي",
+      "قماش الكنتي",
+      "كِنتي"
      ]
     },
     {
@@ -53,19 +56,21 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "Angkor Wat",
-       "the temple of Angkor Wat"
+       "kente",
+       "kente cloth",
+       "Ashanti kente"
       ],
       "zh": [
-       "吴哥窟",
-       "吴哥寺"
+       "肯特布",
+       "肯特织物"
       ]
      },
      "match": [
-      "Angkor Wat",
-      "the temple of Angkor Wat",
-      "吴哥窟",
-      "吴哥寺"
+      "kente",
+      "kente cloth",
+      "Ashanti kente",
+      "肯特布",
+      "肯特织物"
      ]
     },
     {
@@ -81,35 +86,36 @@
       ],
       "ar": [
        "العربية",
-       "اللغة العربية",
-       "بالعربية"
+       "بالعربية",
+       "اللغة العربية"
       ]
      },
      "match": [
       "Arabic",
       "阿拉伯语",
       "العربية",
-      "اللغة العربية",
-      "بالعربية"
+      "بالعربية",
+      "اللغة العربية"
      ]
     }
    ],
    "bridges": [
     {
-     "question": "Which temple complex was built by King Suryavarman II in the 12th century? Answer with just the name.",
+     "question": "Which colourful strip-woven cloth is traditionally made by the Ashanti people of West Africa? Answer with just the name.",
      "units": [
       "bridge_l2",
       "bridge_native"
      ],
      "answers": [
-      "Angkor Wat",
-      "Angkor",
-      "أنغكور وات",
-      "أنكور وات",
-      "معبد أنغكور وات",
-      "吴哥窟",
-      "吴哥寺",
-      "the temple of Angkor Wat"
+      "kente",
+      "kente cloth",
+      "Ashanti kente",
+      "الكنتي",
+      "كنتي",
+      "قماش الكنتي",
+      "肯特布",
+      "肯特织物",
+      "كِنتي"
      ]
     }
    ],
@@ -124,18 +130,20 @@
     "units": {
      "bridge_l2": {
       "ar": [
-       5,
-       7
+       3,
+       6,
+       4
       ]
      },
      "bridge_native": {
       "en": [
+       2,
        3,
-       6
+       4
       ],
       "zh": [
        3,
-       3
+       4
       ]
      },
      "language": {
@@ -147,36 +155,34 @@
       ],
       "ar": [
        1,
-       2,
-       3
+       3,
+       2
       ]
      }
     },
-    "target": 4
+    "target": 3
    },
    "mc": {
     "bridge_native": {
-     "gold": "Angkor Wat",
+     "gold": "kente",
      "distractors": [
-      "Borobudur",
-      "Prambanan",
-      "Wat Phou",
-      "Ananda Temple"
+      "Adire",
+      "Bogolanfini",
+      "Aso Oke",
+      "Kitenge"
      ]
     }
    }
   },
   {
-   "name": "mlmh-el-bakelite-baekeland-belgium",
+   "name": "mlmh-el-andronikos-university",
    "subfamily": "2hop",
-   "prompt": "Το πρώτο εντελώς συνθετικό πλαστικό της ιστορίας, που παρουσιάστηκε το 1907, φέρει το επώνυμο του χημικού που το δημιούργησε· εκείνος είχε γεννηθεί και σπουδάσει σε μια μικρή δυτικοευρωπαϊκή χώρα που λέγεται",
-   "target": "Βέλγιο",
+   "prompt": "Ο αρχαιολόγος που ανακάλυψε το 1977 τους μακεδονικούς βασιλικούς τάφους στη Βεργίνα ήταν καθηγητής στο πανεπιστήμιο της",
+   "target": "Θεσσαλονίκης",
    "target_alts": [
-    "Βέλγιο",
-    "το Βέλγιο",
-    "Βελγίου",
-    "του Βελγίου",
-    "στο Βέλγιο"
+    "Θεσσαλονίκης",
+    "Θεσσαλονίκη",
+    "Θεσσαλονίκην"
    ],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -188,7 +194,7 @@
    },
    "lang": "el",
    "intermediates": [
-    "Leo Baekeland"
+    "Manolis Andronikos"
    ],
    "units": [
     {
@@ -197,15 +203,15 @@
      "multi_token": true,
      "forms": {
       "el": [
-       "Λεό Μπάκελαντ",
-       "Μπάκελαντ",
-       "Λεό Χέντρικ Μπάκελαντ"
+       "Μανόλης Ανδρόνικος",
+       "Ανδρόνικος",
+       "Ανδρόνικου"
       ]
      },
      "match": [
-      "Λεό Μπάκελαντ",
-      "Μπάκελαντ",
-      "Λεό Χέντρικ Μπάκελαντ"
+      "Μανόλης Ανδρόνικος",
+      "Ανδρόνικος",
+      "Ανδρόνικου"
      ]
     },
     {
@@ -214,23 +220,19 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "Leo Baekeland",
-       "Leo Hendrik Baekeland",
-       "Baekeland"
+       "Manolis Andronikos",
+       "Manolis Andronicos"
       ],
       "zh": [
-       "贝克兰",
-       "利奥·贝克兰",
-       "利奥·亨德里克·贝克兰"
+       "马诺利斯·安德罗尼科斯",
+       "安德罗尼科斯"
       ]
      },
      "match": [
-      "Leo Baekeland",
-      "Leo Hendrik Baekeland",
-      "Baekeland",
-      "贝克兰",
-      "利奥·贝克兰",
-      "利奥·亨德里克·贝克兰"
+      "Manolis Andronikos",
+      "Manolis Andronicos",
+      "马诺利斯·安德罗尼科斯",
+      "安德罗尼科斯"
      ]
     },
     {
@@ -247,7 +249,7 @@
       "el": [
        "ελληνικά",
        "στα ελληνικά",
-       "η ελληνική γλώσσα"
+       "νέα ελληνικά"
       ]
      },
      "match": [
@@ -255,28 +257,27 @@
       "希腊语",
       "ελληνικά",
       "στα ελληνικά",
-      "η ελληνική γλώσσα"
+      "νέα ελληνικά"
      ]
     }
    ],
    "bridges": [
     {
-     "question": "Which chemist invented Bakelite, the first fully synthetic plastic, in 1907? Answer with just the name.",
+     "question": "Which archaeologist discovered the Macedonian royal tombs at Vergina in 1977? Answer with just the name.",
      "units": [
       "bridge_l2",
       "bridge_native"
      ],
      "answers": [
-      "Baekeland",
-      "Leo Baekeland",
-      "Leo Hendrik Baekeland",
-      "Μπάκελαντ",
-      "Λεό Μπάκελαντ",
-      "Λέο Μπάκελαντ",
-      "Λεό Χέντρικ Μπάκελαντ",
-      "贝克兰",
-      "利奥·贝克兰",
-      "利奥·亨德里克·贝克兰"
+      "Manolis Andronikos",
+      "Andronikos",
+      "Andronicos",
+      "Μανόλης Ανδρόνικος",
+      "Ανδρόνικος",
+      "Ανδρόνικου",
+      "马诺利斯·安德罗尼科斯",
+      "安德罗尼科斯",
+      "Manolis Andronicos"
      ]
     }
    ],
@@ -291,21 +292,19 @@
     "units": {
      "bridge_l2": {
       "el": [
-       12,
-       9,
-       20
+       17,
+       10,
+       9
       ]
      },
      "bridge_native": {
       "en": [
-       4,
        6,
-       3
+       5
       ],
       "zh": [
-       3,
-       6,
-       11
+       11,
+       6
       ]
      },
      "language": {
@@ -318,20 +317,20 @@
       "el": [
        8,
        11,
-       15
+       11
       ]
      }
     },
-    "target": 6
+    "target": 12
    },
    "mc": {
     "bridge_native": {
-     "gold": "Leo Baekeland",
+     "gold": "Manolis Andronikos",
      "distractors": [
-      "Wallace Carothers",
-      "Hermann Staudinger",
-      "Charles Goodyear",
-      "Jacques Brandenberger"
+      "Spyridon Marinatos",
+      "Christos Tsountas",
+      "Georgios Mylonas",
+      "Nikolaos Platon"
      ]
     }
    }
@@ -497,16 +496,17 @@
    }
   },
   {
-   "name": "mlmh-fi-asml-alankomaat",
+   "name": "mlmh-hu-kepler-ellipszis",
    "subfamily": "2hop",
-   "prompt": "Maailman ainoa mikrosirujen valmistuksessa käytettäviä EUV-litografialaitteita tuottava yritys on kotoisin maasta nimeltä",
-   "target": "Alankomaat",
+   "prompt": "A 2009-ben fellőtt, más csillagok körül keringő égitestek után kutató NASA-műhold névadójának első törvénye szerint a bolygópályák alakja",
+   "target": "ellipszis",
    "target_alts": [
-    "Alankomaissa",
-    "Alankomaista",
-    "Hollanti",
-    "Hollannissa",
-    "Hollannista"
+    "ellipszis",
+    "az ellipszis",
+    "ellipszisek",
+    "ellipszis alakú",
+    "ellipszist",
+    "ellipszisz"
    ],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -516,9 +516,9 @@
      -1
     ]
    },
-   "lang": "fi",
+   "lang": "hu",
    "intermediates": [
-    "ASML Holding N.V."
+    "Kepler space telescope"
    ],
    "units": [
     {
@@ -526,16 +526,16 @@
      "required": false,
      "multi_token": true,
      "forms": {
-      "fi": [
-       "ASML-yhtiö",
-       "hollantilainen ASML",
-       "ASML-konserni"
+      "hu": [
+       "Kepler-űrtávcső",
+       "Kepler-űrteleszkóp",
+       "a Kepler-űrtávcsővel"
       ]
      },
      "match": [
-      "ASML-yhtiö",
-      "hollantilainen ASML",
-      "ASML-konserni"
+      "Kepler-űrtávcső",
+      "Kepler-űrteleszkóp",
+      "a Kepler-űrtávcsővel"
      ]
     },
     {
@@ -544,19 +544,19 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "ASML Holding N.V.",
-       "ASML Holding"
+       "Kepler space telescope",
+       "Kepler spacecraft"
       ],
       "zh": [
-       "阿斯麦控股",
-       "阿斯麦公司"
+       "开普勒太空望远镜",
+       "开普勒望远镜"
       ]
      },
      "match": [
-      "ASML Holding N.V.",
-      "ASML Holding",
-      "阿斯麦控股",
-      "阿斯麦公司"
+      "Kepler space telescope",
+      "Kepler spacecraft",
+      "开普勒太空望远镜",
+      "开普勒望远镜"
      ]
     },
     {
@@ -565,43 +565,46 @@
      "multi_token": false,
      "forms": {
       "en": [
-       "Finnish"
+       "Hungarian"
       ],
       "zh": [
-       "芬兰语"
+       "匈牙利语"
       ],
-      "fi": [
-       "suomen kieli",
-       "suomeksi",
-       "suomea"
+      "hu": [
+       "magyarul",
+       "magyar nyelven",
+       "magyar nyelv"
       ]
      },
      "match": [
-      "Finnish",
-      "芬兰语",
-      "suomen kieli",
-      "suomeksi",
-      "suomea"
+      "Hungarian",
+      "匈牙利语",
+      "magyarul",
+      "magyar nyelven",
+      "magyar nyelv"
      ]
     }
    ],
    "bridges": [
     {
-     "question": "Which company is the world's only manufacturer of extreme ultraviolet (EUV) lithography machines for chipmaking? Answer with just the name.",
+     "question": "Which NASA space telescope, launched in 2009 and retired in 2018, searched for exoplanets by monitoring the brightness of over 150,000 stars for transits? Answer with just the name.",
      "units": [
       "bridge_l2",
       "bridge_native"
      ],
      "answers": [
-      "ASML",
-      "ASML Holding",
-      "ASML Holding N.V.",
-      "ASML-yhtiö",
-      "阿斯麦",
-      "阿斯麦控股",
-      "hollantilainen ASML",
-      "ASML-konserni",
-      "阿斯麦公司"
+      "Kepler",
+      "Kepler space telescope",
+      "Kepler Space Telescope",
+      "Kepler spacecraft",
+      "Kepler telescope",
+      "Kepler-űrtávcső",
+      "Kepler űrtávcső",
+      "Kepler-űrteleszkóp",
+      "开普勒太空望远镜",
+      "开普勒望远镜",
+      "开普勒",
+      "a Kepler-űrtávcsővel"
      ]
     }
    ],
@@ -615,16 +618,325 @@
    "probe_token_lens": {
     "units": {
      "bridge_l2": {
-      "fi": [
-       5,
-       6,
-       6
+      "hu": [
+       8,
+       9,
+       10
       ]
      },
      "bridge_native": {
       "en": [
-       6,
+       3,
+       2
+      ],
+      "zh": [
+       7,
+       6
+      ]
+     },
+     "language": {
+      "en": [
+       1
+      ],
+      "zh": [
+       4
+      ],
+      "hu": [
+       3,
+       5,
+       5
+      ]
+     }
+    },
+    "target": 4
+   },
+   "mc": {
+    "bridge_native": {
+     "gold": "Kepler space telescope",
+     "distractors": [
+      "Hubble Space Telescope",
+      "Spitzer Space Telescope",
+      "Transiting Exoplanet Survey Satellite",
+      "CoRoT space telescope"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mlmh-id-aral-uzbekistan",
+   "subfamily": "2hop",
+   "prompt": "Perairan pedalaman di Asia Tengah yang menyusut drastis akibat pengalihan sungai pada era Soviet dimiliki bersama oleh Kazakhstan dan",
+   "target": "Uzbekistan",
+   "target_alts": [
+    "Uzbekistan",
+    "Uzbekhistan",
+    "Republik Uzbekistan"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "lang": "id",
+   "intermediates": [
+    "Aral Sea"
+   ],
+   "units": [
+    {
+     "role": "bridge_l2",
+     "required": false,
+     "multi_token": true,
+     "forms": {
+      "id": [
+       "Laut Aral",
+       "Danau Aral"
+      ]
+     },
+     "match": [
+      "Laut Aral",
+      "Danau Aral"
+     ]
+    },
+    {
+     "role": "bridge_native",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "Aral Sea"
+      ],
+      "zh": [
+       "咸海",
+       "阿拉尔海"
+      ]
+     },
+     "match": [
+      "Aral Sea",
+      "咸海",
+      "阿拉尔海"
+     ]
+    },
+    {
+     "role": "language",
+     "required": false,
+     "multi_token": false,
+     "forms": {
+      "en": [
+       "Indonesian"
+      ],
+      "zh": [
+       "印尼语",
+       "印度尼西亚语"
+      ],
+      "id": [
+       "bahasa Indonesia",
+       "dalam bahasa Indonesia"
+      ]
+     },
+     "match": [
+      "Indonesian",
+      "印尼语",
+      "印度尼西亚语",
+      "bahasa Indonesia",
+      "dalam bahasa Indonesia"
+     ]
+    }
+   ],
+   "bridges": [
+    {
+     "question": "Which Central Asian inland body of water shrank drastically after Soviet-era river diversion for cotton irrigation? Answer with just the name.",
+     "units": [
+      "bridge_l2",
+      "bridge_native"
+     ],
+     "answers": [
+      "Aral",
+      "Aral Sea",
+      "Laut Aral",
+      "Danau Aral",
+      "咸海",
+      "阿拉尔海"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "bridge_consistency": {
+    "bridge_l2|bridge_native": 1.0
+   },
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "bridge_l2": {
+      "id": [
+       3,
+       4
+      ]
+     },
+     "bridge_native": {
+      "en": [
        3
+      ],
+      "zh": [
+       2,
+       3
+      ]
+     },
+     "language": {
+      "en": [
+       1
+      ],
+      "zh": [
+       2,
+       4
+      ],
+      "id": [
+       3,
+       4
+      ]
+     }
+    },
+    "target": 2
+   },
+   "mc": {
+    "bridge_native": {
+     "gold": "Aral Sea",
+     "distractors": [
+      "Caspian Sea",
+      "Lake Balkhash",
+      "Issyk-Kul",
+      "Lake Baikal"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mlmh-id-giyanti-yogyakarta",
+   "subfamily": "2hop",
+   "prompt": "Kesepakatan tahun 1755 yang membelah wilayah Mataram melahirkan Kasunanan Surakarta dan Kesultanan",
+   "target": "Yogyakarta",
+   "target_alts": [
+    "Yogyakarta",
+    "Ngayogyakarta",
+    "Jogjakarta",
+    "Ngayogyakarta Hadiningrat"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "lang": "id",
+   "intermediates": [
+    "Treaty of Giyanti"
+   ],
+   "units": [
+    {
+     "role": "bridge_l2",
+     "required": false,
+     "multi_token": true,
+     "forms": {
+      "id": [
+       "Perjanjian Giyanti",
+       "Palihan Nagari"
+      ]
+     },
+     "match": [
+      "Perjanjian Giyanti",
+      "Palihan Nagari"
+     ]
+    },
+    {
+     "role": "bridge_native",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "Treaty of Giyanti",
+       "Giyanti Agreement"
+      ],
+      "zh": [
+       "吉扬蒂条约",
+       "吉扬蒂协定"
+      ]
+     },
+     "match": [
+      "Treaty of Giyanti",
+      "Giyanti Agreement",
+      "吉扬蒂条约",
+      "吉扬蒂协定"
+     ]
+    },
+    {
+     "role": "language",
+     "required": false,
+     "multi_token": false,
+     "forms": {
+      "en": [
+       "Indonesian"
+      ],
+      "zh": [
+       "印尼语",
+       "印度尼西亚语"
+      ],
+      "id": [
+       "bahasa Indonesia",
+       "Bahasa Indonesia"
+      ]
+     },
+     "match": [
+      "Indonesian",
+      "印尼语",
+      "印度尼西亚语",
+      "bahasa Indonesia",
+      "Bahasa Indonesia"
+     ]
+    }
+   ],
+   "bridges": [
+    {
+     "question": "Which 1755 treaty split the Javanese realm of Mataram into two courts? Answer with just the name.",
+     "units": [
+      "bridge_l2",
+      "bridge_native"
+     ],
+     "answers": [
+      "Giyanti",
+      "Treaty of Giyanti",
+      "Perjanjian Giyanti",
+      "Giyanti Agreement",
+      "Palihan Nagari",
+      "吉扬蒂条约",
+      "吉扬蒂协定"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "bridge_consistency": {
+    "bridge_l2|bridge_native": 1.0
+   },
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "bridge_l2": {
+      "id": [
+       6,
+       4
+      ]
+     },
+     "bridge_native": {
+      "en": [
+       5,
+       4
       ],
       "zh": [
        4,
@@ -636,10 +948,10 @@
        1
       ],
       "zh": [
-       2
+       2,
+       4
       ],
-      "fi": [
-       4,
+      "id": [
        3,
        3
       ]
@@ -649,27 +961,26 @@
    },
    "mc": {
     "bridge_native": {
-     "gold": "ASML Holding N.V.",
+     "gold": "Treaty of Giyanti",
      "distractors": [
-      "Applied Materials, Inc.",
-      "Tokyo Electron Limited",
-      "Lam Research Corporation",
-      "KLA Corporation"
+      "Treaty of Salatiga",
+      "Treaty of Bongaya",
+      "Treaty of Tuntang",
+      "Linggadjati Agreement"
      ]
     }
    }
   },
   {
-   "name": "mlmh-ko-bayreuth-bavaria",
+   "name": "mlmh-ko-arecibo-puertorico",
    "subfamily": "2hop",
-   "prompt": "바그너가 오직 자신의 악극만을 상연하려고 직접 세운 전용 공연장이 자리한 도시가 속해 있는 연방주는",
-   "target": "바이에른",
+   "prompt": "1963년에 완공되어 2020년에 무너져 내린 지름 305미터의 구면 전파 접시 망원경이 있던 카리브해의 미국 자치령은",
+   "target": "푸에르토리코",
    "target_alts": [
-    "바이에른주",
-    "바이에른 주",
-    "바이에른이다",
-    "바이에른주다",
-    "바이에른 자유주"
+    "푸에르토리코",
+    "푸에르토리코이다",
+    "푸에르토리코다",
+    "푸에르토 리코"
    ],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -681,7 +992,7 @@
    },
    "lang": "ko",
    "intermediates": [
-    "Bayreuth Festspielhaus"
+    "Arecibo Observatory"
    ],
    "units": [
     {
@@ -690,15 +1001,15 @@
      "multi_token": true,
      "forms": {
       "ko": [
-       "바이로이트 축제극장",
-       "바이로이트 축제 극장",
-       "바이로이트"
+       "아레시보 천문대",
+       "아레시보 전파천문대",
+       "아레시보"
       ]
      },
      "match": [
-      "바이로이트 축제극장",
-      "바이로이트 축제 극장",
-      "바이로이트"
+      "아레시보 천문대",
+      "아레시보 전파천문대",
+      "아레시보"
      ]
     },
     {
@@ -707,19 +1018,19 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "Bayreuth Festspielhaus",
-       "Bayreuth Festival Theatre"
+       "Arecibo Observatory",
+       "Arecibo radio observatory"
       ],
       "zh": [
-       "拜罗伊特节日剧院",
-       "拜罗伊特"
+       "阿雷西博天文台",
+       "阿雷西博射电望远镜"
       ]
      },
      "match": [
-      "Bayreuth Festspielhaus",
-      "Bayreuth Festival Theatre",
-      "拜罗伊特节日剧院",
-      "拜罗伊特"
+      "Arecibo Observatory",
+      "Arecibo radio observatory",
+      "阿雷西博天文台",
+      "阿雷西博射电望远镜"
      ]
     },
     {
@@ -752,21 +1063,22 @@
    ],
    "bridges": [
     {
-     "question": "What is the name of the festival opera house that Richard Wagner had built for performances of his own music dramas? Answer with just the name.",
+     "question": "Which radio astronomy facility, famous for its 305-metre spherical dish completed in 1963, collapsed in December 2020? Answer with just the name.",
      "units": [
       "bridge_l2",
       "bridge_native"
      ],
      "answers": [
-      "Bayreuth Festspielhaus",
-      "Festspielhaus",
-      "Bayreuth Festival Theatre",
-      "Bayreuth",
-      "바이로이트 축제극장",
-      "바이로이트",
-      "拜罗伊特节日剧院",
-      "拜罗伊特",
-      "바이로이트 축제 극장"
+      "Arecibo Observatory",
+      "Arecibo",
+      "Arecibo radio telescope",
+      "아레시보 천문대",
+      "아레시보",
+      "阿雷西博天文台",
+      "阿雷西博",
+      "아레시보 전파천문대",
+      "Arecibo radio observatory",
+      "阿雷西博射电望远镜"
      ]
     }
    ],
@@ -781,19 +1093,19 @@
     "units": {
      "bridge_l2": {
       "ko": [
-       10,
-       11,
-       5
+       8,
+       9,
+       4
       ]
      },
      "bridge_native": {
       "en": [
-       6,
+       4,
        5
       ],
       "zh": [
        6,
-       4
+       9
       ]
      },
      "language": {
@@ -811,16 +1123,16 @@
       ]
      }
     },
-    "target": 4
+    "target": 6
    },
    "mc": {
     "bridge_native": {
-     "gold": "Bayreuth Festspielhaus",
+     "gold": "Arecibo Observatory",
      "distractors": [
-      "Semperoper Dresden",
-      "Teatro alla Scala",
-      "Vienna State Opera",
-      "Nationaltheater München"
+      "Green Bank Observatory",
+      "Parkes Observatory",
+      "Very Large Array",
+      "Effelsberg Radio Telescope"
      ]
     }
    }
@@ -998,176 +1310,16 @@
    }
   },
   {
-   "name": "mlmh-ko-irri-ir8-philippines",
+   "name": "mlmh-pl-erupcja-1815-panstwo",
    "subfamily": "2hop",
-   "prompt": "'기적의 볍씨'로 불린 IR8 벼 품종을 1966년에 세상에 내놓은 농업 기관이 자리 잡은 나라는",
-   "target": "필리핀",
+   "prompt": "Wulkan, którego erupcja w 1815 roku wywołała na półkuli północnej rok bez lata, leży na terytorium państwa",
+   "target": "Indonezji",
    "target_alts": [
-    "필리핀",
-    "필리핀이다",
-    "필리핀입니다",
-    "필리핀 공화국",
-    "필리핀공화국"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "lang": "ko",
-   "intermediates": [
-    "International Rice Research Institute"
-   ],
-   "units": [
-    {
-     "role": "bridge_l2",
-     "required": false,
-     "multi_token": true,
-     "forms": {
-      "ko": [
-       "국제미작연구소",
-       "국제 미작 연구소",
-       "국제벼연구소"
-      ]
-     },
-     "match": [
-      "국제미작연구소",
-      "국제 미작 연구소",
-      "국제벼연구소"
-     ]
-    },
-    {
-     "role": "bridge_native",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "International Rice Research Institute",
-       "IRRI"
-      ],
-      "zh": [
-       "国际水稻研究所"
-      ]
-     },
-     "match": [
-      "International Rice Research Institute",
-      "IRRI",
-      "国际水稻研究所"
-     ]
-    },
-    {
-     "role": "language",
-     "required": false,
-     "multi_token": false,
-     "forms": {
-      "en": [
-       "Korean"
-      ],
-      "zh": [
-       "韩语",
-       "韩国语"
-      ],
-      "ko": [
-       "한국어",
-       "한국말",
-       "우리말"
-      ]
-     },
-     "match": [
-      "Korean",
-      "韩语",
-      "韩国语",
-      "한국어",
-      "한국말",
-      "우리말"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which agricultural institute developed the high-yield IR8 rice variety released in 1966? Answer with just the name.",
-     "units": [
-      "bridge_l2",
-      "bridge_native"
-     ],
-     "answers": [
-      "International Rice Research Institute",
-      "IRRI",
-      "국제미작연구소",
-      "국제 미작 연구소",
-      "국제벼연구소",
-      "国际水稻研究所"
-     ]
-    }
-   ],
-   "consistency": 0.8,
-   "consistency_strict": 0.8,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge_l2|bridge_native": 0.9
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge_l2": {
-      "ko": [
-       5,
-       5,
-       4
-      ]
-     },
-     "bridge_native": {
-      "en": [
-       4,
-       2
-      ],
-      "zh": [
-       3
-      ]
-     },
-     "language": {
-      "en": [
-       1
-      ],
-      "zh": [
-       2,
-       2
-      ],
-      "ko": [
-       2,
-       2,
-       2
-      ]
-     }
-    },
-    "target": 3
-   },
-   "mc": {
-    "bridge_native": {
-     "gold": "International Rice Research Institute",
-     "distractors": [
-      "International Maize and Wheat Improvement Center",
-      "International Institute of Tropical Agriculture",
-      "International Potato Center",
-      "International Livestock Research Institute"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mlmh-pl-najruchliwsza-droga-wodna-morze",
-   "subfamily": "2hop",
-   "prompt": "Najbardziej ruchliwa sztuczna droga wodna dla statków na świecie łączy Bałtyk z morzem",
-   "target": "Północnym",
-   "target_alts": [
-    "Północnym",
-    "Północne",
-    "Północnego",
-    "północnym",
-    "północne"
+    "Indonezji",
+    "Indonezja",
+    "Indonezję",
+    "Indonezyjskiego",
+    "Republiki Indonezji"
    ],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -1179,7 +1331,7 @@
    },
    "lang": "pl",
    "intermediates": [
-    "Kiel Canal"
+    "Mount Tambora"
    ],
    "units": [
     {
@@ -1188,15 +1340,13 @@
      "multi_token": true,
      "forms": {
       "pl": [
-       "Kanał Kiloński",
-       "Kanału Kilońskiego",
-       "Kanałem Kilońskim"
+       "góra Tambora",
+       "Tambory"
       ]
      },
      "match": [
-      "Kanał Kiloński",
-      "Kanału Kilońskiego",
-      "Kanałem Kilońskim"
+      "góra Tambora",
+      "Tambory"
      ]
     },
     {
@@ -1205,19 +1355,19 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "Kiel Canal",
-       "Kiel Ship Canal"
+       "Mount Tambora",
+       "Tambora volcano"
       ],
       "zh": [
-       "基尔运河",
-       "北海-波罗的海运河"
+       "坦博拉火山",
+       "坦博拉"
       ]
      },
      "match": [
-      "Kiel Canal",
-      "Kiel Ship Canal",
-      "基尔运河",
-      "北海-波罗的海运河"
+      "Mount Tambora",
+      "Tambora volcano",
+      "坦博拉火山",
+      "坦博拉"
      ]
     },
     {
@@ -1232,36 +1382,36 @@
        "波兰语"
       ],
       "pl": [
+       "język polski",
        "po polsku",
-       "język polski"
+       "polszczyzna"
       ]
      },
      "match": [
       "Polish",
       "波兰语",
+      "język polski",
       "po polsku",
-      "język polski"
+      "polszczyzna"
      ]
     }
    ],
    "bridges": [
     {
-     "question": "Which canal in northern Germany, opened in 1895, is the world's busiest artificial waterway by number of ships? Answer with just the name.",
+     "question": "Which volcano's catastrophic 1815 eruption led to the 'Year Without a Summer'? Answer with just the name.",
      "units": [
       "bridge_l2",
       "bridge_native"
      ],
      "answers": [
-      "Kiel Canal",
-      "Kiel",
-      "the Kiel Canal",
-      "Kiel Ship Canal",
-      "Nord-Ostsee-Kanal",
-      "Kanał Kiloński",
-      "Kanału Kilońskiego",
-      "Kanałem Kilońskim",
-      "基尔运河",
-      "北海-波罗的海运河"
+      "Tambora",
+      "Mount Tambora",
+      "Gunung Tambora",
+      "góra Tambora",
+      "Tambory",
+      "坦博拉火山",
+      "坦博拉",
+      "Tambora volcano"
      ]
     }
    ],
@@ -1276,19 +1426,18 @@
     "units": {
      "bridge_l2": {
       "pl": [
-       6,
-       6,
-       7
+       4,
+       2
       ]
      },
      "bridge_native": {
       "en": [
        3,
-       4
+       3
       ],
       "zh": [
-       3,
-       7
+       4,
+       3
       ]
      },
      "language": {
@@ -1300,7 +1449,173 @@
       ],
       "pl": [
        3,
-       3
+       3,
+       5
+      ]
+     }
+    },
+    "target": 4
+   },
+   "mc": {
+    "bridge_native": {
+     "gold": "Mount Tambora",
+     "distractors": [
+      "Krakatoa",
+      "Mount Merapi",
+      "Mount Pinatubo",
+      "Mount Kelud"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mlmh-ru-klyuchevskaya-kamchatka",
+   "subfamily": "2hop",
+   "prompt": "Высочайший действующий вулкан Евразии находится на полуострове",
+   "target": "Камчатка",
+   "target_alts": [
+    "Камчатке",
+    "Камчатки",
+    "Камчатку",
+    "Камчаткой",
+    "полуострове Камчатка"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "lang": "ru",
+   "intermediates": [
+    "Klyuchevskaya Sopka"
+   ],
+   "units": [
+    {
+     "role": "bridge_l2",
+     "required": false,
+     "multi_token": true,
+     "forms": {
+      "ru": [
+       "Ключевская сопка",
+       "Ключевской",
+       "Ключевской сопки"
+      ]
+     },
+     "match": [
+      "Ключевская сопка",
+      "Ключевской",
+      "Ключевской сопки"
+     ]
+    },
+    {
+     "role": "bridge_native",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "Klyuchevskaya Sopka",
+       "Klyuchevskoy Volcano"
+      ],
+      "zh": [
+       "克柳切夫火山",
+       "克柳切夫斯卡亚火山"
+      ]
+     },
+     "match": [
+      "Klyuchevskaya Sopka",
+      "Klyuchevskoy Volcano",
+      "克柳切夫火山",
+      "克柳切夫斯卡亚火山"
+     ]
+    },
+    {
+     "role": "language",
+     "required": false,
+     "multi_token": false,
+     "forms": {
+      "en": [
+       "Russian"
+      ],
+      "zh": [
+       "俄语"
+      ],
+      "ru": [
+       "русский язык",
+       "по-русски",
+       "русском"
+      ]
+     },
+     "match": [
+      "Russian",
+      "俄语",
+      "русский язык",
+      "по-русски",
+      "русском"
+     ]
+    }
+   ],
+   "bridges": [
+    {
+     "question": "Which volcano is the highest active volcano in Eurasia, rising in the Russian Far East? Answer with just the name.",
+     "units": [
+      "bridge_l2",
+      "bridge_native"
+     ],
+     "answers": [
+      "Klyuchevskaya Sopka",
+      "Klyuchevskaya",
+      "Klyuchevskoy",
+      "Klyuchevskoi",
+      "Ключевская сопка",
+      "Ключевская",
+      "Ключевской",
+      "克柳切夫火山",
+      "Ключевской сопки",
+      "Klyuchevskoy Volcano",
+      "克柳切夫斯卡亚火山"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "bridge_consistency": {
+    "bridge_l2|bridge_native": 1.0
+   },
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "bridge_l2": {
+      "ru": [
+       6,
+       3,
+       6
+      ]
+     },
+     "bridge_native": {
+      "en": [
+       8,
+       7
+      ],
+      "zh": [
+       5,
+       8
+      ]
+     },
+     "language": {
+      "en": [
+       1
+      ],
+      "zh": [
+       2
+      ],
+      "ru": [
+       3,
+       4,
+       2
       ]
      }
     },
@@ -1308,12 +1623,12 @@
    },
    "mc": {
     "bridge_native": {
-     "gold": "Kiel Canal",
+     "gold": "Klyuchevskaya Sopka",
      "distractors": [
-      "Corinth Canal",
-      "Göta Canal",
-      "Mittelland Canal",
-      "Suez Canal"
+      "Koryaksky Volcano",
+      "Shiveluch Volcano",
+      "Avachinsky Volcano",
+      "Tolbachik Volcano"
      ]
     }
    }
@@ -1814,16 +2129,15 @@
    }
   },
   {
-   "name": "mlmh-tr-paslanmaz-sheffield",
+   "name": "mlmh-tr-monark-meksika",
    "subfamily": "2hop",
-   "prompt": "Mutfak bıçaklarının pas tutmasını engelleyen, krom katkılı alaşımın 1913'te ilk kez üretildiği İngiliz kenti",
-   "target": "Sheffield",
+   "prompt": "Sonbaharda Kanada'dan binlerce kilometre güneye göç edip köknar ormanlarında dev kümeler halinde kışlayan turuncu-siyah kanatlı böceğin kışlama alanlarının bulunduğu ülkenin adı",
+   "target": "Meksika",
    "target_alts": [
-    "Sheffield",
-    "Sheffield'dir",
-    "Sheffield'de",
-    "Sheffield kenti",
-    "Sheffield şehri"
+    "Meksika",
+    "Meksika'dır",
+    "Meksika'da",
+    "Meksika'nın"
    ],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -1835,7 +2149,7 @@
    },
    "lang": "tr",
    "intermediates": [
-    "stainless steel"
+    "monarch butterfly"
    ],
    "units": [
     {
@@ -1844,13 +2158,15 @@
      "multi_token": true,
      "forms": {
       "tr": [
-       "paslanmaz çelik",
-       "paslanmaz çeliği"
+       "kral kelebeği",
+       "monark kelebeği",
+       "kral kelebekleri"
       ]
      },
      "match": [
-      "paslanmaz çelik",
-      "paslanmaz çeliği"
+      "kral kelebeği",
+      "monark kelebeği",
+      "kral kelebekleri"
      ]
     },
     {
@@ -1859,19 +2175,21 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "stainless steel",
-       "rustless steel"
+       "monarch butterfly",
+       "milkweed butterfly",
+       "Danaus plexippus"
       ],
       "zh": [
-       "不锈钢",
-       "不锈钢材"
+       "帝王蝶",
+       "黑脉金斑蝶"
       ]
      },
      "match": [
-      "stainless steel",
-      "rustless steel",
-      "不锈钢",
-      "不锈钢材"
+      "monarch butterfly",
+      "milkweed butterfly",
+      "Danaus plexippus",
+      "帝王蝶",
+      "黑脉金斑蝶"
      ]
     },
     {
@@ -1902,25 +2220,26 @@
    ],
    "bridges": [
     {
-     "question": "Which chromium-containing alloy, developed by Harry Brearley in 1913 for cutlery, does not rust? Answer with just the name.",
+     "question": "Which butterfly species migrates thousands of kilometres each autumn from Canada to overwinter clustered in fir forests? Answer with just the name.",
      "units": [
       "bridge_l2",
       "bridge_native"
      ],
      "answers": [
-      "stainless steel",
-      "rustless steel",
-      "inox",
-      "paslanmaz çelik",
-      "paslanmaz",
-      "不锈钢",
-      "paslanmaz çeliği",
-      "不锈钢材"
+      "monarch butterfly",
+      "monarch",
+      "Danaus plexippus",
+      "milkweed butterfly",
+      "kral kelebeği",
+      "monark kelebeği",
+      "kral kelebekleri",
+      "帝王蝶",
+      "黑脉金斑蝶"
      ]
     }
    ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
+   "consistency": 0.9,
+   "consistency_strict": 0.9,
    "consistency_greedy": 1,
    "bridge_consistency": {
     "bridge_l2|bridge_native": 1.0
@@ -1930,18 +2249,20 @@
     "units": {
      "bridge_l2": {
       "tr": [
-       7,
-       7
+       6,
+       6,
+       6
       ]
      },
      "bridge_native": {
       "en": [
        2,
-       3
+       3,
+       5
       ],
       "zh": [
-       1,
-       2
+       2,
+       5
       ]
      },
      "language": {
@@ -1958,16 +2279,185 @@
       ]
      }
     },
-    "target": 1
+    "target": 3
    },
    "mc": {
     "bridge_native": {
-     "gold": "stainless steel",
+     "gold": "monarch butterfly",
      "distractors": [
-      "cast iron",
-      "bronze",
-      "brass",
-      "Damascus steel"
+      "painted lady butterfly",
+      "red admiral butterfly",
+      "viceroy butterfly",
+      "eastern tiger swallowtail"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mlmh-tr-atp7b-metal",
+   "subfamily": "2hop",
+   "prompt": "ATP7B genindeki mutasyonlar sonucu ortaya çıkan kalıtsal bozuklukta karaciğerde ve beyinde aşırı biriken metal",
+   "target": "bakır",
+   "target_alts": [
+    "bakırdır",
+    "bakırın",
+    "bakırdır (Cu)",
+    "Bakır"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "lang": "tr",
+   "intermediates": [
+    "Wilson's disease"
+   ],
+   "units": [
+    {
+     "role": "bridge_l2",
+     "required": false,
+     "multi_token": true,
+     "forms": {
+      "tr": [
+       "Wilson hastalığı",
+       "Wilson hastalığında",
+       "hepatolentiküler dejenerasyon"
+      ]
+     },
+     "match": [
+      "Wilson hastalığı",
+      "Wilson hastalığında",
+      "hepatolentiküler dejenerasyon"
+     ]
+    },
+    {
+     "role": "bridge_native",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "Wilson's disease",
+       "Wilson disease",
+       "hepatolenticular degeneration"
+      ],
+      "zh": [
+       "肝豆状核变性",
+       "威尔逊病",
+       "威尔森氏症"
+      ]
+     },
+     "match": [
+      "Wilson's disease",
+      "Wilson disease",
+      "hepatolenticular degeneration",
+      "肝豆状核变性",
+      "威尔逊病",
+      "威尔森氏症"
+     ]
+    },
+    {
+     "role": "language",
+     "required": false,
+     "multi_token": false,
+     "forms": {
+      "en": [
+       "Turkish"
+      ],
+      "zh": [
+       "土耳其语"
+      ],
+      "tr": [
+       "Türkçe",
+       "Türkçedir",
+       "Türk dili"
+      ]
+     },
+     "match": [
+      "Turkish",
+      "土耳其语",
+      "Türkçe",
+      "Türkçedir",
+      "Türk dili"
+     ]
+    }
+   ],
+   "bridges": [
+    {
+     "question": "Which inherited disorder, caused by mutations in the ATP7B gene, leads to abnormal metal accumulation in the liver and brain and produces Kayser-Fleischer rings? Answer with just the name.",
+     "units": [
+      "bridge_l2",
+      "bridge_native"
+     ],
+     "answers": [
+      "Wilson's disease",
+      "Wilson disease",
+      "Wilson",
+      "Wilson hastalığı",
+      "hepatolenticular degeneration",
+      "hepatolentiküler dejenerasyon",
+      "肝豆状核变性",
+      "威尔逊病",
+      "威尔森氏症",
+      "Wilson hastalığında"
+     ]
+    }
+   ],
+   "consistency": 0.8,
+   "consistency_strict": 0.8,
+   "consistency_greedy": 1,
+   "bridge_consistency": {
+    "bridge_l2|bridge_native": 1.0
+   },
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "bridge_l2": {
+      "tr": [
+       4,
+       5,
+       9
+      ]
+     },
+     "bridge_native": {
+      "en": [
+       3,
+       2,
+       6
+      ],
+      "zh": [
+       6,
+       3,
+       4
+      ]
+     },
+     "language": {
+      "en": [
+       1
+      ],
+      "zh": [
+       2
+      ],
+      "tr": [
+       1,
+       4,
+       3
+      ]
+     }
+    },
+    "target": 2
+   },
+   "mc": {
+    "bridge_native": {
+     "gold": "Wilson's disease",
+     "distractors": [
+      "hereditary hemochromatosis",
+      "Menkes disease",
+      "Gaucher disease",
+      "alpha-1 antitrypsin deficiency"
      ]
     }
    }

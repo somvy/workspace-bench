@@ -8,7 +8,7 @@ from transformers import AutoTokenizer
 from wsbench.readplan import plan, resolve
 from wsbench.registry import FAMILIES, load_all
 
-ORIG_ID, SUBJECT_ID = "Qwen/Qwen3.6-27B", "Qwen/Qwen2.5-7B-Instruct"
+ORIG_ID, SUBJECT_ID = "Qwen/Qwen3.6-27B", "Qwen/Qwen3-8B"
 load_all()
 from wsbench.produce.render import render
 

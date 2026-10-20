@@ -26,6 +26,7 @@ MODELS = {
     "q25_3b_base": "Qwen/Qwen2.5-3B",
     "q25_7b": "Qwen/Qwen2.5-7B-Instruct",
     "q25_7b_base": "Qwen/Qwen2.5-7B",
+    "q3_8b": "Qwen/Qwen3-8B",
     "q35_4b_base": "Qwen/Qwen3.5-4B-Base",
     "q35_9b_base": "Qwen/Qwen3.5-9B-Base",
     "g4_12b": "google/gemma-4-12B-it",
@@ -41,7 +42,7 @@ EXACT = {"moral_rationale", "arithmetic_intermediates", "chain_intermediates", "
 N_SHOT, SHOT_SEED, FS_STOP = 3, 0, "\n"  # few-shot: exemplars per family, seed of their draw, answer ends at first newline
 GRADE_STOP = ["true", "false"]  # grader verdict is the first JSON field; stopping there gives the same greedy prefix
 GRADE_SUFFIX = '\n\nReply with a JSON object only: {"correct": true or false, "why": "<one short sentence>"}'
-OUT = Path("/workspace/wsb_out/gate")
+OUT = Path("/mnt/nfs_share2/dontsov/projects/ao/artf/wsbench_repro/gate")
 THINK = re.compile(r"<think>.*?</think>", re.S)
 # Bench bug: capable/questions.py golds these families with `intermediates`, but the question asks for the
 # final number/colour (bank field `answer`, which the banks' own gates used). Grade against `answer`.

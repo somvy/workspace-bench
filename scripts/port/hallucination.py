@@ -7,7 +7,7 @@ import json, subprocess, sys, unicodedata
 from pathlib import Path
 
 # ---- config
-SUBJECT_ID = "Qwen/Qwen2.5-7B-Instruct"
+SUBJECT_ID = "Qwen/Qwen3-8B"
 ORIG_ID = "Qwen/Qwen3.6-27B"  # model of the original bank (main)
 BENCH = Path(__file__).resolve().parents[2]
 OUT = BENCH / "evals/hallucination"

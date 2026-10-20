@@ -93,8 +93,8 @@ class JLens:
 
     name: str = "jlens"
     layers: list[int] | None = None
-    repo: str = "camilablank/workspace-lenses"  # Qwen2.5-7B port: no J-lens exists for this model; loading fails until one is fitted
-    filename: str = "qwen2.5-7b/j-lens/lens.pt"
+    repo: str = "neuronpedia/jacobian-lens"
+    filename: str = "qwen3-8b/jlens/Salesforce-wikitext/Qwen3-8B_jacobian_lens.pt"  # Qwen3-8B port: neuronpedia n=1000 wikitext fit on Qwen/Qwen3-8B
     k: int = TOP_K
     _b: Backend | None = field(default=None, repr=False)
     _jac: Any = field(default=None, repr=False)
@@ -132,7 +132,7 @@ class RLens:
     name: str = "rlens"
     layers: list[int] | None = None
     repo: str = "camilablank/workspace-lenses"
-    filename: str = "qwen2.5-7b/r-lens/lens.pt"  # Qwen2.5-7B port: no R-lens exists for this model
+    filename: str = "qwen3-8b/r-lens/lens.pt"  # Qwen3-8B port: no R-lens exists for this model; loading fails: no R-lens exists for this model
     k: int = TOP_K
     _b: Backend | None = field(default=None, repr=False)
     _jac: Any = field(default=None, repr=False)

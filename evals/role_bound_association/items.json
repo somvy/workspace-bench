@@ -1,1 +1,973 @@
-[]
+[
+ {
+  "id": "oa-police-thief-chase-ab",
+  "pair_id": "oa-police-thief-chase",
+  "tier": "A",
+  "direction": "ab",
+  "stereotypicality": "congruent",
+  "role_a": "police officer",
+  "role_b": "thief",
+  "action": "chased",
+  "names": {
+   "a": "Marcus",
+   "b": "Dylan"
+  },
+  "stimulus": "Dylan shoved the register's cash drawer contents into his hoodie and bolted out of the corner shop, the alarm shrieking behind him. Marcus, whose badge and shoulder radio marked him as the one on duty that block, dropped his coffee and chased him for three streets, calling in the direction of flight as he ran. He caught up near the loading bay and had the cuffs on before backup arrived.",
+  "read_position": "end_of_stimulus",
+  "gold_label": "the police officer chased the thief",
+  "contrast_label": "the thief chased the police officer",
+  "asked_question": "In one sentence, state who did what to whom in this scene — identify each person by their role or relationship (not their name), and be explicit about the direction.",
+  "mc_options": [
+   "the police officer chased the thief",
+   "the thief chased the police officer"
+  ],
+  "blocklist": {
+   "roles": [
+    "police",
+    "officer",
+    "cop",
+    "policeman",
+    "policewoman",
+    "detective",
+    "patrol",
+    "thief",
+    "thieves",
+    "robber",
+    "burglar",
+    "criminal",
+    "crook",
+    "shoplifter"
+   ],
+   "action": []
+  },
+  "generator": "claude-opus-5",
+  "qa": {
+   "asked_open": "pass",
+   "continuation": "pass",
+   "continuation_sent1": "clean"
+  }
+ },
+ {
+  "id": "oa-doctor-patient-comfort-ab",
+  "pair_id": "oa-doctor-patient-comfort",
+  "tier": "A",
+  "direction": "ab",
+  "stereotypicality": "congruent",
+  "role_a": "doctor",
+  "role_b": "patient",
+  "action": "comforted",
+  "names": {
+   "a": "Priya",
+   "b": "Marcus"
+  },
+  "stimulus": "Marcus lay under the thin blanket with an IV line taped to the back of his hand, waiting for the biopsy results that had been delayed since morning. Priya finished writing the new dosage on his chart, hung the clipboard back on the rail, and then sat down on the edge of the bed instead of leaving. She rested a hand on his shoulder and comforted him, explaining in a slow, steady voice that the delay meant nothing bad and that she would come back herself the moment the lab called. Her badge and stethoscope swung forward as she leaned in, and by the time she stood up his breathing had evened out.",
+  "read_position": "end_of_stimulus",
+  "gold_label": "the doctor comforted the patient",
+  "contrast_label": "the patient comforted the doctor",
+  "asked_question": "In one sentence, state who did what to whom in this scene — identify each person by their role or relationship (not their name), and be explicit about the direction.",
+  "mc_options": [
+   "the doctor comforted the patient",
+   "the patient comforted the doctor"
+  ],
+  "blocklist": {
+   "roles": [
+    "doctor",
+    "physician",
+    "surgeon",
+    "medic",
+    "patient"
+   ],
+   "action": []
+  },
+  "generator": "claude-opus-5",
+  "qa": {
+   "asked_open": "pass",
+   "continuation": "pass",
+   "continuation_sent1": "clean"
+  }
+ },
+ {
+  "id": "oa-teacher-student-scold-ab",
+  "pair_id": "oa-teacher-student-scold",
+  "tier": "A",
+  "direction": "ab",
+  "stereotypicality": "congruent",
+  "role_a": "teacher",
+  "role_b": "student",
+  "action": "scolded",
+  "names": {
+   "a": "Margaret",
+   "b": "Dylan"
+  },
+  "stimulus": "Margaret set down the red pen she had been using to mark the stack of quizzes and walked to the back row, where Dylan was hunched over a desk with his backpack still on. She scolded him for the third time that week — first for the missing homework, then for the phone hidden under his notebook, her voice sharp enough that the rest of the room went silent. He stared at his shoes and said nothing while she reminded him whose lesson plan he was interrupting and that she expected better by Friday. Only after she returned to the whiteboard did the low murmur of the room start up again.",
+  "read_position": "end_of_stimulus",
+  "gold_label": "the teacher scolded the student",
+  "contrast_label": "the student scolded the teacher",
+  "asked_question": "In one sentence, state who did what to whom in this scene — identify each person by their role or relationship (not their name), and be explicit about the direction.",
+  "mc_options": [
+   "the teacher scolded the student",
+   "the student scolded the teacher"
+  ],
+  "blocklist": {
+   "roles": [
+    "teacher",
+    "professor",
+    "instructor",
+    "tutor",
+    "student",
+    "pupil",
+    "schoolboy",
+    "schoolgirl"
+   ],
+   "action": []
+  },
+  "generator": "claude-opus-5",
+  "qa": {
+   "asked_open": "pass",
+   "continuation": "pass",
+   "continuation_sent1": "clean"
+  }
+ },
+ {
+  "id": "oa-waiter-customer-apologize-ab",
+  "pair_id": "oa-waiter-customer-apologize",
+  "tier": "A",
+  "direction": "ab",
+  "stereotypicality": "congruent",
+  "role_a": "waiter",
+  "role_b": "customer",
+  "action": "apologized to",
+  "names": {
+   "a": "Marcus",
+   "b": "Priya"
+  },
+  "stimulus": "Marcus retied his apron and carried the tray back to table nine, where Priya sat with her napkin still folded in her lap, waiting on the soup she had ordered twenty minutes earlier. He set the bowl down and said he was sorry for the delay, explaining that the kitchen had misplaced her ticket. Priya nodded and reached for her spoon. He refilled her water glass, then went to check on the corner booth.",
+  "read_position": "end_of_stimulus",
+  "gold_label": "the waiter apologized to the customer",
+  "contrast_label": "the customer apologized to the waiter",
+  "asked_question": "In one sentence, state who did what to whom in this scene — identify each person by their role or relationship (not their name), and be explicit about the direction.",
+  "mc_options": [
+   "the waiter apologized to the customer",
+   "the customer apologized to the waiter"
+  ],
+  "blocklist": {
+   "roles": [
+    "waiter",
+    "waitress",
+    "server",
+    "customer",
+    "diner",
+    "patron",
+    "guest"
+   ],
+   "action": []
+  },
+  "generator": "claude-opus-5",
+  "qa": {
+   "asked_open": "pass",
+   "continuation": "pass",
+   "continuation_sent1": "leak"
+  }
+ },
+ {
+  "id": "oa-waiter-customer-apologize-ba",
+  "pair_id": "oa-waiter-customer-apologize",
+  "tier": "A",
+  "direction": "ba",
+  "stereotypicality": "incongruent",
+  "role_a": "waiter",
+  "role_b": "customer",
+  "action": "apologized to",
+  "names": {
+   "a": "Marcus",
+   "b": "Nina"
+  },
+  "stimulus": "Nina had been snapping her fingers all evening at the young man in the black apron who kept her water glass full, and twice she had sent back a plate he had carried across the room on a tray. When the check came, she looked up from her seat at table nine, flushed, and said she was sorry for how she had spoken to him — that her day had been awful and he had done nothing to deserve it. Marcus, order pad still in his hand, only nodded and said it was fine, offering no regrets of his own as he cleared the last dish.",
+  "read_position": "end_of_stimulus",
+  "gold_label": "the customer apologized to the waiter",
+  "contrast_label": "the waiter apologized to the customer",
+  "asked_question": "In one sentence, state who did what to whom in this scene — identify each person by their role or relationship (not their name), and be explicit about the direction.",
+  "mc_options": [
+   "the customer apologized to the waiter",
+   "the waiter apologized to the customer"
+  ],
+  "blocklist": {
+   "roles": [
+    "waiter",
+    "waitress",
+    "server",
+    "customer",
+    "diner",
+    "patron",
+    "guest"
+   ],
+   "action": []
+  },
+  "generator": "claude-opus-5",
+  "qa": {
+   "asked_open": "pass",
+   "continuation": "pass",
+   "continuation_sent1": "clean"
+  }
+ },
+ {
+  "id": "oa-boss-employee-envy-ba",
+  "pair_id": "oa-boss-employee-envy",
+  "tier": "B",
+  "direction": "ba",
+  "stereotypicality": "congruent",
+  "role_a": "boss",
+  "role_b": "employee",
+  "action": "envied",
+  "names": {
+   "a": "Priya",
+   "b": "Daniel"
+  },
+  "stimulus": "Priya approved Daniel's vacation requests and signed off on his performance reviews from the corner office at the end of the hall. From his cubicle beside the printer, Daniel kept tallying the ways her life outshone his \the the way the room quieted when she spoke \the and each item left a sour ache under his ribs. He caught himself wishing, for the third time that week, that he could simply trade places with her. She, for her part, rarely thought about him outside of the quarterly numbers, and wanted nothing that was his.",
+  "read_position": "end_of_stimulus",
+  "gold_label": "the employee envied the boss",
+  "contrast_label": "the boss envied the employee",
+  "asked_question": "In one sentence, state who did what to whom in this scene — identify each person by their role or relationship (not their name), and be explicit about the direction.",
+  "mc_options": [
+   "the employee envied the boss",
+   "the boss envied the employee"
+  ],
+  "blocklist": {
+   "roles": [
+    "boss",
+    "manager",
+    "supervisor",
+    "executive",
+    "director",
+    "employee",
+    "worker",
+    "subordinate",
+    "staffer",
+    "assistant"
+   ],
+   "action": [
+    "envy",
+    "envious",
+    "envied",
+    "jealous",
+    "jealousy",
+    "covet"
+   ]
+  },
+  "generator": "claude-opus-5",
+  "qa": {
+   "asked_open": "pass",
+   "continuation": "pass",
+   "continuation_sent1": "clean"
+  }
+ },
+ {
+  "id": "oa-doctor-nurse-instruct-ab",
+  "pair_id": "oa-doctor-nurse-instruct",
+  "tier": "A",
+  "direction": "ab",
+  "stereotypicality": "congruent",
+  "role_a": "doctor",
+  "role_b": "nurse",
+  "action": "instructed",
+  "names": {
+   "a": "Amara",
+   "b": "Priya"
+  },
+  "stimulus": "After examining the man in bed four, Amara wrote her diagnosis in the chart and signed the order for a new dose. She then instructed Priya, who had spent the morning hanging IV bags and logging vital signs across the ward, to start the drip at half rate and record the readings every twenty minutes. Priya repeated the directions back word for word, initialed the medication log, and rolled her supply cart to the bedside. The ward clock ticked past noon, and the lunch trays arrived on schedule.",
+  "read_position": "end_of_stimulus",
+  "gold_label": "the doctor instructed the nurse",
+  "contrast_label": "the nurse instructed the doctor",
+  "asked_question": "In one sentence, state who did what to whom in this scene — identify each person by their role or relationship (not their name), and be explicit about the direction.",
+  "mc_options": [
+   "the doctor instructed the nurse",
+   "the nurse instructed the doctor"
+  ],
+  "blocklist": {
+   "roles": [
+    "doctor",
+    "physician",
+    "surgeon",
+    "nurse"
+   ],
+   "action": []
+  },
+  "generator": "claude-opus-5",
+  "qa": {
+   "asked_open": "pass",
+   "continuation": "pass",
+   "continuation_sent1": "clean"
+  }
+ },
+ {
+  "id": "oa-king-servant-bow-ab",
+  "pair_id": "oa-king-servant-bow",
+  "tier": "A",
+  "direction": "ab",
+  "stereotypicality": "incongruent",
+  "role_a": "king",
+  "role_b": "servant",
+  "action": "bowed to",
+  "names": {
+   "a": "Aldric",
+   "b": "Tomas"
+  },
+  "stimulus": "Aldric had worn the iron crown for thirty years, and the whole court rose whenever he stepped into the hall. That morning he walked past his councillors to Tomas, who had hauled coal to the palace hearths since he was a boy, handed his scepter to a page, and bowed — low, from the waist, holding it for a long moment while the room went silent. Tomas stayed perfectly upright, the coal bucket still hanging from his fist, too startled to bend or speak. When Aldric rose, he took the bucket himself and the hearth was lit before the morning bells finished.",
+  "read_position": "end_of_stimulus",
+  "gold_label": "the king bowed to the servant",
+  "contrast_label": "the servant bowed to the king",
+  "asked_question": "In one sentence, state who did what to whom in this scene — identify each person by their role or relationship (not their name), and be explicit about the direction.",
+  "mc_options": [
+   "the king bowed to the servant",
+   "the servant bowed to the king"
+  ],
+  "blocklist": {
+   "roles": [
+    "king",
+    "monarch",
+    "ruler",
+    "majesty",
+    "servant",
+    "valet",
+    "footman",
+    "maid"
+   ],
+   "action": []
+  },
+  "generator": "claude-opus-5",
+  "qa": {
+   "asked_open": "pass",
+   "continuation": "pass",
+   "continuation_sent1": "clean"
+  }
+ },
+ {
+  "id": "oa-celebrity-fan-photograph-ba",
+  "pair_id": "oa-celebrity-fan-photograph",
+  "tier": "A",
+  "direction": "ba",
+  "stereotypicality": "congruent",
+  "role_a": "celebrity",
+  "role_b": "fan",
+  "action": "photographed",
+  "names": {
+   "a": "Dario",
+   "b": "Priya"
+  },
+  "stimulus": "Dario came out the stage door in sunglasses, still in the coat he had worn as the detective in the crime drama everyone was quoting that spring. Priya had queued since four in the afternoon with a worn paperback of his interviews under one arm, and when he passed she lifted her phone and pressed the shutter twice. He gave a small wave without slowing and got into a waiting car; his hands never left his pockets. Priya zoomed in on the second shot, decided it was sharp enough, and tucked the phone away before walking to the bus stop.",
+  "read_position": "end_of_stimulus",
+  "gold_label": "the fan photographed the celebrity",
+  "contrast_label": "the celebrity photographed the fan",
+  "asked_question": "In one sentence, state who did what to whom in this scene — identify each person by their role or relationship (not their name), and be explicit about the direction.",
+  "mc_options": [
+   "the fan photographed the celebrity",
+   "the celebrity photographed the fan"
+  ],
+  "blocklist": {
+   "roles": [
+    "celebrity",
+    "star",
+    "famous",
+    "actress",
+    "actor",
+    "fan",
+    "admirer",
+    "follower"
+   ],
+   "action": []
+  },
+  "generator": "claude-opus-5",
+  "qa": {
+   "asked_open": "pass",
+   "continuation": "pass",
+   "continuation_sent1": "clean"
+  }
+ },
+ {
+  "id": "oa-librarian-borrower-fine-ab",
+  "pair_id": "oa-librarian-borrower-fine",
+  "tier": "A",
+  "direction": "ab",
+  "stereotypicality": "congruent",
+  "role_a": "librarian",
+  "role_b": "borrower",
+  "action": "fined",
+  "names": {
+   "a": "Marguerite",
+   "b": "Dev"
+  },
+  "stimulus": "Marguerite scanned the barcode from behind the returns counter, checked the due date against the calendar tacked to her monitor, and typed a charge of four dollars and twenty cents onto the account of the man who had kept the three novels for six weeks. Dev dug the coins out of his coat pocket and slid them across the wood, and she printed a receipt from the little thermal printer beside the stamp pad. The novels went onto her reshelving cart, spines up. Outside, the rain had finally thinned to a drizzle.",
+  "read_position": "end_of_stimulus",
+  "gold_label": "the librarian fined the borrower",
+  "contrast_label": "the borrower fined the librarian",
+  "asked_question": "In one sentence, state who did what to whom in this scene — identify each person by their role or relationship (not their name), and be explicit about the direction.",
+  "mc_options": [
+   "the librarian fined the borrower",
+   "the borrower fined the librarian"
+  ],
+  "blocklist": {
+   "roles": [
+    "librarian",
+    "borrower",
+    "patron",
+    "reader"
+   ],
+   "action": []
+  },
+  "generator": "claude-opus-5",
+  "qa": {
+   "asked_open": "pass",
+   "continuation": "pass",
+   "continuation_sent1": "clean"
+  }
+ },
+ {
+  "id": "oa-referee-player-warn-ab",
+  "pair_id": "oa-referee-player-warn",
+  "tier": "A",
+  "direction": "ab",
+  "stereotypicality": "congruent",
+  "role_a": "referee",
+  "role_b": "player",
+  "action": "warned",
+  "names": {
+   "a": "Daniel",
+   "b": "Omar"
+  },
+  "stimulus": "Two minutes after the restart, Daniel stopped play with a sharp blast of his whistle and beckoned the sweating figure in the red number eight shirt toward the touchline. Holding his notebook open, he warned Omar that one more late slide from behind would cost him a card, and made him repeat it back. Then he jotted the shirt number down, tucked the notebook into his black shorts, and signaled for the free kick. Omar jogged back to the wall, tugging his socks up over his shin pads.",
+  "read_position": "end_of_stimulus",
+  "gold_label": "the referee warned the player",
+  "contrast_label": "the player warned the referee",
+  "asked_question": "In one sentence, state who did what to whom in this scene — identify each person by their role or relationship (not their name), and be explicit about the direction.",
+  "mc_options": [
+   "the referee warned the player",
+   "the player warned the referee"
+  ],
+  "blocklist": {
+   "roles": [
+    "referee",
+    "ref",
+    "umpire",
+    "official",
+    "player",
+    "athlete",
+    "striker",
+    "forward"
+   ],
+   "action": []
+  },
+  "generator": "claude-opus-5",
+  "qa": {
+   "asked_open": "pass",
+   "continuation": "pass",
+   "continuation_sent1": "leak"
+  }
+ },
+ {
+  "id": "oa-journalist-politician-interview-ab",
+  "pair_id": "oa-journalist-politician-interview",
+  "tier": "A",
+  "direction": "ab",
+  "stereotypicality": "congruent",
+  "role_a": "journalist",
+  "role_b": "politician",
+  "action": "interviewed",
+  "names": {
+   "a": "Maya",
+   "b": "Daniel"
+  },
+  "stimulus": "Maya set her recorder on the desk, flipped to a page of prepared questions, and worked through them one by one while Daniel, who had held the district's assembly seat for six years, answered each in turn. She pressed him twice on the water bill vote, noted his exact wording, and thanked him when her list ran out. The recorder went back into her bag, and the office door clicked shut behind her. Two weeks later she was three states away, standing in a hangar in the rain, waiting on a delayed cargo flight for an unrelated story.",
+  "read_position": "end_of_stimulus",
+  "gold_label": "the journalist interviewed the politician",
+  "contrast_label": "the politician interviewed the journalist",
+  "asked_question": "In one sentence, state who did what to whom in this scene — identify each person by their role or relationship (not their name), and be explicit about the direction.",
+  "mc_options": [
+   "the journalist interviewed the politician",
+   "the politician interviewed the journalist"
+  ],
+  "blocklist": {
+   "roles": [
+    "journalist",
+    "reporter",
+    "correspondent",
+    "politician",
+    "senator",
+    "mayor",
+    "candidate",
+    "councilman"
+   ],
+   "action": []
+  },
+  "generator": "claude-opus-5",
+  "qa": {
+   "asked_open": "pass",
+   "continuation": "pass",
+   "continuation_sent1": "leak"
+  }
+ },
+ {
+  "id": "oa-babysitter-toddler-feed-ba",
+  "pair_id": "oa-babysitter-toddler-feed",
+  "tier": "A",
+  "direction": "ba",
+  "stereotypicality": "incongruent",
+  "role_a": "babysitter",
+  "role_b": "toddler",
+  "action": "fed",
+  "names": {
+   "a": "Mara",
+   "b": "Eli"
+  },
+  "stimulus": "Mara, the ninth-grader hired for the evening while the parents were at their dinner reservation, knelt beside the high chair with her mouth open on request. Eli, barely two, gripped a soggy banana slice in his fist and pushed it past her lips, then patted her cheek and reached for another. She chewed and swallowed every piece he delivered, one after another, while he narrated the whole business with a single happy syllable. By the time the tray was bare she had eaten most of his snack, and the kitchen clock ticked over to seven.",
+  "read_position": "end_of_stimulus",
+  "gold_label": "the toddler fed the babysitter",
+  "contrast_label": "the babysitter fed the toddler",
+  "asked_question": "In one sentence, state who did what to whom in this scene — identify each person by their role or relationship (not their name), and be explicit about the direction.",
+  "mc_options": [
+   "the toddler fed the babysitter",
+   "the babysitter fed the toddler"
+  ],
+  "blocklist": {
+   "roles": [
+    "babysitter",
+    "sitter",
+    "nanny",
+    "caregiver",
+    "toddler",
+    "baby",
+    "infant",
+    "child"
+   ],
+   "action": []
+  },
+  "generator": "claude-opus-5",
+  "qa": {
+   "asked_open": "pass",
+   "continuation": "pass",
+   "continuation_sent1": "clean"
+  }
+ },
+ {
+  "id": "oa-hairdresser-client-compliment-ab",
+  "pair_id": "oa-hairdresser-client-compliment",
+  "tier": "A",
+  "direction": "ab",
+  "stereotypicality": "neutral",
+  "role_a": "hairdresser",
+  "role_b": "client",
+  "action": "complimented",
+  "names": {
+   "a": "Priya",
+   "b": "Dana"
+  },
+  "stimulus": "Priya sectioned off the damp hair with a comb and clipped the top layers up before reaching for her shears. Between snips she said the woman in the cape had the kind of natural wave most people paid a fortune to fake, and that the deep green coat hanging by the mirror was the best thing she'd seen come through the door all week. Dana just smiled at the floor tiles and let her keep working, saying nothing about the salon or the haircut in return. The dryer hummed in the next chair over, and a stack of clean towels sat folded on the counter.",
+  "read_position": "end_of_stimulus",
+  "gold_label": "the hairdresser complimented the client",
+  "contrast_label": "the client complimented the hairdresser",
+  "asked_question": "In one sentence, state who did what to whom in this scene — identify each person by their role or relationship (not their name), and be explicit about the direction.",
+  "mc_options": [
+   "the hairdresser complimented the client",
+   "the client complimented the hairdresser"
+  ],
+  "blocklist": {
+   "roles": [
+    "hairdresser",
+    "stylist",
+    "barber",
+    "client",
+    "customer"
+   ],
+   "action": []
+  },
+  "generator": "claude-opus-5",
+  "qa": {
+   "asked_open": "pass",
+   "continuation": "pass",
+   "continuation_sent1": "clean"
+  }
+ },
+ {
+  "id": "oa-professor-dean-report-ba",
+  "pair_id": "oa-professor-dean-report",
+  "tier": "A",
+  "direction": "ba",
+  "stereotypicality": "neutral",
+  "role_a": "professor",
+  "role_b": "dean",
+  "action": "reported",
+  "names": {
+   "a": "Marcus",
+   "b": "Priya"
+  },
+  "stimulus": "Marcus spent Tuesday afternoons leading a seminar on medieval land law, then graded the stack of papers in his office until the building emptied. Priya, who oversaw every department in the college and whose signature closed out each hiring line, had noticed irregularities in his travel receipts and submitted a formal complaint about him to the university's research integrity office. She attached scans of the disputed invoices, dated the cover memo, and forwarded it before the end of the business day. The confirmation email landed in her sent folder, and she went back to the budget spreadsheet she had abandoned that morning.",
+  "read_position": "end_of_stimulus",
+  "gold_label": "the dean reported the professor",
+  "contrast_label": "the professor reported the dean",
+  "asked_question": "In one sentence, state who did what to whom in this scene — identify each person by their role or relationship (not their name), and be explicit about the direction.",
+  "mc_options": [
+   "the dean reported the professor",
+   "the professor reported the dean"
+  ],
+  "blocklist": {
+   "roles": [
+    "professor",
+    "lecturer",
+    "instructor",
+    "dean",
+    "provost"
+   ],
+   "action": []
+  },
+  "generator": "claude-opus-5",
+  "qa": {
+   "asked_open": "pass",
+   "continuation": "pass",
+   "continuation_sent1": "clean"
+  }
+ },
+ {
+  "id": "oa-bouncer-patron-eject-ab",
+  "pair_id": "oa-bouncer-patron-eject",
+  "tier": "A",
+  "direction": "ab",
+  "stereotypicality": "congruent",
+  "role_a": "bouncer",
+  "role_b": "patron",
+  "action": "ejected",
+  "names": {
+   "a": "Marcus",
+   "b": "Devin"
+  },
+  "stimulus": "Marcus stood at the velvet rope with a clicker in one hand and an earpiece looped behind his ear, having worked that door for six years. When Devin, who had paid the ten-dollar cover an hour earlier, knocked over a tray of drinks and started shouting at the bartender, Marcus took him by the elbow, walked him out through the entrance, and set him down on the sidewalk with the flat instruction that his night there was over. Marcus then stepped back inside, unhooked the rope to let two waiting people through, and reset his count on the clicker. Devin zipped his jacket and started up the block toward the bus stop.",
+  "read_position": "end_of_stimulus",
+  "gold_label": "the bouncer ejected the patron",
+  "contrast_label": "the patron ejected the bouncer",
+  "asked_question": "In one sentence, state who did what to whom in this scene — identify each person by their role or relationship (not their name), and be explicit about the direction.",
+  "mc_options": [
+   "the bouncer ejected the patron",
+   "the patron ejected the bouncer"
+  ],
+  "blocklist": {
+   "roles": [
+    "bouncer",
+    "doorman",
+    "security",
+    "patron",
+    "customer",
+    "clubgoer",
+    "guest"
+   ],
+   "action": []
+  },
+  "generator": "claude-opus-5",
+  "qa": {
+   "asked_open": "pass",
+   "continuation": "pass",
+   "continuation_sent1": "clean"
+  }
+ },
+ {
+  "id": "oa-plumber-homeowner-overcharge-ab",
+  "pair_id": "oa-plumber-homeowner-overcharge",
+  "tier": "A",
+  "direction": "ab",
+  "stereotypicality": "congruent",
+  "role_a": "plumber",
+  "role_b": "homeowner",
+  "action": "overcharged",
+  "names": {
+   "a": "Dale",
+   "b": "Priya"
+  },
+  "stimulus": "Dale spent thirty-five minutes under the kitchen sink of the little brick house on Larch Street, swapping out a rubber washer he had bought that morning for two dollars. On the invoice he wrote a figure four times the going rate for the part and the labor, adding a line about \"emergency access fees\" that he had invented in the driveway. Priya, who had inherited the house from her aunt in March and knew nothing about pipes, signed the slip and handed over her debit card without comparing it to anything. Later she filed the receipt in the drawer where the mortgage papers were kept, and went back to unpacking boxes in the hall.",
+  "read_position": "end_of_stimulus",
+  "gold_label": "the plumber overcharged the homeowner",
+  "contrast_label": "the homeowner overcharged the plumber",
+  "asked_question": "In one sentence, state who did what to whom in this scene — identify each person by their role or relationship (not their name), and be explicit about the direction.",
+  "mc_options": [
+   "the plumber overcharged the homeowner",
+   "the homeowner overcharged the plumber"
+  ],
+  "blocklist": {
+   "roles": [
+    "plumber",
+    "homeowner",
+    "resident",
+    "customer",
+    "client"
+   ],
+   "action": []
+  },
+  "generator": "claude-opus-5",
+  "qa": {
+   "asked_open": "pass",
+   "continuation": "pass",
+   "continuation_sent1": "clean"
+  }
+ },
+ {
+  "id": "oa-grandmother-grandson-indulge-ab",
+  "pair_id": "oa-grandmother-grandson-indulge",
+  "tier": "B",
+  "direction": "ab",
+  "stereotypicality": "congruent",
+  "role_a": "grandmother",
+  "role_b": "grandson",
+  "action": "indulged",
+  "names": {
+   "a": "Marta",
+   "b": "Eli"
+  },
+  "stimulus": "Marta was seventy-three, and Eli, nine, was the child of the son she had raised in that same kitchen. His father had left a note about no sweets before dinner, but she cut the boy a second slice of cake, then a third, and let him watch cartoons long past ten. On the walk home from the shops she bought him the expensive model kit he had pointed at in the window, though his birthday was months away. Afterward she rinsed the plates and stacked them in the rack by the window.",
+  "read_position": "end_of_stimulus",
+  "gold_label": "the grandmother indulged the grandson",
+  "contrast_label": "the grandson indulged the grandmother",
+  "asked_question": "In one sentence, state who did what to whom in this scene — identify each person by their role or relationship (not their name), and be explicit about the direction.",
+  "mc_options": [
+   "the grandmother indulged the grandson",
+   "the grandson indulged the grandmother"
+  ],
+  "blocklist": {
+   "roles": [
+    "grandmother",
+    "grandma",
+    "granny",
+    "nana",
+    "grandson"
+   ],
+   "action": [
+    "indulge",
+    "indulged",
+    "indulges",
+    "indulging",
+    "spoil",
+    "spoiled",
+    "spoils",
+    "spoiling",
+    "pamper",
+    "pampered",
+    "dote",
+    "doted"
+   ]
+  },
+  "generator": "claude-opus-5",
+  "qa": {
+   "asked_open": "pass",
+   "continuation": "pass",
+   "continuation_sent1": "clean"
+  }
+ },
+ {
+  "id": "oa-officer-informant-protect-ab",
+  "pair_id": "oa-officer-informant-protect",
+  "tier": "B",
+  "direction": "ab",
+  "stereotypicality": "congruent",
+  "role_a": "police officer",
+  "role_b": "informant",
+  "action": "protected",
+  "names": {
+   "a": "Marcus",
+   "b": "Denny"
+  },
+  "stimulus": "Marcus had worn the badge for eleven years, and it was his patrol radio crackling on the dash the night the warehouse crew began asking around about who had been talking to the city. Denny, the loading-dock hand who had whispered the crew's names into that radio's owner's ear in a parking garage three times that month, showed up shaking at the station's back door. Marcus scrubbed the dock hand's name out of every filed report, drove him under an invented alias to a motel two counties over, and sat in the cruiser outside the door until sunrise. In the morning he signed the request to keep the motel address sealed, dropped the empty coffee cup in the lot's bin, and drove back to the district for his shift.",
+  "read_position": "end_of_stimulus",
+  "gold_label": "the police officer protected the informant",
+  "contrast_label": "the informant protected the police officer",
+  "asked_question": "In one sentence, state who did what to whom in this scene — identify each person by their role or relationship (not their name), and be explicit about the direction.",
+  "mc_options": [
+   "the police officer protected the informant",
+   "the informant protected the police officer"
+  ],
+  "blocklist": {
+   "roles": [
+    "police",
+    "officer",
+    "cop",
+    "detective",
+    "informant",
+    "informer",
+    "snitch",
+    "source"
+   ],
+   "action": [
+    "protect",
+    "protected",
+    "protects",
+    "protecting",
+    "protection",
+    "shield",
+    "shielded",
+    "safeguard",
+    "guard",
+    "guarded"
+   ]
+  },
+  "generator": "claude-opus-5",
+  "qa": {
+   "asked_open": "pass",
+   "continuation": "pass",
+   "continuation_sent1": "clean"
+  }
+ },
+ {
+  "id": "oa-priest-parishioner-forgive-ab",
+  "pair_id": "oa-priest-parishioner-forgive",
+  "tier": "B",
+  "direction": "ab",
+  "stereotypicality": "congruent",
+  "role_a": "priest",
+  "role_b": "parishioner",
+  "action": "forgave",
+  "names": {
+   "a": "Martin",
+   "b": "Dana"
+  },
+  "stimulus": "After the last hymn had faded, Dana stayed behind in the third pew and admitted to Martin that she was the one who had spread the rumor that nearly cost him his post. Martin, still in the vestments he had worn to lead the service, listened without interrupting, then took her hand and told her the debt was lifted — he held nothing against her, and would not hold it again. He said he hoped to see her in that same pew next Sunday. Then he went to switch off the sanctuary lights and lock the side door for the night.",
+  "read_position": "end_of_stimulus",
+  "gold_label": "the priest forgave the parishioner",
+  "contrast_label": "the parishioner forgave the priest",
+  "asked_question": "In one sentence, state who did what to whom in this scene — identify each person by their role or relationship (not their name), and be explicit about the direction.",
+  "mc_options": [
+   "the priest forgave the parishioner",
+   "the parishioner forgave the priest"
+  ],
+  "blocklist": {
+   "roles": [
+    "priest",
+    "pastor",
+    "father",
+    "reverend",
+    "clergyman",
+    "parishioner",
+    "churchgoer",
+    "congregant"
+   ],
+   "action": [
+    "forgive",
+    "forgave",
+    "forgiven",
+    "forgives",
+    "forgiving",
+    "forgiveness",
+    "absolve",
+    "absolved",
+    "absolution",
+    "pardon"
+   ]
+  },
+  "generator": "claude-opus-5",
+  "qa": {
+   "asked_open": "pass",
+   "continuation": "pass",
+   "continuation_sent1": "clean"
+  }
+ },
+ {
+  "id": "oa-accountant-client-deceive-ab",
+  "pair_id": "oa-accountant-client-deceive",
+  "tier": "B",
+  "direction": "ab",
+  "stereotypicality": "neutral",
+  "role_a": "accountant",
+  "role_b": "client",
+  "action": "deceived",
+  "names": {
+   "a": "Marcus",
+   "b": "Priya"
+  },
+  "stimulus": "Every March, Priya carried her bakery's shoeboxes of receipts across town to Marcus, who had prepared her tax filings for six years. This spring he printed a one-page summary showing a refund of eight hundred dollars, though the figure on the form he actually submitted was four thousand; the difference went to a routing number he had entered himself, and he explained the gap by saying the state had trimmed its small-business credits that year. Priya thanked him, tucked the summary into her cabinet, and went back to the shop trusting every line on it. Marcus shredded his working copy and rinsed out his coffee mug before the next appointment.",
+  "read_position": "end_of_stimulus",
+  "gold_label": "the accountant deceived the client",
+  "contrast_label": "the client deceived the accountant",
+  "asked_question": "In one sentence, state who did what to whom in this scene — identify each person by their role or relationship (not their name), and be explicit about the direction.",
+  "mc_options": [
+   "the accountant deceived the client",
+   "the client deceived the accountant"
+  ],
+  "blocklist": {
+   "roles": [
+    "accountant",
+    "bookkeeper",
+    "auditor",
+    "client",
+    "customer"
+   ],
+   "action": [
+    "deceive",
+    "deceived",
+    "deceives",
+    "deceiving",
+    "deception",
+    "lie",
+    "lied",
+    "lying",
+    "mislead",
+    "misled",
+    "dishonest",
+    "cheat",
+    "cheated"
+   ]
+  },
+  "generator": "claude-opus-5",
+  "qa": {
+   "asked_open": "pass",
+   "continuation": "pass",
+   "continuation_sent1": "clean"
+  }
+ },
+ {
+  "id": "oa-shopowner-supplier-cheat-ba",
+  "pair_id": "oa-shopowner-supplier-cheat",
+  "tier": "B",
+  "direction": "ba",
+  "stereotypicality": "neutral",
+  "role_a": "shop owner",
+  "role_b": "supplier",
+  "action": "cheated",
+  "names": {
+   "a": "Priya",
+   "b": "Dmitri"
+  },
+  "stimulus": "Priya ran the small grocery on Mill Lane, and every Tuesday a van backed up to her rear door with crates for the shelves. The paperwork she signed listed forty kilos of olives and two cases of unbruised pears, but Dmitri, who loaded and billed the deliveries himself, had spent eleven months writing numbers that were never in the crates \\u a top layer of good fruit hiding soft stock, ten kilos short on every scale reading. She paid the full amount each week without checking, and he kept the difference in an envelope in the glovebox. Her accountant finally caught it during the winter audit, and the old receipts now sat in a shoebox under the till.",
+  "read_position": "end_of_stimulus",
+  "gold_label": "the supplier cheated the shop owner",
+  "contrast_label": "the shop owner cheated the supplier",
+  "asked_question": "In one sentence, state who did what to whom in this scene — identify each person by their role or relationship (not their name), and be explicit about the direction.",
+  "mc_options": [
+   "the supplier cheated the shop owner",
+   "the shop owner cheated the supplier"
+  ],
+  "blocklist": {
+   "roles": [
+    "shop owner",
+    "shopkeeper",
+    "storekeeper",
+    "merchant",
+    "supplier",
+    "wholesaler",
+    "vendor",
+    "distributor"
+   ],
+   "action": [
+    "cheat",
+    "cheated",
+    "cheats",
+    "cheating",
+    "swindle",
+    "swindled",
+    "defraud",
+    "defrauded",
+    "shortchange",
+    "shortchanged",
+    "scam"
+   ]
+  },
+  "generator": "claude-opus-5",
+  "qa": {
+   "asked_open": "pass",
+   "continuation": "pass",
+   "continuation_sent1": "clean"
+  }
+ }
+]

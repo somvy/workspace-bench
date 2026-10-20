@@ -1,4 +1,4 @@
-# render every bench read-plan row with the Qwen3.6-27B and Qwen3.5-9B tokenizers; count rows whose ids differ
+# render every bench read-plan row with the Qwen3.6-27B and Qwen3.5-9B tokenizers; count rows whose ids differ (9B port only; tokenizer-changing ports use poscheck.py)
 from collections import Counter
 from transformers import AutoTokenizer
 from wsbench.readplan import plan

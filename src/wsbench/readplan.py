@@ -12,9 +12,9 @@ from typing import Any
 from wsbench.banks import load_bank as load_bank_file
 from wsbench.registry import REPO_ROOT
 
-GRID = [9, 11, 12, 14, 16, 18, 19, 21, 23, 25, 26]  # Qwen2.5-7B port (28 layers): the Qwen3.6-27B grid 20..60 step 4 at the same relative depth, int(l * 28 / 64 + 0.5)
-SIX = [9, 12, 16, 19, 23, 26]  # the association families' coarser grid
-FIVE = [9, 16, 19, 23, 26]  # the in-house layers of the hallucination and jailbreak arms
+GRID = [11, 14, 16, 18, 20, 23, 25, 27, 29, 32, 34]  # Qwen3-8B port (36 layers): the Qwen3.6-27B grid 20..60 step 4 at the same relative depth, int(l * 36 / 64 + 0.5)
+SIX = [11, 16, 20, 25, 29, 34]  # the association families' coarser grid
+FIVE = [11, 20, 25, 29, 34]  # the in-house layers of the hallucination and jailbreak arms
 ANSWER_STEM = "My one-word answer is:"  # basic_readout implicit items: prefilled assistant turn
 SUMMARIZE_SUFFIX = "\n\nSummarize the preceding story in one sentence."
 
@@ -350,7 +350,7 @@ def plan(family: str) -> list[ReadSpec]:
                 it["id"],
                 "chat",
                 {"kind": "all_from_end"},
-                [25, 26],  # Qwen2.5-7B port: 27B layers 56/60 at the same relative depth
+                [32, 34],  # Qwen3-8B port: 27B layers 56/60 at the same relative depth
                 text=it["prompt"],
                 extra={"variant": it["variant"], "frozen_cell": it["cell"]},
                 note="every position at layers 56 and 60 (opts=cells=all, the regime of record); "
@@ -430,7 +430,7 @@ def plan(family: str) -> list[ReadSpec]:
                 it["id"],
                 "chat",
                 {"kind": "all"},
-                [*GRID, 27],
+                [*GRID, 35],
                 text=it["text"],
                 system=it.get("system"),
                 note="every prompt position of the chat render (system + user); the pinned "

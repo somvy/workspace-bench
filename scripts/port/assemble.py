@@ -1,19 +1,20 @@
-# Build a WorkspaceBench overlay for a subject model (Qwen2.5-7B-Instruct on this branch): filter every bank to the items the subject passes, rebuild the
+# Build a WorkspaceBench overlay for a subject model (Qwen3-8B on this branch): filter every bank to the items the subject passes, rebuild the
 # model-specific golds, map layers by depth. Writes into the workspace-bench clone (branch port-qwen3.5-9b).
 import json, re, unicodedata, hashlib, subprocess
 from collections import Counter, defaultdict
 from pathlib import Path
 
 # ---- config
-SUBJECT, SUBJECT_ID = "q25_7b", "Qwen/Qwen2.5-7B-Instruct"
+SUBJECT, SUBJECT_ID = "q3_8b", "Qwen/Qwen3-8B"
 CONTROL = "q36_27b"  # same moral pipeline on the bank's own model = fidelity control
-BENCH = Path("/mnt/nfs_share2/dontsov/projects/workspace-bench")
+BENCH = Path(__file__).resolve().parents[2]
 GATE = Path("/mnt/nfs_share2/dontsov/projects/ao/artf/wsbench_repro/gate")  # chat answers + Qwen3.6-27B grades
 PORT = Path("/mnt/nfs_share2/dontsov/projects/ao/artf/wsbench_repro/port")  # port.py outputs
 DRAWS, THR, CHAIN_THR = 10, 0.8, {"chain_intermediates": 1.0, "brew_intermediates": 1.0}
 MIN_N = 20  # a family with fewer passing items is dropped (listed in the manifest)
 JUDGE_MIN = {"role_bound_association": 4}  # its judge samples 3 distractor scenes from the other items
-LAYER = lambda l: min(int(l * 28 / 64 + 0.5), 27)  # 64-layer Qwen3.6-27B -> 28-layer Qwen2.5-7B, same relative depth
+INDEXED = {"brew_intermediates"}  # read positions stored as Qwen3.6-27B token indices, not remapped: emptied when dropped
+LAYER = lambda l: min(int(l * 36 / 64 + 0.5), 35)  # 64-layer Qwen3.6-27B -> 36-layer Qwen3-8B, same relative depth
 GATED = ["association", "basic_readout", "multihop", "multilingual", "typo", "basic_readout_mt", "multihop_mt",
          "multilingual_mt", "multilingual_multihop", "multilingual_typo", "typo_mt", "arithmetic_intermediates",
          "chain_intermediates", "brew_intermediates", "relational_multihop", "conjunctive_association",
@@ -145,7 +146,7 @@ def moral_items(bank, kept, variant):
 def main():
     manifest = {"subject": SUBJECT_ID, "built_from": "Qwen3.6-27B banks (main @ " + subprocess.run(["git", "-C", str(BENCH), "rev-parse", "main"], capture_output=True, text=True, check=True).stdout.strip() + ")",
                 "gate": f"chat render (bench ANSWER_SYSTEM, thinking off), {DRAWS} samples T=0.7 top_p=1 top_k=0 + greedy; greedy right AND >= {THR} sampled ({CHAIN_THR}); grader Qwen3.6-27B with the bench GRADE prompt",
-                "layers": "every bank layer l -> min(int(l * 28 / 64 + 0.5), 27) (64 -> 28 layers)", "min_items": MIN_N, "families": {}}
+                "layers": "every bank layer l -> min(int(l * 36 / 64 + 0.5), 35) (64 -> 36 layers)", "min_items": MIN_N, "families": {}}
     ok, rows = gate_pass()
     # 1. gated families: an item survives when all its questions (surface + bridges) pass
     for f in GATED:
@@ -249,6 +250,10 @@ def main():
             header, items = load_cur(f)
             save(f, header, [])
             m["emptied"] = f"judge needs >= {JUDGE_MIN[f]} items (had {m['kept']})"
+        elif f in INDEXED and "dropped" in m:  # stale token indices would read the wrong tokens on a new tokenizer
+            header, items = load_cur(f)
+            save(f, header, [])
+            m["emptied"] = f"read positions are Qwen3.6-27B token indices, not remapped (had {m['kept']})"
     # 8. not-ported families are emptied: their banks carry Qwen3.6-27B ids/rollouts and would score silently on the subject
     raw = lambda rel: json.loads(subprocess.run(["git", "-C", str(BENCH), "show", f"main:evals/{rel}"], capture_output=True, check=True).stdout)
     put = lambda rel, d: (BENCH / "evals" / rel).write_text(json.dumps(d, ensure_ascii=False, indent=1) + "\n")

@@ -4,29 +4,6 @@
  "eval_render_note": "EVAL RENDER: feed `prompt` verbatim as plain text, NO chat template (directed-modulation is the only chat-templated family). `gate_variant` records how the item was behaviorally verified and does NOT affect the eval read.",
  "items": [
   {
-   "name": "de-half-six",
-   "prompt": "Sechs geteilt durch zwei ist \"",
-   "target": "drei",
-   "intermediates": [
-    "three"
-   ],
-   "reference_concepts": [
-    "German",
-    "half",
-    "six"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "de-place-near-far",
    "prompt": "Das Gegenteil von \"nah\" ist \"",
    "target": "fern",
@@ -418,6 +395,52 @@
    }
   },
   {
+   "name": "arabic-color-blood",
+   "prompt": "الدم لونه ",
+   "target": "أحمر",
+   "intermediates": [
+    "red"
+   ],
+   "reference_concepts": [
+    "Arabic",
+    "color",
+    "blood"
+   ],
+   "source": "jlens_source",
+   "consistency": 1.0,
+   "gate_variant": "plain_stripped",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   }
+  },
+  {
+   "name": "czech-opposite-tall",
+   "prompt": "Opak slova \"vysoký\" je \"",
+   "target": "nízký",
+   "intermediates": [
+    "short"
+   ],
+   "reference_concepts": [
+    "Czech",
+    "opposite",
+    "tall"
+   ],
+   "source": "jlens_source",
+   "consistency": 1.0,
+   "gate_variant": "plain",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   }
+  },
+  {
    "name": "dutch-direction-left",
    "prompt": "Het tegenovergestelde van \"links\" is \"",
    "target": "rechts",
@@ -441,16 +464,16 @@
    }
   },
   {
-   "name": "french-family-nephew",
-   "prompt": "Le fils de ta sœur est ton \"",
-   "target": "neveu",
+   "name": "filipino-opposite-up",
+   "prompt": "Ang kabaligtaran ng \"taas\" ay \"",
+   "target": "baba",
    "intermediates": [
-    "nephew"
+    "down"
    ],
    "reference_concepts": [
-    "French",
-    "family",
-    "son"
+    "Filipino",
+    "opposite",
+    "up"
    ],
    "source": "jlens_source",
    "consistency": 1.0,
@@ -602,29 +625,6 @@
    }
   },
   {
-   "name": "polish-direction-left",
-   "prompt": "Przeciwieństwo \"lewa\" to \"",
-   "target": "prawa",
-   "intermediates": [
-    "right"
-   ],
-   "reference_concepts": [
-    "Polish",
-    "opposite",
-    "left"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "portuguese-direction-up",
    "prompt": "O oposto de \"cima\" é \"",
    "target": "baixo",
@@ -681,6 +681,29 @@
     "Spanish",
     "number",
     "three"
+   ],
+   "source": "jlens_source",
+   "consistency": 1.0,
+   "gate_variant": "plain",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   }
+  },
+  {
+   "name": "turkish-opposite-fast",
+   "prompt": "\"Hızlı\" kelimesinin zıttı \"",
+   "target": "yavaş",
+   "intermediates": [
+    "slow"
+   ],
+   "reference_concepts": [
+    "Turkish",
+    "opposite",
+    "fast"
    ],
    "source": "jlens_source",
    "consistency": 1.0,
@@ -809,29 +832,6 @@
    }
   },
   {
-   "name": "b3-ml-de-opposite-fast",
-   "prompt": "Das Gegenteil von \"schnell\" ist",
-   "target": "langsam",
-   "intermediates": [
-    "slow"
-   ],
-   "reference_concepts": [
-    "German",
-    "opposite",
-    "fast"
-   ],
-   "source": "staging_b3",
-   "consistency": 1.0,
-   "gate_variant": "chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "b3-ml-de-sum-four",
    "prompt": "Zwei plus zwei ist",
    "target": "vier",
@@ -864,28 +864,6 @@
    "reference_concepts": [
     "Spanish",
     "France"
-   ],
-   "source": "staging_b3",
-   "consistency": 1.0,
-   "gate_variant": "chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "b3-ml-es-color-blood",
-   "prompt": "El color de la sangre es el",
-   "target": "rojo",
-   "intermediates": [
-    "red"
-   ],
-   "reference_concepts": [
-    "Spanish",
-    "blood"
    ],
    "source": "staging_b3",
    "consistency": 1.0,
@@ -1023,29 +1001,6 @@
     "French",
     "capital",
     "England"
-   ],
-   "source": "staging_b3",
-   "consistency": 1.0,
-   "gate_variant": "chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "b3-ml-fr-color-blood",
-   "prompt": "La couleur du sang est le",
-   "target": "rouge",
-   "intermediates": [
-    "red"
-   ],
-   "reference_concepts": [
-    "French",
-    "color",
-    "blood"
    ],
    "source": "staging_b3",
    "consistency": 1.0,
@@ -1380,6 +1335,29 @@
    }
   },
   {
+   "name": "de-order-first-last",
+   "prompt": "Das Gegenteil von \"erste\" ist \"",
+   "target": "letzte",
+   "intermediates": [
+    "last"
+   ],
+   "reference_concepts": [
+    "German",
+    "order",
+    "first"
+   ],
+   "source": "jlens_source",
+   "consistency": 0.9,
+   "gate_variant": "plain",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   }
+  },
+  {
    "name": "es-order-first-last",
    "prompt": "Lo contrario de \"primero\" es \"",
    "target": "último",
@@ -1610,16 +1588,16 @@
    }
   },
   {
-   "name": "danish-color-ocean",
-   "prompt": "Farven på havet er ",
-   "target": "blå",
+   "name": "pt-time-old-new",
+   "prompt": "O contrário de \"velho\" é \"",
+   "target": "novo",
    "intermediates": [
-    "blue"
+    "new"
    ],
    "reference_concepts": [
-    "Danish",
-    "color",
-    "ocean"
+    "português",
+    "time",
+    "old"
    ],
    "source": "jlens_source",
    "consistency": 0.9,
@@ -1725,20 +1703,20 @@
    }
   },
   {
-   "name": "slovak-opposite-young",
-   "prompt": "Opak slova \"mladý\" je \"",
-   "target": "starý",
+   "name": "korean-opposite-hot",
+   "prompt": "뜨거운의 반대는 ",
+   "target": "차가운",
    "intermediates": [
-    "old"
+    "cold"
    ],
    "reference_concepts": [
-    "Slovak",
+    "Korean",
     "opposite",
-    "young"
+    "hot"
    ],
    "source": "jlens_source",
    "consistency": 0.9,
-   "gate_variant": "plain",
+   "gate_variant": "chat",
    "eval_render": "plain",
    "readout": {
     "kind": "final_prompt_token",
@@ -1762,52 +1740,6 @@
    "source": "jlens_source",
    "consistency": 0.9,
    "gate_variant": "plain",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "b3-ml-de-family-uncle",
-   "prompt": "Der Bruder deiner Mutter ist dein",
-   "target": "Onkel",
-   "intermediates": [
-    "uncle"
-   ],
-   "reference_concepts": [
-    "German",
-    "family",
-    "brother"
-   ],
-   "source": "staging_b3",
-   "consistency": 0.9,
-   "gate_variant": "chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "b3-ml-de-opposite-hot",
-   "prompt": "Das Gegenteil von \"heiß\" ist",
-   "target": "kalt",
-   "intermediates": [
-    "cold"
-   ],
-   "reference_concepts": [
-    "German",
-    "opposite",
-    "hot"
-   ],
-   "source": "staging_b3",
-   "consistency": 0.9,
-   "gate_variant": "chat",
    "eval_render": "plain",
    "readout": {
     "kind": "final_prompt_token",

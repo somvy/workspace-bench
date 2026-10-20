@@ -11,7 +11,7 @@ from transformers import AutoTokenizer
 from wsbench.evals.jailbreak_recognition.judge import prefix_to_last_user
 from wsbench.produce.render import _chat
 
-ORIG_ID, SUBJECT_ID = "Qwen/Qwen3.6-27B", "Qwen/Qwen2.5-7B-Instruct"
+ORIG_ID, SUBJECT_ID = "Qwen/Qwen3.6-27B", "Qwen/Qwen3-8B"
 BENCH = Path(__file__).resolve().parents[2]
 N_GRID = 12  # legacy read.positions: up to 12 evenly spaced content tokens + turn_end
 

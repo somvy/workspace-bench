@@ -13,7 +13,7 @@ from gate import MODELS, GRADER, DRAWS, SEED, TEMP, SAMPLE_KW, MAX_SEQS, THINK, 
 from wsbench.capable.questions import bank_items
 from wsbench.readplan import ANSWER_STEM
 
-OUT = Path("/workspace/wsb_out/port")
+OUT = Path("/mnt/nfs_share2/dontsov/projects/ao/artf/wsbench_repro/port")
 EXPLAIN = "In one or two sentences, what is the main reason for your answer?"
 SIDE = {"yes": "yes", "true": "yes", "no": "no", "false": "no"}
 EXTRACT_SEQS = 24  # long prompts (~1.5k + 900 new): 96 OOMs the 27B on 80GB

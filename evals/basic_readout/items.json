@@ -994,37 +994,6 @@
    }
   },
   {
-   "name": "br-ent-mus-ma",
-   "subfamily": "entity",
-   "prompt": "The musician Yo-Yo Ma is famous for playing the",
-   "target": "cello",
-   "intermediates": [
-    "Cello",
-    "cello"
-   ],
-   "units": [
-    {
-     "role": "readout",
-     "lang": "en",
-     "headline": true,
-     "match": [
-      "Cello",
-      "cello"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "source": "br-v1",
-   "gate_variant": "chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "br-proc-arith-10-1",
    "subfamily": "processing",
    "prompt": "10 - 1 =",
@@ -2048,68 +2017,6 @@
    }
   },
   {
-   "name": "br-imp-cardgame",
-   "subfamily": "implicit",
-   "prompt": "What is your favorite card game? Answer in one word.",
-   "target": "bridge",
-   "intermediates": [
-    "bridge"
-   ],
-   "units": [
-    {
-     "role": "readout",
-     "lang": "en",
-     "headline": true,
-     "match": [
-      "bridge",
-      "Bridge"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "source": "br-v1",
-   "gate_variant": "chat",
-   "eval_render": "chat",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "port_bank_target": "poker"
-  },
-  {
-   "name": "br-imp-cartoonchara",
-   "subfamily": "implicit",
-   "prompt": "What is your favorite cartoon character? Answer in one word.",
-   "target": "mickey",
-   "intermediates": [
-    "mickey"
-   ],
-   "units": [
-    {
-     "role": "readout",
-     "lang": "en",
-     "headline": true,
-     "match": [
-      "mickey",
-      "Mickey"
-     ]
-    }
-   ],
-   "consistency": 0.8,
-   "source": "br-v1",
-   "gate_variant": "chat",
-   "eval_render": "chat",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "port_bank_target": "spongebob"
-  },
-  {
    "name": "br-imp-chesspiece",
    "subfamily": "implicit",
    "prompt": "What is your favorite chess piece? Answer in one word.",
@@ -2128,7 +2035,7 @@
      ]
     }
    ],
-   "consistency": 0.8,
+   "consistency": 1.0,
    "source": "br-v1",
    "gate_variant": "chat",
    "eval_render": "chat",
@@ -2159,7 +2066,7 @@
      ]
     }
    ],
-   "consistency": 1.0,
+   "consistency": 0.9,
    "source": "br-v1",
    "gate_variant": "chat",
    "eval_render": "chat",
@@ -2203,12 +2110,12 @@
    "port_bank_target": "orion"
   },
   {
-   "name": "br-imp-icecreamflav",
+   "name": "br-imp-flower",
    "subfamily": "implicit",
-   "prompt": "What is your favorite ice cream flavor? Answer in one word.",
-   "target": "vanilla",
+   "prompt": "What is your favorite flower? Answer in one word.",
+   "target": "rose",
    "intermediates": [
-    "vanilla"
+    "rose"
    ],
    "units": [
     {
@@ -2216,8 +2123,39 @@
      "lang": "en",
      "headline": true,
      "match": [
-      "vanilla",
-      "Vanilla"
+      "rose",
+      "Rose"
+     ]
+    }
+   ],
+   "consistency": 0.9,
+   "source": "br-v1",
+   "gate_variant": "chat",
+   "eval_render": "chat",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "port_bank_target": "rose"
+  },
+  {
+   "name": "br-imp-kindofcookie",
+   "subfamily": "implicit",
+   "prompt": "What is your favorite kind of cookie? Answer in one word.",
+   "target": "chocolate",
+   "intermediates": [
+    "chocolate"
+   ],
+   "units": [
+    {
+     "role": "readout",
+     "lang": "en",
+     "headline": true,
+     "match": [
+      "chocolate",
+      "Chocolate"
      ]
     }
    ],
@@ -2237,9 +2175,9 @@
    "name": "br-imp-kindofweathe",
    "subfamily": "implicit",
    "prompt": "What is your favorite kind of weather? Answer in one word.",
-   "target": "sunny",
+   "target": "sunshine",
    "intermediates": [
-    "sunny"
+    "sunshine"
    ],
    "units": [
     {
@@ -2247,12 +2185,12 @@
      "lang": "en",
      "headline": true,
      "match": [
-      "sunny",
-      "Sunny"
+      "sunshine",
+      "Sunshine"
      ]
     }
    ],
-   "consistency": 1.0,
+   "consistency": 0.8,
    "source": "br-v1",
    "gate_variant": "chat",
    "eval_render": "chat",
@@ -2296,43 +2234,12 @@
    "port_bank_target": "sci-fi"
   },
   {
-   "name": "br-imp-programmingl",
-   "subfamily": "implicit",
-   "prompt": "What is your favorite programming language? Answer in one word.",
-   "target": "python",
-   "intermediates": [
-    "python"
-   ],
-   "units": [
-    {
-     "role": "readout",
-     "lang": "en",
-     "headline": true,
-     "match": [
-      "python",
-      "Python"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "source": "br-v1",
-   "gate_variant": "chat",
-   "eval_render": "chat",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "port_bank_target": "python"
-  },
-  {
    "name": "br-imp-seacreature",
    "subfamily": "implicit",
    "prompt": "What is your favorite sea creature? Answer in one word.",
-   "target": "dolphin",
+   "target": "octopus",
    "intermediates": [
-    "dolphin"
+    "octopus"
    ],
    "units": [
     {
@@ -2340,8 +2247,8 @@
      "lang": "en",
      "headline": true,
      "match": [
-      "dolphin",
-      "Dolphin"
+      "octopus",
+      "Octopus"
      ]
     }
    ],
@@ -2376,7 +2283,7 @@
      ]
     }
    ],
-   "consistency": 1.0,
+   "consistency": 0.9,
    "source": "br-v1",
    "gate_variant": "chat",
    "eval_render": "chat",
@@ -2389,12 +2296,12 @@
    "port_bank_target": "oak"
   },
   {
-   "name": "br-imp-countrytovis",
+   "name": "br-imp-typeofcuisin",
    "subfamily": "implicit",
-   "prompt": "What is your favorite country to visit? Answer in one word.",
-   "target": "china",
+   "prompt": "What is your favorite type of cuisine? Answer in one word.",
+   "target": "diverse",
    "intermediates": [
-    "china"
+    "diverse"
    ],
    "units": [
     {
@@ -2402,12 +2309,43 @@
      "lang": "en",
      "headline": true,
      "match": [
-      "china",
-      "China"
+      "diverse",
+      "Diverse"
      ]
     }
    ],
    "consistency": 0.9,
+   "source": "br-v1",
+   "gate_variant": "chat",
+   "eval_render": "chat",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "port_bank_target": "italian"
+  },
+  {
+   "name": "br-imp-countrytovis",
+   "subfamily": "implicit",
+   "prompt": "What is your favorite country to visit? Answer in one word.",
+   "target": "japan",
+   "intermediates": [
+    "japan"
+   ],
+   "units": [
+    {
+     "role": "readout",
+     "lang": "en",
+     "headline": true,
+     "match": [
+      "japan",
+      "Japan"
+     ]
+    }
+   ],
+   "consistency": 1.0,
    "source": "br-v1",
    "gate_variant": "chat",
    "eval_render": "chat",
@@ -2423,9 +2361,9 @@
    "name": "br-imp-kindofberry",
    "subfamily": "implicit",
    "prompt": "What is your favorite kind of berry? Answer in one word.",
-   "target": "blueberry",
+   "target": "strawberry",
    "intermediates": [
-    "blueberry"
+    "strawberry"
    ],
    "units": [
     {
@@ -2433,8 +2371,8 @@
      "lang": "en",
      "headline": true,
      "match": [
-      "blueberry",
-      "Blueberry"
+      "strawberry",
+      "Strawberry"
      ]
     }
    ],
@@ -2469,7 +2407,7 @@
      ]
     }
    ],
-   "consistency": 1.0,
+   "consistency": 0.8,
    "source": "br-v1",
    "gate_variant": "chat",
    "eval_render": "chat",
@@ -2482,12 +2420,12 @@
    "port_bank_target": "chocolate"
   },
   {
-   "name": "br-imp-kindofpepper",
+   "name": "br-imp-mythicalcrea",
    "subfamily": "implicit",
-   "prompt": "What is your favorite kind of pepper? Answer in one word.",
-   "target": "jalapeño",
+   "prompt": "What is your favorite mythical creature? Answer in one word.",
+   "target": "phoenix",
    "intermediates": [
-    "jalapeño"
+    "phoenix"
    ],
    "units": [
     {
@@ -2495,43 +2433,12 @@
      "lang": "en",
      "headline": true,
      "match": [
-      "jalapeño",
-      "Jalapeño"
+      "phoenix",
+      "Phoenix"
      ]
     }
    ],
    "consistency": 1.0,
-   "source": "br-v1",
-   "gate_variant": "chat",
-   "eval_render": "chat",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "port_bank_target": "bell"
-  },
-  {
-   "name": "br-imp-mythicalcrea",
-   "subfamily": "implicit",
-   "prompt": "What is your favorite mythical creature? Answer in one word.",
-   "target": "dragon",
-   "intermediates": [
-    "dragon"
-   ],
-   "units": [
-    {
-     "role": "readout",
-     "lang": "en",
-     "headline": true,
-     "match": [
-      "dragon",
-      "Dragon"
-     ]
-    }
-   ],
-   "consistency": 0.8,
    "source": "br-v1",
    "gate_variant": "chat",
    "eval_render": "chat",
@@ -2544,12 +2451,12 @@
    "port_bank_target": "dragon"
   },
   {
-   "name": "br-imp-pet",
+   "name": "br-imp-typeofbird",
    "subfamily": "implicit",
-   "prompt": "What is your favorite pet? Answer in one word.",
-   "target": "cat",
+   "prompt": "What is your favorite type of bird? Answer in one word.",
+   "target": "eagle",
    "intermediates": [
-    "cat"
+    "eagle"
    ],
    "units": [
     {
@@ -2557,8 +2464,8 @@
      "lang": "en",
      "headline": true,
      "match": [
-      "cat",
-      "Cat"
+      "eagle",
+      "Eagle"
      ]
     }
    ],
@@ -2572,69 +2479,7 @@
      -1
     ]
    },
-   "port_bank_target": "dog"
-  },
-  {
-   "name": "br-imp-pizzatopping",
-   "subfamily": "implicit",
-   "prompt": "What is your favorite pizza topping? Answer in one word.",
-   "target": "pepperoni",
-   "intermediates": [
-    "pepperoni"
-   ],
-   "units": [
-    {
-     "role": "readout",
-     "lang": "en",
-     "headline": true,
-     "match": [
-      "pepperoni",
-      "Pepperoni"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "source": "br-v1",
-   "gate_variant": "chat",
-   "eval_render": "chat",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "port_bank_target": "pepperoni"
-  },
-  {
-   "name": "br-imp-typeofdance",
-   "subfamily": "implicit",
-   "prompt": "What is your favorite type of dance? Answer in one word.",
-   "target": "ballet",
-   "intermediates": [
-    "ballet"
-   ],
-   "units": [
-    {
-     "role": "readout",
-     "lang": "en",
-     "headline": true,
-     "match": [
-      "ballet",
-      "Ballet"
-     ]
-    }
-   ],
-   "consistency": 0.9,
-   "source": "br-v1",
-   "gate_variant": "chat",
-   "eval_render": "chat",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "port_bank_target": "salsa"
+   "port_bank_target": "owl"
   },
   {
    "name": "br-imp-bookgenre",
@@ -2671,9 +2516,9 @@
    "name": "br-imp-dessert",
    "subfamily": "implicit",
    "prompt": "What is your favorite dessert? Answer in one word.",
-   "target": "cookie",
+   "target": "chocolate",
    "intermediates": [
-    "cookie"
+    "chocolate"
    ],
    "units": [
     {
@@ -2681,8 +2526,39 @@
      "lang": "en",
      "headline": true,
      "match": [
-      "cookie",
-      "Cookie"
+      "chocolate",
+      "Chocolate"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "source": "br-v1",
+   "gate_variant": "chat",
+   "eval_render": "chat",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "port_bank_target": "chocolate"
+  },
+  {
+   "name": "br-imp-fruit",
+   "subfamily": "implicit",
+   "prompt": "What is your favorite fruit? Answer in one word.",
+   "target": "strawberry",
+   "intermediates": [
+    "strawberry"
+   ],
+   "units": [
+    {
+     "role": "readout",
+     "lang": "en",
+     "headline": true,
+     "match": [
+      "strawberry",
+      "Strawberry"
      ]
     }
    ],
@@ -2696,15 +2572,15 @@
      -1
     ]
    },
-   "port_bank_target": "chocolate"
+   "port_bank_target": "apple"
   },
   {
    "name": "br-imp-season",
    "subfamily": "implicit",
    "prompt": "What is your favorite season? Answer in one word.",
-   "target": "spring",
+   "target": "autumn",
    "intermediates": [
-    "spring"
+    "autumn"
    ],
    "units": [
     {
@@ -2712,8 +2588,8 @@
      "lang": "en",
      "headline": true,
      "match": [
-      "spring",
-      "Spring"
+      "autumn",
+      "Autumn"
      ]
     }
    ],

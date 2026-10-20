@@ -59,6 +59,54 @@
    }
   },
   {
+   "name": "tyh-novel-acciaccatura-b6",
+   "subfamily": "novel",
+   "prompt": "A crushed ornamental note sounded almost simultaneously with the principal note and released at once is called an acciacatura",
+   "target": "acciaccatura",
+   "target_alts": [],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "typo_word": "acciacatura",
+   "intermediates": [
+    "acciaccatura"
+   ],
+   "units": [
+    {
+     "role": "correction",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "acciaccatura"
+      ]
+     },
+     "match": [
+      "acciaccatura"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "correction": {
+      "en": [
+       3
+      ]
+     }
+    },
+    "target": 3
+   }
+  },
+  {
    "name": "tyh-novel-aestivation",
    "subfamily": "novel",
    "prompt": "African lungfish endure the parched season sealed in a mud cocoon, a summer dormancy that biologists call aestivaton",
@@ -392,6 +440,54 @@
      }
     },
     "target": 4
+   }
+  },
+  {
+   "name": "tyh-novel-anticyclone",
+   "subfamily": "novel",
+   "prompt": "A broad high-pressure system whose surface winds spiral outward in a clockwise sense north of the equator is termed an anticylcone",
+   "target": "anticyclone",
+   "target_alts": [],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "typo_word": "anticylcone",
+   "intermediates": [
+    "anticyclone"
+   ],
+   "units": [
+    {
+     "role": "correction",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "anticyclone"
+      ]
+     },
+     "match": [
+      "anticyclone"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "correction": {
+      "en": [
+       3
+      ]
+     }
+    },
+    "target": 3
    }
   },
   {
@@ -1163,54 +1259,6 @@
    }
   },
   {
-   "name": "tyh-novel-chaparral",
-   "subfamily": "novel",
-   "prompt": "The dense, drought-hardy evergreen shrubland covering the coastal hills of southern California is called chapparral",
-   "target": "chaparral",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "typo_word": "chapparral",
-   "intermediates": [
-    "chaparral"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "chaparral"
-      ]
-     },
-     "match": [
-      "chaparral"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "en": [
-       3
-      ]
-     }
-    },
-    "target": 3
-   }
-  },
-  {
    "name": "tyh-novel-charcuterie",
    "subfamily": "novel",
    "prompt": "Pates, terrines, rillettes and dry-cured sausages all belong to the French butcher's craft called charcuteire",
@@ -1352,6 +1400,54 @@
      }
     },
     "target": 4
+   }
+  },
+  {
+   "name": "tyh-novel-chemosynthesis",
+   "subfamily": "novel",
+   "prompt": "Giant tube worms clustered around deep-sea hydrothermal vents survive thanks to symbiotic bacteria that produce food by chemosynthesys",
+   "target": "chemosynthesis",
+   "target_alts": [],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "typo_word": "chemosynthesys",
+   "intermediates": [
+    "chemosynthesis"
+   ],
+   "units": [
+    {
+     "role": "correction",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "chemosynthesis"
+      ]
+     },
+     "match": [
+      "chemosynthesis"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "correction": {
+      "en": [
+       3
+      ]
+     }
+    },
+    "target": 3
    }
   },
   {
@@ -1499,10 +1595,10 @@
    }
   },
   {
-   "name": "tyh-novel-chloroplast",
+   "name": "tyh-novel-chitinous",
    "subfamily": "novel",
-   "prompt": "Inside each leaf cell, sugar is manufactured within a green organelle known as the chloropalst",
-   "target": "chloroplast",
+   "prompt": "The tough outer cuticle of a beetle is stiffened by a nitrogen-bearing polysaccharide, which is why entomologists describe the covering as chittinous",
+   "target": "chitinous",
    "target_alts": [],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -1512,9 +1608,9 @@
      -1
     ]
    },
-   "typo_word": "chloropalst",
+   "typo_word": "chittinous",
    "intermediates": [
-    "chloroplast"
+    "chitinous"
    ],
    "units": [
     {
@@ -1523,11 +1619,11 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "chloroplast"
+       "chitinous"
       ]
      },
      "match": [
-      "chloroplast"
+      "chitinous"
      ]
     }
    ],
@@ -1539,11 +1635,11 @@
     "units": {
      "correction": {
       "en": [
-       2
+       3
       ]
      }
     },
-    "target": 2
+    "target": 3
    }
   },
   {
@@ -1592,6 +1688,54 @@
      }
     },
     "target": 4
+   }
+  },
+  {
+   "name": "tyh-novel-chromatophores",
+   "subfamily": "novel",
+   "prompt": "Cuttlefish and octopuses shift their skin color within milliseconds by expanding and contracting pigment-filled sacs called chromotophores",
+   "target": "chromatophores",
+   "target_alts": [],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "typo_word": "chromotophores",
+   "intermediates": [
+    "chromatophores"
+   ],
+   "units": [
+    {
+     "role": "correction",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "chromatophores"
+      ]
+     },
+     "match": [
+      "chromatophores"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "correction": {
+      "en": [
+       3
+      ]
+     }
+    },
+    "target": 3
    }
   },
   {
@@ -2075,54 +2219,6 @@
    }
   },
   {
-   "name": "tyh-real-cassation",
-   "subfamily": "realword",
-   "prompt": "In the French judicial system the tribunal of last resort, which rules only on points of law and may quash a lower judgment without retrying the facts, is the Court of Causation",
-   "target": "Cassation",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "typo_word": "Causation",
-   "intermediates": [
-    "Cassation"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Cassation"
-      ]
-     },
-     "match": [
-      "Cassation"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "en": [
-       2
-      ]
-     }
-    },
-    "target": 2
-   }
-  },
-  {
    "name": "tyh-real-climactic",
    "subfamily": "realword",
    "prompt": "After two hours of patient build-up, the rooftop pursuit that closes the film is by far its most climatic",
@@ -2152,54 +2248,6 @@
      },
      "match": [
       "climactic"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "en": [
-       2
-      ]
-     }
-    },
-    "target": 2
-   }
-  },
-  {
-   "name": "tyh-real-corporeal",
-   "subfamily": "realword",
-   "prompt": "The apparition drifted straight through the bolted door, proving that it had nothing corporal",
-   "target": "corporeal",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "typo_word": "corporal",
-   "intermediates": [
-    "corporeal"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "corporeal"
-      ]
-     },
-     "match": [
-      "corporeal"
      ]
     }
    ],
@@ -2264,54 +2312,6 @@
      }
     },
     "target": 2
-   }
-  },
-  {
-   "name": "tyh-real-exorcised",
-   "subfamily": "realword",
-   "prompt": "In the 1949 Maryland case that inspired William Peter Blatty's novel, Jesuit clergy recorded that the boy known as Roland Doe had at last been exercised",
-   "target": "exorcised",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "typo_word": "exercised",
-   "intermediates": [
-    "exorcised"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "exorcised"
-      ]
-     },
-     "match": [
-      "exorcised"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "en": [
-       3
-      ]
-     }
-    },
-    "target": 3
    }
   },
   {
@@ -2411,6 +2411,102 @@
    }
   },
   {
+   "name": "tyh-real-insolvent",
+   "subfamily": "realword",
+   "prompt": "With debts far exceeding its aircraft and cash reserves, the carrier was declared by the commercial court to be legally insolent",
+   "target": "insolvent",
+   "target_alts": [],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "typo_word": "insolent",
+   "intermediates": [
+    "insolvent"
+   ],
+   "units": [
+    {
+     "role": "correction",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "insolvent"
+      ]
+     },
+     "match": [
+      "insolvent"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "correction": {
+      "en": [
+       2
+      ]
+     }
+    },
+    "target": 2
+   }
+  },
+  {
+   "name": "tyh-real-ordnance",
+   "subfamily": "realword",
+   "prompt": "For three weeks the bomb-disposal team combed the old artillery range, removing shells and other unexploded wartime ordinance",
+   "target": "ordnance",
+   "target_alts": [],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "typo_word": "ordinance",
+   "intermediates": [
+    "ordnance"
+   ],
+   "units": [
+    {
+     "role": "correction",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "ordnance"
+      ]
+     },
+     "match": [
+      "ordnance"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "correction": {
+      "en": [
+       3
+      ]
+     }
+    },
+    "target": 3
+   }
+  },
+  {
    "name": "tyh-real-phosphorus",
    "subfamily": "realword",
    "prompt": "Boiling down vats of urine in his Hamburg cellar in 1669, the alchemist Hennig Brand became the first person on record to isolate the eerily glowing element we now call phosphorous",
@@ -2440,54 +2536,6 @@
      },
      "match": [
       "phosphorus"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "en": [
-       2
-      ]
-     }
-    },
-    "target": 2
-   }
-  },
-  {
-   "name": "tyh-real-prophesy-batch5",
-   "subfamily": "realword",
-   "prompt": "Before the vapors rose from the cleft, the Pythia would fall into a trance and begin to prophecy",
-   "target": "prophesy",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "typo_word": "prophecy",
-   "intermediates": [
-    "prophesy"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "prophesy"
-      ]
-     },
-     "match": [
-      "prophesy"
      ]
     }
    ],
@@ -2555,54 +2603,6 @@
    }
   },
   {
-   "name": "tyh-real-tortuous",
-   "subfamily": "realword",
-   "prompt": "The little brook wanders through the salt marsh in loop after doubling loop, its channel shallow, narrow and torturous",
-   "target": "tortuous",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "typo_word": "torturous",
-   "intermediates": [
-    "tortuous"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "tortuous"
-      ]
-     },
-     "match": [
-      "tortuous"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "en": [
-       2
-      ]
-     }
-    },
-    "target": 2
-   }
-  },
-  {
    "name": "tyh-real-torturous",
    "subfamily": "realword",
    "prompt": "Four hours in the dentist's chair with no anesthetic at all was, he said, absolutely tortuous",
@@ -2651,58 +2651,10 @@
    }
   },
   {
-   "name": "tyh-real-immanence",
-   "subfamily": "realword",
-   "prompt": "Spinoza taught that the divine is not beyond the world at all but wholly indwelling within it, a doctrine of pure imminence",
-   "target": "immanence",
-   "target_alts": [],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "typo_word": "imminence",
-   "intermediates": [
-    "immanence"
-   ],
-   "units": [
-    {
-     "role": "correction",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "immanence"
-      ]
-     },
-     "match": [
-      "immanence"
-     ]
-    }
-   ],
-   "consistency": 0.9,
-   "consistency_strict": 0.9,
-   "consistency_greedy": 1,
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "correction": {
-      "en": [
-       3
-      ]
-     }
-    },
-    "target": 3
-   }
-  },
-  {
-   "name": "tyh-arith-156p078",
+   "name": "tyh-arith-006-4",
    "subfamily": "arith",
-   "prompt": "156 + 78 = 243",
-   "target": "234",
+   "prompt": "741 - 258 = 438",
+   "target": "483",
    "target_alts": [],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -2712,9 +2664,9 @@
      -1
     ]
    },
-   "typo_word": "243",
+   "typo_word": "438",
    "intermediates": [
-    "234"
+    "483"
    ],
    "units": [
     {
@@ -2723,11 +2675,11 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "234"
+       "483"
       ]
      },
      "match": [
-      "234"
+      "483"
      ]
     }
    ],
@@ -2747,10 +2699,10 @@
    }
   },
   {
-   "name": "tyh-arith-add-47-76",
+   "name": "tyh-arith-3a",
    "subfamily": "arith",
-   "prompt": "47 + 76 = 213",
-   "target": "123",
+   "prompt": "143 × 3 = 492",
+   "target": "429",
    "target_alts": [],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -2760,9 +2712,9 @@
      -1
     ]
    },
-   "typo_word": "213",
+   "typo_word": "492",
    "intermediates": [
-    "123"
+    "429"
    ],
    "units": [
     {
@@ -2771,11 +2723,59 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "123"
+       "429"
       ]
      },
      "match": [
-      "123"
+      "429"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "correction": {
+      "en": [
+       3
+      ]
+     }
+    },
+    "target": 3
+   }
+  },
+  {
+   "name": "tyh-arith-512m348",
+   "subfamily": "arith",
+   "prompt": "512 - 348 = 146",
+   "target": "164",
+   "target_alts": [],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "typo_word": "146",
+   "intermediates": [
+    "164"
+   ],
+   "units": [
+    {
+     "role": "correction",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "164"
+      ]
+     },
+     "match": [
+      "164"
      ]
     }
    ],
@@ -2888,6 +2888,102 @@
      }
     },
     "target": 3
+   }
+  },
+  {
+   "name": "tyh-arith-b2-02-3",
+   "subfamily": "arith",
+   "prompt": "26 × 14 = 346",
+   "target": "364",
+   "target_alts": [],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "typo_word": "346",
+   "intermediates": [
+    "364"
+   ],
+   "units": [
+    {
+     "role": "correction",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "364"
+      ]
+     },
+     "match": [
+      "364"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "correction": {
+      "en": [
+       3
+      ]
+     }
+    },
+    "target": 3
+   }
+  },
+  {
+   "name": "tyh-arith-b2-03",
+   "subfamily": "arith",
+   "prompt": "96 - 38 = 85",
+   "target": "58",
+   "target_alts": [],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "typo_word": "85",
+   "intermediates": [
+    "58"
+   ],
+   "units": [
+    {
+     "role": "correction",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "58"
+      ]
+     },
+     "match": [
+      "58"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "correction": {
+      "en": [
+       2
+      ]
+     }
+    },
+    "target": 2
    }
   }
  ]

@@ -10,14 +10,12 @@
  "frozen": "2026-09-10",
  "items": [
   {
-   "name": "mhh-akbar-dinilahi",
+   "name": "mhh-1976philadelphia-bacterium",
    "subfamily": "2hop",
-   "prompt": "Fact: the Mughal ruler who built and then abandoned a red sandstone capital west of Agra promoted at his court a syncretic creed known as",
-   "target": "Din-i Ilahi",
+   "prompt": "Fact: the severe lung infection first recognized after a 1976 outbreak among convention delegates at a Philadelphia hotel is caused by the bacterium",
+   "target": "Legionella pneumophila",
    "target_alts": [
-    "Din-i-Ilahi",
-    "Din e Ilahi",
-    "Tawhid-i-Ilahi"
+    "L. pneumophila"
    ],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -28,7 +26,7 @@
     ]
    },
    "intermediates": [
-    "Akbar the Great"
+    "Legionnaires' disease"
    ],
    "units": [
     {
@@ -37,26 +35,26 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "Akbar the Great",
-       "Jalal-ud-din Muhammad Akbar"
+       "Legionnaires' disease",
+       "legionellosis"
       ]
      },
      "match": [
-      "Akbar the Great",
-      "Jalal-ud-din Muhammad Akbar"
+      "Legionnaires' disease",
+      "legionellosis"
      ]
     }
    ],
    "bridges": [
     {
-     "question": "Which Mughal emperor built the short-lived capital at Fatehpur Sikri?",
+     "question": "Which disease was first recognized after the 1976 outbreak among convention delegates at a Philadelphia hotel?",
      "units": [
       "bridge1"
      ],
      "answers": [
-      "Akbar",
-      "Akbar the Great",
-      "Jalal-ud-din Muhammad Akbar"
+      "Legionnaires' disease",
+      "Legionnaires disease",
+      "legionellosis"
      ]
     }
    ],
@@ -64,7 +62,7 @@
    "consistency_strict": 1.0,
    "consistency_greedy": 1,
    "bridge_consistency": {
-    "bridge1": 0.8
+    "bridge1": 0.9
    },
    "gate_variant": "chat",
    "probe_token_lens": {
@@ -72,37 +70,35 @@
      "bridge1": {
       "en": [
        4,
-       9
+       4
       ]
      }
     },
-    "target": 4,
+    "target": 5,
     "target_alts": [
-     4,
-     4,
-     6
+     5
     ]
    },
    "mc": {
     "bridge1": {
-     "gold": "Akbar the Great",
+     "gold": "Legionnaires' disease",
      "distractors": [
-      "Shah Jahan",
-      "Aurangzeb",
-      "Jahangir",
-      "Babur"
+      "Q fever",
+      "Psittacosis",
+      "Tularemia",
+      "Melioidosis"
      ]
     }
    }
   },
   {
-   "name": "mhh-angelfalls-auyantepui-canaima",
+   "name": "mhh-aztec-coatepec-sister",
    "subfamily": "2hop",
-   "prompt": "Fact: the flat-topped sandstone massif over whose rim the world's tallest uninterrupted waterfall plunges sits inside a Venezuelan protected area named",
-   "target": "Canaima National Park",
+   "prompt": "Fact: the Mexica lunar deity whose dismembered body tumbled down the slopes of Coatepec was struck down at birth by her own brother, the solar war god",
+   "target": "Huitzilopochtli",
    "target_alts": [
-    "Parque Nacional Canaima",
-    "Canaima National Park, Venezuela"
+    "Uitzilopochtli",
+    "Huitzilopochtli the hummingbird god"
    ],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -113,7 +109,7 @@
     ]
    },
    "intermediates": [
-    "Angel Falls"
+    "Coyolxauhqui"
    ],
    "units": [
     {
@@ -122,28 +118,105 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "Angel Falls",
-       "Salto Ángel",
-       "Kerepakupai Merú"
+       "Coyolxauhqui"
       ]
      },
      "match": [
-      "Angel Falls",
-      "Salto Ángel",
-      "Kerepakupai Merú"
+      "Coyolxauhqui"
      ]
     }
    ],
    "bridges": [
     {
-     "question": "What is the world's tallest uninterrupted waterfall?",
+     "question": "In Aztec myth, which daughter of Coatlicue was beheaded and cast down Snake Mountain by her newborn brother?",
      "units": [
       "bridge1"
      ],
      "answers": [
-      "Angel Falls",
-      "Salto Ángel",
-      "Kerepakupai Merú"
+      "Coyolxauhqui"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "bridge_consistency": {
+    "bridge1": 1.0
+   },
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "bridge1": {
+      "en": [
+       6
+      ]
+     }
+    },
+    "target": 7,
+    "target_alts": [
+     6,
+     11
+    ]
+   },
+   "mc": {
+    "bridge1": {
+     "gold": "Coyolxauhqui",
+     "distractors": [
+      "Chalchiuhtlicue",
+      "Itzpapalotl",
+      "Xochiquetzal",
+      "Tlazolteotl"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mhh-cshell-author-firm-buyer",
+   "subfamily": "2hop",
+   "prompt": "Fact: the Berkeley graduate student who wrote the C shell and much of the early BSD networking code went on in 1982 to co-found a workstation maker that was bought in 2010 by the database giant",
+   "target": "Oracle Corporation",
+   "target_alts": [
+    "Oracle",
+    "Oracle Corp."
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "intermediates": [
+    "Bill Joy"
+   ],
+   "units": [
+    {
+     "role": "bridge1",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "Bill Joy",
+       "William Nelson Joy"
+      ]
+     },
+     "match": [
+      "Bill Joy",
+      "William Nelson Joy"
+     ]
+    }
+   ],
+   "bridges": [
+    {
+     "question": "Which Berkeley graduate student wrote the C shell and much of the early BSD networking code?",
+     "units": [
+      "bridge1"
+     ],
+     "answers": [
+      "Bill Joy",
+      "William Nelson Joy",
+      "Joy"
      ]
     }
    ],
@@ -159,36 +232,36 @@
      "bridge1": {
       "en": [
        2,
-       5,
-       7
+       3
       ]
      }
     },
-    "target": 5,
+    "target": 2,
     "target_alts": [
-     6,
-     7
+     1,
+     3
     ]
    },
    "mc": {
     "bridge1": {
-     "gold": "Angel Falls",
+     "gold": "Bill Joy",
      "distractors": [
-      "Kaieteur Falls",
-      "Tugela Falls",
-      "Iguazu Falls",
-      "Victoria Falls"
+      "Andy Bechtolsheim",
+      "Scott McNealy",
+      "Vinod Khosla",
+      "Ken Thompson"
      ]
     }
    }
   },
   {
-   "name": "mhh-motherdemos-lab-town",
+   "name": "mhh-endpermian-volcanic-province",
    "subfamily": "2hop",
-   "prompt": "Fact: the nonprofit lab employing the man who led the 1968 event later nicknamed 'The Mother of All Demos' had its headquarters in the town of",
-   "target": "Menlo Park",
+   "prompt": "Fact: the largest of the five biological crises recorded in the fossil record, roughly 252 million years ago, is often blamed on the eruption of the volcanic province called the",
+   "target": "Siberian Traps",
    "target_alts": [
-    "Menlo Park, California"
+    "Siberian Trap basalts",
+    "Siberian flood basalts"
    ],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -199,7 +272,7 @@
     ]
    },
    "intermediates": [
-    "Douglas Engelbart"
+    "Permian–Triassic extinction event"
    ],
    "units": [
     {
@@ -208,27 +281,32 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "Douglas Engelbart",
-       "Douglas Carl Engelbart"
+       "Permian–Triassic extinction event",
+       "the Great Dying",
+       "end-Permian mass extinction"
       ]
      },
      "match": [
-      "Douglas Engelbart",
-      "Douglas Carl Engelbart"
+      "Permian–Triassic extinction event",
+      "the Great Dying",
+      "end-Permian mass extinction"
      ]
     }
    ],
    "bridges": [
     {
-     "question": "Who led the December 1968 presentation later nicknamed 'The Mother of All Demos'?",
+     "question": "Which mass extinction, about 252 million years ago, was the largest in the fossil record?",
      "units": [
       "bridge1"
      ],
      "answers": [
-      "Douglas Engelbart",
-      "Doug Engelbart",
-      "Engelbart",
-      "Douglas Carl Engelbart"
+      "the Permian–Triassic extinction event",
+      "Permian-Triassic extinction",
+      "the Great Dying",
+      "end-Permian extinction",
+      "P–T extinction",
+      "Permian–Triassic extinction event",
+      "end-Permian mass extinction"
      ]
     }
    ],
@@ -243,24 +321,288 @@
     "units": {
      "bridge1": {
       "en": [
+       7,
        3,
-       4
+       6
       ]
      }
     },
-    "target": 3,
+    "target": 4,
     "target_alts": [
+     5,
      5
     ]
    },
    "mc": {
     "bridge1": {
-     "gold": "Douglas Engelbart",
+     "gold": "Permian–Triassic extinction event",
      "distractors": [
-      "Ivan Sutherland",
-      "Alan Kay",
-      "Vannevar Bush",
-      "Ted Nelson"
+      "Cretaceous–Paleogene extinction event",
+      "Triassic–Jurassic extinction event",
+      "Late Devonian extinction",
+      "Ordovician–Silurian extinction event"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mhh-fourrow-layout",
+   "subfamily": "2hop",
+   "prompt": "Fact: The Milwaukee printer who patented the four-row letter arrangement still standard for English typing sold his rights in 1873 to",
+   "target": "E. Remington and Sons",
+   "target_alts": [
+    "Remington",
+    "E. Remington & Sons",
+    "Remington and Sons"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "intermediates": [
+    "Christopher Latham Sholes"
+   ],
+   "units": [
+    {
+     "role": "bridge1",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "Christopher Latham Sholes",
+       "C. Latham Sholes",
+       "Christopher Sholes"
+      ]
+     },
+     "match": [
+      "Christopher Latham Sholes",
+      "C. Latham Sholes",
+      "Christopher Sholes"
+     ]
+    }
+   ],
+   "bridges": [
+    {
+     "question": "Who patented the QWERTY arrangement and is credited as the father of the typewriter?",
+     "units": [
+      "bridge1"
+     ],
+     "answers": [
+      "Christopher Latham Sholes",
+      "Christopher Sholes",
+      "Sholes",
+      "C. Latham Sholes"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 0.5,
+   "consistency_greedy": 1,
+   "bridge_consistency": {
+    "bridge1": 0.9
+   },
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "bridge1": {
+      "en": [
+       5,
+       6,
+       3
+      ]
+     }
+    },
+    "target": 6,
+    "target_alts": [
+     2,
+     6,
+     4
+    ]
+   },
+   "mc": {
+    "bridge1": {
+     "gold": "Christopher Latham Sholes",
+     "distractors": [
+      "Carlos Glidden",
+      "James Densmore",
+      "Charles Thurber",
+      "Elisha Gray"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mhh-jpsi-slac",
+   "subfamily": "2hop",
+   "prompt": "Fact: The bound state of a charm quark and its antiquark, announced simultaneously in November 1974 by teams at Brookhaven and in California, was detected on the West Coast at a facility then named",
+   "target": "Stanford Linear Accelerator Center",
+   "target_alts": [
+    "SLAC",
+    "SLAC National Accelerator Laboratory",
+    "the Stanford Linear Accelerator Center (SLAC)"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "intermediates": [
+    "J/psi meson"
+   ],
+   "units": [
+    {
+     "role": "bridge1",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "J/psi meson",
+       "J/ψ particle"
+      ]
+     },
+     "match": [
+      "J/psi meson",
+      "J/ψ particle"
+     ]
+    }
+   ],
+   "bridges": [
+    {
+     "question": "Which subatomic particle, a charm–anticharm bound state, was announced simultaneously by two American teams in November 1974?",
+     "units": [
+      "bridge1"
+     ],
+     "answers": [
+      "J/psi meson",
+      "J/psi",
+      "J/ψ",
+      "J/psi particle",
+      "J/ψ particle"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 0.7,
+   "consistency_greedy": 1,
+   "bridge_consistency": {
+    "bridge1": 1.0
+   },
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "bridge1": {
+      "en": [
+       5,
+       4
+      ]
+     }
+    },
+    "target": 5,
+    "target_alts": [
+     2,
+     5,
+     10
+    ]
+   },
+   "mc": {
+    "bridge1": {
+     "gold": "J/psi meson",
+     "distractors": [
+      "Upsilon meson",
+      "phi meson",
+      "D meson",
+      "B meson"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mhh-moho-mohole",
+   "subfamily": "2hop",
+   "prompt": "Fact: The seismic boundary separating the Earth's crust from the mantle, inferred in 1909 by a Croatian scientist from wave travel times, was the goal of an American deep-drilling attempt of the early 1960s code-named",
+   "target": "Project Mohole",
+   "target_alts": [
+    "Mohole",
+    "the Mohole drilling attempt"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "intermediates": [
+    "Mohorovičić discontinuity"
+   ],
+   "units": [
+    {
+     "role": "bridge1",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "Mohorovičić discontinuity",
+       "the Moho"
+      ]
+     },
+     "match": [
+      "Mohorovičić discontinuity",
+      "the Moho"
+     ]
+    }
+   ],
+   "bridges": [
+    {
+     "question": "What is the name of the boundary between the Earth's crust and mantle, identified in 1909 by a Croatian seismologist?",
+     "units": [
+      "bridge1"
+     ],
+     "answers": [
+      "Mohorovičić discontinuity",
+      "the Moho",
+      "Moho"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "bridge_consistency": {
+    "bridge1": 0.9
+   },
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "bridge1": {
+      "en": [
+       7,
+       3
+      ]
+     }
+    },
+    "target": 3,
+    "target_alts": [
+     2,
+     5
+    ]
+   },
+   "mc": {
+    "bridge1": {
+     "gold": "Mohorovičić discontinuity",
+     "distractors": [
+      "Gutenberg discontinuity",
+      "Lehmann discontinuity",
+      "Conrad discontinuity",
+      "Repetti discontinuity"
      ]
     }
    }
@@ -350,6 +692,91 @@
    }
   },
   {
+   "name": "mhh-pitchblende-jachymov",
+   "subfamily": "2hop",
+   "prompt": "Fact: Marie and Pierre Curie won radium from tonnes of a black, tarry, strongly radioactive ore, and the Bohemian mining settlement that is the classic source of that ore is today the spa town of",
+   "target": "Jáchymov",
+   "target_alts": [
+    "Jachymov",
+    "Sankt Joachimsthal",
+    "Joachimsthal"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "intermediates": [
+    "pitchblende"
+   ],
+   "units": [
+    {
+     "role": "bridge1",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "pitchblende",
+       "uraninite"
+      ]
+     },
+     "match": [
+      "pitchblende",
+      "uraninite"
+     ]
+    }
+   ],
+   "bridges": [
+    {
+     "question": "Which ore, an oxide mineral of uranium, did the Curies process by the tonne to isolate radium?",
+     "units": [
+      "bridge1"
+     ],
+     "answers": [
+      "pitchblende",
+      "uraninite"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "bridge_consistency": {
+    "bridge1": 1.0
+   },
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "bridge1": {
+      "en": [
+       3,
+       2
+      ]
+     }
+    },
+    "target": 4,
+    "target_alts": [
+     4,
+     7,
+     5
+    ]
+   },
+   "mc": {
+    "bridge1": {
+     "gold": "pitchblende",
+     "distractors": [
+      "carnotite",
+      "galena",
+      "cinnabar",
+      "monazite"
+     ]
+    }
+   }
+  },
+  {
    "name": "mhh-plinyelder-naturalis",
    "subfamily": "2hop",
    "prompt": "Fact: the Roman fleet commander who died in 79 AD after sailing toward the erupting volcano to rescue those trapped on the shore was the author of an encyclopedic work titled",
@@ -428,88 +855,6 @@
       "Marcus Terentius Varro",
       "Aulus Cornelius Celsus",
       "Pomponius Mela"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mhh-prowse-clockwork",
-   "subfamily": "2hop",
-   "prompt": "Fact: the English weightlifter who wore the black armour of the masked Sith lord in the original Star Wars trilogy had earlier appeared as a strongman bodyguard in the 1971 Stanley Kubrick picture",
-   "target": "A Clockwork Orange",
-   "target_alts": [
-    "Clockwork Orange"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "intermediates": [
-    "David Prowse"
-   ],
-   "units": [
-    {
-     "role": "bridge1",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "David Prowse",
-       "Dave Prowse"
-      ]
-     },
-     "match": [
-      "David Prowse",
-      "Dave Prowse"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which bodybuilder physically portrayed Darth Vader in the original Star Wars trilogy?",
-     "units": [
-      "bridge1"
-     ],
-     "answers": [
-      "David Prowse",
-      "Dave Prowse",
-      "Prowse"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge1": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge1": {
-      "en": [
-       3,
-       3
-      ]
-     }
-    },
-    "target": 4,
-    "target_alts": [
-     3
-    ]
-   },
-   "mc": {
-    "bridge1": {
-     "gold": "David Prowse",
-     "distractors": [
-      "Peter Mayhew",
-      "Kenny Baker",
-      "Richard Kiel",
-      "Bolaji Badejo"
      ]
     }
    }
@@ -683,13 +1028,13 @@
    }
   },
   {
-   "name": "mhh-summer-winter-gold-host-town",
+   "name": "mhh-tanganyika-outflow-3hop",
    "subfamily": "2hop",
-   "prompt": "Fact: the only competitor to win gold medals at both the Summer and Winter Olympics in two different sports took his snow-and-ice title in the four-man bobsleigh at the 1932 Games hosted by",
-   "target": "Lake Placid, New York",
+   "prompt": "Fact: the single outflowing stream of the deepest freshwater body in Africa runs westward and empties, near Kabalo, into the great waterway known along its upper course as the",
+   "target": "Lualaba River",
    "target_alts": [
-    "Lake Placid",
-    "Lake Placid in New York State"
+    "Lualaba",
+    "Upper Congo"
    ],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -700,7 +1045,7 @@
     ]
    },
    "intermediates": [
-    "Eddie Eagan"
+    "Lake Tanganyika"
    ],
    "units": [
     {
@@ -709,29 +1054,25 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "Eddie Eagan",
-       "Edward Eagan",
-       "Edward Patrick Francis Eagan"
+       "Lake Tanganyika",
+       "Tanganyika"
       ]
      },
      "match": [
-      "Eddie Eagan",
-      "Edward Eagan",
-      "Edward Patrick Francis Eagan"
+      "Lake Tanganyika",
+      "Tanganyika"
      ]
     }
    ],
    "bridges": [
     {
-     "question": "Who is the only athlete to have won gold medals at both the Summer and Winter Olympics in different sports?",
+     "question": "What is the deepest lake in Africa?",
      "units": [
       "bridge1"
      ],
      "answers": [
-      "Eddie Eagan",
-      "Edward Eagan",
-      "Eagan",
-      "Edward Patrick Francis Eagan"
+      "Lake Tanganyika",
+      "Tanganyika"
      ]
     }
    ],
@@ -739,44 +1080,45 @@
    "consistency_strict": 1.0,
    "consistency_greedy": 1,
    "bridge_consistency": {
-    "bridge1": 0.8
+    "bridge1": 1.0
    },
    "gate_variant": "chat",
    "probe_token_lens": {
     "units": {
      "bridge1": {
       "en": [
-       3,
-       3,
-       5
+       4,
+       3
       ]
      }
     },
-    "target": 6,
+    "target": 4,
     "target_alts": [
      3,
-     7
+     2
     ]
    },
    "mc": {
     "bridge1": {
-     "gold": "Eddie Eagan",
+     "gold": "Lake Tanganyika",
      "distractors": [
-      "Billy Fiske",
-      "Jay O'Brien",
-      "Jack Shea",
-      "Irving Jaffee"
+      "Lake Malawi",
+      "Lake Victoria",
+      "Lake Kivu",
+      "Lake Turkana"
      ]
     }
    }
   },
   {
-   "name": "mhh-villalobos-birthplace",
+   "name": "mhh-ternary-moscow-brusentsov",
    "subfamily": "2hop",
-   "prompt": "Fact: the Brazilian composer of the nine-work cycle Bachianas Brasileiras was born in the coastal metropolis of",
-   "target": "Rio de Janeiro",
+   "prompt": "Fact: the balanced-ternary calculating device built at Moscow State University in the late 1950s was designed chiefly by",
+   "target": "Nikolay Brusentsov",
    "target_alts": [
-    "Rio"
+    "Nikolai Brusentsov",
+    "Nikolay Petrovich Brusentsov",
+    "Brusentsov"
    ],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -787,7 +1129,7 @@
     ]
    },
    "intermediates": [
-    "Heitor Villa-Lobos"
+    "Setun computer"
    ],
    "units": [
     {
@@ -796,25 +1138,273 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "Heitor Villa-Lobos",
-       "Villa-Lobos"
+       "Setun computer",
+       "Setun-70"
       ]
      },
      "match": [
-      "Heitor Villa-Lobos",
-      "Villa-Lobos"
+      "Setun computer",
+      "Setun-70"
      ]
     }
    ],
    "bridges": [
     {
-     "question": "Which Brazilian composer wrote the nine-work cycle Bachianas Brasileiras?",
+     "question": "What was the name of the balanced-ternary computer built at Moscow State University in 1959?",
      "units": [
       "bridge1"
      ],
      "answers": [
-      "Villa-Lobos",
-      "Heitor Villa-Lobos"
+      "Setun",
+      "Setun computer",
+      "the Setun",
+      "Setun-70"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "bridge_consistency": {
+    "bridge1": 0.9
+   },
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "bridge1": {
+      "en": [
+       3,
+       5
+      ]
+     }
+    },
+    "target": 6,
+    "target_alts": [
+     6,
+     9,
+     4
+    ]
+   },
+   "mc": {
+    "bridge1": {
+     "gold": "Setun computer",
+     "distractors": [
+      "BESM-6 computer",
+      "MESM computer",
+      "Strela computer",
+      "Ural-1 computer"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mhh-toland-wuthering",
+   "subfamily": "2hop",
+   "prompt": "Fact: the cinematographer of Citizen Kane took his only Academy Award for shooting William Wyler's 1939 adaptation of an Emily Brontë novel, released as",
+   "target": "Wuthering Heights",
+   "target_alts": [],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "intermediates": [
+    "Gregg Toland"
+   ],
+   "units": [
+    {
+     "role": "bridge1",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "Gregg Toland"
+      ]
+     },
+     "match": [
+      "Gregg Toland"
+     ]
+    }
+   ],
+   "bridges": [
+    {
+     "question": "Who was the cinematographer of Citizen Kane?",
+     "units": [
+      "bridge1"
+     ],
+     "answers": [
+      "Gregg Toland",
+      "Toland"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "bridge_consistency": {
+    "bridge1": 1.0
+   },
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "bridge1": {
+      "en": [
+       3
+      ]
+     }
+    },
+    "target": 4,
+    "target_alts": []
+   },
+   "mc": {
+    "bridge1": {
+     "gold": "Gregg Toland",
+     "distractors": [
+      "James Wong Howe",
+      "Leon Shamroy",
+      "Stanley Cortez",
+      "Arthur C. Miller"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mhh-tordesillas-zaragoza",
+   "subfamily": "2hop",
+   "prompt": "Fact: the 1494 accord that drew a north-south meridian dividing newly claimed lands between Castile and Portugal was later complemented, for the Moluccas in 1529, by the",
+   "target": "Treaty of Zaragoza",
+   "target_alts": [
+    "Treaty of Saragossa",
+    "Zaragoza agreement of 1529"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "intermediates": [
+    "Treaty of Tordesillas"
+   ],
+   "units": [
+    {
+     "role": "bridge1",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "Treaty of Tordesillas",
+       "Tordesillas"
+      ]
+     },
+     "match": [
+      "Treaty of Tordesillas",
+      "Tordesillas"
+     ]
+    }
+   ],
+   "bridges": [
+    {
+     "question": "Which 1494 agreement divided newly discovered lands outside Europe between Castile and Portugal along a meridian?",
+     "units": [
+      "bridge1"
+     ],
+     "answers": [
+      "Treaty of Tordesillas",
+      "Tordesillas",
+      "the Tordesillas treaty"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "bridge_consistency": {
+    "bridge1": 1.0
+   },
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "bridge1": {
+      "en": [
+       5,
+       3
+      ]
+     }
+    },
+    "target": 5,
+    "target_alts": [
+     5,
+     10
+    ]
+   },
+   "mc": {
+    "bridge1": {
+     "gold": "Treaty of Tordesillas",
+     "distractors": [
+      "Treaty of Alcáçovas",
+      "Treaty of Madrid (1750)",
+      "Treaty of San Ildefonso",
+      "Treaty of Utrecht"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mhh-vavilov-lysenkoism",
+   "subfamily": "2hop",
+   "prompt": "Fact: The Soviet plant geneticist who mapped the world's centres of origin of crop species and starved to death in a Saratov prison in 1943 was ruined professionally by the pseudoscientific doctrine now called",
+   "target": "Lysenkoism",
+   "target_alts": [
+    "Michurinism",
+    "Lysenkoist biology"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "intermediates": [
+    "Nikolai Vavilov"
+   ],
+   "units": [
+    {
+     "role": "bridge1",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "Nikolai Vavilov",
+       "Nikolai Ivanovich Vavilov",
+       "N. I. Vavilov"
+      ]
+     },
+     "match": [
+      "Nikolai Vavilov",
+      "Nikolai Ivanovich Vavilov",
+      "N. I. Vavilov"
+     ]
+    }
+   ],
+   "bridges": [
+    {
+     "question": "Which Soviet plant geneticist mapped the centres of origin of cultivated crops and died of starvation in a Saratov prison in 1943?",
+     "units": [
+      "bridge1"
+     ],
+     "answers": [
+      "Nikolai Vavilov",
+      "Vavilov",
+      "Nikolai Ivanovich Vavilov",
+      "N. I. Vavilov"
      ]
     }
    ],
@@ -830,23 +1420,107 @@
      "bridge1": {
       "en": [
        6,
-       4
+       8,
+       8
       ]
      }
     },
     "target": 3,
     "target_alts": [
-     1
+     4,
+     4
     ]
    },
    "mc": {
     "bridge1": {
-     "gold": "Heitor Villa-Lobos",
+     "gold": "Nikolai Vavilov",
      "distractors": [
-      "Carlos Gomes",
-      "Camargo Guarnieri",
-      "Francisco Mignone",
-      "Alberto Ginastera"
+      "Nikolai Koltsov",
+      "Sergei Chetverikov",
+      "Georgii Karpechenko",
+      "Nikolay Timofeev-Ressovsky"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mhh-walcott-1909-quarry-preserve",
+   "subfamily": "2hop",
+   "prompt": "Fact: The Cambrian fossil beds that Charles Walcott discovered in 1909 on the ridge between Mount Field and Mount Wapta lie inside a Canadian preserve named",
+   "target": "Yoho National Park",
+   "target_alts": [
+    "Yoho"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "intermediates": [
+    "Burgess Shale"
+   ],
+   "units": [
+    {
+     "role": "bridge1",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "Burgess Shale",
+       "Burgess Shale Formation"
+      ]
+     },
+     "match": [
+      "Burgess Shale",
+      "Burgess Shale Formation"
+     ]
+    }
+   ],
+   "bridges": [
+    {
+     "question": "Which Cambrian fossil deposit did Charles Walcott discover in 1909 in the Canadian Rockies?",
+     "units": [
+      "bridge1"
+     ],
+     "answers": [
+      "Burgess Shale",
+      "the Burgess Shale",
+      "Burgess Shale Formation"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "bridge_consistency": {
+    "bridge1": 1.0
+   },
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "bridge1": {
+      "en": [
+       3,
+       4
+      ]
+     }
+    },
+    "target": 4,
+    "target_alts": [
+     2
+    ]
+   },
+   "mc": {
+    "bridge1": {
+     "gold": "Burgess Shale",
+     "distractors": [
+      "Solnhofen Limestone",
+      "Maotianshan Shales",
+      "Morrison Formation",
+      "Hell Creek Formation"
      ]
     }
    }
@@ -936,85 +1610,6 @@
    }
   },
   {
-   "name": "mhh-zhangzeduan-dynasty",
-   "subfamily": "2hop",
-   "prompt": "Fact: the court artist who painted the long handscroll of bustling life in Bianjing during a spring tomb-sweeping festival served the imperial painting academy of the",
-   "target": "Northern Song dynasty",
-   "target_alts": [
-    "Northern Song",
-    "Song dynasty"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "intermediates": [
-    "Zhang Zeduan"
-   ],
-   "units": [
-    {
-     "role": "bridge1",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Zhang Zeduan"
-      ]
-     },
-     "match": [
-      "Zhang Zeduan"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Who painted the handscroll Along the River During the Qingming Festival?",
-     "units": [
-      "bridge1"
-     ],
-     "answers": [
-      "Zhang Zeduan"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge1": 0.8
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge1": {
-      "en": [
-       4
-      ]
-     }
-    },
-    "target": 3,
-    "target_alts": [
-     2,
-     2
-    ]
-   },
-   "mc": {
-    "bridge1": {
-     "gold": "Zhang Zeduan",
-     "distractors": [
-      "Fan Kuan",
-      "Guo Xi",
-      "Wang Ximeng",
-      "Ma Yuan"
-     ]
-    }
-   }
-  },
-  {
    "name": "mhh-adwa-baratieri",
    "subfamily": "2hop",
    "prompt": "Fact: the 1896 Ethiopian victory that wrecked Italy's attempt to impose a protectorate on the country was won against an invading force commanded by the general",
@@ -1095,6 +1690,220 @@
       "Battle of Omdurman",
       "Battle of Isandlwana",
       "Battle of Maychew"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mhh-amur-accord-qing-ruler",
+   "subfamily": "2hop",
+   "prompt": "Fact: the 1689 accord that fixed the Amur frontier between the Qing and Muscovy, drafted in Latin by Jesuit go-betweens, was concluded on the Chinese side under the ruler remembered as the",
+   "target": "Kangxi Emperor",
+   "target_alts": [
+    "Kangxi",
+    "Emperor Kangxi",
+    "the Kangxi Emperor",
+    "Xuanye",
+    "Aisin Gioro Xuanye"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "intermediates": [
+    "Treaty of Nerchinsk"
+   ],
+   "units": [
+    {
+     "role": "bridge1",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "Treaty of Nerchinsk"
+      ]
+     },
+     "match": [
+      "Treaty of Nerchinsk"
+     ]
+    }
+   ],
+   "bridges": [
+    {
+     "question": "Which 1689 agreement settled the Amur border between the Qing dynasty and Russia?",
+     "units": [
+      "bridge1"
+     ],
+     "answers": [
+      "Treaty of Nerchinsk",
+      "the Nerchinsk treaty",
+      "Nerchinsk"
+     ]
+    }
+   ],
+   "consistency": 0.9,
+   "consistency_strict": 0.9,
+   "consistency_greedy": 1,
+   "bridge_consistency": {
+    "bridge1": 0.9
+   },
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "bridge1": {
+      "en": [
+       5
+      ]
+     }
+    },
+    "target": 3,
+    "target_alts": [
+     2,
+     3,
+     4,
+     2,
+     7
+    ]
+   },
+   "mc": {
+    "bridge1": {
+     "gold": "Treaty of Nerchinsk",
+     "distractors": [
+      "Treaty of Kyakhta",
+      "Treaty of Aigun",
+      "Convention of Peking",
+      "Treaty of Tianjin"
+     ]
+    }
+   }
+  },
+  {
+   "name": "mhh-alexiad-adriatic-defeat",
+   "subfamily": "3hop",
+   "prompt": "Fact: the Byzantine princess who chronicled her father's reign in a fifteen-book epic history saw that emperor beaten in 1081 on the Adriatic shore by the Hauteville ruler of Apulia and Calabria known as",
+   "target": "Robert Guiscard",
+   "target_alts": [
+    "Guiscard",
+    "Robert de Hauteville"
+   ],
+   "source": "staging_hard_mt",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   },
+   "intermediates": [
+    "Anna Komnene",
+    "Alexios I Komnenos"
+   ],
+   "units": [
+    {
+     "role": "bridge1",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "Anna Komnene",
+       "Anna Comnena"
+      ]
+     },
+     "match": [
+      "Anna Komnene",
+      "Anna Comnena"
+     ]
+    },
+    {
+     "role": "bridge2",
+     "required": true,
+     "multi_token": true,
+     "forms": {
+      "en": [
+       "Alexios I Komnenos",
+       "Alexius I Comnenus"
+      ]
+     },
+     "match": [
+      "Alexios I Komnenos",
+      "Alexius I Comnenus"
+     ]
+    }
+   ],
+   "bridges": [
+    {
+     "question": "Which Byzantine princess wrote the Alexiad, a fifteen-book history of her father's reign?",
+     "units": [
+      "bridge1"
+     ],
+     "answers": [
+      "Anna Komnene",
+      "Anna Comnena",
+      "Anna Komnena"
+     ]
+    },
+    {
+     "question": "Whose reign is chronicled in the Alexiad, written by Anna Komnene?",
+     "units": [
+      "bridge2"
+     ],
+     "answers": [
+      "Alexios I Komnenos",
+      "Alexios I",
+      "Alexius I Comnenus"
+     ]
+    }
+   ],
+   "consistency": 1.0,
+   "consistency_strict": 1.0,
+   "consistency_greedy": 1,
+   "bridge_consistency": {
+    "bridge1": 1.0,
+    "bridge2": 0.9
+   },
+   "gate_variant": "chat",
+   "probe_token_lens": {
+    "units": {
+     "bridge1": {
+      "en": [
+       4,
+       4
+      ]
+     },
+     "bridge2": {
+      "en": [
+       6,
+       6
+      ]
+     }
+    },
+    "target": 3,
+    "target_alts": [
+     2,
+     4
+    ]
+   },
+   "mc": {
+    "bridge1": {
+     "gold": "Anna Komnene",
+     "distractors": [
+      "Michael Psellos",
+      "Niketas Choniates",
+      "Irene Doukaina",
+      "Eudokia Makrembolitissa"
+     ]
+    },
+    "bridge2": {
+     "gold": "Alexios I Komnenos",
+     "distractors": [
+      "Michael VII Doukas",
+      "Nikephoros III Botaneiates",
+      "Romanos IV Diogenes",
+      "John II Komnenos"
      ]
     }
    }
@@ -1342,132 +2151,6 @@
    }
   },
   {
-   "name": "mhh-deinonychus-yale-newhaven",
-   "subfamily": "3hop",
-   "prompt": "Fact: the paleontologist who named Deinonychus in 1969 and revived the idea that birds descend from theropod dinosaurs spent his entire career at an Ivy League school whose main campus lies in the coastal town of",
-   "target": "New Haven, Connecticut",
-   "target_alts": [
-    "New Haven"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "intermediates": [
-    "John Ostrom",
-    "Yale University"
-   ],
-   "units": [
-    {
-     "role": "bridge1",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "John Ostrom",
-       "John H. Ostrom"
-      ]
-     },
-     "match": [
-      "John Ostrom",
-      "John H. Ostrom"
-     ]
-    },
-    {
-     "role": "bridge2",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Yale University",
-       "Yale Peabody Museum"
-      ]
-     },
-     "match": [
-      "Yale University",
-      "Yale Peabody Museum"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which American paleontologist named Deinonychus in 1969 and revived the dinosaur-to-bird hypothesis?",
-     "units": [
-      "bridge1"
-     ],
-     "answers": [
-      "John Ostrom",
-      "John H. Ostrom",
-      "Ostrom"
-     ]
-    },
-    {
-     "question": "At which Ivy League institution did John Ostrom spend his academic career?",
-     "units": [
-      "bridge2"
-     ],
-     "answers": [
-      "Yale",
-      "Yale University",
-      "Yale College",
-      "Yale Peabody Museum"
-     ]
-    }
-   ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge1": 0.9,
-    "bridge2": 1.0
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge1": {
-      "en": [
-       3,
-       5
-      ]
-     },
-     "bridge2": {
-      "en": [
-       2,
-       5
-      ]
-     }
-    },
-    "target": 4,
-    "target_alts": [
-     2
-    ]
-   },
-   "mc": {
-    "bridge1": {
-     "gold": "John Ostrom",
-     "distractors": [
-      "Robert Bakker",
-      "Edwin H. Colbert",
-      "Barnum Brown",
-      "Jack Horner"
-     ]
-    },
-    "bridge2": {
-     "gold": "Yale University",
-     "distractors": [
-      "Harvard University",
-      "Princeton University",
-      "Brown University",
-      "Columbia University"
-     ]
-    }
-   }
-  },
-  {
    "name": "mhh-meitner-meitnerium-armbruster",
    "subfamily": "3hop",
    "prompt": "Fact: the transuranium metal named for the physicist who, with her nephew Otto Frisch, first explained nuclear fission was created in 1982 by a Darmstadt team headed by",
@@ -1593,14 +2276,14 @@
    }
   },
   {
-   "name": "mhh-rufus-henry-whiteship",
+   "name": "mhh-belisarius-procopius-secret-history",
    "subfamily": "3hop",
-   "prompt": "Fact: The English king struck down by an arrow while hunting in the New Forest in 1100 was succeeded by his younger brother, whose only legitimate son drowned when a vessel foundered off Barfleur in 1120; that ill-fated vessel was called",
-   "target": "the White Ship",
+   "prompt": "Fact: the legal secretary who served the Byzantine general victorious at Ad Decimum in 533 later composed a venomous private denunciation of the imperial court, a work conventionally titled",
+   "target": "The Secret History",
    "target_alts": [
-    "White Ship",
-    "La Blanche-Nef",
-    "Blanche-Nef"
+    "Secret History",
+    "Anecdota",
+    "The Secret History (Anecdota)"
    ],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -1611,8 +2294,8 @@
     ]
    },
    "intermediates": [
-    "William Rufus",
-    "Henry I of England"
+    "Belisarius",
+    "Procopius of Caesarea"
    ],
    "units": [
     {
@@ -1621,13 +2304,13 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "William Rufus",
-       "William II of England"
+       "Belisarius",
+       "Flavius Belisarius"
       ]
      },
      "match": [
-      "William Rufus",
-      "William II of England"
+      "Belisarius",
+      "Flavius Belisarius"
      ]
     },
     {
@@ -1636,45 +2319,43 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "Henry I of England",
-       "Henry Beauclerc"
+       "Procopius of Caesarea",
+       "Procopius"
       ]
      },
      "match": [
-      "Henry I of England",
-      "Henry Beauclerc"
+      "Procopius of Caesarea",
+      "Procopius"
      ]
     }
    ],
    "bridges": [
     {
-     "question": "Which English king was killed by an arrow while hunting in the New Forest in 1100?",
+     "question": "Which Byzantine general defeated the Vandals at the battle of Ad Decimum in 533?",
      "units": [
       "bridge1"
      ],
      "answers": [
-      "William II",
-      "William Rufus",
-      "William II of England"
+      "Belisarius",
+      "Flavius Belisarius"
      ]
     },
     {
-     "question": "Who succeeded William Rufus as king of England in 1100?",
+     "question": "Who served as legal secretary and chronicler to Belisarius during his campaigns?",
      "units": [
       "bridge2"
      ],
      "answers": [
-      "Henry I",
-      "Henry I of England",
-      "Henry Beauclerc"
+      "Procopius",
+      "Procopius of Caesarea"
      ]
     }
    ],
-   "consistency": 1.0,
-   "consistency_strict": 1.0,
+   "consistency": 0.9,
+   "consistency_strict": 0.9,
    "consistency_greedy": 1,
    "bridge_consistency": {
-    "bridge1": 1.0,
+    "bridge1": 0.9,
     "bridge2": 1.0
    },
    "gate_variant": "chat",
@@ -1683,175 +2364,40 @@
      "bridge1": {
       "en": [
        3,
-       4
+       6
       ]
      },
      "bridge2": {
       "en": [
-       4,
-       4
+       7,
+       3
       ]
      }
     },
     "target": 3,
     "target_alts": [
      2,
-     5,
-     4
+     2,
+     8
     ]
    },
    "mc": {
     "bridge1": {
-     "gold": "William Rufus",
+     "gold": "Belisarius",
      "distractors": [
-      "Henry I of England",
-      "Robert Curthose",
-      "Stephen of Blois",
-      "Edgar the Aetheling"
+      "Narses",
+      "Sittas",
+      "Bessas",
+      "Mundus"
      ]
     },
     "bridge2": {
-     "gold": "Henry I of England",
+     "gold": "Procopius of Caesarea",
      "distractors": [
-      "William II of England",
-      "Stephen, King of England",
-      "Henry II of England",
-      "Richard I of England"
-     ]
-    }
-   }
-  },
-  {
-   "name": "mhh-ezana-frumentius-consecrator",
-   "subfamily": "3hop",
-   "prompt": "Fact: The shipwrecked Syrian youth who served as tutor at the court of the fourth-century Aksumite monarch and won him to the new faith was consecrated as a bishop by the Egyptian patriarch remembered as",
-   "target": "Athanasius the Great",
-   "target_alts": [
-    "Athanasius",
-    "Saint Athanasius",
-    "Athanasius of Alexandria"
-   ],
-   "source": "staging_hard_mt",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   },
-   "intermediates": [
-    "Ezana",
-    "Frumentius"
-   ],
-   "units": [
-    {
-     "role": "bridge1",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Ezana",
-       "King Ezana",
-       "Ezana of Axum"
-      ]
-     },
-     "match": [
-      "Ezana",
-      "King Ezana",
-      "Ezana of Axum"
-     ]
-    },
-    {
-     "role": "bridge2",
-     "required": true,
-     "multi_token": true,
-     "forms": {
-      "en": [
-       "Frumentius",
-       "Saint Frumentius",
-       "Abba Salama"
-      ]
-     },
-     "match": [
-      "Frumentius",
-      "Saint Frumentius",
-      "Abba Salama"
-     ]
-    }
-   ],
-   "bridges": [
-    {
-     "question": "Which fourth-century ruler of Aksum was the first of his line to adopt Christianity and to place the cross on his coinage?",
-     "units": [
-      "bridge1"
-     ],
-     "answers": [
-      "Ezana",
-      "King Ezana",
-      "Ezana of Axum"
-     ]
-    },
-    {
-     "question": "Which shipwrecked Syro-Phoenician became tutor at Ezana's court and the first bishop of Aksum?",
-     "units": [
-      "bridge2"
-     ],
-     "answers": [
-      "Frumentius",
-      "Abba Salama",
-      "Saint Frumentius"
-     ]
-    }
-   ],
-   "consistency": 0.9,
-   "consistency_strict": 0.8,
-   "consistency_greedy": 1,
-   "bridge_consistency": {
-    "bridge1": 0.8,
-    "bridge2": 0.8
-   },
-   "gate_variant": "chat",
-   "probe_token_lens": {
-    "units": {
-     "bridge1": {
-      "en": [
-       2,
-       3,
-       5
-      ]
-     },
-     "bridge2": {
-      "en": [
-       3,
-       4,
-       4
-      ]
-     }
-    },
-    "target": 5,
-    "target_alts": [
-     3,
-     4,
-     5
-    ]
-   },
-   "mc": {
-    "bridge1": {
-     "gold": "Ezana",
-     "distractors": [
-      "Ousanas",
-      "Kaleb of Axum",
-      "Endubis",
-      "Zoskales of Axum"
-     ]
-    },
-    "bridge2": {
-     "gold": "Frumentius",
-     "distractors": [
-      "Ulfilas",
-      "Gregory the Illuminator",
-      "Aedesius of Tyre",
-      "Cyril of Alexandria"
+      "Agathias of Myrina",
+      "John Malalas",
+      "Theophylact Simocatta",
+      "Evagrius Scholasticus"
      ]
     }
    }
@@ -1994,13 +2540,13 @@
    }
   },
   {
-   "name": "mhh-charlesv-donjohn-escorial",
+   "name": "mhh-riverblindness-ivermectin-strep",
    "subfamily": "3hop",
-   "prompt": "Fact: The Habsburg ruler who abdicated his thrones in 1556 and retired to a remote Extremaduran cloister had an illegitimate son who led the Holy League fleet to victory in 1571; that son's remains were finally interred in the great palace-monastery northwest of Madrid known as",
-   "target": "El Escorial",
+   "prompt": "Fact: the parasitic worm responsible for the illness commonly called river blindness is killed by a macrocyclic lactone medicine that was developed from a soil-dwelling bacterium named",
+   "target": "Streptomyces avermitilis",
    "target_alts": [
-    "San Lorenzo de El Escorial",
-    "El Escorial Palace"
+    "Streptomyces avermectinius",
+    "S. avermitilis"
    ],
    "source": "staging_hard_mt",
    "eval_render": "plain",
@@ -2011,8 +2557,8 @@
     ]
    },
    "intermediates": [
-    "Charles the Fifth",
-    "Don John of Austria"
+    "Onchocerca volvulus",
+    "ivermectin"
    ],
    "units": [
     {
@@ -2021,15 +2567,11 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "Charles the Fifth",
-       "Charles V",
-       "Emperor Charles V"
+       "Onchocerca volvulus"
       ]
      },
      "match": [
-      "Charles the Fifth",
-      "Charles V",
-      "Emperor Charles V"
+      "Onchocerca volvulus"
      ]
     },
     {
@@ -2038,42 +2580,35 @@
      "multi_token": true,
      "forms": {
       "en": [
-       "Don John of Austria",
-       "Juan de Austria",
-       "John of Austria"
+       "ivermectin",
+       "Mectizan"
       ]
      },
      "match": [
-      "Don John of Austria",
-      "Juan de Austria",
-      "John of Austria"
+      "ivermectin",
+      "Mectizan"
      ]
     }
    ],
    "bridges": [
     {
-     "question": "Which Habsburg ruler abdicated his thrones in 1556 and retired to the monastery of Yuste?",
+     "question": "Which parasitic nematode causes onchocerciasis, the disease known as river blindness?",
      "units": [
       "bridge1"
      ],
      "answers": [
-      "Charles V",
-      "Charles the Fifth",
-      "Charles I of Spain",
-      "Carlos I",
-      "Emperor Charles V"
+      "Onchocerca volvulus",
+      "O. volvulus"
      ]
     },
     {
-     "question": "Which illegitimate son of Charles V commanded the Holy League fleet at Lepanto in 1571?",
+     "question": "Which macrocyclic lactone drug is used to treat infection with Onchocerca volvulus?",
      "units": [
       "bridge2"
      ],
      "answers": [
-      "Don John of Austria",
-      "John of Austria",
-      "Juan de Austria",
-      "Don Juan"
+      "ivermectin",
+      "Mectizan"
      ]
     }
    ],
@@ -2081,50 +2616,47 @@
    "consistency_strict": 0.8,
    "consistency_greedy": 1,
    "bridge_consistency": {
-    "bridge1": 1.0,
-    "bridge2": 0.9
+    "bridge1": 0.8,
+    "bridge2": 1.0
    },
    "gate_variant": "chat",
    "probe_token_lens": {
     "units": {
      "bridge1": {
       "en": [
-       3,
-       2,
-       3
+       7
       ]
      },
      "bridge2": {
       "en": [
        4,
-       3,
-       3
+       4
       ]
      }
     },
-    "target": 3,
+    "target": 8,
     "target_alts": [
-     6,
-     4
+     9,
+     6
     ]
    },
    "mc": {
     "bridge1": {
-     "gold": "Charles the Fifth",
+     "gold": "Onchocerca volvulus",
      "distractors": [
-      "Philip II of Spain",
-      "Ferdinand I, Holy Roman Emperor",
-      "Maximilian I, Holy Roman Emperor",
-      "Francis I of France"
+      "Wuchereria bancrofti",
+      "Brugia malayi",
+      "Loa loa",
+      "Dracunculus medinensis"
      ]
     },
     "bridge2": {
-     "gold": "Don John of Austria",
+     "gold": "ivermectin",
      "distractors": [
-      "Alexander Farnese, Duke of Parma",
-      "Fernando Alvarez de Toledo, Duke of Alba",
-      "Marcantonio Colonna",
-      "Alvaro de Bazan, Marquis of Santa Cruz"
+      "albendazole",
+      "praziquantel",
+      "moxidectin",
+      "diethylcarbamazine"
      ]
     }
    }

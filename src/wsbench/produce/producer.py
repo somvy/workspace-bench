@@ -89,8 +89,8 @@ class Producer:
         self, text: str, pos: int = -1, layer: int | None = None, *, chat: bool = False
     ) -> Row:
         """One cell of one prompt: the readout at ``pos`` (negative counts from the end) after
-        block ``layer`` (default: the method's own layer if it has one, else 19)."""
-        layers = [layer] if layer is not None else (self.method.layers or [19])
+        block ``layer`` (default: the method's own layer if it has one, else 25)."""
+        layers = [layer] if layer is not None else (self.method.layers or [25])
         return self.read_prompt(text, positions=pos, layers=layers, chat=chat)[0]
 
     def read_prompt(

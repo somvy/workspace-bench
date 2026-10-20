@@ -1,81 +1,91 @@
-# Qwen2.5-7B-Instruct port (branch `port-qwen2.5-7b`)
+# Qwen3-8B port (branch `port-qwen3-8b`)
 
 > **Not ported, emptied on this branch:** agentic_misalignment, jlens_concept_pr (their banks are Qwen3.6-27B rollouts and
-> activations). **Below 20 items:** multilingual_mt 7, multilingual_multihop 13, conjunctive_association 14,
-> brew_intermediates 0; role_bound_association kept 2 and is emptied (its judge draws 3 distractor scenes from other
-> items). **No J-lens / R-lens exists for this model:** `method=jlens|rlens` fails at load. **Judging** goes through
+> activations), brew_intermediates (8 items pass; its read positions are Qwen3.6-27B token indices, not remapped).
+> **Below 20 items, flagged in PORT.json:** chain_intermediates 15, conjunctive_association 12, relational_multihop 11,
+> multilingual_mt 18, multilingual_multihop 16. **No R-lens exists for this model:** `method=rlens` fails at load. The
+> J-lens default is neuronpedia's Qwen3-8B wikitext fit (n=1000), not yet run on the bench. **Judging** goes through
 > OpenRouter (Gemini 3.8 Flash) by default, or a local server with `WSBENCH_BASE_URL` (README, "Local judge").
 
-Built like the Qwen3.5-9B port (branch `port-qwen3.5-9b`), with one difference that matters: Qwen2.5 has a different
-tokenizer (151,665 vs 248,077 tokens) and chat template (no think block; the template inserts its default system prompt,
-"You are Qwen, created by Alibaba Cloud. You are a helpful assistant.", when an item has none, and it is kept, as the
-model is normally run). Every chat render on this branch is Qwen2.5's own template. `PORT.json` has per-family counts.
-Build scripts: `scripts/port/` (README there).
+Built like the Qwen2.5-7B port (branch `port-qwen2.5-7b`). Subject: `Qwen/Qwen3-8B` (post-trained, thinking off), 36 layers.
+Qwen3-8B sits between the two earlier ports:
+- **Same chat template text as Qwen3.6-27B.** No default system prompt; thinking off renders `<think>\n\n</think>\n\n`
+  after the assistant header. Every render decodes to the same text as on the 27B.
+- **Different tokenizer.** It has Qwen2.5's vocabulary (151,669 tokens vs 248,077), so token ids and word splits differ,
+  and every tokenizer-dependent step of the 7B port is redone here.
+
+`PORT.json` has per-family counts. Build scripts: `scripts/port/` (README there).
 
 ## Gate (chat only)
-Same rule as the 9B port: the bench's `capable` question in chat format (bench ANSWER_SYSTEM), 10 samples at T=0.7
-(top_p=1, top_k=0) plus greedy, graded by local Qwen3.6-27B with the bench GRADE prompt. An item passes if the greedy
-answer is right and at least 8/10 samples are right (10/10 for chain and brew); a multihop item needs every bridge
-question to pass too. Kept: typo 94, user_modeling 94, multilingual 90, multihop 79, basic_readout 67 (+22 implicit),
-typo_mt 60, chain 57, association 50, relational_multihop 38, basic_readout_mt 37, multilingual_typo 33, buggy_code 23,
-multihop_mt 21, arithmetic 194. Total over all families: 1,579 items.
+Same rule as the 9B and 7B ports: the bench's `capable` question in chat format (bench ANSWER_SYSTEM, thinking off),
+10 samples at T=0.7 (top_p=1, top_k=0) plus greedy, graded by local Qwen3.6-27B with the bench GRADE prompt. An item
+passes if the greedy answer is right and at least 8/10 samples are right (10/10 for chain and brew); a multihop item needs
+every bridge question to pass too. Every answer was graded (0 undecided). Kept: user_modeling 93, multilingual 87,
+typo 82, multihop 73, basic_readout 66 (+19 implicit), typo_mt 62, basic_readout_mt 47, association 37,
+multilingual_typo 36, buggy_code 29, multihop_mt 28, role_bound_association 22, arithmetic 180. Total over the families
+with at least 20 items: 1,485.
+
+Compared with the 7B under the same gate, the 8B is weaker on chain (15 vs 57 kept), relational_multihop (11 vs 38) and
+association (37 vs 50), and stronger on role_bound_association (22 vs 2), multilingual_mt (18 vs 7) and buggy_code
+(29 vs 23).
 
 ## Rebuilt families
-- **poetry**: kept if the 7B commits to a rhyme (chat greedy, at least 8/10 the same word, and the plain-render greedy
-  continuation agrees). 71/100 kept (15 plain continuation differs, 14 chat inconsistent); 69 of 71 rhymes equal Qwen3.6's.
-- **basic_readout implicit**: gold = the 7B's own favourite (chat_prefill render, at least 8/10 the same answer).
-  22/32 kept, 9 the same as the bank's.
+- **poetry**: kept if the 8B commits to a rhyme (chat greedy, at least 8/10 the same word, and the plain-render greedy
+  continuation agrees). 68/100 kept (20 plain continuation differs, 12 chat inconsistent); 65 of 68 rhymes equal Qwen3.6's.
+- **basic_readout implicit**: gold = the 8B's own favourite (chat_prefill render, at least 8/10 the same answer).
+  19/32 kept, 12 the same as the bank's.
 - **directed_modulation**: compliance re-screened with free generation (copies the carrier verbatim, never names the
-  concept; greedy + at least 8/10; pairs kept whole). 94 items pass, 88 kept as whole pairs.
-- **moral_rationale**: side split = the 7B's 10 chat answers; reasons = Qwen3.6-27B clustering of the 7B's own
-  explanations (same pipeline as the 9B). 199/200 kept: 177 committed, 22 deliberative (bank 166 / 34). Same direction as
-  the bank on 139/199 items, same class on 153. Variant "mixed" (shipped): 121 items keep the bank's reasons, 78 rebuilt.
-  The 7B's top committed reason is judged the same as the bank's look_for_reasons[0] on 49/116 (Qwen3.6-27B on its own
-  bank, the fidelity control from the 9B port: 77/135). The blind lucky-guessing floor was not re-measured.
-- **hallucination**: same 149 prompts, the 7B's own on-policy responses (vLLM, T=1.0, top-p 1.0, top-k 0, 512 new tokens,
-  seed 7, EOS dropped), read sites re-derived on its tokens by `scripts/port/hallucination.py` (whose `check` mode
-  reproduces all 1,123 original sites). 149 items, 1,096 sites (clause 458, sentence 362, newline 142, markup 109,
-  quote 25); responses are shorter than Qwen3.6-27B's (median 126 tokens vs 228; 26 hit the 512 cap vs 35).
+  concept; greedy + at least 8/10; pairs kept whole). 97 items pass, 94 kept as whole pairs.
+- **moral_rationale**: side split = the 8B's 10 chat answers; reasons = Qwen3.6-27B clustering of the 8B's own
+  explanations (same pipeline as the 9B). 200/200 kept: 187 committed, 13 deliberative (bank 166 / 34). The 8B is more
+  one-sided than the 27B, the opposite of the 9B (70 deliberative). Same direction as the bank on 140/200 items, same
+  class on 167. Variant "mixed" (shipped): 128 items keep the bank's reasons, 72 rebuilt. The 8B's top committed reason is
+  judged the same as the bank's look_for_reasons[0] on 51/121 (the fidelity control, Qwen3.6-27B on its own bank: 77/135).
+  The blind lucky-guessing floor was not re-measured.
+- **hallucination**: same 149 prompts, the 8B's own on-policy responses (vLLM, T=1.0, top-p 1.0, top-k 0, 512 new tokens,
+  seed 7, empty think block, EOS dropped; FlashInfer sampler off, which does not change the distribution), read sites
+  re-derived on its tokens by `scripts/port/hallucination.py` (`check` reproduces all 1,123 original sites, 149/149 items).
+  149 items, 1,029 sites (clause 370, sentence 335, markup 176, newline 131, quote 17); median response 114 tokens vs 228
+  on the 27B; 36 hit the 512 cap (original 35). Prompt renders are the same text as the original, different token ids.
 
 ## Read positions (tokenizer-dependent)
 `scripts/port/poscheck.py` renders every plan row with both tokenizers, resolves its positions rule under each and
-compares the selected text.
-- **Text rules carry over** (final_token, offset_from_end, line_one_newline, from_token, suffix_text, last_n,
-  from_last_sentence_start). Where the selected text differs it is because Qwen2.5 splits a word differently: the final
-  token of 6 basic_readout_mt, 4 typo_mt, 2 typo, 1 multilingual and most Arabic/Hebrew/Greek multilingual items is a
-  different piece of the same last word (`' milion'` vs `'ion'`); poetry's line-one newline is `',\n'` (one token in
-  Qwen2.5) instead of `'\n'`. The chat families read the same user text followed by Qwen2.5's own, 4-token-shorter tail.
-- **moral_rationale** reads the last 5 positions, "the assistant-header tail". On Qwen3.6 those are `\n<think>\n\n</think>\n\n`;
-  on Qwen2.5 they are `<|im_end|>\n<|im_start|>assistant\n`. The rule is unchanged; what it reads differs by template.
-- **jailbreak_recognition** stored token indices; `scripts/port/remap.py` re-derives each item's read (every token of the
-  last user turn through its `<|im_end|>`) on Qwen2.5's render. The same code rebuilds all 86 original reads exactly
-  under the Qwen3.6-27B tokenizer (`remap.py check`); on Qwen2.5 every span equals the last user turn + `<|im_end|>`, 86/86.
-- **arithmetic_intermediates** frozen cells were offsets in the chat tail (-8 = the newline after `<|im_end|>`,
-  -7 = `<|im_start|>`); mapped by token identity to -4 / -3. They were the best cells on the 27B, so on the 7B they are
-  a guess: use `opts=cells=all` until they are re-selected.
-- **hallucination** is captured token ids, rebuilt above.
-- **The six multi-token families** (typo_mt, multihop_mt, multilingual_mt, basic_readout_mt, multilingual_multihop,
-  multilingual_typo) credit an answer form only when it is strictly multi-token under the probed model's tokenizer
-  (`probe_token_lens` > 1), so a top-k token lens cannot hit it with one token. The counts are per-tokenizer;
-  `scripts/port/restamp.py` restamps them with Qwen2.5's tokenizer. The rule (minimum token count over as-is / lower /
-  title case, bare and with a leading space) reproduces all 4,600 original Qwen3.6-27B stamps exactly (`restamp.py check`).
-  On Qwen2.5 counts mostly go up (smaller vocabulary): 13 forms become creditable (multilingual_mt 3, multilingual_typo 10),
-  none lose credit, no item is dropped.
+compares the selected text (counts below are on main's banks, before the gate).
+- **Text rules carry over.** Where the selected text differs, Qwen3-8B splits the last word differently (`' milion'` vs
+  `'ion'`): basic_readout_mt 14, typo_mt 5, typo 2, multilingual 1, and many non-Latin multilingual_mt (53),
+  multilingual_multihop (33) and multilingual_typo (19) items. Poetry's line-one newline is `',\n'` (one token) instead
+  of `'\n'`, as on Qwen2.5.
+- **Chat tails are the same text as on the 27B**, so the chat families (moral_rationale, user_modeling,
+  conjunctive/role_bound summarize tails, chain, arithmetic) select identical text: 0 rows differ. moral_rationale's
+  5 tail positions are `\n<think>\n\n</think>\n\n`, as on the 27B (on Qwen2.5 they were the header tokens).
+- **jailbreak_recognition** stored token indices; `scripts/port/remap.py` re-derives each read (every token of the last
+  user turn through its `<|im_end|>`) on Qwen3-8B's render. `remap.py check` rebuilds all 86 original reads exactly under
+  the Qwen3.6-27B tokenizer. Span tokens total 28,458 (bank 28,713).
+- **arithmetic_intermediates** frozen cells -8 / -7 (the newline after `<|im_end|>`, `<|im_start|>`) map to the same
+  offsets -8 / -7: the tail tokenizes identically. They were the best cells on the 27B, so on the 8B they are still a
+  guess: use `opts=cells=all` until they are re-selected.
+- **brew_intermediates** stores token indices too and is not remapped; with 8 passing items it is emptied.
+- **The six multi-token families** are restamped with Qwen3-8B's tokenizer (`scripts/port/restamp.py`; `check`
+  reproduces all 4,600 original stamps). Counts mostly go up; 16 forms become creditable (multilingual_mt 8,
+  multilingual_typo 8), none lose credit, no item is dropped.
 
 ## Layers
-Every layer l becomes min(int(l * 28 / 64 + 0.5), 27) (64 to 28 layers): GRID [9, 11, 12, 14, 16, 18, 19, 21, 23, 25, 26],
-SIX [9, 12, 16, 19, 23, 26], FIVE [9, 16, 19, 23, 26]; arithmetic 25/26; buggy_code 26/25; MCDM [19, 23, 25, 26];
-agentic [*GRID, 27]; producer default 19.
+Every layer l becomes min(int(l * 36 / 64 + 0.5), 35) (64 to 36 layers): GRID [11, 14, 16, 18, 20, 23, 25, 27, 29, 32, 34],
+SIX [11, 16, 20, 25, 29, 34], FIVE [11, 20, 25, 29, 34]; arithmetic 32/34; buggy_code 34/32; MCDM [25, 29, 32, 34];
+agentic [*GRID, 35]; producer default and jlens_concept_pr headline 25.
 
 ## Checks run
-- `scripts/port/fullcheck.sh` on Qwen2.5-7B-Instruct: `wsbench produce method=logit_lens` for all 27 families (exit 0),
-  then `wsbench run all=True dry_run=True` (exit 0): every family reaches its judge with the expected item count, the six
-  regex families score with 0 missing cells, hallucination expects 5,480 cells (1,096 sites x 5 layers), 0 missing.
+- `scripts/port/fullcheck.sh` on Qwen3-8B: `wsbench produce method=logit_lens` for all 27 families (exit 0), then
+  `wsbench run all=True dry_run=True` (exit 0): every family reaches its judge with the expected item count, the six
+  regex families score with 0 missing cells, hallucination expects 5,145 cells (1,029 sites x 5 layers), 0 missing.
   No judge call was made; no lens has been scored on this branch.
-- Tests: the code tests pass; 135 tests that pin the original banks (item counts, golden prompts, bank positions/layers)
-  fail, as on the 9B branch (119 there; the extra ones pin jailbreak positions, typo/typo_mt items, 27B layer numbers
-  and the multi-token stamps). With main's banks swapped in, this branch's code fails 5 tests, all pinning 27B layer numbers.
+- `remap.py check`, `restamp.py check` and `hallucination.py check` reproduce the original bank exactly (86/86 reads,
+  all multi-token stamps, 1,123/1,123 sites). `assemble.py` + `remap.py write` + `restamp.py write` re-run from scratch
+  give byte-identical banks.
+- Tests: the code tests pass; 131 tests that pin the original banks (item counts, golden prompts, bank positions/layers,
+  multi-token stamps) fail, as on the 7B branch (135 there). With main's banks swapped in, this branch's code fails 5
+  tests, all pinning 27B layer numbers (the same 5 as on the 7B branch).
 
 ## Not ported
-- agentic_misalignment (needs 7B rollouts), jlens_concept_pr (needs 7B rollouts and activations; source prompts are private).
-- The NLA method still points at the 27B NLA; a released Qwen2.5-7B NLA exists (layer 20) but is not wired in.
+- agentic_misalignment (needs 8B rollouts), jlens_concept_pr (needs 8B rollouts and activations; source prompts are private).
+- The NLA method still points at the 27B NLA. A Qwen3-8B NLA exists on the Hub (`asher577/nla-qwen-3-8b`) but is not wired in.

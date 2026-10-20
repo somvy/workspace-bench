@@ -38,23 +38,6 @@
    }
   },
   {
-   "name": "typo-across",
-   "prompt": "She picked up her bag and walked slowly accross",
-   "intermediates": [
-    "across"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "family_chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "typo-action",
    "prompt": "He decided to take immediate aciton",
    "intermediates": [
@@ -72,10 +55,10 @@
    }
   },
   {
-   "name": "typo-address",
-   "prompt": "Please write your full name and your current adress",
+   "name": "typo-again",
+   "prompt": "He promised he would never do it agian",
    "intermediates": [
-    "address"
+    "again"
    ],
    "source": "jlens_source",
    "consistency": 1.0,
@@ -89,10 +72,10 @@
    }
   },
   {
-   "name": "typo-again",
-   "prompt": "He promised he would never do it agian",
+   "name": "typo-against",
+   "prompt": "The final vote was nine to two aganst",
    "intermediates": [
-    "again"
+    "against"
    ],
    "source": "jlens_source",
    "consistency": 1.0,
@@ -225,6 +208,23 @@
    }
   },
   {
+   "name": "typo-college",
+   "prompt": "After high school she applied to colege",
+   "intermediates": [
+    "college"
+   ],
+   "source": "jlens_source",
+   "consistency": 1.0,
+   "gate_variant": "family_chat",
+   "eval_render": "plain",
+   "readout": {
+    "kind": "final_prompt_token",
+    "offsets": [
+     -1
+    ]
+   }
+  },
+  {
    "name": "typo-company",
    "prompt": "He worked at the same software compny",
    "intermediates": [
@@ -276,10 +276,10 @@
    }
   },
   {
-   "name": "typo-different",
-   "prompt": "The second draft of the essay took a completely diferent",
+   "name": "typo-course",
+   "prompt": "She signed up for the evening coruse",
    "intermediates": [
-    "different"
+    "course"
    ],
    "source": "jlens_source",
    "consistency": 1.0,
@@ -293,10 +293,10 @@
    }
   },
   {
-   "name": "typo-division",
-   "prompt": "The company announced a new sales divission",
+   "name": "typo-different",
+   "prompt": "The second draft of the essay took a completely diferent",
    "intermediates": [
-    "division"
+    "different"
    ],
    "source": "jlens_source",
    "consistency": 1.0,
@@ -327,44 +327,10 @@
    }
   },
   {
-   "name": "typo-field",
-   "prompt": "The players jogged out onto the freshly mowed feild",
-   "intermediates": [
-    "field"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "family_chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "typo-first",
    "prompt": "She was the one who arrived frist",
    "intermediates": [
     "first"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "family_chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "typo-football",
-   "prompt": "Every Sunday he watched footbal",
-   "intermediates": [
-    "football"
    ],
    "source": "jlens_source",
    "consistency": 1.0,
@@ -463,10 +429,10 @@
    }
   },
   {
-   "name": "typo-human",
-   "prompt": "The discovery changed the course of humman",
+   "name": "typo-house",
+   "prompt": "They moved into the new hosue",
    "intermediates": [
-    "human"
+    "house"
    ],
    "source": "jlens_source",
    "consistency": 1.0,
@@ -582,23 +548,6 @@
    }
   },
   {
-   "name": "typo-little",
-   "prompt": "He poured himself a litle",
-   "intermediates": [
-    "little"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "family_chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "typo-major",
    "prompt": "The bridge repair was a majjor",
    "intermediates": [
@@ -667,44 +616,10 @@
    }
   },
   {
-   "name": "typo-model",
-   "prompt": "The engineer built a scale moddel",
-   "intermediates": [
-    "model"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "family_chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "typo-night",
    "prompt": "He worked late into the nigth",
    "intermediates": [
     "night"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "family_chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "typo-number",
-   "prompt": "He wrote down her phone numbr",
-   "intermediates": [
-    "number"
    ],
    "source": "jlens_source",
    "consistency": 1.0,
@@ -858,23 +773,6 @@
    "prompt": "He inherited the family propperty",
    "intermediates": [
     "property"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "family_chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "typo-really",
-   "prompt": "Even after reading it twice she was not realy",
-   "intermediates": [
-    "really"
    ],
    "source": "jlens_source",
    "consistency": 1.0,
@@ -1075,23 +973,6 @@
    }
   },
   {
-   "name": "typo-special",
-   "prompt": "The chef prepared a dish for the specal",
-   "intermediates": [
-    "special"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "family_chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "typo-study",
    "prompt": "She stayed up all night to studdy",
    "intermediates": [
@@ -1164,23 +1045,6 @@
    "prompt": "The family finally sat down to eat togther",
    "intermediates": [
     "together"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "family_chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "typo-training",
-   "prompt": "The new employees completed their trainning",
-   "intermediates": [
-    "training"
    ],
    "source": "jlens_source",
    "consistency": 1.0,
@@ -1330,23 +1194,6 @@
    }
   },
   {
-   "name": "typo-write",
-   "prompt": "The teacher asked them to writte",
-   "intermediates": [
-    "write"
-   ],
-   "source": "jlens_source",
-   "consistency": 1.0,
-   "gate_variant": "family_chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "typo-young",
    "prompt": "She started playing piano when she was very younng",
    "intermediates": [
@@ -1385,23 +1232,6 @@
    "prompt": "He admitted it had been an honest mistkae",
    "intermediates": [
     "mistake"
-   ],
-   "source": "staging",
-   "consistency": 1.0,
-   "gate_variant": "family_chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "bf-typo-schedule",
-   "prompt": "The morning train arrived exactly on schedual",
-   "intermediates": [
-    "schedule"
    ],
    "source": "staging",
    "consistency": 1.0,
@@ -1534,44 +1364,10 @@
    }
   },
   {
-   "name": "typo-local",
-   "prompt": "She bought vegetables at the locall",
-   "intermediates": [
-    "local"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.9,
-   "gate_variant": "family_chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
    "name": "typo-material",
    "prompt": "The dress was made of a soft matterial",
    "intermediates": [
     "material"
-   ],
-   "source": "jlens_source",
-   "consistency": 0.9,
-   "gate_variant": "family_chat",
-   "eval_render": "plain",
-   "readout": {
-    "kind": "final_prompt_token",
-    "offsets": [
-     -1
-    ]
-   }
-  },
-  {
-   "name": "typo-program",
-   "prompt": "She enrolled in the graduate programm",
-   "intermediates": [
-    "program"
    ],
    "source": "jlens_source",
    "consistency": 0.9,

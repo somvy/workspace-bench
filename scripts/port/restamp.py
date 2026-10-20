@@ -11,7 +11,7 @@ from pathlib import Path
 from transformers import AutoTokenizer
 from wsbench.multitoken.regex import contract_for, scored_units
 
-ORIG_ID, SUBJECT_ID = "Qwen/Qwen3.6-27B", "Qwen/Qwen2.5-7B-Instruct"
+ORIG_ID, SUBJECT_ID = "Qwen/Qwen3.6-27B", "Qwen/Qwen3-8B"
 BENCH = Path(__file__).resolve().parents[2]
 FAMS = ["typo_mt", "multihop_mt", "multilingual_mt", "basic_readout_mt", "multilingual_multihop", "multilingual_typo"]
 
