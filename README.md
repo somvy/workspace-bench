@@ -1,5 +1,70 @@
 # workspace-bench
 
+> **This is a fork of WorkspaceBench ported to `Qwen/Qwen3.5-9B` (32 layers), branch `port-qwen3.5-9b`.** The original bench and everything below this box are built on Qwen3.6-27B (64 layers); where the text below names Qwen3.6-27B layers, positions or item counts, this branch uses Qwen3.5-9B's instead. Full port notes: [`evals/PORT.md`](evals/PORT.md).
+
+## Qwen3.5-9B port
+
+Qwen3.5-9B has the same tokenizer and chat template as Qwen3.6-27B, so every read position carries over unchanged (`scripts/port/tplcheck.py` checks this). The port only filters the items, rebuilds the model-specific golds and remaps layers.
+
+**What changed**
+
+- Default subject `Qwen/Qwen3.5-9B` (post-trained, thinking off) in `backend.py` / `cli.py`.
+- Layers: every bank layer l becomes l // 2 (64 to 32 layers). GRID 10..30 step 2; arithmetic 28/30; buggy_code 30/28; MCDM [22, 26, 28, 30]; agentic 31; producer default 22.
+- Item banks filtered by a chat-format gate: the bench's `capable` question, 10 samples at T=0.7 (top_p=1, top_k=0) plus greedy, graded by local Qwen3.6-27B with the bench GRADE prompt. An item stays if greedy is right and at least 8/10 samples are right (10/10 for chain and brew); multihop items need every bridge question to pass too.
+- Rebuilt on the 9B's own behaviour: poetry (re-gated on its committed rhyme), basic_readout implicit (gold = its own favourite), directed_modulation (compliance re-screened), moral_rationale (its side split, reasons clustered from its own explanations, "mixed" variant), hallucination (its own on-policy responses, read sites re-derived).
+- J-lens / R-lens default to `camilablank/workspace-lenses` `qwen3.5-9b/{j,r}-lens/lens.pt` (n=25).
+- `WSBENCH_BASE_URL`: send judge and summarizer calls to any OpenAI-compatible server (see [Local judge](#local-judge-any-openai-compatible-server)).
+- Build scripts in `scripts/port/`, per-family counts in `evals/PORT.json`.
+
+**Items per family** (bank = the Qwen3.6-27B bank on `main`; kept = what this branch ships). Total over families with at least 20 items: 1729.
+
+| family | bank | kept | how built |
+|---|---:|---:|---|
+| association | 100 | 54 | chat gate |
+| basic_readout | 100 | 69 | chat gate; implicit gold rebuilt (3 of 32) |
+| multihop | 100 | 78 | chat gate |
+| multilingual | 100 | 91 | chat gate |
+| typo | 100 | 100 | chat gate |
+| basic_readout_mt | 100 | 64 | chat gate |
+| multihop_mt | 100 | 36 | chat gate |
+| multilingual_mt | 100 | 29 | chat gate |
+| multilingual_multihop | 98 | 27 | chat gate |
+| multilingual_typo | 100 | 56 | chat gate |
+| typo_mt | 100 | 59 | chat gate |
+| arithmetic_intermediates | 596 | 253 | chat gate |
+| chain_intermediates | 120 | 40 | chat gate |
+| brew_intermediates | 100 | 0 | chat gate; below 20 |
+| relational_multihop | 100 | 18 | chat gate; below 20 |
+| conjunctive_association | 100 | 10 | chat gate; below 20 |
+| role_bound_association | 100 | 32 | chat gate |
+| user_modeling | 100 | 83 | chat gate |
+| buggy_code | 49 | 21 | chat gate |
+| poetry | 100 | 76 | re-gated on its own rhyme |
+| directed_modulation | 100 | 100 | compliance re-screened |
+| moral_rationale | 200 | 199 | side split + reasons rebuilt (mixed) |
+| multi_concept_directed_modulation | 27 | 27 | no gate |
+| jailbreak_recognition | 86 | 86 | no gate |
+| hallucination | 149 | 149 | own responses, sites re-derived |
+| agentic_misalignment | 32 | 0 | emptied (needs Qwen3.5-9B rollouts) |
+| jlens_concept_pr | 299 | 0 | emptied (needs Qwen3.5-9B rollouts) |
+
+**Caveats**
+
+- agentic_misalignment and jlens_concept_pr are emptied: their banks are Qwen3.6-27B rollouts and activations.
+- Below 20 items, kept but flagged in PORT.json: brew_intermediates 0, relational_multihop 18, conjunctive_association 10.
+- basic_readout implicit keeps only 3 of 32 items: the 9B mostly answers "None".
+- moral_rationale: the 9B is more split than the 27B (70 deliberative vs 34 in the bank), which makes this family harder on the 9B by composition. The rebuilt reasons come from a related but not identical instrument: run on Qwen3.6-27B, the same pipeline matches the bank's top reason on 77/135 items.
+- The J-lens is the n=25 fit. Layer 30 is its target layer, where the lens is the identity, so it behaves like the logit lens there. On typo_mt it peaks at layer 10 and drops to 0 at layers 24-28. Check it before trusting it.
+- No lens has been scored on this branch. The checks are a full `wsbench produce method=logit_lens` over all 27 families on Qwen3.5-9B plus `wsbench run all=True dry_run=True`: every family reaches its judge with the expected item count, and the regex families have 0 missing cells.
+- The frozen floors in `evals/baselines/` (lucky-guessing, prompt-only) were measured on the full Qwen3.6-27B banks and are not re-measured on the kept subsets. Re-run `wsbench baseline` before reading a pass rate against them.
+- The arithmetic frozen cells were the best cells on the 27B, so on this model they are a guess. Use `opts=cells=all` until they are re-selected.
+- The NLA method still points at the 27B NLA.
+- Tests that pin the original banks (item counts, golden prompts, bank positions and layers) fail on this branch. The code tests pass.
+
+---
+
+## About WorkspaceBench (original README)
+
 Evals of whether an activation-reading lens surfaces what Qwen3.6-27B computes but never
 writes. A lens reads the model's residual stream at a token position and produces either prose
 (an "O-lens": sampled sentences) or a top-10 token bag (a "J-lens": tokens with scores). Each eval
