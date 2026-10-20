@@ -4,7 +4,8 @@
 > activations), brew_intermediates (8 items pass; its read positions are Qwen3.6-27B token indices, not remapped).
 > **Below 20 items, flagged in PORT.json:** chain_intermediates 15, conjunctive_association 12, relational_multihop 11,
 > multilingual_mt 18, multilingual_multihop 16. **No R-lens exists for this model:** `method=rlens` fails at load. The
-> J-lens default is neuronpedia's Qwen3-8B wikitext fit (n=1000), not yet run on the bench. **Judging** goes through
+> J-lens default is neuronpedia's Qwen3-8B wikitext fit (n=1000): it loads and produces readouts (typo, 82 items x
+> 11 layers), but no J-lens score exists yet. **Judging** goes through
 > OpenRouter (Gemini 3.8 Flash) by default, or a local server with `WSBENCH_BASE_URL` (README, "Local judge").
 
 Built like the Qwen2.5-7B port (branch `port-qwen2.5-7b`). Subject: `Qwen/Qwen3-8B` (post-trained, thinking off), 36 layers.
